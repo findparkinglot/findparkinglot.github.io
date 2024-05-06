@@ -94,7 +94,7 @@ const setMaker = () => {
         const img = document.createElement("div");
         img.className = "img";
 
-        if(MapGroup.name.match(/禁停重機|台中市停管處黃先生恥辱柱/) || marker.properties.name.match(/禁停/) || marker.properties.description.match(/禁停/)){
+        if(MapGroup.name.match(/禁停重機|台中市停管處黃先生恥辱柱/) || marker.properties.name.match(/禁停/) || (marker.properties.description && marker.properties.description.match(/禁停/))){
           el.classList.add('marker-type-0')
           img.classList.add('marker-type-0')
           tag.classList.add('marker-type-0')
