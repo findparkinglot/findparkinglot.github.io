@@ -50,7 +50,7 @@ const onSetParkingInfo = (data) => {
 <template>
 
   <div class="appTitle">
-    <h1>騎重機錯了嗎?到底能停哪?</h1>
+    <h1>重機能停哪?</h1>
   </div>
   <!-- <button
     class="btn btnGetLngLat"
@@ -62,13 +62,13 @@ const onSetParkingInfo = (data) => {
     :class="mapOptions.getLngLat ? 'active' : ''"
   >
     {{ mapOptions.getLngLat ? "結束取得座標" : "手動取得座標" }}
-  </button>
+  </button> -->
   <button
     class="btn btnFAQ"
     @click="windowFAQOpen ? (windowFAQOpen = false) : (windowFAQOpen = true)"
   >
     如何加入手機桌面?
-  </button> -->
+  </button>
 
   
 

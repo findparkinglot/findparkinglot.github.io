@@ -279,7 +279,7 @@ button.btn.active{
   transform: rotate(-45deg);
 }
 
-button.btnGetLngLat{
+button.btnFAQ{
   position: absolute;
   z-index: 999;
   top: 10px;
@@ -288,7 +288,8 @@ button.btnGetLngLat{
   padding: 6px 8px;
 }
 
-button.btnFAQ{
+
+button.btnGetLngLat{
   position: absolute;
   z-index: 999;
   top: 50px;
@@ -296,7 +297,6 @@ button.btnFAQ{
   font-size: 12px;
   padding: 6px 8px;
 }
-
 .coordinates {
   background: #141d1f;
   color: #fff;
