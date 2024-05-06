@@ -4,10 +4,25 @@ import axios from 'axios';
 
 import mapboxgl from 'mapbox-gl';
 
-import googleData from '@/assets/GooglePackingData.json'
+// import googleData from '@/assets/json/大重停車記事.json'
 
+// impport "@/assets/json/" 底下所有的json檔案
+const mapImportList = import.meta.glob('@/assets/json/*.json')
 
-console.log(googleData.features);
+console.log(mapImportList);
+
+let MapDataList = ref([])
+for (const path in mapImportList) {
+  mapImportList[path]().then((data) => {
+    MapDataList.value.push({
+      name: path.split('/').pop().replace('.json', ''),
+      features: data.features
+    })
+  })
+}
+
+console.log(MapDataList.value);
+
 
 const props = defineProps({
   getLngLat: Boolean,
@@ -58,78 +73,92 @@ const setMaker = () => {
     }
   }
 
-  // Add markers to the map.
-  for (const marker of googleData.features) {
-    if (
-      isMatchLngLat(marker.geometry.coordinates)
-    ) {
-      // Create a DOM element for each marker.
-      const el = document.createElement("div");
-      // const width = marker.properties.iconSize[0];
-      // const height = marker.properties.iconSize[1];
-      el.className = "marker";
-      // el.style.width = `${width}px`;
-      // el.style.height = `${height}px`;
-      // el.style.visibility = '';
+  for(const MapGroup of MapDataList.value){
+    
+    // Add markers to the map.
+    for (const marker of MapGroup.features) {
+      if (
+        isMatchLngLat(marker.geometry.coordinates)
+      ) {
+        // Create a DOM element for each marker.
+        const el = document.createElement("div");
+        // const width = marker.properties.iconSize[0];
+        // const height = marker.properties.iconSize[1];
+        el.className = "marker";
+        // el.style.width = `${width}px`;
+        // el.style.height = `${height}px`;
+        // el.style.visibility = '';
 
-      const tag = document.createElement("div");
-      tag.className = "tag";
-      const img = document.createElement("div");
-      img.className = "img";
+        const tag = document.createElement("div");
+        tag.className = "tag";
+        const img = document.createElement("div");
+        img.className = "img";
 
-      if(marker.properties.name.match(/\(禁止\)/)){
-        el.classList.add('forbidden')
-        img.classList.add('forbidden')
-        tag.classList.add('forbidden')
-      }
-      el.append(tag);
-      el.append(img);
-      // if(marker.imgUrl!='' && marker.imgUrl!=null){
-      //   const img = document.createElement("img");
-      //   img.className = "img";
-      //   img.src = `${marker.imgUrl}`;
-      //   el.append(img);
-      // }
-      
+        if(MapGroup.name.match(/禁停重機|台中市停管處黃先生恥辱柱/) || marker.properties.name.match(/禁停/) || marker.properties.description.match(/禁停/)){
+          el.classList.add('marker-type-0')
+          img.classList.add('marker-type-0')
+          tag.classList.add('marker-type-0')
 
-      el.addEventListener("click", () => {
-        map.value.flyTo({
-          // These options control the ending camera position: centered at
-          // the target, at zoom level 9, and north up.
-          center: marker.geometry.coordinates,
-          zoom: 18,
-          bearing: 0,
+          const icon = document.createElement("span");
+          icon.className = "material-icons-outlined";
+          icon.innerHTML = "close";
+          icon.style.color = "white";
+          el.append(icon);
+        }
+        
+        el.append(tag);
+        el.append(img);
+        // if(marker.imgUrl!='' && marker.imgUrl!=null){
+        //   const img = document.createElement("img");
+        //   img.className = "img";
+        //   img.src = `${marker.imgUrl}`;
+        //   el.append(img);
+        // }
+        
 
-          // These options control the flight curve, making it move
-          // slowly and zoom out almost completely before starting
-          // to pan.
-          speed: 1, // make the flying slow
-          curve: 1, // change the speed at which it zooms out
+        el.addEventListener("click", () => {
+          map.value.flyTo({
+            // These options control the ending camera position: centered at
+            // the target, at zoom level 9, and north up.
+            center: marker.geometry.coordinates,
+            zoom: 18,
+            bearing: 0,
 
-          // This can be any easing function: it takes a number between
-          // 0 and 1 and returns another number between 0 and 1.
-          easing: (t) => t,
+            // These options control the flight curve, making it move
+            // slowly and zoom out almost completely before starting
+            // to pan.
+            speed: 1, // make the flying slow
+            curve: 1, // change the speed at which it zooms out
 
-          // this animation is considered essential with respect to prefers-reduced-motion
-          essential: true,
+            // This can be any easing function: it takes a number between
+            // 0 and 1 and returns another number between 0 and 1.
+            easing: (t) => t,
+
+            // this animation is considered essential with respect to prefers-reduced-motion
+            essential: true,
+          });
+          var data = {
+            name: MapGroup.name,
+            properties: marker.properties
+          }
+          emits("parkingInfo", data);
+
+          // window.alert(marker.properties.info);
         });
-        var data = marker.properties;
-        emits("parkingInfo", data);
 
-        // window.alert(marker.properties.info);
-      });
+        const popup = new mapboxgl.Popup({ offset: 25 }).setText(
+          marker.properties.name
+        );
 
-      const popup = new mapboxgl.Popup({ offset: 25 }).setText(
-        marker.properties.name
-      );
-
-      // Add markers to the map.
-      var oneMarker = new mapboxgl.Marker(el)
-        .setLngLat(marker.geometry.coordinates)
-        .setPopup(popup) // sets a popup on this marker
-        .addTo(map.value);
-      currentMarkers.value.push(oneMarker);
+        // Add markers to the map.
+        var oneMarker = new mapboxgl.Marker(el)
+          .setLngLat(marker.geometry.coordinates)
+          .setPopup(popup) // sets a popup on this marker
+          .addTo(map.value);
+        currentMarkers.value.push(oneMarker);
+      }
     }
+
   }
 
 }

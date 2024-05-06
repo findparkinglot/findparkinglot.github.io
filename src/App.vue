@@ -33,11 +33,13 @@ const menuActive = ref(false)
 const infoActive = ref(false)
 const parkingName = ref("")
 const parkingNameDes = ref("")
+const parkingType = ref("")
 
 const onSetParkingInfo = (data) => {
   console.log(data);
-  parkingName.value = data.name;
-  parkingNameDes.value = data.description;
+  parkingName.value = data.properties.name;
+  parkingNameDes.value = data.properties.description;
+  parkingType.value = data.name;
   infoActive.value = true;
 }
 
@@ -222,6 +224,9 @@ const onSetParkingInfo = (data) => {
     <div v-if="parkingNameDes" style="margin-top: 5px;">
       <!-- 內容: -->
       <div v-html="parkingNameDes"></div>
+    </div>
+    <div style="margin-top: 5px;color: #666;font-size: 12px;">
+      {{ parkingType }}
     </div>
   </div>
 </template>

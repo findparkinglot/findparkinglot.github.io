@@ -67,10 +67,6 @@ h2,h3,h4,h5,h6,p{
   z-index: 1;
   box-shadow: 0 0 10px #333;
 }
-.marker.forbidden{
-  background: #cc3a3a;
-  border: 3px solid #cc3a3a;
-}
 .marker>.tag{
   position: absolute; 
   z-index: 0;
@@ -80,9 +76,6 @@ h2,h3,h4,h5,h6,p{
   height: 20px;
   transform: rotate(45deg);
   background: #2ee7d6;
-}
-.marker>.tag.forbidden{
-  background: #cc3a3a;
 }
 .marker>.img{
   position:absolute;
@@ -94,7 +87,27 @@ h2,h3,h4,h5,h6,p{
   object-position: center center;
   /* background: #141d1f; */
 }
-.marker>.img.forbidden{
+.marker>.material-icons-outlined{
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+
+}
+
+/* marker-type-0 : 禁止 */
+
+
+.marker.marker-type-0{
+  background: #cc3a3a;
+  border: 3px solid #cc3a3a;
+}
+.marker>.tag.marker-type-0{
+  background: #cc3a3a;
+}
+.marker>.img.marker-type-0{
   background: #cc3a3a;
 }
 
