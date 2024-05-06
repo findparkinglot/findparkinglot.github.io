@@ -1,24 +1,39 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="zh-TW">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="/logo.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>騎重機錯了嗎?到底能停哪?</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>logo.png">
+    <title>我到底能停哪?</title>
+    
     <link rel="apple-touch-icon" href="./logo.png">
     <link rel="manifest" href="./manifest.json" />
+    <script>
+      if("serviceWorker" in navigator){
+        navigator.serviceWorker
+          .register("./serviceWorker.js")
+          .then(res => console.log("service worker registered"))
+          .catch(err => console.log("service worker not registered", err));
+      }
+    </script>
+
+
+ 
     <meta property="description" content="車位這麼多 但我到底能停哪裡? 停車費又是多少?" >
-    <meta property="og:title" content="騎重機錯了嗎?到底能停哪?" >
+    <meta property="og:title" content="我到底能停哪? | Ray's tools" >
     <meta property="og:type" content="website" >
     <meta property="og:url" content="https://findparkinglot.github.io/" >
     <meta property="og:image" content="https://findparkinglot.github.io/ogimage.png" >
     <meta property="og:description" content="車位這麼多 但我到底能停哪裡? 停車費又是多少?"  >
-    <meta property="og:site_name" content="騎重機錯了嗎?到底能停哪?" >
+    <meta property="og:site_name" content="我到底能停哪?" >
     <meta property="og:locale" content="" >
+
     <link rel="alternate" hreflang="zh-tw" href="https://findparkinglot.github.io/" />
     <link rel="canonical" href="https://findparkinglot.github.io/">
     <link rel="stylesheet" href="./loading.css">
 
+    
   </head>
   <body>
     <div id="loading-cover" class="loading-cover">
@@ -35,6 +50,8 @@
       <strong>We're sorry but 我到底能停哪? doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6596839701234097"
+     crossorigin="anonymous"></script>
+    <!-- built files will be auto injected -->
   </body>
 </html>

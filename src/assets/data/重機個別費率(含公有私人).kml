@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>重機個別費率(含公有/私人)</name>
+    <Style id="icon-1538-E65100-labelson">
+      <IconStyle>
+        <color>ff0051e6</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Style id="icon-1632-0288D1-labelson">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Style id="icon-1632-7CB342-labelson">
+      <IconStyle>
+        <color>ff42b37c</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Style id="icon-1633-0288D1-labelson">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Style id="icon-1633-7CB342-labelson">
+      <IconStyle>
+        <color>ff42b37c</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Style id="icon-1853-F57C00-labelson">
+      <IconStyle>
+        <color>ff007cf5</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Placemark>
+      <name>(20/h)機車道進-赤土崎公園地下停車場</name>
+      <description>重機獨立費率 20h 後牌辨析 僅有共享/優先格 親身經驗 或 車友/朋友/親人經驗 停車場設有機車停車場獨立出入口，在建中路管理室旁邊，是地下停車場，與一般機車共用停車格，停車格有加大，大部分重機都停的下，有210個位置有月租  </description>
+      <styleUrl>#icon-1633-7CB342-labelson</styleUrl>
+      <Point>
+        <coordinates>
+          120.9939724,24.7992646,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>(Free)家樂福 中正店</name>
+      <description>大型重機免費停車；專用停車格6格 感謝Jeff 1445@ptt</description>
+      <styleUrl>#icon-1633-7CB342-labelson</styleUrl>
+      <Point>
+        <coordinates>
+          120.228612,23.032797,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>(Free)家樂福 光華店</name>
+      <description>汽車費率 有購物可折抵、或免費 按鈴，或直接從桿子末端進入  專用格2 格 或以上</description>
+      <styleUrl>#icon-1633-7CB342-labelson</styleUrl>
+      <Point>
+        <coordinates>
+          120.3171752,22.6109204,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>(Free)家樂福淡新店</name>
+      <description><![CDATA[汽車道下，繞擋條直接進入，限停重機專用格<br>可直接離場無須繳費 2023/3/11]]></description>
+      <styleUrl>#icon-1633-7CB342-labelson</styleUrl>
+      <Point>
+        <coordinates>
+          121.4436466,25.1882039,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>(50/d)九份大、小車停車場</name>
+      <description>機車20 重機50 計次(2021)</description>
+      <styleUrl>#icon-1632-0288D1-labelson</styleUrl>
+      <Point>
+        <coordinates>
+          121.848312,25.111455,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>整修中-(40/d)三民機車停車場</name>
+      <description>重機40元/次 專用5格</description>
+      <styleUrl>#icon-1853-F57C00-labelson</styleUrl>
+      <Point>
+        <coordinates>
+          121.4722614,25.0858266,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>(Free)富基漁港</name>
+      <description><![CDATA["末端有一個重機驛站免費停車<br>可以讓愛車和大海拍照<br>外面一點也有一個重機專用停車空間<br>友善重機 風景漂亮的漁港<br>另外張阿瑞生魚片超好吃"]]></description>
+      <styleUrl>#icon-1633-7CB342-labelson</styleUrl>
+      <Point>
+        <coordinates>
+          121.5357911,25.2934166,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name><![CDATA[(30/d)文化機車&自行車停車場5F]]></name>
+      <description>悠遊卡進入/出場</description>
+      <styleUrl>#icon-1633-0288D1-labelson</styleUrl>
+      <Point>
+        <coordinates>
+          121.4387431,25.1726548,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>(10/h | 30/d)青埔新光影城/x-park 城市車旅</name>
+      <description><![CDATA[10h/30d 重機比照機車停<br>感謝 ___@ptt (名字不見了)]]></description>
+      <styleUrl>#icon-1632-7CB342-labelson</styleUrl>
+      <Point>
+        <coordinates>
+          121.2143985,25.0176982,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>(Free)家樂福埔里店 Carrefour Pu Li Store</name>
+      <description><![CDATA[家樂福（埔里）	停汽車格，免收費。	0	管理員協助 / 按鈴 <br>感謝q64071239分享]]></description>
+      <styleUrl>#icon-1538-E65100-labelson</styleUrl>
+      <Point>
+        <coordinates>
+          120.9571119,23.9708346,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>(Free｜按鈴)野柳遊客中心</name>
+      <description><![CDATA[野柳地質公園停車場/新北市萬里區港東路(野柳遊客中心旁)	觀光臨停免費	免費	管理員協助 / 按鈴	無 /未知 <br> （2023/7月）來觀光詢問管理員可停，依指示停放不收費。<br>感謝LAN@PTT]]></description>
+      <styleUrl>#icon-1538-E65100-labelson</styleUrl>
+      <Point>
+        <coordinates>
+          121.6899463,25.2052837,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>(50/d)歐特儀石牌圖書館停車場</name>
+      <description><![CDATA[要從機車入口處進入，重機獨立費率 50d 按鈕後直接進場，<br>在欄杆前直接投幣50元，欄杆就會升起，直接離場  ]]></description>
+      <styleUrl>#icon-1632-7CB342-labelson</styleUrl>
+      <Point>
+        <coordinates>
+          121.5228604,25.1132602,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>(Free)家樂福 屏東店</name>
+      <description><![CDATA[不收費 ; 檔桿較短，重機從右側縫隙進入，車身較大者可按鈴通知管理員開門 ; 專用格數2格，接近賣場入口  <br>感謝paul40807@ptt]]></description>
+      <styleUrl>#icon-1633-7CB342-labelson</styleUrl>
+      <Point>
+        <coordinates>
+          120.4977911,22.6823957,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>(Free)家樂福 內壢店</name>
+      <description><![CDATA[免費 騎進汽車道 專用格2 格 或以上 <br>感謝Yang@YT]]></description>
+      <styleUrl>#icon-1633-7CB342-labelson</styleUrl>
+      <Point>
+        <coordinates>
+          121.2536774,24.9724254,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>(40/h)家樂福 豐原店</name>
+      <description>汽車費率 1小時40元 倒退嚕掃牌</description>
+      <styleUrl>#icon-1538-E65100-labelson</styleUrl>
+      <Point>
+        <coordinates>
+          120.7063822,24.2521761,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>(Free)家樂福 林口店</name>
+      <description>從汽車入口進去停專用格 不用錢 閘門旁邊進去 專用2 格 或以上 </description>
+      <styleUrl>#icon-1633-7CB342-labelson</styleUrl>
+      <Point>
+        <coordinates>
+          121.3740639,25.0775982,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>(Free)家樂福 嘉義店</name>
+      <description><![CDATA[在B1停車場斜坡下去的右邊 共有5格車位<br>無出入口管制]]></description>
+      <styleUrl>#icon-1633-7CB342-labelson</styleUrl>
+      <Point>
+        <coordinates>
+          120.4314986,23.4711237,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>(20/d)市政公園停車場-機車</name>
+      <description><![CDATA[機車費率 20/d 後牌辨析<br>台中市交通局試辦機車格停放大型重機區域  <br>紅黃牌可自由選擇停機車或汽車 機車20d 汽車20h 後牌辨析 2 格 或以上 <br>從機車道進場可停機車格或大型重機專用車格<br>從汽車道進場可停汽車格或大型重機專用車格<br>停車入口有兩邊可從文心路或惠中路進出，若大重從汽車道進請靠左側後車牌辨識才能準確，不建議從汽車道右邊辨識  ]]></description>
+      <styleUrl>#icon-1632-7CB342-labelson</styleUrl>
+      <Point>
+        <coordinates>
+          120.644299,24.1609203,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>(20/h)市政公園地下停車場-機車</name>
+      <description><![CDATA[機車費率 20/d 後牌辨析<br>台中市交通局試辦機車格停放大型重機區域 <br>紅黃牌可自由選擇停機車或汽車 機車20d 汽車20h 後牌辨析 2 格 或以上 <br>從機車道進場可停機車格或大型重機專用車格<br>從汽車道進場可停汽車格或大型重機專用車格<br>停車入口有兩邊可從文心路或惠中路進出，若大重從汽車道進請靠左側後車牌辨識才能準確，不建議從汽車道右邊辨識  ]]></description>
+      <styleUrl>#icon-1632-7CB342-labelson</styleUrl>
+      <Point>
+        <coordinates>
+          120.6470641,24.1591845,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>(--)武聖夜市</name>
+      <description><![CDATA[武聖夜市 裡面有大型重機的停車格<br>請遵循工作人員引導 ]]></description>
+      <styleUrl>#icon-1633-0288D1-labelson</styleUrl>
+      <Point>
+        <coordinates>
+          120.1905098,23.003458,0
+        </coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>
