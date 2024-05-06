@@ -2,6 +2,10 @@
 import { ref } from 'vue'
 import MapBox from './components/MapBox.vue'
 
+// const KMLData = '@/assets/MapData/My Maps/doc.kml'
+
+// console.log(KMLData);
+
 
 const mapStyle = [
   {
@@ -108,7 +112,7 @@ const onSetParkingInfo = (data) => {
   <div class="window-box-cover" v-if="windowMessageOpen">
     <div class="window-box">
       <h3 style="margin-bottom: 15px; text-align: left">
-        嗨!歡迎使用 <b style="color: #2ee7d6">騎重機錯了嗎? 到底能停哪?</b> <br /><br />
+        嗨!歡迎使用 <b style="color: #2ee7d6">重機能停哪?</b> <br /><br />
         目前資料處於"<b style="color: #2ee7d6">測試階段</b>", 停車資訊僅供參考  <br /><br />
         <!-- 目前資料處於 "<b style="color: #2ee7d6">測試階段</b>" ，
         除了有圖片的地點， 其餘地點皆為"<b style="color: #2ee7d6">僅供參考</b
@@ -134,7 +138,7 @@ const onSetParkingInfo = (data) => {
         <!-- 如果覺得不錯，可以請我喝杯<a href="https://payment.opay.tw/Broadcaster/Donate/C9169C214B7D9633A239CBB7D3CB9251" style="color:#2ee7d6" target="_blank">咖啡</a>‧<br><br> -->
 
 
-        謝謝各位!
+        謝謝!
       </h3>
 
       <button class="btn" @click="windowMessageOpen = false">確定</button>
