@@ -10,8 +10,10 @@ const props = defineProps({
   degreeOfFriendlinessKeyArray: Array,
   mapDataList: Array,
   getLngLat: Boolean,
-  mapStylesSelected: String
+  mapStylesSelected: String,
+  goToParkingPlaceData: Object,
 })
+const emits = defineEmits(["parkingInfo","update:goToParkingPlaceData"]);
 
 
 const map = ref(null)
@@ -66,7 +68,6 @@ const isMatchLngLat = (coordinates) => {
   return isMatch;
 }
 
-const emits = defineEmits(["parkingInfo"]);
 
 
 const getIconImgUrl = (url) => {
@@ -139,7 +140,9 @@ const setMaker = () => {
           var data = {
             name: MapGroup.name,
             properties: marker.properties,
+            geometry: marker.geometry.coordinates,
           }
+
           emits("parkingInfo", data);
 
           // window.alert(marker.properties.info);
@@ -185,7 +188,7 @@ const setUserArea = () => {
 
   axios.get('https://api.mapbox.com/geocoding/v5/mapbox.places/'+lngLat+'.json?access_token='+mapData.value.accessToken)
   .then(function (response) {
-    // console.log("test: ",response.data);
+    console.log("test: ",response.data);
   })
   .catch(function (error) {
     console.log(error);
@@ -255,6 +258,124 @@ const setLngLatMaker = () => {
   lngLatMaker.value.on("dragend", onDragEnd);
 }
 
+async function getRoute(start,end) {
+
+  map.value.addLayer({
+    id: 'point',
+    type: 'circle',
+    source: {
+      type: 'geojson',
+      data: {
+        type: 'FeatureCollection',
+        features: [
+          {
+            type: 'Feature',
+            properties: {},
+            geometry: {
+              type: 'Point',
+              coordinates: start
+            }
+          }
+        ]
+      }
+    },
+    paint: {
+      'circle-radius': 10,
+      'circle-color': '#3887be'
+    }
+  });
+
+
+  // make a directions request using cycling profile
+  // an arbitrary start will always be the same
+  // only the end or destination will change
+  const query = await fetch(
+    `https://api.mapbox.com/directions/v5/mapbox/driving/${start[0]},${start[1]};${end[0]},${end[1]}?steps=true&geometries=geojson&access_token=${mapData.value.accessToken}`,
+    { method: 'GET' }
+  );
+  const json = await query.json();
+  const data = json.routes[0];
+  const route = data.geometry.coordinates;
+  const geojson = {
+    type: 'Feature',
+    properties: {},
+    geometry: {
+      type: 'LineString',
+      coordinates: route
+    }
+  };
+  // if the route already exists on the map, we'll reset it using setData
+  if (map.value.getSource('route')) {
+    map.value.getSource('route').setData(geojson);
+  }
+  // otherwise, we'll make a new request
+  else {
+    map.value.addLayer({
+      id: 'route',
+      type: 'line',
+      source: {
+        type: 'geojson',
+        data: geojson
+      },
+      layout: {
+        'line-join': 'round',
+        'line-cap': 'round'
+      },
+      paint: {
+        'line-color': '#3887be',
+        'line-width': 5,
+        'line-opacity': 0.75
+      }
+    });
+  }
+  // add turn instructions here at the end
+}
+
+
+const getUserLocation = (target) => {
+  if (mapData.value.userCoordinates[0] !== null) {
+
+    //判斷 source 是否有 id 為 point 的圖層，有的話就移除
+    if (map.value.getSource('point')) {
+      map.value.removeLayer('point');
+      map.value.removeSource('point');
+    }
+
+    let geocoding = mapData.value.userCoordinates[0] + "," + mapData.value.userCoordinates[1] + ';' + target[0] + ',' + target[1];
+    axios.get('https://api.mapbox.com/directions/v5/mapbox/driving/'+geocoding+'?geometries=geojson&exclude=toll&access_token='+mapData.value.accessToken).then((response) => {
+      console.log(response);
+
+      
+
+      getRoute(mapData.value.userCoordinates,target);
+    }).catch((error) => {
+      console.log(error);
+    })
+  }else{
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(successCallback,errorCallback);
+    }else{
+      console.log("NONE");
+    }
+  }
+}
+
+const removeRoutes = () => {
+  if (map.value.getSource('route')) {
+    map.value.removeLayer('route');
+    map.value.removeSource('route');
+  }
+  if (map.value.getSource('point')) {
+    map.value.removeLayer('point');
+    map.value.removeSource('point');
+  }
+
+  emits("update:goToParkingPlaceData", null);
+  // setMap();
+}
+
+
+
 
 onMounted(()=>{
   mapboxgl.accessToken = mapData.value.accessToken;
@@ -265,6 +386,12 @@ onMounted(()=>{
   }
 
 
+})
+
+watch(() => props.goToParkingPlaceData, (newVal, oldVal) => {
+  if (newVal !== null) {
+    getUserLocation(newVal);
+  }
 })
 
 watch(() => props.mapStylesSelected, (newVal, oldVal) => {
@@ -294,8 +421,17 @@ watch(() => props.degreeOfFriendlinessKeyArray, (newVal, oldVal) => {
 
 <template>
   <div id="map"></div>
+  <button class="btn clearLineRoute" @click="removeRoutes()" v-if="props.goToParkingPlaceData">取消路線規劃</button>
 </template>
 
 <style scoped>
-
+  .clearLineRoute{
+    position: absolute;
+    bottom: 30px;
+    right: 0px;
+    z-index: 999;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 </style>

@@ -109,7 +109,8 @@ const ParkingInfo = ref({
   parkingName: '',
   parkingNameDes: '',
   parkingType: '',
-  parkingIcon: ''
+  parkingIcon: '',
+  geometry: [null,null]
 })
 
 const onSetParkingInfo = (data) => {
@@ -118,6 +119,7 @@ const onSetParkingInfo = (data) => {
   ParkingInfo.value.parkingNameDes = data.properties.description;
   ParkingInfo.value.parkingType = data.name;
   ParkingInfo.value.parkingIcon = getIconImgUrl(data.properties.icon);
+  ParkingInfo.value.geometry = data.geometry;
   infoActive.value = true;
 }
 
@@ -264,6 +266,12 @@ const degreeOfFriendlinessList = ref([
   },
 ])
 
+const goToParkingPlaceData = ref(null);
+
+const goToParkingPlace = (geometry) => {
+  goToParkingPlaceData.value = geometry;
+}
+
 onMounted(() => {
   MapDataInit()
 })
@@ -310,6 +318,7 @@ onMounted(() => {
     :mapDataList="MapDataList"
     :getLngLat="mapOptions.getLngLat"
     :mapStylesSelected="mapOptions.mapStylesSelected"
+    v-model:goToParkingPlaceData="goToParkingPlaceData"
     @parkingInfo="onSetParkingInfo"
   />
 
@@ -593,9 +602,26 @@ onMounted(() => {
     <div style="margin-top: 5px;color: #666;font-size: 12px;">
       {{ ParkingInfo.parkingType }}
     </div>
+
+    <div class="gotoBtn-div">
+      {{ ParkingInfo.geometry[0] }},{{ ParkingInfo.geometry[1] }}
+      <button class="btn" @click="goToParkingPlace(ParkingInfo.geometry)">路線規劃</button>
+    </div>
   </div>
 </template>
 
 <style scoped>
 
+  .gotoBtn-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0 0 ;
+    color: #666;
+  }
+  .gotoBtn-div>button{
+    font-size: 12px;
+    padding: 4px 6px;
+    margin: 0;
+  }
 </style>
