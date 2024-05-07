@@ -398,11 +398,12 @@ button.btnGetLngLat{
       top: auto;
       bottom: 40px;
 
-      
+    
       right: auto;
-
+      left: 0;
+      transform: translate(-100%, 0);
       width: calc(100% - 40px);
-      left: calc((100% - 20px) * -1);
+      max-width: 420px;
       min-height: 100px;
       max-height: 300px;
       overflow: hidden;
@@ -413,6 +414,7 @@ button.btnGetLngLat{
       bottom: 40px;
       color: #ccc;
       left: 10px;
+      transform: translate(0, 0);
       right: auto;
   }
 

@@ -90,6 +90,16 @@ const mapOptions = ref({
   mapStylesSelected: "mapbox://styles/jamestim9215/ckvkdj5cd1q4115nzwxa9rny3",
 })
 const windowMessageOpen = ref(true)
+
+if(localStorage.getItem('isReadFirstMessage') && localStorage.getItem('isReadFirstMessage') == 'true'){
+  windowMessageOpen.value = false;
+}
+
+const closeMesBox = () => {
+  windowMessageOpen.value = false;
+  localStorage.setItem('isReadFirstMessage', 'true');
+}
+
 const windowMobileFAQOpen = ref(false)
 const windowFAQOpen = ref(false)
 const menuActive = ref(false)
@@ -135,7 +145,7 @@ onMounted(() => {
     class="btn btnMobileFAQ"
     @click="windowMobileFAQOpen ? (windowMobileFAQOpen = false) : (windowMobileFAQOpen = true)"
   >
-    如何加入手機桌面?
+    如何加入手機桌面? 類APP
   </button>
   <button
     class="btn btnFAQ"
@@ -155,7 +165,7 @@ onMounted(() => {
     @parkingInfo="onSetParkingInfo"
   />
 
-  
+  <!-- 教學 -->
   <div class="window-box-cover" v-if="windowFAQOpen">
     <div class="window-box">
       <h3 style="text-align: left">地圖怎麼看?</h3>
@@ -169,7 +179,7 @@ onMounted(() => {
         </div>
         <div class="faq-content">
           <img src="@/assets/MapData/My Maps/PackingMarkerList/images/icon-3.png" alt="">
-          機(有人)：有設重機專用格
+          重機(有人)：有設重機專用格
         </div>
         <div class="faq-content">
           <img src="@/assets/MapData/My Maps/PackingMarkerList/images/icon-10.png" alt="">
@@ -238,6 +248,7 @@ onMounted(() => {
     </div>
   </div>
   
+  <!-- 加入手機桌面 類APP -->
   <div class="window-box-cover" v-if="windowMobileFAQOpen">
     <div class="window-box">
       <h3 style="margin-bottom: 15px; text-align: left">如何加入手機桌面?</h3>
@@ -266,7 +277,9 @@ onMounted(() => {
     <div class="window-box">
       <h3 style="margin-bottom: 15px; text-align: left">
         嗨!歡迎使用 <b style="color: #2ee7d6">重機能停哪?</b> <br /><br />
-        目前資料處於"<b style="color: #2ee7d6">測試階段</b>", 停車資訊僅供參考  <br /><br />
+        目前此停車地圖處於"<b style="color: #2ee7d6">測試階段</b>", 停車資訊僅供參考。<br />
+        非常感謝各位車友與<b><a href="https://linktr.ee/hueythegentry" style="color: #2ee7d6" target="_blank">大重停車記</a></b>停車資料。<br />
+
         <!-- 目前資料處於 "<b style="color: #2ee7d6">測試階段</b>" ，
         除了有圖片的地點， 其餘地點皆為"<b style="color: #2ee7d6">僅供參考</b
         >"， 歡迎車友們可以使用<b
@@ -294,7 +307,7 @@ onMounted(() => {
         謝謝!
       </h3>
 
-      <button class="btn" @click="windowMessageOpen = false">確定</button>
+      <button class="btn" @click="closeMesBox()">確定</button>
     </div>
   </div>
 
@@ -328,8 +341,11 @@ onMounted(() => {
 
     <h5 style="padding: 10px 0 0 0">資料來源</h5>
     <a href="https://linktr.ee/hueythegentry" target="_blank">
-      <button class="btn" style="font-size: 10px; margin: 0 5px 5px 0">
-        大重停車記事
+      <button class="btn" style="
+        font-size: 12px;
+        padding: 6px 8px;
+        margin: 0 5px 5px 0">
+        大重停車記事[240423更新]
       </button>
     </a>
 
