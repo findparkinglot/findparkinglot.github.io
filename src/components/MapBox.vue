@@ -222,17 +222,22 @@ const setMap = () => {
 
   map.value.on('geolocate', function (e) {
     var bearing = e.coords.heading;
+    console.log("???????");
     // 依據使用者的方向旋轉地圖
     map.value.easeTo({
       bearing: bearing,
       duration: 1000,
       offset: [0, 0],
     });
+
   });
 }
 
 
 const successCallback = (position) => {
+
+  console.log(position.coords.heading);
+
   mapData.value.userCoordinates[0] = position.coords.longitude;
   mapData.value.userCoordinates[1] = position.coords.latitude;
   mapData.value.center[0] = position.coords.longitude;
