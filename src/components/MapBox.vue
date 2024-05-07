@@ -221,8 +221,11 @@ const setMap = () => {
 
   map.value.on('geolocate', function (e) {
     var bearing = e.coords.heading;
+    // 依據使用者的方向旋轉地圖
     map.value.easeTo({
-      bearing: bearing
+      bearing: bearing,
+      duration: 1000,
+      offset: [0, 0],
     });
   });
 }

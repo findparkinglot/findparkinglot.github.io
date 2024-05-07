@@ -270,6 +270,7 @@ const goToParkingPlaceData = ref(null);
 
 const goToParkingPlace = (geometry) => {
   goToParkingPlaceData.value = geometry;
+  infoActive.value = false;
 }
 
 onMounted(() => {
@@ -605,7 +606,7 @@ onMounted(() => {
 
     <div class="gotoBtn-div">
       {{ ParkingInfo.geometry[0] }},{{ ParkingInfo.geometry[1] }}
-      <button class="btn" @click="goToParkingPlace(ParkingInfo.geometry)">路線規劃</button>
+      <button class="btn" @click="goToParkingPlace(ParkingInfo.geometry)" v-if="goToParkingPlaceData==null">路線規劃</button>
     </div>
   </div>
 </template>
