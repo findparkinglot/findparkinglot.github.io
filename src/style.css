@@ -125,8 +125,8 @@ h2,h3,h4,h5,h6,p{
 .window-box{
   position: relative;
   margin: 30px auto;
-  width: calc(100% - 60px);
-  max-width: 300px;
+  width: calc(100% - 80px);
+  max-width: 400px;
   height: auto;
   /* min-height: 200px; */
   /* background: #39455d; */
@@ -137,14 +137,29 @@ h2,h3,h4,h5,h6,p{
   color: #ccc;
   text-align: center;
 }
+
+.window-box>h3{
+  color: #2ee7d6;
+  margin-bottom: 15px;
+}
+.window-box>h4{
+  color: #fff;
+  margin-bottom: 15px;
+}
+.window-box>h5{
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
 .mainInfoBox{
   position: fixed;
   border-radius: 10px;
   padding: 10px;
   z-index: 999;
-  left: -320px;
+  left: -420px;
   top: 60px;
-  width: calc(320px - 20px);
+  width: calc(420px - 20px);
+  max-width: calc(100% - 20px);
   height: auto;
   max-height: calc(100dvh - 120px);
   background: #141d1f;
@@ -158,7 +173,7 @@ h2,h3,h4,h5,h6,p{
   /* top: 180px; */
   top: 60px;
   left: auto;
-  right: -320px;
+  right: -420px;
   min-height: 100px;
   color: #ccc;
   /* max-height: calc(100vh - 240px); */
@@ -279,7 +294,7 @@ button.btn.active{
   transform: rotate(-45deg);
 }
 
-button.btnFAQ{
+button.btnMobileFAQ{
   position: absolute;
   z-index: 999;
   top: 10px;
@@ -289,10 +304,20 @@ button.btnFAQ{
 }
 
 
-button.btnGetLngLat{
+button.btnFAQ{
   position: absolute;
   z-index: 999;
   top: 50px;
+  right: 40px;
+  font-size: 12px;
+  padding: 6px 8px;
+}
+
+
+button.btnGetLngLat{
+  position: absolute;
+  z-index: 999;
+  top: 90px;
   right: 40px;
   font-size: 12px;
   padding: 6px 8px;
@@ -326,6 +351,25 @@ button.btnGetLngLat{
   color: #2ee7d6;
   margin-bottom: 5px;
 }
+#parkingName {
+  color: #2ee7d6;
+  margin-bottom: 5px;
+  padding: 0 30px 0 0;
+  display: flex;
+  align-items: center;
+}
+
+#parkingName img{
+  position: relative;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center center;
+  margin-right: 5px;
+}
+
 #parkingLotAddress{
   color: #999;
 }
@@ -333,6 +377,19 @@ button.btnGetLngLat{
   color: #999;
 }
 
+
+.faq-content{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.faq-content>img{
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+  object-fit: cover;
+  object-position: center center;
+}
 @media (max-width: 768px) {
   .mainInfoBox2{
       top: auto;

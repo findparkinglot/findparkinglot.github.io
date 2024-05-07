@@ -4,27 +4,9 @@ import axios from 'axios';
 
 import mapboxgl from 'mapbox-gl';
 
-// import googleData from '@/assets/json/大重停車記事.json'
-
-// impport "@/assets/json/" 底下所有的json檔案
-const mapImportList = import.meta.glob('@/assets/json/*.json')
-
-console.log(mapImportList);
-
-let MapDataList = ref([])
-for (const path in mapImportList) {
-  mapImportList[path]().then((data) => {
-    MapDataList.value.push({
-      name: path.split('/').pop().replace('.json', ''),
-      features: data.features
-    })
-  })
-}
-
-console.log(MapDataList.value);
-
 
 const props = defineProps({
+  mapDataList: Array,
   getLngLat: Boolean,
   mapStylesSelected: String
 })
@@ -66,6 +48,15 @@ const isMatchLngLat = (coordinates) => {
 
 const emits = defineEmits(["parkingInfo"]);
 
+
+const getIconImgUrl = (url) => {
+  if(url.match('http')){
+    return url;
+  }else{
+    return new URL(`/src/assets/MapData/My Maps/PackingMarkerList/images/${url}`, import.meta.url).href
+  }
+}
+
 const setMaker = () => {
   if (currentMarkers.value !== null) {
     for (var i = currentMarkers.value.length - 1; i >= 0; i--) {
@@ -73,7 +64,7 @@ const setMaker = () => {
     }
   }
 
-  for(const MapGroup of MapDataList.value){
+  for(const MapGroup of props.mapDataList){
     
     // Add markers to the map.
     for (const marker of MapGroup.features) {
@@ -93,27 +84,14 @@ const setMaker = () => {
         tag.className = "tag";
         const img = document.createElement("div");
         img.className = "img";
-
-        if(MapGroup.name.match(/禁停重機|台中市停管處黃先生恥辱柱/) || marker.properties.name.match(/禁停/) || (marker.properties.description && marker.properties.description.match(/禁停/))){
-          el.classList.add('marker-type-0')
-          img.classList.add('marker-type-0')
-          tag.classList.add('marker-type-0')
-
-          const icon = document.createElement("span");
-          icon.className = "material-icons-outlined";
-          icon.innerHTML = "close";
-          icon.style.color = "white";
-          el.append(icon);
+        if(marker.properties.icon){
+          img.style.backgroundImage = `url(${getIconImgUrl(marker.properties.icon)})`;
+          img.style.backgroundSize = 'cover';
+          img.style.backgroundPosition = 'center center';
         }
         
         el.append(tag);
         el.append(img);
-        // if(marker.imgUrl!='' && marker.imgUrl!=null){
-        //   const img = document.createElement("img");
-        //   img.className = "img";
-        //   img.src = `${marker.imgUrl}`;
-        //   el.append(img);
-        // }
         
 
         el.addEventListener("click", () => {
@@ -139,7 +117,7 @@ const setMaker = () => {
           });
           var data = {
             name: MapGroup.name,
-            properties: marker.properties
+            properties: marker.properties,
           }
           emits("parkingInfo", data);
 

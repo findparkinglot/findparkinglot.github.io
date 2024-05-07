@@ -1,11 +1,69 @@
 <script setup>
-import { ref } from 'vue'
+import { onMounted, ref } from 'vue'
 import MapBox from './components/MapBox.vue'
 
-// const KMLData = '@/assets/MapData/My Maps/doc.kml'
+import xml from '@/assets/MapData/My Maps/PackingMarkerList/doc.xml'
+console.log(xml);
 
-// console.log(KMLData);
+const MapDataList = ref([])
 
+const findIcon = (iconMapId) => {
+  let icon = '';
+
+  for (const key in xml.kml.Document[0].StyleMap) {
+    let id = xml.kml.Document[0].StyleMap[key].$.id;
+    if(id == iconMapId.replace('#','')){
+      icon = xml.kml.Document[0].StyleMap[key].Pair[0].styleUrl[0];
+      break;
+    }
+  }
+
+  for (const key in xml.kml.Document[0].Style) {
+    let id = xml.kml.Document[0].Style[key].$.id;
+    if(id == icon.replace('#','')){
+      icon = xml.kml.Document[0].Style[key].IconStyle[0].Icon[0].href[0].replace('images/','');
+      break;
+    }
+  }
+
+  return icon;
+}
+
+const MapDataInit = () =>{
+  console.log(xml.kml.Document[0]);
+
+  let _cateData = xml.kml.Document[0].Folder.map((folder)=>{
+    return {
+      name: folder.name[0],
+      features: folder.Placemark.map((place)=>{
+        var parts = place.Point[0].coordinates[0].trim().split(',');
+        return {
+          properties:{
+            name: place.name[0],
+            description: place.description?place.description[0]:'',
+            icon: findIcon(place.styleUrl[0]),
+          },
+          geometry: {
+            coordinates: [parts[0],parts[1]]
+          }
+        }
+      }),
+    }
+  })
+
+  MapDataList.value = _cateData;
+
+  console.log(MapDataList.value);
+}
+
+
+const getIconImgUrl = (url) => {
+  if(url.match('http')){
+    return url;
+  }else{
+    return new URL(`/src/assets/MapData/My Maps/PackingMarkerList/images/${url}`, import.meta.url).href
+  }
+}
 
 const mapStyle = [
   {
@@ -32,21 +90,27 @@ const mapOptions = ref({
   mapStylesSelected: "mapbox://styles/jamestim9215/ckvkdj5cd1q4115nzwxa9rny3",
 })
 const windowMessageOpen = ref(true)
+const windowMobileFAQOpen = ref(false)
 const windowFAQOpen = ref(false)
 const menuActive = ref(false)
 const infoActive = ref(false)
 const parkingName = ref("")
 const parkingNameDes = ref("")
 const parkingType = ref("")
+const parkingIcon = ref("")
 
 const onSetParkingInfo = (data) => {
   console.log(data);
   parkingName.value = data.properties.name;
   parkingNameDes.value = data.properties.description;
   parkingType.value = data.name;
+  parkingIcon.value = getIconImgUrl(data.properties.icon);
   infoActive.value = true;
 }
 
+onMounted(() => {
+  MapDataInit()
+})
 
 
 </script>
@@ -68,10 +132,16 @@ const onSetParkingInfo = (data) => {
     {{ mapOptions.getLngLat ? "結束取得座標" : "手動取得座標" }}
   </button> -->
   <button
+    class="btn btnMobileFAQ"
+    @click="windowMobileFAQOpen ? (windowMobileFAQOpen = false) : (windowMobileFAQOpen = true)"
+  >
+    如何加入手機桌面?
+  </button>
+  <button
     class="btn btnFAQ"
     @click="windowFAQOpen ? (windowFAQOpen = false) : (windowFAQOpen = true)"
   >
-    如何加入手機桌面?
+    教學 地圖怎麼看?
   </button>
 
   
@@ -79,6 +149,7 @@ const onSetParkingInfo = (data) => {
   <pre id="coordinates" class="coordinates"></pre>
 
   <MapBox 
+    :mapDataList="MapDataList"
     :getLngLat="mapOptions.getLngLat"
     :mapStylesSelected="mapOptions.mapStylesSelected"
     @parkingInfo="onSetParkingInfo"
@@ -86,6 +157,88 @@ const onSetParkingInfo = (data) => {
 
   
   <div class="window-box-cover" v-if="windowFAQOpen">
+    <div class="window-box">
+      <h3 style="text-align: left">地圖怎麼看?</h3>
+      <h4 style="text-align: left">
+        圖案代表甚麼格位
+      </h4>
+      <h5 style="text-align: left">
+        <div class="faq-content">
+          <img src="@/assets/MapData/My Maps/PackingMarkerList/images/icon-1.png" alt="">
+          汽車：汽車格(含未確認是否有重機格)
+        </div>
+        <div class="faq-content">
+          <img src="@/assets/MapData/My Maps/PackingMarkerList/images/icon-3.png" alt="">
+          機(有人)：有設重機專用格
+        </div>
+        <div class="faq-content">
+          <img src="@/assets/MapData/My Maps/PackingMarkerList/images/icon-10.png" alt="">
+          機車(沒人)：機車格
+        </div>
+        <div class="faq-content">
+          <img src="@/assets/MapData/My Maps/PackingMarkerList/images/icon-16.png" alt="">
+          綠P：重機專用路邊停車格
+        </div>
+        <div class="faq-content">
+          <img src="@/assets/MapData/My Maps/PackingMarkerList/images/icon-17.png" alt="">
+          黃P：重機與汽車共享路邊停車格(黃P共享格不再更新，四輪爺不在乎，形同虛設)
+        </div>
+        <div class="faq-content">
+          <img src="@/assets/MapData/My Maps/PackingMarkerList/images/icon-18.png" alt="">
+          紫P：時段性汽機車共用停車格，注意使用時間喔!
+        </div>
+      </h5>
+      <br />
+      <h4 style="text-align: left">
+        顏色代表入場方式
+      </h4>
+      <h5 style="text-align: left">
+        <div class="faq-content">
+          <img src="@/assets/MapData/My Maps/PackingMarkerList/images/icon-1.png" alt="">
+          <img src="@/assets/MapData/My Maps/PackingMarkerList/images/icon-3.png" alt="">
+          <img src="@/assets/MapData/My Maps/PackingMarkerList/images/icon-10.png" alt="">
+          綠色最友善：有後牌辨析
+        </div>
+        <div class="faq-content">
+          <img src="@/assets/MapData/My Maps/PackingMarkerList/images/icon-6.png" alt="">
+          <img src="@/assets/MapData/My Maps/PackingMarkerList/images/icon-9.png" alt="">
+          <img src="@/assets/MapData/My Maps/PackingMarkerList/images/icon-13.png" alt="">
+          藍色最傳統：悠遊卡 或 按鈕取票
+        </div>
+        <div class="faq-content">
+          <img src="@/assets/MapData/My Maps/PackingMarkerList/images/icon-2.png" alt="">
+          <img src="@/assets/MapData/My Maps/PackingMarkerList/images/icon-5.png" alt="">
+          <img src="@/assets/MapData/My Maps/PackingMarkerList/images/icon-11.png" alt="">
+          紅色最靠北：按鈕請管理員協助 或 倒退嚕前牌辨析
+        </div>
+        <div class="faq-content">
+          <img src="@/assets/MapData/My Maps/PackingMarkerList/images/icon-7.png" alt="">
+          <img src="@/assets/MapData/My Maps/PackingMarkerList/images/icon-4.png" alt="">
+          <!-- <img src="@/assets/MapData/My Maps/PackingMarkerList/images/icon-10.png" alt=""> -->
+          灰色未確定：有可能是上述任何情況，有停到灰色的拜託表單回報
+        </div>
+      </h5>
+      <br />
+      <h4 style="text-align: left">
+        名稱前有價錢
+      </h4>
+      <h5 style="text-align: left">
+        <div class="faq-content">
+          <img src="@/assets/MapData/My Maps/PackingMarkerList/images/icon-3.png" alt="">
+          (30/h)三張里地下停車場
+        </div>
+        <div class="faq-content">
+          - 數字：金額，時段費率複雜的場地，會以最高收費標示<br>
+          - d/h：計費方式，d為計次，h為計時<br>
+          - Free 代表免錢        
+        </div>
+      </h5>
+      <br />
+      <button class="btn" @click="windowFAQOpen = false">確定</button>
+    </div>
+  </div>
+  
+  <div class="window-box-cover" v-if="windowMobileFAQOpen">
     <div class="window-box">
       <h3 style="margin-bottom: 15px; text-align: left">如何加入手機桌面?</h3>
       <br />
@@ -106,7 +259,7 @@ const onSetParkingInfo = (data) => {
         <br />
       </h4>
       <br />
-      <button class="btn" @click="windowFAQOpen = false">確定</button>
+      <button class="btn" @click="windowMobileFAQOpen = false">確定</button>
     </div>
   </div>
   <div class="window-box-cover" v-if="windowMessageOpen">
@@ -220,11 +373,14 @@ const onSetParkingInfo = (data) => {
       <div></div>
       <div></div>
     </div>
-    <h3 id="parkingLotTitle" style="padding: 0 25px 0 0"></h3>
-    <div>
+    <h3 id="parkingLotTitle" style="padding: 0 25px 0 0">
+      
       <!-- 名稱: -->
-      <div id="parkingName">{{ parkingName }}</div>
-    </div>
+      <div id="parkingName">
+        <img :src="parkingIcon" alt="">
+        {{ parkingName }}
+      </div>
+    </h3>
     <div v-if="parkingNameDes" style="margin-top: 5px;">
       <!-- 內容: -->
       <div v-html="parkingNameDes"></div>

@@ -1,20 +1,32 @@
-{"type":"FeatureCollection", "features":[
-{"type":"Feature","geometry":{"type":"Point","coordinates":[121.553563,25.0630499,0]},"properties":{"name":"(40/h | 630/d)松山機場臺北國際航空站第三停車場","description":"有重機辨識區 收費比照汽車"}},
-{"type":"Feature","geometry":{"type":"Point","coordinates":[120.2928885,23.1279449,0]},"properties":{"name":"(Free)凱比吉公園","description":"免費  無出入口管制"}},
-{"type":"Feature","geometry":{"type":"Point","coordinates":[121.4746157,25.0560805,0]},"properties":{"name":"(20/h | 120/d)新北市三重光復平面停車場","description":"汽車費率 20h 後牌辨析 12小時內最高120元"}},
-{"type":"Feature","geometry":{"type":"Point","coordinates":[120.970219,24.8071,0]},"properties":{"name":"(20/h) 俥亭停車府後地下停車場","description":"汽車費率 20h 倒退嚕"}},
-{"type":"Feature","geometry":{"type":"Point","coordinates":[121.5743909,25.0784192,0]},"properties":{"name":"(平40/h | 假20/h)大港墘公園地下停車場","description":"(沒誤植, 假日真的比較便宜)<br>大港墘公園地下停車場 汽車費率 40h 假日20h <br>後牌辨析 <br>專用格 2 格 或以上 正好停代管"}},
-{"type":"Feature","geometry":{"type":"Point","coordinates":[121.4483621,25.0008401,0]},"properties":{"name":"(20/h)板橋中山國小地下停車場"}},
-{"type":"Feature","geometry":{"type":"Point","coordinates":[121.4475827,25.0395491,0]},"properties":{"name":"(20/h)新莊國民運動中心停車場","description":"***倒退嚕進場***<br>感謝tonyX@ptt"}},
-{"type":"Feature","geometry":{"type":"Point","coordinates":[121.445523,25.167695,0]},"properties":{"name":"(平30/h | 假60/h) 捷運淡水站停車場","description":"教士2016年貼文下回覆，有大重專用車位及攝影機"}},
-{"type":"Feature","geometry":{"type":"Point","coordinates":[121.5264592,25.0522814,0]},"properties":{"name":"(30/h)林森公園地下停車場","description":"向3592 rebel車主致敬<br>您被撞倒也同時讓作者知道這裡可以停..."}},
-{"type":"Feature","geometry":{"type":"Point","coordinates":[121.5273067,25.0524352,0]},"properties":{"name":"(30/h)林森公園地下停車場(新生路入口)"}},
-{"type":"Feature","geometry":{"type":"Point","coordinates":[121.455153,25.0014859,0]},"properties":{"name":"(30/h)新北市立圖書館總館"}},
-{"type":"Feature","geometry":{"type":"Point","coordinates":[121.5660926,25.0558398,0]},"properties":{"name":"(30/h)西松高中地下停車場"}},
-{"type":"Feature","geometry":{"type":"Point","coordinates":[121.3103217,24.9799179,0]},"properties":{"name":"(30/h)陽明公園停車場","description":"按鈕取票, 一小時30, 半小時15"}},
-{"type":"Feature","geometry":{"type":"Point","coordinates":[121.511936,25.067167,0]},"properties":{"name":"(30/h)延平國小地下停車場","description":"相片有重機停車區"}},
-{"type":"Feature","geometry":{"type":"Point","coordinates":[121.2261388,24.9564135,0]},"properties":{"name":"(30/h)中央地下停車場","description":"汽車, 重機格 感謝PTT車友"}},
-{"type":"Feature","geometry":{"type":"Point","coordinates":[121.5784781,25.0483101,0]},"properties":{"name":"(平40/h | 假50/h | 300/d)松山車站地下停車場","description":"週一-四 40/H, 週五-日及假日50/H, 上限300/日<br>有後牌辨識 @PTT車友分享 2022年7月底<br>有重機專用格2格以上"}},
+{
+    "type":"FeatureCollection", 
+    "features":[
+        {
+            "type":"Feature",
+            "geometry":{
+                "type":"Point",
+                "coordinates":[121.553563,25.0630499,0]
+            },
+            "properties":{
+                "name":"(40/h | 630/d)松山機場臺北國際航空站第三停車場",
+                "description":"有重機辨識區 收費比照汽車"
+            }
+        },
+        {"type":"Feature","geometry":{"type":"Point","coordinates":[120.2928885,23.1279449,0]},"properties":{"name":"(Free)凱比吉公園","description":"免費  無出入口管制"}},
+        {"type":"Feature","geometry":{"type":"Point","coordinates":[121.4746157,25.0560805,0]},"properties":{"name":"(20/h | 120/d)新北市三重光復平面停車場","description":"汽車費率 20h 後牌辨析 12小時內最高120元"}},
+        {"type":"Feature","geometry":{"type":"Point","coordinates":[120.970219,24.8071,0]},"properties":{"name":"(20/h) 俥亭停車府後地下停車場","description":"汽車費率 20h 倒退嚕"}},
+        {"type":"Feature","geometry":{"type":"Point","coordinates":[121.5743909,25.0784192,0]},"properties":{"name":"(平40/h | 假20/h)大港墘公園地下停車場","description":"(沒誤植, 假日真的比較便宜)<br>大港墘公園地下停車場 汽車費率 40h 假日20h <br>後牌辨析 <br>專用格 2 格 或以上 正好停代管"}},
+        {"type":"Feature","geometry":{"type":"Point","coordinates":[121.4483621,25.0008401,0]},"properties":{"name":"(20/h)板橋中山國小地下停車場"}},
+        {"type":"Feature","geometry":{"type":"Point","coordinates":[121.4475827,25.0395491,0]},"properties":{"name":"(20/h)新莊國民運動中心停車場","description":"***倒退嚕進場***<br>感謝tonyX@ptt"}},
+        {"type":"Feature","geometry":{"type":"Point","coordinates":[121.445523,25.167695,0]},"properties":{"name":"(平30/h | 假60/h) 捷運淡水站停車場","description":"教士2016年貼文下回覆，有大重專用車位及攝影機"}},
+        {"type":"Feature","geometry":{"type":"Point","coordinates":[121.5264592,25.0522814,0]},"properties":{"name":"(30/h)林森公園地下停車場","description":"向3592 rebel車主致敬<br>您被撞倒也同時讓作者知道這裡可以停..."}},
+        {"type":"Feature","geometry":{"type":"Point","coordinates":[121.5273067,25.0524352,0]},"properties":{"name":"(30/h)林森公園地下停車場(新生路入口)"}},
+        {"type":"Feature","geometry":{"type":"Point","coordinates":[121.455153,25.0014859,0]},"properties":{"name":"(30/h)新北市立圖書館總館"}},
+        {"type":"Feature","geometry":{"type":"Point","coordinates":[121.5660926,25.0558398,0]},"properties":{"name":"(30/h)西松高中地下停車場"}},
+        {"type":"Feature","geometry":{"type":"Point","coordinates":[121.3103217,24.9799179,0]},"properties":{"name":"(30/h)陽明公園停車場","description":"按鈕取票, 一小時30, 半小時15"}},
+        {"type":"Feature","geometry":{"type":"Point","coordinates":[121.511936,25.067167,0]},"properties":{"name":"(30/h)延平國小地下停車場","description":"相片有重機停車區"}},
+        {"type":"Feature","geometry":{"type":"Point","coordinates":[121.2261388,24.9564135,0]},"properties":{"name":"(30/h)中央地下停車場","description":"汽車, 重機格 感謝PTT車友"}},
+        {"type":"Feature","geometry":{"type":"Point","coordinates":[121.5784781,25.0483101,0]},"properties":{"name":"(平40/h | 假50/h | 300/d)松山車站地下停車場","description":"週一-四 40/H, 週五-日及假日50/H, 上限300/日<br>有後牌辨識 @PTT車友分享 2022年7月底<br>有重機專用格2格以上"}},
 {"type":"Feature","geometry":{"type":"Point","coordinates":[121.52913,25.10988,0]},"properties":{"name":"(平30/h | 假40/h)蘭雅公園地下停車場","description":"平日30/H, 假日40/H, 有1個專用車格"}},
 {"type":"Feature","geometry":{"type":"Point","coordinates":[121.5155291,25.0554429,0]},"properties":{"name":"(30/h)蓬萊國小地下停車場","description":"30/H 寧夏夜市最佳, 有專用格"}},
 {"type":"Feature","geometry":{"type":"Point","coordinates":[121.5117184,25.0743147,0]},"properties":{"name":"(30/h)啟聰學校地下停車場","description":"30/H 有專用格"}},
