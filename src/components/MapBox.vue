@@ -167,10 +167,10 @@ const setMaker = () => {
 
 const setMakerInit = () => {
   map.value.on("dragend", () => {
-    setMaker();
+    if(props.goToParkingPlaceData == null) setMaker();
   });
   map.value.on("zoomend", () => {
-    setMaker();
+    if(props.goToParkingPlaceData == null) setMaker();
   });
 
   setMaker();
@@ -218,6 +218,13 @@ const setMap = () => {
       showUserHeading: true,
     })
   );
+
+  map.value.on('geolocate', function (e) {
+    var bearing = e.coords.heading;
+    map.value.easeTo({
+      bearing: bearing
+    });
+  });
 }
 
 
@@ -290,7 +297,7 @@ async function getRoute(start,end) {
   // an arbitrary start will always be the same
   // only the end or destination will change
   const query = await fetch(
-    `https://api.mapbox.com/directions/v5/mapbox/driving/${start[0]},${start[1]};${end[0]},${end[1]}?steps=true&geometries=geojson&access_token=${mapData.value.accessToken}`,
+    `https://api.mapbox.com/directions/v5/mapbox/driving/${start[0]},${start[1]};${end[0]},${end[1]}?steps=true&exclude=toll,motorway,ferry,cash_only_tolls&geometries=geojson&access_token=${mapData.value.accessToken}`,
     { method: 'GET' }
   );
   const json = await query.json();
@@ -341,16 +348,27 @@ const getUserLocation = (target) => {
       map.value.removeSource('point');
     }
 
-    let geocoding = mapData.value.userCoordinates[0] + "," + mapData.value.userCoordinates[1] + ';' + target[0] + ',' + target[1];
-    axios.get('https://api.mapbox.com/directions/v5/mapbox/driving/'+geocoding+'?geometries=geojson&exclude=toll,motorway,ferry,cash_only_tolls&access_token='+mapData.value.accessToken).then((response) => {
-      console.log(response);
+    //清除 target 以外的 marker
+    if (currentMarkers.value !== null) {
+      for (var i = currentMarkers.value.length - 1; i >= 0; i--) {
+        if(currentMarkers.value[i].getLngLat().lng != target[0] && currentMarkers.value[i].getLngLat().lat != target[1]){
+          currentMarkers.value[i].remove();
+        }
+        // currentMarkers.value[i].remove();
+      }
+    }
 
-      
+    // zoom beteween user and target
+    var bounds = [
+      [mapData.value.userCoordinates[0], mapData.value.userCoordinates[1]],
+      [target[0], target[1]]
+    ];
+    map.value.fitBounds(bounds, {
+      padding: { top: 100, bottom: 100, left: 100, right: 100 }
+    });
 
-      getRoute(mapData.value.userCoordinates,target);
-    }).catch((error) => {
-      console.log(error);
-    })
+
+    getRoute(mapData.value.userCoordinates,target);
   }else{
     if ("geolocation" in navigator) {
       navigator.geolocation.getCurrentPosition(successCallback,errorCallback);
@@ -369,6 +387,8 @@ const removeRoutes = () => {
     map.value.removeLayer('point');
     map.value.removeSource('point');
   }
+
+  setMaker();
 
   emits("update:goToParkingPlaceData", null);
   // setMap();
