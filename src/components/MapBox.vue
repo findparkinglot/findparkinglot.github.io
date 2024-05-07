@@ -281,7 +281,7 @@ async function getRoute(start,end) {
     },
     paint: {
       'circle-radius': 10,
-      'circle-color': '#3887be'
+      'circle-color': '#2ee7d6'
     }
   });
 
@@ -322,7 +322,7 @@ async function getRoute(start,end) {
         'line-cap': 'round'
       },
       paint: {
-        'line-color': '#3887be',
+        'line-color': '#2ee7d6',
         'line-width': 5,
         'line-opacity': 0.75
       }
@@ -342,7 +342,7 @@ const getUserLocation = (target) => {
     }
 
     let geocoding = mapData.value.userCoordinates[0] + "," + mapData.value.userCoordinates[1] + ';' + target[0] + ',' + target[1];
-    axios.get('https://api.mapbox.com/directions/v5/mapbox/driving/'+geocoding+'?geometries=geojson&exclude=toll&access_token='+mapData.value.accessToken).then((response) => {
+    axios.get('https://api.mapbox.com/directions/v5/mapbox/driving/'+geocoding+'?geometries=geojson&exclude=toll,motorway,ferry,cash_only_tolls&access_token='+mapData.value.accessToken).then((response) => {
       console.log(response);
 
       
