@@ -6,6 +6,8 @@ import mapboxgl from 'mapbox-gl';
 
 
 const props = defineProps({
+  parkingTypeKeyArray: Array,
+  degreeOfFriendlinessKeyArray: Array,
   mapDataList: Array,
   getLngLat: Boolean,
   mapStylesSelected: String
@@ -28,6 +30,24 @@ const mapData = ref({
 const lngLatMaker = ref(null)
 
 const currentMarkers = ref([])
+
+const isShowMarker = (icon) => {
+  let isShow = true;
+
+  //判斷 icon 同時出現在 parkingTypeKeyArray 與 degreeOfFriendlinessKeyArray
+  if (icon) {
+    if (
+      props.parkingTypeKeyArray.indexOf(icon) == -1 ||
+      props.degreeOfFriendlinessKeyArray.indexOf(icon) == -1
+    ) {
+      isShow = false;
+    }
+  } else {
+    isShow = false;
+  }
+  
+  return isShow;
+}
 
 const isMatchLngLat = (coordinates) => {
   // console.log("["+map.value.getBounds()._sw.lng+" , "+coordinates[0]+" , "+map.value.getBounds()._ne.lng+"]");
@@ -69,7 +89,8 @@ const setMaker = () => {
     // Add markers to the map.
     for (const marker of MapGroup.features) {
       if (
-        isMatchLngLat(marker.geometry.coordinates)
+        isMatchLngLat(marker.geometry.coordinates) &&
+        isShowMarker(marker.properties.icon)
       ) {
         // Create a DOM element for each marker.
         const el = document.createElement("div");
@@ -259,6 +280,14 @@ watch(() => props.getLngLat, (newVal, oldVal) => {
   if (props.getLngLat == true) {
     setLngLatMaker();
   }
+})
+
+watch(() => props.parkingTypeKeyArray, (newVal, oldVal) => {
+  setMaker();
+})
+
+watch(() => props.degreeOfFriendlinessKeyArray, (newVal, oldVal) => {
+  setMaker();
 })
 
 </script>

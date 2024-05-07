@@ -104,19 +104,165 @@ const windowMobileFAQOpen = ref(false)
 const windowFAQOpen = ref(false)
 const menuActive = ref(false)
 const infoActive = ref(false)
-const parkingName = ref("")
-const parkingNameDes = ref("")
-const parkingType = ref("")
-const parkingIcon = ref("")
+
+const ParkingInfo = ref({
+  parkingName: '',
+  parkingNameDes: '',
+  parkingType: '',
+  parkingIcon: ''
+})
 
 const onSetParkingInfo = (data) => {
   console.log(data);
-  parkingName.value = data.properties.name;
-  parkingNameDes.value = data.properties.description;
-  parkingType.value = data.name;
-  parkingIcon.value = getIconImgUrl(data.properties.icon);
+  ParkingInfo.value.parkingName = data.properties.name;
+  ParkingInfo.value.parkingNameDes = data.properties.description;
+  ParkingInfo.value.parkingType = data.name;
+  ParkingInfo.value.parkingIcon = getIconImgUrl(data.properties.icon);
   infoActive.value = true;
 }
+
+const parkingType = ref("")
+const parkingTypeList = ref([
+  {
+    name: "全部",
+    value: "",
+    key: [
+      "icon-1.png",
+      "icon-2.png",
+      "icon-3.png",
+      "icon-4.png",
+      "icon-5.png",
+      "icon-6.png",
+      "icon-7.png",
+      "icon-9.png",
+      "icon-10.png",
+      "icon-11.png",
+      "icon-13.png",
+      "icon-16.png",
+      "icon-17.png",
+      "icon-18.png",
+      "icon-19.png",
+    ]
+  },
+  {
+    name: "汽車：汽車格(含未確認是否有重機格)",
+    value: "car",
+    key: [
+      "icon-1.png",
+      "icon-6.png",
+      "icon-2.png",
+      "icon-7.png"
+    ]
+  },
+  {
+    name: "重機：有設重機專用格",
+    value: "motorcycle",
+    key: [
+      "icon-3.png",
+      "icon-4.png",
+      "icon-5.png",
+      "icon-9.png"
+    ]
+  },
+  {
+    name: "機車：機車格",
+    value: "scooter",
+    key: [
+      "icon-10.png",
+      "icon-11.png",
+      "icon-13.png",
+    ]
+  },
+  {
+    name: "綠P:重機專用路邊停車格",
+    value: "greenP",
+    key: [
+      "icon-16.png",
+    ]
+  },
+  {
+    name: "黃P:重機與汽車共享路邊停車格",
+    value: "yellowP",
+    key: [
+      "icon-17.png",
+    ]
+  },
+  {
+    name: "紫P:時段性汽機車共用停車格，注意使用時間喔!",
+    value: "purpleP",
+    key: [
+      "icon-18.png",
+    ]
+  },
+  {
+    name: "紅X:停都不給停",
+    value: "redX",
+    key: [
+      "icon-19.png",
+    ]
+  },
+
+])
+
+const degreeOfFriendliness = ref("")
+const degreeOfFriendlinessList = ref([
+  {
+    name: "全部",
+    value: "",
+    key: [
+      "icon-1.png",
+      "icon-2.png",
+      "icon-3.png",
+      "icon-4.png",
+      "icon-5.png",
+      "icon-6.png",
+      "icon-7.png",
+      "icon-9.png",
+      "icon-10.png",
+      "icon-11.png",
+      "icon-13.png",
+      "icon-16.png",
+      "icon-17.png",
+      "icon-18.png",
+      "icon-19.png",
+    ]
+  },
+  {
+    name: "最友善：有後牌辨析",
+    value: "friendly",
+    key: [
+      "icon-1.png",
+      "icon-3.png",
+      "icon-10.png",
+    ]
+  },
+  {
+    name: "最傳統：悠遊卡、按鈕取票",
+    value: "normal",
+    key: [
+      "icon-6.png",
+      "icon-9.png",
+      "icon-13.png",
+    ]
+  },
+  {
+    name: "最靠北：按鈕請管理員協助、前牌辨析",
+    value: "unfriendly",
+    key: [
+      "icon-2.png",
+      "icon-5.png",
+      "icon-11.png",
+    ]
+  },
+  {
+    name: "未確定",
+    value: "unknown",
+    key: [
+      "icon-7.png",
+      "icon-4.png",
+    ]
+  },
+])
 
 onMounted(() => {
   MapDataInit()
@@ -159,6 +305,8 @@ onMounted(() => {
   <pre id="coordinates" class="coordinates"></pre>
 
   <MapBox 
+    :parkingTypeKeyArray="parkingTypeList.filter((item)=>item.value == parkingType)[0].key"
+    :degreeOfFriendlinessKeyArray="degreeOfFriendlinessList.filter((item)=>item.value == degreeOfFriendliness)[0].key"
     :mapDataList="MapDataList"
     :getLngLat="mapOptions.getLngLat"
     :mapStylesSelected="mapOptions.mapStylesSelected"
@@ -196,6 +344,10 @@ onMounted(() => {
         <div class="faq-content">
           <img src="@/assets/MapData/My Maps/PackingMarkerList/images/icon-18.png" alt="">
           紫P：時段性汽機車共用停車格，注意使用時間喔!
+        </div>
+        <div class="faq-content">
+          <img src="@/assets/MapData/My Maps/PackingMarkerList/images/icon-19.png" alt="">
+          紅X：停都不給停
         </div>
       </h5>
       <br />
@@ -276,6 +428,7 @@ onMounted(() => {
       <button class="btn" @click="windowMobileFAQOpen = false">確定</button>
     </div>
   </div>
+
   <div class="window-box-cover" v-if="windowMessageOpen">
     <div class="window-box">
       <h3>
@@ -288,7 +441,7 @@ onMounted(() => {
 
         非常感謝各位車友與<b><a href="https://linktr.ee/hueythegentry" style="color: #2ee7d6" target="_blank">大重停車記</a></b> 
         整理與提供資料。
-        目前此停車地圖處於"<b style="color: #2ee7d6">測試階段</b>", 停車資訊僅供參考。停車資料預計每周更新一次。<br /><br />
+        目前此停車地圖處於"<b style="color: #2ee7d6">測試階段</b>", 停車資訊僅供參考。停車資料預計每周更新一次，功能陸續推出中。<br /><br />
 
         如有任何使用上的問題，
         請至"<b><a href="https://forms.gle/iJCyfqVtpL35WtZM7" style="color: #2ee7d6" target="_blank">錯誤資訊回報</a></b>"填寫表單‧<br /><br />
@@ -315,9 +468,38 @@ onMounted(() => {
     </div>
     <h3 style="padding: 0 25px 0 0">設定</h3>
 
-    <h5>地圖樣式</h5>
+    <h5>甚麼格位</h5>
     <select
-      style="width: 100%; margin-bottom: 0px"
+      style="width: 100%; margin-bottom: 10px"
+      v-model="parkingType"
+    >
+      <option
+        :value="key.value"
+        v-for="(key, index) in parkingTypeList"
+        :key="index"
+      >
+        {{ key.name }}
+      </option>
+    </select>
+
+    <h5>友善程度</h5>
+    <select
+      style="width: 100%; margin-bottom: 10px"
+      v-model="degreeOfFriendliness"
+    >
+      <option
+        :value="key.value"
+        v-for="(key, index) in degreeOfFriendlinessList"
+        :key="index"
+      >
+        {{ key.name }}
+      </option>
+    </select>
+
+
+    <h5>地圖顏色</h5>
+    <select
+      style="width: 100%; margin-bottom: 10px"
       :value="mapOptions.mapStylesSelected"
       v-model="mapOptions.mapStylesSelected"
     >
@@ -330,7 +512,7 @@ onMounted(() => {
       </option>
     </select>
 
-    <h5 style="padding: 10px 0 0 0">停車場資料來源</h5>
+    <h5 style="padding: 0">停車場資料來源</h5>
     <a href="https://linktr.ee/hueythegentry" target="_blank">
       <button class="btn" style="
         font-size: 12px;
@@ -361,6 +543,12 @@ onMounted(() => {
         (重機能停哪?) Web錯誤資訊回報
       </button></a
     >
+
+    <h5 style="padding: 10px 0 0 0">資訊</h5>
+    <p style="color: #ccc;font-size: 12px;">版本資訊：v1.0.0</p>
+    <p style="color: #ccc;font-size: 12px;">Web製作：爽爽</p>
+    <p style="color: #ccc;font-size: 12px;">資料參考：大重停車記事 google my map資料</p>
+    <p style="color: #ccc;font-size: 12px;">版權宣告：© 2024 爽爽 版權所有。本網頁未經准許，禁止任何商業行為</p>
 
     <!-- <ins
       class="adsbygoogle"
@@ -394,16 +582,16 @@ onMounted(() => {
       
       <!-- 名稱: -->
       <div id="parkingName">
-        <img :src="parkingIcon" alt="">
-        {{ parkingName }}
+        <img :src="ParkingInfo.parkingIcon" alt="">
+        {{ ParkingInfo.parkingName }}
       </div>
     </h3>
-    <div v-if="parkingNameDes" style="margin-top: 5px;">
+    <div v-if="ParkingInfo.parkingNameDes" style="margin-top: 5px;">
       <!-- 內容: -->
-      <div v-html="parkingNameDes"></div>
+      <div v-html="ParkingInfo.parkingNameDes"></div>
     </div>
     <div style="margin-top: 5px;color: #666;font-size: 12px;">
-      {{ parkingType }}
+      {{ ParkingInfo.parkingType }}
     </div>
   </div>
 </template>
