@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, ref } from 'vue'
+import { onMounted, ref, watch } from 'vue'
 import MapBox from './components/MapBox.vue'
 
 import xml from '@/assets/MapData/My Maps/PackingMarkerList/doc.xml'
@@ -104,6 +104,7 @@ const windowMobileFAQOpen = ref(false)
 const windowFAQOpen = ref(false)
 const menuActive = ref(false)
 const infoActive = ref(false)
+const stepsOpen = ref(false)
 
 const ParkingInfo = ref({
   parkingName: '',
@@ -267,14 +268,24 @@ const degreeOfFriendlinessList = ref([
 ])
 
 const goToParkingPlaceData = ref(null);
+const routeData = ref(null)
 
 const goToParkingPlace = (geometry) => {
   goToParkingPlaceData.value = geometry;
   infoActive.value = false;
+  routeData.value = null;
 }
 
 onMounted(() => {
   MapDataInit()
+})
+
+watch(() => routeData.value , (val) => {
+  if(val!=null){
+    stepsOpen.value = true;
+  }else{
+    stepsOpen.value = false;
+  }
 })
 
 
@@ -320,8 +331,31 @@ onMounted(() => {
     :getLngLat="mapOptions.getLngLat"
     :mapStylesSelected="mapOptions.mapStylesSelected"
     v-model:goToParkingPlaceData="goToParkingPlaceData"
+    v-model:routeData="routeData"
     @parkingInfo="onSetParkingInfo"
   />
+
+  <!-- 路線 -->
+  <div class="mainInfoBox mainInfoBox2" :class="stepsOpen ? 'active' : ''" style="z-index:1000">
+    <div
+      class="menuBtn"
+      @click="stepsOpen ? (stepsOpen = false) : (stepsOpen = true)"
+      :class="stepsOpen ? 'active' : ''"
+      v-show="stepsOpen"
+    >
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <h3 style="padding: 0 25px 0 0">路線</h3>
+    <h5>步驟</h5>
+    <ol style="padding-inline-start: 20px;" v-if="routeData">
+      <li v-for="(step, index) in routeData.legs[0].steps" :key="index" style="color:#ccc;font-size: 14px; padding: 4px 0" >
+        {{ step.maneuver.instruction}}
+      </li>
+    </ol>
+    <button class="btn clearLineRoute" @click="goToParkingPlaceData=null;stepsOpen=false">取消路線規劃</button>
+  </div>
 
   <!-- 教學 -->
   <div class="window-box-cover" v-if="windowFAQOpen">
@@ -613,16 +647,26 @@ onMounted(() => {
 
 <style scoped>
 
-  .gotoBtn-div{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0 0 ;
-    color: #666;
-  }
-  .gotoBtn-div>button{
-    font-size: 12px;
-    padding: 4px 6px;
-    margin: 0;
-  }
+.gotoBtn-div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0 0 ;
+  color: #666;
+}
+.gotoBtn-div>button{
+  font-size: 12px;
+  padding: 4px 6px;
+  margin: 0;
+}
+
+
+.clearLineRoute{
+  position: relative;
+  float: right;
+  font-size: 12px;
+  padding: 4px 6px;
+  margin: 0;
+}
+
 </style>

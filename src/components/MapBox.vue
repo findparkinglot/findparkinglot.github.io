@@ -12,8 +12,9 @@ const props = defineProps({
   getLngLat: Boolean,
   mapStylesSelected: String,
   goToParkingPlaceData: Object,
+  routeData: Object,
 })
-const emits = defineEmits(["parkingInfo","update:goToParkingPlaceData"]);
+const emits = defineEmits(["parkingInfo","update:goToParkingPlaceData","update:routeData"]);
 
 
 const map = ref(null)
@@ -300,7 +301,7 @@ async function getRoute(start,end) {
   // an arbitrary start will always be the same
   // only the end or destination will change
   const query = await fetch(
-    `https://api.mapbox.com/directions/v5/mapbox/driving/${start[0]},${start[1]};${end[0]},${end[1]}?steps=true&exclude=toll,motorway,ferry,cash_only_tolls&geometries=geojson&access_token=${mapData.value.accessToken}`,
+    `https://api.mapbox.com/directions/v5/mapbox/driving/${start[0]},${start[1]};${end[0]},${end[1]}?alternatives=false&language=en&overview=full&steps=true&exclude=toll,motorway,ferry,cash_only_tolls&geometries=geojson&access_token=${mapData.value.accessToken}`,
     { method: 'GET' }
   );
   const json = await query.json();
@@ -314,6 +315,7 @@ async function getRoute(start,end) {
       coordinates: route
     }
   };
+  emits("update:routeData", data);
   // if the route already exists on the map, we'll reset it using setData
   if (map.value.getSource('route')) {
     map.value.getSource('route').setData(geojson);
@@ -337,6 +339,7 @@ async function getRoute(start,end) {
         'line-opacity': 0.75
       }
     });
+
   }
   // add turn instructions here at the end
 }
@@ -414,6 +417,8 @@ onMounted(()=>{
 watch(() => props.goToParkingPlaceData, (newVal, oldVal) => {
   if (newVal !== null) {
     getUserLocation(newVal);
+  }else{
+    removeRoutes();
   }
 })
 
@@ -444,17 +449,7 @@ watch(() => props.degreeOfFriendlinessKeyArray, (newVal, oldVal) => {
 
 <template>
   <div id="map"></div>
-  <button class="btn clearLineRoute" @click="removeRoutes()" v-if="props.goToParkingPlaceData">取消路線規劃</button>
 </template>
 
 <style scoped>
-  .clearLineRoute{
-    position: absolute;
-    bottom: 30px;
-    right: 0px;
-    z-index: 999;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
 </style>
