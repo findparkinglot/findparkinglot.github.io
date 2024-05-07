@@ -91,9 +91,9 @@ const mapOptions = ref({
 })
 const windowMessageOpen = ref(true)
 
-if(localStorage.getItem('isReadFirstMessage') && localStorage.getItem('isReadFirstMessage') == 'true'){
-  windowMessageOpen.value = false;
-}
+// if(localStorage.getItem('isReadFirstMessage') && localStorage.getItem('isReadFirstMessage') == 'true'){
+//   windowMessageOpen.value = false;
+// }
 
 const closeMesBox = () => {
   windowMessageOpen.value = false;
@@ -254,18 +254,21 @@ onMounted(() => {
       <h3 style="margin-bottom: 15px; text-align: left">如何加入手機桌面?</h3>
       <br />
       <h4 style="text-align: left">
-        p.s.<br />以下以IOS為範例 安卓系統大同小異 <br /><br />
+        p.s.以下以IOS為範例<br /><br />
 
-        Step 1. 使用 Safari 開啟網站 並點擊下方分享按鈕
+        1. 使用 Safari 開啟網站 並點擊下方分享按鈕
         <img width="100%" src="@/assets/images/ios_01.jpg" alt="" />
         <br />
-        Step 2. 加入主畫面
+        <br />
+        2. 加入主畫面
         <img width="100%" src="@/assets/images/ios_02.jpg" alt="" />
         <br />
-        Step 3. 儲存
+        <br />
+        3. 儲存
         <img width="100%" src="@/assets/images/ios_03.jpg" alt="" />
         <br />
-        Step 4. 即可在桌面開啟 並無網頁狀態列
+        <br />
+        4. 即可在桌面開啟 並無網頁狀態列
         <img width="100%" src="@/assets/images/ios_04.jpg" alt="" />
         <br />
       </h4>
@@ -275,37 +278,25 @@ onMounted(() => {
   </div>
   <div class="window-box-cover" v-if="windowMessageOpen">
     <div class="window-box">
-      <h3 style="margin-bottom: 15px; text-align: left">
-        嗨!歡迎使用 <b style="color: #2ee7d6">重機能停哪?</b> <br /><br />
-        目前此停車地圖處於"<b style="color: #2ee7d6">測試階段</b>", 停車資訊僅供參考。<br />
-        非常感謝各位車友與<b><a href="https://linktr.ee/hueythegentry" style="color: #2ee7d6" target="_blank">大重停車記</a></b>停車資料。<br />
-
-        <!-- 目前資料處於 "<b style="color: #2ee7d6">測試階段</b>" ，
-        除了有圖片的地點， 其餘地點皆為"<b style="color: #2ee7d6">僅供參考</b
-        >"， 歡迎車友們可以使用<b
-          ><a
-            href="https://forms.gle/iJCyfqVtpL35WtZM7"
-            style="color: #2ee7d6"
-            target="_blank"
-            >錯誤資訊回報</a
-          ></b
-        >或是<b
-          ><a
-            href="https://forms.gle/siWoYMo9PtxAk38w9"
-            style="color: #2ee7d6"
-            target="_blank"
-            >提供停車場資訊</a
-          ></b
-        >表單， 有了大家的幫忙! 以後就能方便車友們查詢到正確的地點停車~<br /><br /> -->
-
-        <!-- p.s.<br />
-        目前規劃 此系統免費提供給大家使用!!<br /> -->
-        <!-- 如果覺得不錯，可以請我喝杯<a href="https://paypal.me/jamestim9215?country.x=TW&locale.x=zh_TW" style="color:#2ee7d6" target="_blank">咖啡</a>‧<br><br> -->
-        <!-- 如果覺得不錯，可以請我喝杯<a href="https://payment.opay.tw/Broadcaster/Donate/C9169C214B7D9633A239CBB7D3CB9251" style="color:#2ee7d6" target="_blank">咖啡</a>‧<br><br> -->
-
-
-        謝謝!
+      <h3>
+        嗨!歡迎使用
       </h3>
+      <h2>
+        重機能停哪?
+      </h2>
+      <h4 style="margin: 15px 0; text-align: left">
+
+        非常感謝各位車友與<b><a href="https://linktr.ee/hueythegentry" style="color: #2ee7d6" target="_blank">大重停車記</a></b> 
+        整理與提供資料。
+        目前此停車地圖處於"<b style="color: #2ee7d6">測試階段</b>", 停車資訊僅供參考。停車資料預計每周更新一次。<br /><br />
+
+        如有任何使用上的問題，
+        請至"<b><a href="https://forms.gle/iJCyfqVtpL35WtZM7" style="color: #2ee7d6" target="_blank">錯誤資訊回報</a></b>"填寫表單‧<br /><br />
+        
+        停車場資訊相關問題，請至 "<b><a href="https://docs.google.com/forms/d/e/1FAIpQLSdnEyoJJlxGxKhf1UmZ_6pfMrjOiidD2SkvV5ZKFDFrQ6AvdA/viewform" style="color: #2ee7d6" target="_blank">大重停車記事 回報表單</a></b>" 填寫。<br /><br />
+        
+        感謝各位車友的幫忙!<br /><br />
+        </h4>
 
       <button class="btn" @click="closeMesBox()">確定</button>
     </div>
@@ -339,7 +330,7 @@ onMounted(() => {
       </option>
     </select>
 
-    <h5 style="padding: 10px 0 0 0">資料來源</h5>
+    <h5 style="padding: 10px 0 0 0">停車場資料來源</h5>
     <a href="https://linktr.ee/hueythegentry" target="_blank">
       <button class="btn" style="
         font-size: 12px;
@@ -349,17 +340,27 @@ onMounted(() => {
       </button>
     </a>
 
+    <h5 style="padding: 10px 0 0 0">問題回報</h5>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdnEyoJJlxGxKhf1UmZ_6pfMrjOiidD2SkvV5ZKFDFrQ6AvdA/viewform" target="_blank">
+      <button class="btn" style="
+        font-size: 12px;
+        padding: 6px 8px;
+        margin: 0 5px 5px 0">
+        大重停車記事 回報表單
+      </button>
+    </a>
+
     <!-- <h5 style="margin-top: 10px; margin-bottom: 10px">回報</h5> -->
     <!-- <a href="https://forms.gle/siWoYMo9PtxAk38w9" target="_blank"
       ><button class="btn" style="font-size: 10px; margin: 0 5px 5px 0">
         提供停車場資訊
       </button></a
     > -->
-    <!-- <a href="https://forms.gle/iJCyfqVtpL35WtZM7" target="_blank"
-      ><button class="btn" style="font-size: 10px; margin: 0 5px 5px 0">
-        錯誤資訊回報
+    <a href="https://forms.gle/iJCyfqVtpL35WtZM7" target="_blank"
+      ><button class="btn" style="font-size: 12px;padding: 6px 8px;margin: 0 5px 5px 0">
+        (重機能停哪?) Web錯誤資訊回報
       </button></a
-    > -->
+    >
 
     <!-- <ins
       class="adsbygoogle"
