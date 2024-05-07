@@ -156,10 +156,11 @@ h2,h3,h4,h5,h6,p{
   border-radius: 10px;
   padding: 10px;
   z-index: 999;
-  left: -420px;
+  left: 0;
+  transform: translate(-100%, 0);
   top: 60px;
-  width: calc(420px - 20px);
-  max-width: calc(100% - 20px);
+  width: calc(100% - 40px);
+  max-width: 420px;
   height: auto;
   max-height: calc(100dvh - 120px);
   background: #141d1f;
@@ -173,21 +174,23 @@ h2,h3,h4,h5,h6,p{
   /* top: 180px; */
   top: 60px;
   left: auto;
-  right: -420px;
+  right: 0;
+  transform: translate(100%, 0);
   min-height: 100px;
   color: #ccc;
-  /* max-height: calc(100vh - 240px); */
   max-height: calc(100dvh - 120px);
   overflow: hidden;
   overflow-y: auto;
 }
 .mainInfoBox.active{
   left: 10px;
+  transform: translate(0, 0);
 }
 
 .mainInfoBox2.active{
   left: auto;
   right: 10px;
+  transform: translate(0, 0);
 }
 
 
