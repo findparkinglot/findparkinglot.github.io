@@ -337,7 +337,7 @@ watch(() => routeData.value , (val) => {
 
   <!-- 路線 -->
   <div class="mainInfoBox mainInfoBox2" :class="stepsOpen ? 'active' : ''" style="z-index:1000">
-    <div
+    <!-- <div
       class="menuBtn"
       @click="stepsOpen ? (stepsOpen = false) : (stepsOpen = true)"
       :class="stepsOpen ? 'active' : ''"
@@ -346,10 +346,10 @@ watch(() => routeData.value , (val) => {
       <div></div>
       <div></div>
       <div></div>
-    </div>
+    </div> -->
     <h3 style="padding: 0 25px 0 0">路線</h3>
     <h5>步驟</h5>
-    <ol style="padding-inline-start: 20px;" v-if="routeData">
+    <ol style="padding-inline-start: 20px;max-height: 150px;overflow: hide;overflow-y:auto" v-if="routeData">
       <li v-for="(step, index) in routeData.legs[0].steps" :key="index" style="color:#ccc;font-size: 14px; padding: 4px 0" >
         {{ step.maneuver.instruction}}
       </li>
