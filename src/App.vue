@@ -508,16 +508,25 @@ watch(() => routeData.value , (val) => {
       </h2>
       <h4 style="margin: 15px 0; text-align: left">
 
-        非常感謝各位車友與<b><a href="https://linktr.ee/hueythegentry" style="color: #2ee7d6" target="_blank">大重停車記事</a></b> 
-        整理與提供資料。
-        目前此停車地圖處於"<b style="color: #2ee7d6">測試階段</b>", 停車資訊僅供參考。停車資料預計每周更新一次，功能陸續推出中。<br /><br />
+        這是一個提供重機停車資訊的地圖，<br />
+        你可以檢視路線規劃，可以根據你選擇的停車場開啟GOOGLE或APPLE MAP導航。
+        方便你前往停車場。<br /><br />
+        
+        目前此停車地圖處於"<b style="color: #2ee7d6">測試階段</b>", 停車資訊僅供參考。停車資料預計每周或每月不定期更新，功能陸續推出。<br /><br />
+
+        資料取源於<b><a href="https://linktr.ee/hueythegentry" style="color: #2ee7d6" target="_blank">大重停車記事</a></b>，
+        非常感謝大大們的努力，讓我們有更多的停車位資訊。<br /><br />
 
         如有任何使用上的問題，
         請至"<b><a href="https://forms.gle/iJCyfqVtpL35WtZM7" style="color: #2ee7d6" target="_blank">錯誤資訊回報</a></b>"填寫表單‧<br /><br />
         
-        停車場資訊相關問題，請至 "<b><a href="https://docs.google.com/forms/d/e/1FAIpQLSdnEyoJJlxGxKhf1UmZ_6pfMrjOiidD2SkvV5ZKFDFrQ6AvdA/viewform" style="color: #2ee7d6" target="_blank">大重停車記事 回報表單</a></b>" 填寫。<br /><br />
+        此站只提供停車訊，如有停車場資訊相關問題，請至 "<b><a href="https://linktr.ee/hueythegentry" style="color: #2ee7d6" target="_blank">大重停車記事</a></b>" 填寫回報表單。<br /><br />
         
-        感謝各位車友的幫忙!<br /><br />
+        感謝各位車友的幫忙!<br />
+        一起打造更好的停車環境!<br /><br />
+
+        非常感謝您的使用，祝您停車愉快！<br />
+        by 爽爽
         </h4>
 
       <button class="btn" @click="closeMesBox()">確定</button>
@@ -617,6 +626,7 @@ watch(() => routeData.value , (val) => {
     <p style="color: #ccc;font-size: 12px;">版本資訊：v1.0.0</p>
     <p style="color: #ccc;font-size: 12px;">Web製作：爽爽</p>
     <p style="color: #ccc;font-size: 12px;">資料參考：大重停車記事 google my map資料</p>
+    <p style="color: #ccc;font-size: 12px;">地圖API：Mapbox GL JS API</p>
     <p style="color: #ccc;font-size: 12px;">版權宣告：© 2024 爽爽 版權所有。本網頁未經准許，禁止任何商業行為</p>
 
     <!-- <ins
