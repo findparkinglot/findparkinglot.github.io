@@ -7,6 +7,7 @@ import xml from '@/assets/MapData/My Maps/PackingMarkerList/doc.xml'
 
 const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
 
+const isApple = /iPhone|iPad|iPod/i.test(navigator.userAgent)
 
 const MapDataList = ref([])
 
@@ -680,7 +681,7 @@ watch(() => routeData.value , (val) => {
     </div>
     <div class="gotoBtn-div">
       <button class="btn" @click="openInMap('google',ParkingInfo.geometry)">在Google Map開啟</button>
-      <button class="btn" @click="openInMap('apple',ParkingInfo.geometry)" v-if="isMobile">在Apple Map開啟</button>
+      <button class="btn" @click="openInMap('apple',ParkingInfo.geometry)" v-if="isMobile && isApple">在Apple Map開啟</button>
       <button class="btn" @click="goToParkingPlace(ParkingInfo.geometry)" v-if="goToParkingPlaceData==null">路線規劃</button>
     </div>
   </div>
