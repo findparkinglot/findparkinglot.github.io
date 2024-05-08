@@ -483,7 +483,7 @@ watch(() => routeData.value , (val) => {
       </h2>
       <h4 style="margin: 15px 0; text-align: left">
 
-        非常感謝各位車友與<b><a href="https://linktr.ee/hueythegentry" style="color: #2ee7d6" target="_blank">大重停車記</a></b> 
+        非常感謝各位車友與<b><a href="https://linktr.ee/hueythegentry" style="color: #2ee7d6" target="_blank">大重停車記事</a></b> 
         整理與提供資料。
         目前此停車地圖處於"<b style="color: #2ee7d6">測試階段</b>", 停車資訊僅供參考。停車資料預計每周更新一次，功能陸續推出中。<br /><br />
 
