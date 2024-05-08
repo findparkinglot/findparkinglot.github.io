@@ -276,6 +276,16 @@ const goToParkingPlace = (geometry) => {
   routeData.value = null;
 }
 
+const openInMap = (type,geometry) => {
+  let url = '';
+  if(type == 'apple'){
+    url = `http://maps.apple.com/?daddr=${geometry[1]},${geometry[0]}&dirflg=d&t=m`
+  }else if(type == 'google'){
+    url = `https://www.google.com/maps/dir/?api=1&destination=${geometry[1]},${geometry[0]}&travelmode=driving`
+  }
+  window.open(url, '_blank');
+}
+
 onMounted(() => {
   MapDataInit()
 })
@@ -638,8 +648,13 @@ watch(() => routeData.value , (val) => {
       {{ ParkingInfo.parkingType }}
     </div>
 
-    <div class="gotoBtn-div">
+    <div class="gotoBtn-div" style="font-size: 10px;">
       {{ ParkingInfo.geometry[0] }},{{ ParkingInfo.geometry[1] }}
+    </div>
+
+    <div class="gotoBtn-div">
+      <button class="btn" @click="openInMap('google',ParkingInfo.geometry)">在Google Map開啟</button>
+      <button class="btn" @click="openInMap('apple',ParkingInfo.geometry)">在Apple Map開啟</button>
       <button class="btn" @click="goToParkingPlace(ParkingInfo.geometry)" v-if="goToParkingPlaceData==null">路線規劃</button>
     </div>
   </div>
