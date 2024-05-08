@@ -103,6 +103,13 @@ const setMaker = () => {
         // el.style.height = `${height}px`;
         // el.style.visibility = '';
 
+        // marker fade in
+        el.style.opacity = 0;
+        setTimeout(() => {
+          el.style.opacity = 1;
+        }, 200);
+
+
         const tag = document.createElement("div");
         tag.className = "tag";
         const img = document.createElement("div");
