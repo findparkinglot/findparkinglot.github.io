@@ -108,6 +108,7 @@ const windowFAQOpen = ref(false)
 const menuActive = ref(false)
 const infoActive = ref(false)
 const stepsOpen = ref(false)
+const stepShow = ref(true)
 
 const ParkingInfo = ref({
   parkingName: '',
@@ -363,13 +364,22 @@ watch(() => routeData.value , (val) => {
       <div></div>
     </div> -->
     <h3 style="padding: 0 25px 0 0">路線</h3>
-    <h5>步驟</h5>
-    <ol style="padding-inline-start: 20px;max-height: 150px;overflow: hide;overflow-y:auto" v-if="routeData">
+    
+    <div style="display: flex;justify-content: space-between; margin-top: 10px">
+      <h5>步驟</h5>
+      <span class="material-icons-outlined" @click="stepShow=false" v-if="stepShow">
+      expand_more
+      </span>
+      <span class="material-icons-outlined" @click="stepShow=true" v-else>
+      expand_less
+      </span>
+    </div>
+    <ol style="margin-top:0;background-color:#111;padding: 5px 0;padding-inline-start: 25px;max-height: 150px;overflow: hide;overflow-y:auto" v-if="routeData" :style="stepShow?'max-height: 35px;':''">
       <li v-for="(step, index) in routeData.legs[0].steps" :key="index" style="color:#ccc;font-size: 14px; padding: 4px 0" >
         {{ step.maneuver.instruction}}
       </li>
     </ol>
-    <button class="btn clearLineRoute" @click="goToParkingPlaceData=null;stepsOpen=false">取消路線規劃</button>
+      <button class="btn clearLineRoute" @click="goToParkingPlaceData=null;stepsOpen=false">取消路線規劃</button>
   </div>
 
   <!-- 教學 -->
