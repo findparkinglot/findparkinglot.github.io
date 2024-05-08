@@ -138,13 +138,29 @@ const setMaker = () => {
             // this animation is considered essential with respect to prefers-reduced-motion
             essential: true,
           });
-          var data = {
-            name: MapGroup.name,
-            properties: marker.properties,
-            geometry: marker.geometry.coordinates,
-          }
 
-          emits("parkingInfo", data);
+          axios.get('https://api.mapbox.com/search/geocode/v6/reverse?longitude='+marker.geometry.coordinates[0]+'&latitude='+marker.geometry.coordinates[1]+'&limit=1&access_token='+mapData.value.accessToken).then(function (addressData) {
+
+            var data = {
+              name: MapGroup.name,
+              properties: marker.properties,
+              geometry: marker.geometry.coordinates,
+              address: addressData.data.features[0].properties.full_address
+            }
+
+            emits("parkingInfo", data);
+
+          }).catch(function (error) {
+            console.log(error);
+            var data = {
+              name: MapGroup.name,
+              properties: marker.properties,
+              geometry: marker.geometry.coordinates,
+              address: ''
+            }
+
+            emits("parkingInfo", data);
+          });
 
           // window.alert(marker.properties.info);
         });

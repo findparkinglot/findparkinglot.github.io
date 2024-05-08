@@ -111,7 +111,8 @@ const ParkingInfo = ref({
   parkingNameDes: '',
   parkingType: '',
   parkingIcon: '',
-  geometry: [null,null]
+  geometry: [null,null],
+  address: '',
 })
 
 const onSetParkingInfo = (data) => {
@@ -121,6 +122,7 @@ const onSetParkingInfo = (data) => {
   ParkingInfo.value.parkingType = data.name;
   ParkingInfo.value.parkingIcon = getIconImgUrl(data.properties.icon);
   ParkingInfo.value.geometry = data.geometry;
+  ParkingInfo.value.address = data.address;
   infoActive.value = true;
 }
 
@@ -644,14 +646,15 @@ watch(() => routeData.value , (val) => {
       <!-- 內容: -->
       <div v-html="ParkingInfo.parkingNameDes"></div>
     </div>
-    <div style="margin-top: 5px;color: #666;font-size: 12px;">
-      {{ ParkingInfo.parkingType }}
+
+    <div style="font-size: 12px;margin-top: 5px;color: #999;">
+      {{ ParkingInfo.address }}
     </div>
 
-    <div class="gotoBtn-div" style="font-size: 10px;">
-      {{ ParkingInfo.geometry[0] }},{{ ParkingInfo.geometry[1] }}
+    <div class="gotoBtn-div" style="color: #666;font-size: 12px;">
+      <span>{{ ParkingInfo.parkingType }}</span>
+      <span>[{{ ParkingInfo.geometry[0] }},{{ ParkingInfo.geometry[1] }}]</span>
     </div>
-
     <div class="gotoBtn-div">
       <button class="btn" @click="openInMap('google',ParkingInfo.geometry)">在Google Map開啟</button>
       <button class="btn" @click="openInMap('apple',ParkingInfo.geometry)">在Apple Map開啟</button>
