@@ -660,7 +660,7 @@ watch(() => routeData.value , (val) => {
     <p style="color: #ccc;font-size: 12px;">版權宣告：© 2024 爽爽 版權所有。本網頁未經准許，禁止任何商業行為</p>
     <a href="https://buymeacoffee.com/jamestim923" target="_blank">
       <button class="btn" style="font-size: 12px;padding: 6px 8px;margin: 0 5px 5px 0">
-        Buy me a coffee ☕️
+        請我喝杯咖啡 ☕️，讓我有動力繼續更新
       </button>
     </a>
 
