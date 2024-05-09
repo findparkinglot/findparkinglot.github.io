@@ -510,10 +510,12 @@ watch(() => routeData.value , (val) => {
       <h4 style="margin: 15px 0; text-align: left">
 
         這是一個提供重機停車資訊的地圖，<br />
-        你可以檢視路線規劃，可以根據你選擇的停車場開啟GOOGLE或APPLE MAP導航。
+        你可以依據分類"友善程度"、"停車格類型"尋找合適的停車場，且可查看路線規劃，根據你選擇的停車場開啟GOOGLE或APPLE MAP導航。
         方便你前往停車場。<br /><br />
         
-        目前此停車地圖處於"<b style="color: #2ee7d6">測試階段</b>", 停車資訊僅供參考。停車資料預計每周或每月不定期更新，功能陸續推出。<br /><br />
+        目前此停車地圖處於"<b style="color: #2ee7d6">測試階段</b>",停車資訊僅供參考。停車資料預計每周或每月不定期更新，功能陸續推出。<br /><br />
+
+        使用地圖API(免費方案)，回應有次數限制，如發生無法使用地圖的情況，則代表測試結束。<br /><br />
 
         資料取源於<b><a href="https://linktr.ee/hueythegentry" style="color: #2ee7d6" target="_blank">大重停車記事</a></b>，
         非常感謝大大們的努力，讓我們有更多的停車位資訊。<br /><br />
