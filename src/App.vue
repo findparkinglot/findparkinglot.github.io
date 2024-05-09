@@ -548,8 +548,8 @@ watch(() => routeData.value , (val) => {
 
         資料取源於<b><a href="https://linktr.ee/hueythegentry" style="color: #2ee7d6" target="_blank">大重停車記事</a></b>，
         非常感謝大大們的努力，讓我們有更多的停車位資訊。
-        此站只提供停車訊，如有停車場資訊相關問題，請至 "<b><a href="https://linktr.ee/hueythegentry" style="color: #2ee7d6" target="_blank">大重停車記事</a></b>" 填寫回報表單。
-        如有任何使用上的問題，請至"<b><a href="https://forms.gle/iJCyfqVtpL35WtZM7" style="color: #2ee7d6" target="_blank">錯誤資訊回報</a></b>"填寫表單‧
+        此站只提供停車場資訊，如有停車場相關問題，請至 "<b><a href="https://linktr.ee/hueythegentry" style="color: #2ee7d6" target="_blank">大重停車記事</a></b>" 填寫回報表單。
+        如有任何此網站使用上的問題，請至"<b><a href="https://forms.gle/iJCyfqVtpL35WtZM7" style="color: #2ee7d6" target="_blank">錯誤資訊回報</a></b>"填寫表單‧
         <br /><br />
         感謝各位車友的幫忙!<br />
         一起打造更好的停車環境!<br />
