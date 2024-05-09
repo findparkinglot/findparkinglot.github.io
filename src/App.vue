@@ -655,7 +655,6 @@ watch(() => routeData.value , (val) => {
     <h5 style="padding: 10px 0 0 0">資訊</h5>
     <p style="color: #ccc;font-size: 12px;">版本資訊：v1.0.0</p>
     <p style="color: #ccc;font-size: 12px;">Web製作：爽爽</p>
-    <p style="color: #ccc;font-size: 12px;">Email: jamestim9215@gmail.com</p>
     <p style="color: #ccc;font-size: 12px;">資料參考：大重停車記事 google my map資料</p>
     <p style="color: #ccc;font-size: 12px;">地圖API：Mapbox GL JS API</p>
     <p style="color: #ccc;font-size: 12px;">版權宣告：© 2024 爽爽 版權所有。本網頁未經准許，禁止任何商業行為</p>
