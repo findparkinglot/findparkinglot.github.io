@@ -106,6 +106,7 @@ const closeMesBox = () => {
 
 const windowMobileFAQOpen = ref(false)
 const windowFAQOpen = ref(false)
+const windowHowToUseOpen = ref(false)
 const menuActive = ref(false)
 const infoActive = ref(false)
 const stepsOpen = ref(false)
@@ -327,14 +328,24 @@ watch(() => routeData.value , (val) => {
   <button
     class="btn btnMobileFAQ"
     @click="windowMobileFAQOpen ? (windowMobileFAQOpen = false) : (windowMobileFAQOpen = true)"
+    v-show="!stepsOpen"
   >
     如何加入手機桌面? 類APP
   </button>
   <button
     class="btn btnFAQ"
     @click="windowFAQOpen ? (windowFAQOpen = false) : (windowFAQOpen = true)"
+    v-show="!stepsOpen"
   >
     教學 地圖怎麼看?
+  </button>
+
+  <button
+    class="btn btnHowToUse"
+    @click="windowHowToUseOpen ? (windowHowToUseOpen = false) : (windowHowToUseOpen = true)"
+    v-show="!stepsOpen"
+  >
+    教學 怎麼用?
   </button>
 
   
@@ -469,6 +480,29 @@ watch(() => routeData.value , (val) => {
       <button class="btn" @click="windowFAQOpen = false">確定</button>
     </div>
   </div>
+
+  <!-- 教學 -->
+  <div class="window-box-cover" v-if="windowHowToUseOpen">
+    <div class="window-box">
+      <h3 style="text-align: left">地圖怎麼用?</h3>
+      <h4 style="text-align: left">
+        1. 介面說明
+        <img width="100%" src="@/assets/images/FAQ1.jpg" alt="">
+        <br />
+        <br />
+        2. 操作說明
+        <img width="100%" src="@/assets/images/FAQ2.jpg" alt="">
+        <br />
+        <br />
+        3. 選單
+        <img width="100%" src="@/assets/images/FAQ3.jpg" alt="">
+        <br />
+
+      </h4>
+      <br />
+      <button class="btn" @click="windowHowToUseOpen = false">確定</button>
+    </div>
+  </div>
   
   <!-- 加入手機桌面 類APP -->
   <div class="window-box-cover" v-if="windowMobileFAQOpen">
@@ -542,6 +576,7 @@ watch(() => routeData.value , (val) => {
       class="menuBtn"
       @click="menuActive ? (menuActive = false) : (menuActive = true)"
       :class="menuActive ? 'active' : ''"
+      v-show="!stepsOpen"
     >
       <div></div>
       <div></div>
@@ -619,11 +654,11 @@ watch(() => routeData.value , (val) => {
         提供停車場資訊
       </button></a
     > -->
-    <a href="https://forms.gle/iJCyfqVtpL35WtZM7" target="_blank"
-      ><button class="btn" style="font-size: 12px;padding: 6px 8px;margin: 0 5px 5px 0">
+    <a href="https://forms.gle/iJCyfqVtpL35WtZM7" target="_blank">
+      <button class="btn" style="font-size: 12px;padding: 6px 8px;margin: 0 5px 5px 0">
         (重機能停哪?) Web錯誤資訊回報
-      </button></a
-    >
+      </button>
+    </a>
 
     <h5 style="padding: 10px 0 0 0">資訊</h5>
     <p style="color: #ccc;font-size: 12px;">版本資訊：v1.0.0</p>
@@ -632,6 +667,11 @@ watch(() => routeData.value , (val) => {
     <p style="color: #ccc;font-size: 12px;">資料參考：大重停車記事 google my map資料</p>
     <p style="color: #ccc;font-size: 12px;">地圖API：Mapbox GL JS API</p>
     <p style="color: #ccc;font-size: 12px;">版權宣告：© 2024 爽爽 版權所有。本網頁未經准許，禁止任何商業行為</p>
+    <a href="https://buymeacoffee.com/jamestim923" target="_blank">
+      <button class="btn" style="font-size: 12px;padding: 6px 8px;margin: 0 5px 5px 0">
+        Buy me a coffee ☕️
+      </button>
+    </a>
 
     <!-- <ins
       class="adsbygoogle"

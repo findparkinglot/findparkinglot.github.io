@@ -317,6 +317,16 @@ button.btnFAQ{
 }
 
 
+button.btnHowToUse{
+  position: absolute;
+  z-index: 999;
+  top: 90px;
+  right: 40px;
+  font-size: 12px;
+  padding: 6px 8px;
+}
+
+
 button.btnGetLngLat{
   position: absolute;
   z-index: 999;
