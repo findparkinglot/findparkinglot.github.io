@@ -1,0 +1,6554 @@
+[
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)臺大辛亥汽機車停車場",
+            "description": "汽車入口有標示重機圖案",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "121.543183",
+            "25.020652"
+        ],
+        "address": "368 復興南路二段, 106, 大安區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)大安運動中心停車場",
+            "description": "",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.546149",
+            "25.020237"
+        ],
+        "address": "55 辛亥路三段, 106, 大安區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "⇨(40/h | 220/d)公中站 市民大道停車場",
+            "description": "B1有重機位 後牌辨析(站主親訪)",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.519232",
+            "25.0482"
+        ],
+        "address": "市民大道高架道路, 100, 中正區, 臺北市, Taiwan"
+    },
+    {
+        "name": "禁停重機",
+        "properties": {
+            "name": "(禁止)台大癌醫機車停車場",
+            "description": "***2023/7更新禁止停放250cc以上大型重機<br>--------------------------<br>感謝車友s8802946 (彼得漁夫) @PTT<br>感謝車友LAN@ptt 更新",
+            "icon": "icon-19.png"
+        },
+        "geometry": [
+            "121.543178",
+            "25.015115"
+        ],
+        "address": "153 基隆路三段, 106, 大安區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(Free)凱比吉公園",
+            "description": "免費  無出入口管制",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "120.292888",
+            "23.127945"
+        ],
+        "address": "光復三街, 741, 善化區, 臺南市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(平40/h | 假20/h)大港墘公園地下停車場",
+            "description": "(沒誤植, 假日真的比較便宜)<br>大港墘公園地下停車場 汽車費率 40h 假日20h <br>後牌辨析 <br>專用格 2 格 或以上 正好停代管",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.574391",
+            "25.078419"
+        ],
+        "address": "12 洲子街, 114, 內湖區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(20/h) 俥亭停車府後地下停車場",
+            "description": "汽車費率 20h 倒退嚕",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "120.970219",
+            "24.8071"
+        ],
+        "address": "府後街, 300, 東區, 新竹市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(20/h | 120/d)新北市三重光復平面停車場",
+            "description": "汽車費率 20h 後牌辨析 12小時內最高120元",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "121.474616",
+            "25.05608"
+        ],
+        "address": "頂文路, 241, 三重區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(平30/h | 假60/h) 捷運淡水站停車場",
+            "description": "教士2016年貼文下回覆，有大重專用車位及攝影機",
+            "icon": "icon-4.png"
+        },
+        "geometry": [
+            "121.445523",
+            "25.167695"
+        ],
+        "address": "1 中正東路, 251, 淡水區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(20/h)板橋中山國小地下停車場",
+            "description": "",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.448362",
+            "25.00084"
+        ],
+        "address": "合安路, 220, 板橋區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)林森公園地下停車場(新生路入口)",
+            "description": "",
+            "icon": "icon-5.png"
+        },
+        "geometry": [
+            "121.527307",
+            "25.052435"
+        ],
+        "address": "新生高架道路, 104, 中山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)西松高中地下停車場",
+            "description": "",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.566093",
+            "25.05584"
+        ],
+        "address": "健康路325巷19弄, 105, 松山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)陽明公園停車場",
+            "description": "按鈕取票, 一小時30, 半小時15",
+            "icon": "icon-6.png"
+        },
+        "geometry": [
+            "121.310322",
+            "24.979918"
+        ],
+        "address": "90 長沙街, 330, 桃園區, Taoyuan, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)延平國小地下停車場",
+            "description": "相片有重機停車區",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.511936",
+            "25.067167"
+        ],
+        "address": "重慶北路三段120巷, 103, 大同區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(20/h)新莊國民運動中心停車場",
+            "description": "***倒退嚕進場***<br>感謝tonyX@ptt",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.447583",
+            "25.039549"
+        ],
+        "address": "和興街, 242, 新莊區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)林森公園地下停車場",
+            "description": "向3592 rebel車主致敬<br>您被撞倒也同時讓作者知道這裡可以停...",
+            "icon": "icon-5.png"
+        },
+        "geometry": [
+            "121.526459",
+            "25.052281"
+        ],
+        "address": "108 南京東路一段, 104, 中山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)新北市立圖書館總館",
+            "description": "",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "121.455153",
+            "25.001486"
+        ],
+        "address": "139 貴興路, 220, 板橋區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)中央地下停車場",
+            "description": "汽車, 重機格 感謝PTT車友",
+            "icon": "icon-4.png"
+        },
+        "geometry": [
+            "121.226139",
+            "24.956414"
+        ],
+        "address": "62 中央東路, 320, 中壢區, Taoyuan, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(平30/h | 假40/h)蘭雅公園地下停車場",
+            "description": "平日30/H, 假日40/H, 有1個專用車格",
+            "icon": "icon-4.png"
+        },
+        "geometry": [
+            "121.52913",
+            "25.10988"
+        ],
+        "address": "士東路120巷, 111, 士林區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(平40/h | 假50/h | 300/d)松山車站地下停車場",
+            "description": "週一-四 40/H, 週五-日及假日50/H, 上限300/日<br>有後牌辨識 @PTT車友分享 2022年7月底<br>有重機專用格2格以上",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.578478",
+            "25.04831"
+        ],
+        "address": "327 松隆路, 110, 信義區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)蓬萊國小地下停車場",
+            "description": "30/H 寧夏夜市最佳, 有專用格",
+            "icon": "icon-4.png"
+        },
+        "geometry": [
+            "121.515529",
+            "25.055443"
+        ],
+        "address": "平陽街, 103, 大同區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(40/h)爭議中- 大稻埕公園地下停車場",
+            "description": "40/H, 夜間19-8 10/H (節日除外)",
+            "icon": "icon-8.png"
+        },
+        "geometry": [
+            "121.510538",
+            "25.058444"
+        ],
+        "address": "233 歸綏街, 103, 大同區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)嘉興公園地下停車場",
+            "description": "",
+            "icon": "icon-4.png"
+        },
+        "geometry": [
+            "121.551928",
+            "25.021666"
+        ],
+        "address": "370 嘉興街, 106, 大安區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(---)文化部",
+            "description": "",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.443165",
+            "25.055999"
+        ],
+        "address": "439 中平路, 242, 新莊區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(40/h)朝陽公園地下停車場",
+            "description": "40/H 夜間22-8 10/H",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.513727",
+            "25.056117"
+        ],
+        "address": "60 重慶北路二段, 103, 大同區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(40/h)嘟嘟房僑安站",
+            "description": "8-22 40/H, 22-8 30/H, 兩輪誌,1個專用格",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.556672",
+            "25.04069"
+        ],
+        "address": "僑安地下停車場入口車道, 106, 大安區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)啟聰學校地下停車場",
+            "description": "30/H 有專用格",
+            "icon": "icon-4.png"
+        },
+        "geometry": [
+            "121.511718",
+            "25.074315"
+        ],
+        "address": "延平北路四段179巷, 103, 大同區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)春光公園地下停車場",
+            "description": "30/H, 3個專用格<br>專用格散佈在B1樑柱旁，有明顯標示<br>雖有後牌辨析，但要管理員操作，宜先提醒再出場",
+            "icon": "icon-5.png"
+        },
+        "geometry": [
+            "121.581005",
+            "25.042518"
+        ],
+        "address": "林口街, 110, 信義區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(20/h)臺北市文山區萬興國民小學",
+            "description": "20/H, 2個專用格",
+            "icon": "icon-4.png"
+        },
+        "geometry": [
+            "121.576313",
+            "24.989904"
+        ],
+        "address": "114 秀明路二段, 116, 文山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)玉成國小地下停車場",
+            "description": "日間30/h, 晚間20/h, 4個專用格",
+            "icon": "icon-4.png"
+        },
+        "geometry": [
+            "121.592707",
+            "25.053204"
+        ],
+        "address": "23 昆陽街, 115, 南港區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(40/h)東湖國小地下停車場",
+            "description": "",
+            "icon": "icon-4.png"
+        },
+        "geometry": [
+            "121.616062",
+            "25.068437"
+        ],
+        "address": "115-1 東湖路, 114, 內湖區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(40/h)建成公園地下停車場",
+            "description": "",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.518072",
+            "25.053972"
+        ],
+        "address": "3 承德路二段, 103, 大同區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)建成國中地下停車場",
+            "description": "後牌辨識，30/H, 2個專用格<br>感謝Kris60111@ptt",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.518973",
+            "25.051777"
+        ],
+        "address": "37-1 長安西路, 103, 大同區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)福林公園地下停車場",
+            "description": "30/H 室內 管理員, 3個專用格",
+            "icon": "icon-5.png"
+        },
+        "geometry": [
+            "121.530719",
+            "25.095975"
+        ],
+        "address": "15 中正路, 111, 士林區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)艋舺公園地下停車場",
+            "description": "不算友善 有2個專用格(市政府資料)",
+            "icon": "icon-4.png"
+        },
+        "geometry": [
+            "121.499448",
+            "25.036142"
+        ],
+        "address": "192 西園路一段, 108, 萬華區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(平30/h | 假40/h)大龍國小地下停車場",
+            "description": "平日30/H, 假日40/H, 2個專用格",
+            "icon": "icon-4.png"
+        },
+        "geometry": [
+            "121.517292",
+            "25.074126"
+        ],
+        "address": "47 哈密街, 103, 大同區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(平40/h | 假50/h)雅祥公園地下停車場",
+            "description": "平日40/H, 假日50/H, 上限200, 1個專用格",
+            "icon": "icon-4.png"
+        },
+        "geometry": [
+            "121.571726",
+            "25.047512"
+        ],
+        "address": "松隆路123巷, 110, 信義區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(40/h)長安國小地下停車場",
+            "description": "日間40/h, 晚間30/h, 1個專用格<br>入場辨識 後牌<br>911@m01",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.531382",
+            "25.050347"
+        ],
+        "address": "3 一江街, 104, 中山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(平40/h | 假50/h)承德公園地下停車場",
+            "description": "平日40. 假日50, 有2個專用格",
+            "icon": "icon-4.png"
+        },
+        "geometry": [
+            "121.522422",
+            "25.089857"
+        ],
+        "address": "181 基河路, 111, 士林區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(平20/h | 假30/h)洛陽停車場（環河北路入口）",
+            "description": "汽車, 後牌, 6-7F, 有2個專用格",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.505156",
+            "25.047588"
+        ],
+        "address": "4 環河南路一段, 108, 萬華區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(20/h)萬華國中地下停車場",
+            "description": "有6格專用格 1小時20元",
+            "icon": "icon-4.png"
+        },
+        "geometry": [
+            "121.49961",
+            "25.029185"
+        ],
+        "address": "201 西藏路199巷, 108, 萬華區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(40/h | 630/d)松山機場臺北國際航空站第三停車場",
+            "description": "有重機辨識區 收費比照汽車",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "121.553563",
+            "25.06305"
+        ],
+        "address": "計程車排班通道, 105, 松山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(40/h | 220/10h)板橋火車站停車場",
+            "description": "停汽車, 40/H 每10小時220<br>2020/7 GOOGLE街景看到重機駛出, 理應可停<br> 有專用格4格以上，進場後順時鐘繞行，接近出口處右側可看到專用格",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.464378",
+            "25.01526"
+        ],
+        "address": "新站路, 220, 板橋區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(平30/h | 假40/h)新北市市民廣場 地下停車場 | 歐特儀",
+            "description": "走汽車道，是車牌辯識系統，<br>專屬大型重機專用停車格在停車場柵欄處旁邊<br>@節錄自DCARD",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.465699",
+            "25.014106"
+        ],
+        "address": "28 新站路, 220, 板橋區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(60/d)板橋原宿",
+            "description": "重機計次60元, 2022/6/28. 感謝PTT車友",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.461533",
+            "25.008665"
+        ],
+        "address": "22 中山路一段50巷, 220, 板橋區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(平20/h | 假30/h)洛陽停車場",
+            "description": "汽車, 後牌, 6-7F, 有2個專用格",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.506064",
+            "25.048402"
+        ],
+        "address": "環河南路一段, 108, 萬華區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)府前廣場地下停車場 | 歐特儀",
+            "description": "\"汽車收費重機位, 30/H, 市府最便宜<br>免費咖啡, 重機專用位置多\"",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.563011",
+            "25.035983"
+        ],
+        "address": "2 松壽路, 110, 信義區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)七星公園地下停車場",
+            "description": "有2個專用格(政府資料)",
+            "icon": "icon-4.png"
+        },
+        "geometry": [
+            "121.502377",
+            "25.136686"
+        ],
+        "address": "700 大業路, 112, 北投區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(20/h)景文平面停車場",
+            "description": "20/H 大重專用格*2 兩輪誌",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.540478",
+            "24.990481"
+        ],
+        "address": "5 景文街90巷, 116, 文山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(60/h 左車道進)Mega City 板橋大遠百停車場",
+            "description": "停汽車, 比照收費 有後牌<br>感謝a0913@PTT",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "121.467399",
+            "25.014466"
+        ],
+        "address": "117-4 漢生東路, 220, 板橋區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(40/h)台北市農會C區收費停車場",
+            "description": "兩輪誌, 40//H",
+            "icon": "icon-6.png"
+        },
+        "geometry": [
+            "121.542937",
+            "25.036152"
+        ],
+        "address": "26 復興南路一段340巷, 106, 大安區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)博愛地下停車場",
+            "description": "比照汽車收費, 有重機專用區",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.741888",
+            "25.12755"
+        ],
+        "address": "9 愛三路, 200, 仁愛區, 基隆市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)三張里地下停車場",
+            "description": "後牌, 汽車, 重機格",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.566903",
+            "25.030641"
+        ],
+        "address": "松平路, 110, 信義區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(40/h)成淵高中地下停車場",
+            "description": "",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.520065",
+            "25.060378"
+        ],
+        "address": "29 錦西街, 103, 大同區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(50/4h | 注意開放時間)國家圖書館",
+            "description": "**管理員協助**<br>本館設有地下停車場，提供35個車位供一般讀者停放，讀者可從中山南路南側車道進入停車場。收費方式依星期二至星期六8:50--21:00，星期日8:50-17:00開放時間，分時段收費，以進館及離館時間計算收費， 每4小時為一時段，每時段停車費新臺幣50元；2小時以內，則採半價彈性收費，超過2小時，以單一時段計費。",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.516569",
+            "25.037359"
+        ],
+        "address": "20 中山南路, 100, 中正區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(20/h)金城立體停車場",
+            "description": "汽車格, 管理員開閘登記",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.458597",
+            "24.983598"
+        ],
+        "address": "金城路二段242巷, 236, 土城區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(40/h)永盛公園地下停車場",
+            "description": "後牌辨識, 汽車40/H",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.524747",
+            "25.059242"
+        ],
+        "address": "30 中山北路二段93巷, 104, 中山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(40/h)中華電信大安園區地下停車場",
+            "description": "\"台北市中華電信大安園區委外地下停車場，抽票卡式，平日白 02/20 04:58<br>→ seelel: 天可以停重機專屬區域，有監視器，汽車收費一小時40元\"",
+            "icon": "icon-9.png"
+        },
+        "geometry": [
+            "121.547107",
+            "25.032227"
+        ],
+        "address": "9 信義路四段74巷, 106, 大安區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h | 200/d)永和國小地下停車場",
+            "description": "半小時離場免費",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "121.517269",
+            "25.00182"
+        ],
+        "address": "253 中正路, 234, 永和區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(50/h)松山國小停車場",
+            "description": "重機；後牌；專用位4格",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.578592",
+            "25.05023"
+        ],
+        "address": "746 八德路四段, 105, 松山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(平50/d | 假90/d)長福平面停車場",
+            "description": "平日50, 假日90, 計次",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.372552",
+            "24.932003"
+        ],
+        "address": "光明路3巷, 237, 三峽區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(20/h | 50/12h)中南社會住宅",
+            "description": "",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.619123",
+            "25.042921"
+        ],
+        "address": "舊莊街一段3巷, 115, 南港區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h | 150/12h)光榮國小地下停車場",
+            "description": "半小時離場免費, B2有專用格",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.500326",
+            "25.072442"
+        ],
+        "address": "秀江街, 241, 三重區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(50/h | 280/d)長揚停車場(康定店)",
+            "description": "按鈕取幣",
+            "icon": "icon-6.png"
+        },
+        "geometry": [
+            "121.501669",
+            "25.033771"
+        ],
+        "address": "康定路287巷, 108, 萬華區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(80/h)台北市士林區戶政事務所",
+            "description": "用鍵盤輸入車牌 ; 半小時離場免費",
+            "icon": "icon-6.png"
+        },
+        "geometry": [
+            "121.519637",
+            "25.092678"
+        ],
+        "address": "469 中正路, 111, 士林區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(40/h | 240/15h)榮星花園地下停車場",
+            "description": "",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.538295",
+            "25.0642"
+        ],
+        "address": "五常街, 104, 中山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)棒球場地下停車場",
+            "description": "按鈴請人員協助進入",
+            "icon": "icon-5.png"
+        },
+        "geometry": [
+            "121.503129",
+            "25.023798"
+        ],
+        "address": "69 青年路, 108, 萬華區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)高爾夫球場地下停車場",
+            "description": "按鈴請人員協助進入",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.507486",
+            "25.024714"
+        ],
+        "address": "5 國興路, 108, 萬華區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)台北市萬華區公所",
+            "description": "",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.499796",
+            "25.034839"
+        ],
+        "address": "120 和平西路三段, 108, 萬華區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(50/h)峨眉立體停車場 [右車道進]",
+            "description": "右車道進，可停電動車位旁綠色漆面空間<br>於管理室後方有專用空間<br>感謝 kawsxkaws@PTT <br>汽車, 後牌, 50/H",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.505557",
+            "25.044105"
+        ],
+        "address": "52 峨眉街, 108, 萬華區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(20/h)遠東百貨 竹北店",
+            "description": "汽車停車區可停重機@蟑螂頭PTT",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.023336",
+            "24.822352"
+        ],
+        "address": "18 莊敬北路, 302, 竹北市, Hsinchu County, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(40/h)臺北市信義區信義國民小學",
+            "description": "",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.562998",
+            "25.031235"
+        ],
+        "address": "60 松勤街, 110, 信義區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)景勤二號公園地下停車場",
+            "description": "",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.558505",
+            "25.026055"
+        ],
+        "address": "信安街67巷, 110, 信義區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(40/h)五分埔公園地下停車場",
+            "description": "",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.580536",
+            "25.046826"
+        ],
+        "address": "92 中坡北路, 110, 信義區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(平30/h | 假60/h)松山高中地下停車場",
+            "description": "平日30/H, 假日60/H",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.563782",
+            "25.044065"
+        ],
+        "address": "7 忠孝東路四段559巷, 110, 信義區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)台北市災害應變中心地下停車場",
+            "description": "",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.565997",
+            "25.028653"
+        ],
+        "address": "2 莊敬路391巷11弄, 110, 信義區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)興雅國中地下停車場",
+            "description": "",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.572799",
+            "25.034836"
+        ],
+        "address": "18 松德路200巷, 110, 信義區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(20/h)社正路平面停車場",
+            "description": "不確定車牌辨識方式",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.509009",
+            "25.088085"
+        ],
+        "address": "111 延平北路六段, 111, 士林區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(20/h)社子國小地下停車場",
+            "description": "",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.502185",
+            "25.091375"
+        ],
+        "address": "社中街, 111, 士林區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(平50/d | 假40/h)故宮廣場停車場",
+            "description": "",
+            "icon": "icon-6.png"
+        },
+        "geometry": [
+            "121.549032",
+            "25.09907"
+        ],
+        "address": "250 至善路二段, 111, 士林區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(20/h)海光公園地下停車場",
+            "description": "",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.508492",
+            "25.080934"
+        ],
+        "address": "87 葫蘆街, 111, 士林區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(日20/h | 夜40/h)前港公園地下停車場",
+            "description": "早上-下午 20/H, 晚上40/H",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.520905",
+            "25.085627"
+        ],
+        "address": "66 後港街, 111, 士林區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)國立臺灣科學教育館",
+            "description": "",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.516474",
+            "25.096261"
+        ],
+        "address": "189 士商路, 111, 士林區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(平40/h | 假50/h)臺北市立百齡高級中學",
+            "description": "",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.523927",
+            "25.086636"
+        ],
+        "address": "177 承德路四段, 111, 士林區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(50/h)天母西側停車場",
+            "description": "",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.52977",
+            "25.118753"
+        ],
+        "address": "天玉街38巷, 111, 士林區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(平20/h | 假40/h)台北市立大學天母校區停車場",
+            "description": "平日20/H, 假日40/H",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.53605",
+            "25.116283"
+        ],
+        "address": "3 忠誠路二段207巷, 111, 士林區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(假日限定120/d)捷運木柵機廠停車場",
+            "description": "",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.585864",
+            "25.001485"
+        ],
+        "address": "萬福橋, 116, 文山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(50/h)天母東側停車場",
+            "description": "",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.530736",
+            "25.118464"
+        ],
+        "address": "中山北路七段14巷3弄, 111, 士林區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(平50/d | 假60/h)木柵動物園停車場（河川高灘地）",
+            "description": "",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.578453",
+            "24.998235"
+        ],
+        "address": "32 新光路二段, 116, 文山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)台北市文山運動中心停車場",
+            "description": "",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.559028",
+            "24.996984"
+        ],
+        "address": "222 興隆路三段, 116, 文山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(平10/h | 假60/h)動物園站地下停車場",
+            "description": "",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.578815",
+            "24.997392"
+        ],
+        "address": "32 新光路二段, 116, 文山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(20/h)興隆公園地下停車場",
+            "description": "",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.551241",
+            "25.000642"
+        ],
+        "address": "地下停車場入口, 116, 文山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)文山區行政中心便民停車場",
+            "description": "",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.56947",
+            "24.989472"
+        ],
+        "address": "220 木柵路三段, 116, 文山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(20/h)臺北市文山區辛亥國民小學",
+            "description": "",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.559241",
+            "25.006224"
+        ],
+        "address": "103 辛亥路四段, 116, 文山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(20/h)興隆公共住宅D2區地下停車場",
+            "description": "汽車費率、無後方辨識 <br>依照管理員指示停汽車或機車格、無專用格",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.562546",
+            "24.988156"
+        ],
+        "address": "26 木柵路二段138巷, 116, 文山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(20/h)景美國小地下停車場",
+            "description": "景美國小地下停車場 入場辨識 有後排辨識",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.540265",
+            "24.988502"
+        ],
+        "address": "景文街142巷, 116, 文山區, 臺北市, New Taipei City, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(20/h)景華公園地下停車場",
+            "description": "",
+            "icon": "icon-4.png"
+        },
+        "geometry": [
+            "121.543781",
+            "24.995162"
+        ],
+        "address": "1 景華街52巷, 116, 文山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(20/h)永建國小地下停車場",
+            "description": "",
+            "icon": "icon-4.png"
+        },
+        "geometry": [
+            "121.555625",
+            "24.988761"
+        ],
+        "address": "1 木柵路一段311巷, 116, 文山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(20/h)水源快速道路高架橋下停車場",
+            "description": "",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.535353",
+            "25.003859"
+        ],
+        "address": "溪洲街, 116, 文山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(20/h)臺北花木批發市場地下停車場",
+            "description": "",
+            "icon": "icon-4.png"
+        },
+        "geometry": [
+            "121.54045",
+            "25.004526"
+        ],
+        "address": "15 興隆路一段, 116, 文山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "⇨(50/h)市民大道延吉段停車場",
+            "description": "收費會按照時間不同, 50/H為最高收費",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.552122",
+            "25.044458"
+        ],
+        "address": "市民大道高架道路, 106, 大安區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(平30/h | 假40/h)松山工農地下停車場站",
+            "description": "",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.572475",
+            "25.039101"
+        ],
+        "address": "忠孝東路五段372巷28弄, 110, 信義區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(平40/h | 假60/h)華山文創",
+            "description": "按鈕取票 華山文創, 平日40/H, 假日60/H",
+            "icon": "icon-6.png"
+        },
+        "geometry": [
+            "121.528643",
+            "25.043597"
+        ],
+        "address": "2 忠孝東路二段64巷, 100, 中正區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(40/h)臺北自來水事業處公館停車場",
+            "description": "前牌辨析",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.535461",
+            "25.011047"
+        ],
+        "address": "汀州路三段230巷, 100, 中正區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "⇨(40/h)復敦段 市民大道停車場",
+            "description": "按鈕請管理員協助<br>收費會按照時間不同, 40/H為最高收費",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.54739",
+            "25.044967"
+        ],
+        "address": "市民大道高架道路, 106, 大安區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(40/h | 280/d)北寧路地下停車場",
+            "description": "",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.552564",
+            "25.049193"
+        ],
+        "address": "38 北寧路, 105, 松山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)民生立體收費停車場",
+            "description": "30/H 2樓A區專用格",
+            "icon": "icon-4.png"
+        },
+        "geometry": [
+            "121.559617",
+            "25.058402"
+        ],
+        "address": "284 民生東路五段, 105, 松山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)國家考場大樓汽車地下停車場",
+            "description": "按鈴停車30/H",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.55023",
+            "24.98703"
+        ],
+        "address": "木柵路一段76巷, 116, 文山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)中崙高中地下停車場",
+            "description": "入場不需走車道辨識，大型重機可以直接鑽車道右側小縫進入停車場，找到專用格停放之後到管理室報備車號即可，有大型重機專用停車格<br>感謝KEVIN@PTT 12/24更新<br>專用格三格, 專人引導 @兩輪誌",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.561217",
+            "25.04997"
+        ],
+        "address": "83 光復北路11巷, 105, 松山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)民有市場地下停車場",
+            "description": "",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.547018",
+            "25.060484"
+        ],
+        "address": "15 民權東路三段140巷, 105, 松山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(20/h)迪化汚水處理廠停車場",
+            "description": "",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.511366",
+            "25.074089"
+        ],
+        "address": "延平北路四段, 103, 大同區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h | 150/15h)民權公園地下停車場",
+            "description": "對講機請管理人員協助進入",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.55889",
+            "25.062047"
+        ],
+        "address": "100 民權東路四段, 105, 松山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(平40/h | 假50/h)八德立體停車場",
+            "description": "有可專用停重機的車格非常少，入場需要請管理員協助或倒退嚕照車牌<br>感謝Una",
+            "icon": "icon-5.png"
+        },
+        "geometry": [
+            "121.571713",
+            "25.0496"
+        ],
+        "address": "市民大道六段, 105, 松山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(平60/h | 假70/h)台北車站西區地下停車場",
+            "description": "台北車站西地下停車場可利用後車牌辨識進出場，辨識時車牌位置要在地面白框線垂直範圍內 感謝tony330857@PTT SUPERBIKE 22/10/03",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "121.515417",
+            "25.047574"
+        ],
+        "address": "台鐵西站停車場出口, 100, 中正區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)中正運動中心機車停車場",
+            "description": "",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.519308",
+            "25.038222"
+        ],
+        "address": "1 信義路一段, 100, 中正區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)台北大橋橋下停車場",
+            "description": "",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.509893",
+            "25.063125"
+        ],
+        "address": "台北大橋, 103, 大同區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(40/h)中山堂地下停車場",
+            "description": "有後牌但好像有點壞掉，如遇困難請呼叫管理員，感謝blackstyles@ptt 分享<br>（2023/3月）入場後牌可辨識到，機器正常繳費，離場時辨識不到，但按鈕管理員很快就協助開門，態度友善。<br>感謝LAN@ptt 分享",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "121.510625",
+            "25.044117"
+        ],
+        "address": "61 武昌街一段, 100, 中正區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(平40/h | 假50/h)兩廳院停車場",
+            "description": "",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.517073",
+            "25.035196"
+        ],
+        "address": "289 中山南路, 100, 中正區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(40/h)延吉廢鐵道停車場",
+            "description": "平面車位",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "121.555052",
+            "25.043217"
+        ],
+        "address": "50 延吉街131巷1弄, 106, 大安區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "⇦(30/h | 160/d)林森-金山 市民大道停車場 ",
+            "description": "後牌辨識、專用２格<br>優先>４格",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.525572",
+            "25.047659"
+        ],
+        "address": "市民大道二段, 104, 中山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "⇦⇨(30/h | 200/d)中林站 市民大道停車場",
+            "description": "感謝c222ssss@PTT更新<br>有後牌辨析",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "121.52229",
+            "25.047956"
+        ],
+        "address": "市民大道高架道路, 104, 中山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)龍門國中地下停車場",
+            "description": "",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.538227",
+            "25.023753"
+        ],
+        "address": "269 建國南路二段, 106, 大安區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)健康國小地下停車場",
+            "description": "重機專用格1格",
+            "icon": "icon-4.png"
+        },
+        "geometry": [
+            "121.562705",
+            "25.056112"
+        ],
+        "address": "三民路43巷, 105, 松山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(平20/h | 假40/h)大安森林公園停車場",
+            "description": "平曰20/H, 假日40/H, 一定有車位",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "121.53738",
+            "25.032062"
+        ],
+        "address": "37 建國南路二段, 106, 大安區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(平20/h | 假40/h)大安森林公園地下停車場信義路出入口",
+            "description": "",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "121.535848",
+            "25.033315"
+        ],
+        "address": "100 信義路三段, 106, 大安區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)大安高工地下停車場",
+            "description": "入場可辨識後牌（不確定是否需要靠按鈕辨識，但今天的停車經驗是按下對講鈕同時螢幕就顯示出車號），大重專用/優先格皆有，整體相當友善，推薦使用，費率一小時30元<br>感謝Kevin@ptt",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.540984",
+            "25.032717"
+        ],
+        "address": "156 信義路三段, 106, 大安區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(50/h)附中公園地下停車場",
+            "description": "",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.542462",
+            "25.036124"
+        ],
+        "address": "26 復興南路一段340巷, 106, 大安區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)三鶯運動中心停車場",
+            "description": "",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.369383",
+            "24.936201"
+        ],
+        "address": "129 文化路, 237, 三峽區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(平20/h | 假30/h)新北市政府樹林藝文綜合行政大樓",
+            "description": "",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.42877",
+            "24.996256"
+        ],
+        "address": "40-7 樹新路, 238, 樹林區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(40/h)青島國宅停車場",
+            "description": "進場一律由管理員給票，憑票付費出場",
+            "icon": "icon-6.png"
+        },
+        "geometry": [
+            "121.524088",
+            "25.04368"
+        ],
+        "address": "忠孝東路一段84巷, 100, 中正區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(20/h | 100/d)大湖公園地下停車場",
+            "description": "管理員協助進入",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.602055",
+            "25.083565"
+        ],
+        "address": "11 成功路五段, 114, 內湖區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(50/h)金華公園地下停車場",
+            "description": "",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.531614",
+            "25.029637"
+        ],
+        "address": "青田街, 106, 大安區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)烏來立體停車場",
+            "description": "車位多 管理員會出來抄車牌<br>管理員友善 <br>22/8/13到此一遊",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.551661",
+            "24.865516"
+        ],
+        "address": "47 烏來街, 233, 烏來區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(50/h | 320/d)台北車站K區地下街停車場",
+            "description": "",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.517773",
+            "25.046958"
+        ],
+        "address": "43 忠孝西路一段, 100, 中正區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(20/h)新竹稅務大樓停車場",
+            "description": "",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "120.969767",
+            "24.806211"
+        ],
+        "address": "112 中央路, 300, 東區, 新竹市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(20/h)公二停五地下停車場",
+            "description": "辨識失敗，閘門會開啟，停妥後要向管理員索取停車扣繳費用。繳費一樣向管理室繳費，無法自動繳費。<br>感謝a07051226@ptt",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.011355",
+            "24.831051"
+        ],
+        "address": "汽車停車場入口, 302, 竹北市, Hsinchu County, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)港區第一停車場",
+            "description": "管理員協助 / 按鈴<br>1.按對講機告知車號進場<br>2.至繳費機繳費後離場。<br>管理室在「南寮漁港福宴海鮮餐廳」的位置，建議停（地標上）港區第二停車場的位置。<br>感謝a07051226@ptt分享",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "120.927062",
+            "24.848994"
+        ],
+        "address": "新港一路, 300, 北區, 新竹市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(20/h)東大陸橋下停車場-中華站",
+            "description": "車牌辨識失敗，閘門會開。<br>建議停妥後向管理員確認進場記錄，<br>有離場找不到紀錄被卡在閘門口經驗。<br>感謝a07051226@ptt分享",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "120.975035",
+            "24.804321"
+        ],
+        "address": "東大高架道, 300, 東區, 新竹市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)本場較佳-港區第二停車場",
+            "description": "管理員協助 / 按鈴<br>1.按對講機告知車號進場<br>2.至繳費機繳費後離場。<br>管理室在「南寮漁港福宴海鮮餐廳」的位置，建議停（地標上）港區第二停車場的位置。<br>感謝a07051226@ptt分享",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "120.925519",
+            "24.846861"
+        ],
+        "address": "296 東大路四段, 300, 北區, 新竹市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(Free)家樂福 彰化店",
+            "description": "彰化市的家樂福重機進出場可以直接繞過柵欄或是按鈴請服務員開柵欄，以上已有與家樂福服務中心確認無需繳費<br>感謝 伸港陳禹勳@PTT",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "120.54252",
+            "24.09443"
+        ],
+        "address": "278 金馬路二段, 500, 彰化市, Changhua County, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(40/h)台北榮總立體停車場",
+            "description": "感謝VINCENT 管理員協助 / 按鈴",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.521465",
+            "25.119517"
+        ],
+        "address": "石牌路二段, 112, 北投區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(40/h)台北榮總停車場",
+            "description": "管理員協助/按鈴<br>感謝VINCENT",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.520312",
+            "25.119223"
+        ],
+        "address": "排班計程車專用道, 112, 北投區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(50/h)臺南市立圖書館 新總館",
+            "description": "按鈕取票<br>入場為前牌辨識 待辨識失敗後即可按鈕取票 <br>專用格2格以上<br>感謝Jeff 1445 @ptt",
+            "icon": "icon-9.png"
+        },
+        "geometry": [
+            "120.237669",
+            "23.024742"
+        ],
+        "address": "255 康橋大道, 710, 永康區, 臺南市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)秀朗樂活停車場",
+            "description": "管理員協助 / 按鈴, 重機專用 2 格 或以上<br>入口處名稱是＂秀朗樂活停車場＂上方有大型重機圖示，斜坡下去後左手邊就是管理室，管理員會幫忙開門引導登記時間，離場時再至管理室繳費，整體態度友善，有規劃專屬車格就在管理室的旁邊。<br>感謝LAN@ptt",
+            "icon": "icon-5.png"
+        },
+        "geometry": [
+            "121.520333",
+            "24.998833"
+        ],
+        "address": "民權路36巷, 234, 永和區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(40/h)臺北榮民總醫院第三門診停車場",
+            "description": "管理員協助/按鈴<br>感謝VINCENT",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.518938",
+            "25.119206"
+        ],
+        "address": "161 石牌路二段, 112, 北投區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(20/h)福林路平面停車場",
+            "description": "感謝s8802946@ptt<br>無出入管制，人工收費20/h, 重機停車格有四格<br>2023/4/2站主親往更新",
+            "icon": "icon-9.png"
+        },
+        "geometry": [
+            "121.53261",
+            "25.09598"
+        ],
+        "address": "福林路100巷11弄, 111, 士林區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(40/h) 花博公園圓山停車場",
+            "description": "感謝c222ssss@PTT<br>滿位時工作人員會放重機進場 找空位停好即可",
+            "icon": "icon-6.png"
+        },
+        "geometry": [
+            "121.520329",
+            "25.068621"
+        ],
+        "address": "民族西路, 104, 中山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)行善社會住宅公有停車場",
+            "description": "行善社宅下的停車場，停汽車格後車牌辨識 <br>uTagGO★力揚行善停車場 <br>感謝smileverday(uccu)@ptt",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "121.582184",
+            "25.061261"
+        ],
+        "address": "新湖一路, 114, 內湖區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(20/h)新北市三重國民運動中心",
+            "description": "汽車費率\t20/h\t按鈕取票 感謝Jason0408@ptt",
+            "icon": "icon-6.png"
+        },
+        "geometry": [
+            "121.487898",
+            "25.054625"
+        ],
+        "address": "重新路四段214巷, 241, 三重區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "⇦(平30/h | 假40/h)市民大道敦延段停車場",
+            "description": "",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.550675",
+            "25.044749"
+        ],
+        "address": "147 市民大道四段, 106, 大安區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h | 200/d)江翠國小地下停車場",
+            "description": "2023/12/24到訪-文強停車代理後增加後牌辨識<br>-------------------------------------------------------<br>評論有說可以+打電話詢問<br>感謝yaoyuchien @ptt",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "121.473834",
+            "25.033256"
+        ],
+        "address": "文化路二段417巷, 220, 板橋區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(Free)車埕遊客中心",
+            "description": "免費\t無出入口管制 面對遊客中心的左手邊有一塊水泥空地，有箭頭標示\"重機.機車專用停車場\"，入口無管制，目測是提供觀光免費臨停。<br>感謝LAN@ptt提供",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "120.865859",
+            "23.832038"
+        ],
+        "address": "127 民權巷, 553, 水里鄉, Nantou County, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(平20/h | 假50/h)深坑區公有市場附設停車場",
+            "description": "專用格2格或以上，比照汽車收費<br>(2023/3)變更為前牌辨識，需找管理員<br>感謝匿名網友提供",
+            "icon": "icon-5.png"
+        },
+        "geometry": [
+            "121.615774",
+            "25.001149"
+        ],
+        "address": "平埔街, 222, 深坑區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)府後立體停車場",
+            "description": "走汽車道有後牌辨識，停汽車格，機器可正常繳費。須注意2~3樓為公務車位勿占用到。<br>感謝LAN@ptt",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "121.458666",
+            "25.010241"
+        ],
+        "address": "府後街, 220, 板橋區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "⇦ (30/h)建國-復興 市民大道停車場",
+            "description": "",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.54046",
+            "25.044737"
+        ],
+        "address": "143 市民大道三段, 104, 中山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(平30/h | 假40/h)新北市淡水民生停車場",
+            "description": "平日30/h | 160/12h <br>假日40/h | 200/12h <br>按鈴進場<br>感謝Datolon@ptt",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.461843",
+            "25.137962"
+        ],
+        "address": "48 民生路, 251, 淡水區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/d)乙未紀念公園地下停車場",
+            "description": "按鈴進入<br>直接停汽車格<br>感謝lr0119<br>--2024年4月更新--<br>入場辨識 大重可以直接下機車車道停機車區，收費比照機車，僅需注意機車車道為單車道雙向通行",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.205809",
+            "24.947926"
+        ],
+        "address": "復旦路二段23巷, 324, 平鎮區, Taoyuan, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(平30/h | 假40/h)延平路立體停車場",
+            "description": "停汽車格, 樓層坡道有點陡",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "121.223234",
+            "24.955994"
+        ],
+        "address": "536 延平路, 320, 中壢區, Taoyuan, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(平60/h | 假80/h)芝山站停車場",
+            "description": "管理員協助/按鈴",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.52252",
+            "25.102945"
+        ],
+        "address": "70 福華路, 111, 士林區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(50/h)中正路停車場",
+            "description": "管理員協助/按鈴",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.435752",
+            "25.172988"
+        ],
+        "address": "334 中正路, 251, 淡水區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(40/h)日月亭汽車停車場(松山車站場)",
+            "description": "臨停區域7-10F, 9F可找到工作人員登記車牌號碼<br>但9F為機械位 請停其它樓層<br>僅有前牌辨識",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.581078",
+            "25.049005"
+        ],
+        "address": "69 玉成街, 115, 南港區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(平30/h;200/d | 假40/h)國立臺灣圖書館 地下停車場",
+            "description": "國立臺灣圖書館 地下停車場/新北市中和區中安街(過中和路350巷右手邊，四號公園地下)\t汽車費率\t「 平日30h/200d」；「假日(含)前一日17:00起，40h/無上限」\t後牌辨析\t無 /未知\t\t\t\t\t\t\t\t\t親身經驗 或 車友/朋友/親人經驗\t進入靠右走臨停車道，進出都有後牌辨識，機器繳費正常，也有車輛查詢功能。<br>感謝LAN@PTT",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "121.511713",
+            "25.001131"
+        ],
+        "address": "85 中安街, 235, 中和區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h | 240/d)三重區中山立體停車場",
+            "description": "後牌辨析<br>一天(15h)最高收費120 <br>感謝機biker@youtube",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "121.489702",
+            "25.060897"
+        ],
+        "address": "過圳街31巷, 241, 三重區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(平30/h | 假40/h)三重區綜合體育館 地下停車場",
+            "description": "按鈕取票 無單日上限<br>感謝Jeff1445@PTT",
+            "icon": "icon-6.png"
+        },
+        "geometry": [
+            "121.491407",
+            "25.061849"
+        ],
+        "address": "3 新北大道一段, 241, 三重區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h | 300/d)健康社宅二區停車場",
+            "description": "出入口只有前牌辨識，二輪從閘門縫隙處直接進入  30/h ; 150/12h  禁停機車格，只能停汽車格；由於沒有車牌辨識，進場後需要通知管理人員（到社宅管理室或是撥打電話 一區：0905-118-571 二區：0905-119-731）",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.565634",
+            "25.054672"
+        ],
+        "address": "延壽街72巷, 105, 松山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/d) 三腳渡平面停車場",
+            "description": "汽車費率 30h 無出入口管制 2 格 或以上 <br>超過4小時會被拖吊",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "121.516392",
+            "25.081838"
+        ],
+        "address": "三腳渡越堤坡道, 111, 士林區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(平30/h | 假50/h)全球人壽希望園區",
+            "description": "平日/日間收費 50元/一小時，每12小時最高150元。 <br> 假日收費 60元/一小時，每12小時最高200元。  因為用汽車進入停車的時候看到有重機停放（汽車跟機車車道分開），但出入口應該只有前牌辨識，應該需要管理員協助",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.532402",
+            "25.044384"
+        ],
+        "address": "102 八德路一段, 100, 中正區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(平30/h | 假40/h)臺南市美術館2館地下停車場",
+            "description": "汽車費率 平日 30H；假日 40H 繞過汽車閘門直接騎到出口找管理室，他們會引導重機停管理室前的車位<br>感謝小鍾@FB",
+            "icon": "icon-5.png"
+        },
+        "geometry": [
+            "120.200947",
+            "22.99019"
+        ],
+        "address": "260 府前路一段, 700, 中西區, 臺南市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)新北市蘆洲區仁愛停車場多功能大樓",
+            "description": "後牌辨析 ; 專用格 2 格 或以上",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "121.471447",
+            "25.0908"
+        ],
+        "address": "188-3 民權路, 247, 蘆洲區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)中原國小地下停車場",
+            "description": "30h 後牌辨析 專用格2 格 或以上",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.239371",
+            "24.956402"
+        ],
+        "address": "158 中北路, 320, 中壢區, Taoyuan, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(平20/h | 假30/h)林口停三公有停車場",
+            "description": "",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.389052",
+            "25.078814"
+        ],
+        "address": "188 中山路, 244, 林口區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(平20/h | 假30/h)金山立體停車場",
+            "description": "大型重型機車需由人員協助由汽車車道進場，依汽車臨停收費，建議停放於R樓平日20h、最高上限50元；假日30h、最高上限100元 <br>由汽車道進入；若遇汽車排隊車潮，可選擇另一方式，由人員引導至機車區的大型車格停放（實際停放大小為3格機車格大小，場內另有畫製）<br>感謝kevinbig3",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.641694",
+            "25.220059"
+        ],
+        "address": "中興路, 208, 金山區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h | 300/d) 健康1區社會住宅地下停車場",
+            "description": "出入口只有前牌辨識，二輪從閘門縫隙處直接進入 無 /未知 30/h ; 150/12h 出入口只有前牌辨識，二輪從閘門縫隙處直接進入 無 /未知 親身經驗 或 車友/朋友/親人經驗 禁停機車格，只能停汽車格；由於沒有車牌辨識，進場後需要通知管理人員（到社宅管理室或是撥打電話 一區：0905-118-571 二區：0905-119-731）",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.563994",
+            "25.054313"
+        ],
+        "address": "25 三民路, 105, 松山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)二重公園停車場",
+            "description": "重機月租1500",
+            "icon": "icon-4.png"
+        },
+        "geometry": [
+            "121.474965",
+            "25.066329"
+        ],
+        "address": "水漾路二段, 241, 三重區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(40/h)新生高架停車場",
+            "description": "40h 前10分鐘免費 無出入口管制",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.52773",
+            "25.060514"
+        ],
+        "address": "新生高架道路, 104, 中山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)新北市頂溪國小地下停車場",
+            "description": "重機月租1500",
+            "icon": "icon-4.png"
+        },
+        "geometry": [
+            "121.510774",
+            "25.015607"
+        ],
+        "address": "文化路135巷 ／ 仁愛路104巷7弄, 234, 永和區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)國家生技園區地下停車場",
+            "description": "重機月租1000",
+            "icon": "icon-4.png"
+        },
+        "geometry": [
+            "121.611421",
+            "25.047491"
+        ],
+        "address": "101 研究院路一段130巷, 115, 南港區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(20/h)右車道進-平實公園地下停車場",
+            "description": "感謝 Jeff1445@ptt<br>汽車費率 20h 後牌辨析 <br>後牌辨識僅設置於右側車道（出入場均有",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "120.236402",
+            "22.992815"
+        ],
+        "address": "1 平實路, 701, 東區, 臺南市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(20/h | 100/d)幸福公園停車場",
+            "description": "感謝lumis888@ptt<br>汽車費率 每小時20元，當日上限100元 <br> 出入車道有多重減速板，請小心",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "120.491379",
+            "22.678668"
+        ],
+        "address": "38 勝利路, 900, 屏東市, Pingtung County, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(20/h)三峽國小地下停車場",
+            "description": "管理員協助 / 按鈴<br>fantong@ptt",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.367608",
+            "24.935073"
+        ],
+        "address": "65 中山路, 237, 三峽區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(40/h)新店行政園區市政廳地下停車場",
+            "description": "新店行政園區停車場 汽車費率 40h 後牌辨析 親身經驗 或 車友/朋友/親人經驗  <br>感謝Joketrojan@ptt",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "121.542371",
+            "24.967338"
+        ],
+        "address": "9 北新路一段88巷, 231, 新店區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)鶯歌老街第二停車場",
+            "description": "推車吧少年 僅有前牌辨識",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.34336",
+            "24.949431"
+        ],
+        "address": "尖山埔路二段, 239, 鶯歌區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)鶯歌老街第二停車場(北區)",
+            "description": "推車照屁屁",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.343119",
+            "24.949638"
+        ],
+        "address": "尖山埔路二段, 239, 鶯歌區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(40/h)臺北表演藝術中心停車場",
+            "description": "管理員協助/按鈴",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.523692",
+            "25.084636"
+        ],
+        "address": "6 前港街, 111, 士林區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)歐特儀捷運新店站轉乘停車場",
+            "description": "管理員協助/按鈴<br>感謝Timo",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.537613",
+            "24.957038"
+        ],
+        "address": "8 文中路, 231, 新店區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(平40/h | 假50/h)藝文園區地下停車場(南區) ",
+            "description": "感謝harry7991mv@ptt",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.301053",
+            "25.013978"
+        ],
+        "address": "藝文二街, 330, 桃園區, Taoyuan, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h | 250/d)中山國中地下停車場",
+            "description": "感謝cbc0916(低調) 私訊回報",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.546486",
+            "25.060656"
+        ],
+        "address": "15 民權東路三段140巷, 105, 松山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(20/h)文中小平面停車場",
+            "description": "推車吧少車<br>鳴謝 pokejoe0603 (阿爽)@PTT 貼文",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.482289",
+            "25.058956"
+        ],
+        "address": "114 三陽路, 241, 三重區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(20/h | 100/d)中路三號社會住宅地下停車場",
+            "description": "汽車費率 20元/H (每日最高上限100元） 後牌辨析  專用格2 格 或以上  <br>重機專用格停滿，則停放一般汽車格",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.284829",
+            "25.007549"
+        ],
+        "address": "崇法街, 330, 桃園區, Taoyuan, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(平20/h | 假30/h)城市車旅停車場 海安站",
+            "description": "",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "120.195688",
+            "22.991248"
+        ],
+        "address": "停車場入口, 700, 中西區, 臺南市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(20/h)尚順育樂世界",
+            "description": "汽車費率 20h 專用 2 格 或以上",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "120.904657",
+            "24.688205"
+        ],
+        "address": "中央路 141 巷, 351, 頭份市, Miaoli County, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)碧華國小地下停車場",
+            "description": "汽車費率 30h",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.490031",
+            "25.085081"
+        ],
+        "address": "160 五華街, 241, 三重區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(60/h)南華高中收費停車場",
+            "description": "汽車費率 60h",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.531012",
+            "25.015611"
+        ],
+        "address": "58 汀州路三段, 100, 中正區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)新北市立圖書館 青少年圖書館",
+            "description": "汽車費率 30h 後牌辨析",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "121.510847",
+            "24.95958"
+        ],
+        "address": "196-2 安康路二段, 231, 新店區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)福和國中地下停車場",
+            "description": "汽車費率 30h（上限150d) 後牌辨析 <br>專用2 格 或以上 <br>收費貌似半小時未滿一小時會分開為15元/30分鐘",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.522922",
+            "25.004699"
+        ],
+        "address": "林森路112巷12弄, 234, 永和區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(日30/h | 夜20/h)南港國小地下停車場",
+            "description": "汽車費率 30h 後牌辨析 2 格 或以上 <br>假日及平日（20-8）20h ,平日（8-20）30h",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.611225",
+            "25.056487"
+        ],
+        "address": "3-2 興東街, 115, 南港區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)新莊國民中學地下停車場",
+            "description": "鍵盤輸入 專用2格以上",
+            "icon": "icon-9.png"
+        },
+        "geometry": [
+            "121.45132",
+            "25.034278"
+        ],
+        "address": "景德路, 242, 新莊區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(20/h)靠左側-市政公園地下停車場-汽車",
+            "description": "紅黃牌可自由選擇停機車或汽車 機車20d 汽車20h 後牌辨析 2 格 或以上 <br>從機車道進場可停機車格或大型重機專用車格<br>從汽車道進場可停汽車格或大型重機專用車格<br>停車入口有兩邊可從文心路或惠中路進出，若大重從汽車道進請靠左側後車牌辨識才能準確，不建議從汽車道右邊辨識",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "120.64715",
+            "24.159351"
+        ],
+        "address": "201 文心路二段, 407, 西屯區, 臺中市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)水萍塭公園地下停車場",
+            "description": "汽車費率 不分平假日一小時20 管理員協助 / 按鈴 無 親身經驗 或 車友/朋友/親人經驗 地上有重機入口標示（方便使用對講機）",
+            "icon": "icon-6.png"
+        },
+        "geometry": [
+            "120.194593",
+            "22.985666"
+        ],
+        "address": "1-26 夏林路, 702, 南區, 臺南市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(20/h)靠左側-市政公園停車場-汽車",
+            "description": "紅黃牌可自由選擇停機車或汽車 機車20d 汽車20h 後牌辨析 2 格 或以上 <br>從機車道進場可停機車格或大型重機專用車格<br>從汽車道進場可停汽車格或大型重機專用車格<br>停車入口有兩邊可從文心路或惠中路進出，若大重從汽車道進請靠左側後車牌辨識才能準確，不建議從汽車道右邊辨識",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "120.644154",
+            "24.160715"
+        ],
+        "address": "109 惠中路一段, 407, 西屯區, 臺中市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(20/h)新市國小地下停車場",
+            "description": "汽車費率 20h",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "120.295383",
+            "23.078334"
+        ],
+        "address": "242 光華街, 744, 新市區, 臺南市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(40/h)大誠立體停車場-倒退入場",
+            "description": "汽車費率 40h 需要倒車進入 <br>只有前車牌辨識 必須倒車入場出場",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "120.679158",
+            "24.144749"
+        ],
+        "address": "20 吉祥街, 400, 中區, 臺中市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(40/h)機車道進-中和國小地下停車場",
+            "description": "汽車費率 專用格4格以上<br>機車道進入 會自動調整為汽車費率<br>可停專用格或汽車格",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.499826",
+            "24.998586"
+        ],
+        "address": "632 景平路, 235, 中和區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(20/h)新竹火車站後站(一)汽車停車場",
+            "description": "汽車費率 20h 後牌辨析 <br>新竹市公有停車位，<br>慢慢都開始改成後牌辨識系統",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "120.974303",
+            "24.800833"
+        ],
+        "address": "南大路, 300, 東區, 新竹市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(20/h)新竹火車站後站(二)汽車停車場",
+            "description": "汽車費率 20h 後牌辨析 <br>新竹市公有停車位，<br>慢慢都開始改成後牌辨識系統",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "120.974527",
+            "24.801856"
+        ],
+        "address": "公竹路, 300, 東區, 新竹市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(20/h)新竹火車站後站(三)汽車停車場",
+            "description": "汽車費率 20h 後牌辨析 <br>新竹市公有停車位，<br>慢慢都開始改成後牌辨識系統",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "120.97538",
+            "24.802362"
+        ],
+        "address": "東大路一段21巷, 300, 東區, 新竹市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(20/h)北大路停車場",
+            "description": "汽車費率 20h 後牌辨析 <br>新竹市公有停車位，<br>慢慢都開始改成後牌辨識系統",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "120.967399",
+            "24.809178"
+        ],
+        "address": "109 中正路, 300, 北區, 新竹市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(40/h)中山運動中心地下停車場",
+            "description": "機車格收汽車費率 每小時$40 <br>管理員協助 / 按鈴 <br>專用2 格 或以上 <br> 設計不良，按鈕處在斜坡上，有倒車的危險",
+            "icon": "icon-11.png"
+        },
+        "geometry": [
+            "121.521619",
+            "25.054735"
+        ],
+        "address": "中山北路二段42巷, 104, 中山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(60/h)台壽金融總部大樓停車場",
+            "description": "汽車費率 每小時$60 <br>管理員協助 / 按鈴 <br> 重機進入後到B1登記車號，停汽車車位",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.521814",
+            "25.054667"
+        ],
+        "address": "中山北路二段42巷, 104, 中山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(20/h)新竹火車站後站(四)汽車停車場",
+            "description": "汽車費率 20h 後牌辨析 <br>新竹市公有停車位，<br>慢慢都開始改成後牌辨識系統",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "120.975393",
+            "24.802146"
+        ],
+        "address": "東大路一段21巷, 300, 東區, 新竹市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(40/h)新南停車場-國立臺灣大學",
+            "description": "新南停車場-台灣大學\t汽車費率\t40h\t按鈕取票\t2 格 或以上 下停車場管理員引導停在管理室旁邊<br>感謝Jason300R@PTT分享",
+            "icon": "icon-9.png"
+        },
+        "geometry": [
+            "121.533937",
+            "25.01912"
+        ],
+        "address": "機車入口車道, 106, 大安區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(50/h)新光三越台南中山店停車場",
+            "description": "下到閘門口跟左前方保全揮揮手，他會幫你遙控開門，要記住進場時間 無 /未知 親身經驗 或 車友/朋友/親人經驗 停好車後先到一樓服務台跟服務人員告知車牌及進場時間，之後出場可在繳費機輸入車牌繳費，出口閘門可從右邊繞過去出場即可<br>---<br>感謝小鍾@FB",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "120.209846",
+            "22.99551"
+        ],
+        "address": "162 中山路, 700, 中西區, 臺南市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(平40/h | 假50/h)大魯閣新時代購物中心",
+            "description": "台中新時代 <br>汽車費率 平日40/h 假日50/h 後牌辨析<br>感謝伸港陳禹勳@PTT",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "120.687748",
+            "24.135773"
+        ],
+        "address": "186 復興路四段, 401, 東區, 臺中市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(30/h)新北高工地下停車場",
+            "description": "汽車費率 每小時$30 後牌辨析",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "121.448828",
+            "24.983845"
+        ],
+        "address": "裕生路83巷29弄, 236, 土城區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(80/h)市府轉運站停車場-城市車旅",
+            "description": "車牌辨識（但需按鈕）, 可折抵消費<br>感謝OLIVER分享",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "121.566035",
+            "25.040221"
+        ],
+        "address": "忠孝東路五段22巷, 110, 信義區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(平30/h | 假40/h)美麗新淡海影城",
+            "description": "汽車停車場平日$30/時；假日$40/時。 憑電影票根平日折抵3小時，假日折抵2小時，單日全館含商場消費最高折抵4小時。",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.437896",
+            "25.200592"
+        ],
+        "address": "新市六路二段, 251, 淡水區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(40/h)CITYLINK 內湖店",
+            "description": "可折抵消費",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.594398",
+            "25.084124"
+        ],
+        "address": "188 成功路四段, 114, 內湖區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(30/h)輔大醫療大樓停車場B2",
+            "description": "B2 重機臨停",
+            "icon": "icon-4.png"
+        },
+        "geometry": [
+            "121.431599",
+            "25.038958"
+        ],
+        "address": "66 三泰路, 242, 新莊區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(20/h)樟新站停車場",
+            "description": "",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.55694",
+            "24.979542"
+        ],
+        "address": "一壽街17巷, 116, 文山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(20/h)興隆市場旁平面停車場",
+            "description": "可能要倒退入場",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.547257",
+            "24.999465"
+        ],
+        "address": "48 興隆路二段, 116, 文山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(40/h)新內一停車場",
+            "description": "按鈕取幣",
+            "icon": "icon-6.png"
+        },
+        "geometry": [
+            "121.573567",
+            "25.076229"
+        ],
+        "address": "1 瑞光路316巷, 114, 內湖區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(20/h)保儀路平面停車場",
+            "description": "",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.566311",
+            "24.984265"
+        ],
+        "address": "120 保儀路, 116, 文山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(平30/h | 假40/h)台北兒童新樂園汽車停車場",
+            "description": "",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "121.514896",
+            "25.098189"
+        ],
+        "address": "55 承德路五段, 111, 士林區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(平30/h | 假60/h)Times JC PARK新莊停車場",
+            "description": "鍵盤輸入 <br>感謝roit******@****.com",
+            "icon": "icon-6.png"
+        },
+        "geometry": [
+            "121.448711",
+            "25.049225"
+        ],
+        "address": "738-1 幸福路, 242, 新莊區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(100/h)全聯大安北師店停車場",
+            "description": "",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.545272",
+            "25.025434"
+        ],
+        "address": "29 和平東路二段311巷, 106, 大安區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(平40/h | 假50/h)信義廣場地下停車場",
+            "description": "平日40/H, 假日50/H, 2個專用格<br>有後車牌辨識",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.566394",
+            "25.033054"
+        ],
+        "address": "15 信義路五段, 110, 信義區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(50/h | 250/d)中華電信仁愛停車場",
+            "description": "",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.524619",
+            "25.036887"
+        ],
+        "address": "145 杭州南路一段, 100, 中正區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(30/h | 120/d)右道進-基隆東岸地下停車場站",
+            "description": "@通勤者之歌SHORT<br>汽車道進入, 管理室旁有重機專用區",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.743721",
+            "25.13034"
+        ],
+        "address": "130 愛三路, 200, 仁愛區, 基隆市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(---)夢時代購物中心 汽車停車場",
+            "description": "教士2016貼文下回覆 3樓有重機專用停車位",
+            "icon": "icon-5.png"
+        },
+        "geometry": [
+            "120.308268",
+            "22.594772"
+        ],
+        "address": "興發路, 806, 前鎮區, 高雄市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(30/h)家樂福 青海店",
+            "description": "教士2016貼文下回覆 有重機專用停車位",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "120.644814",
+            "24.170162"
+        ],
+        "address": "207-18 青海路二段, 407, 西屯區, 臺中市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(70/3h)光華停車場",
+            "description": "2022年 3小時70元, 老父女經營, <br>友善, 但會台語比較好, 不然會有點雞同鴨講",
+            "icon": "icon-6.png"
+        },
+        "geometry": [
+            "121.373098",
+            "24.93225"
+        ],
+        "address": "光明路3巷, 237, 三峽區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(40/h)忠信廣場地下停車場",
+            "description": "全日40/h, 2個專用格",
+            "icon": "icon-4.png"
+        },
+        "geometry": [
+            "121.568176",
+            "25.040235"
+        ],
+        "address": "興雅路, 110, 信義區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(60/h)京站時尚廣場小碧潭店",
+            "description": "汽車費率 B4 621-626 重機專用格<br>60元/小時, 500元折抵一小時",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.530712",
+            "24.972351"
+        ],
+        "address": "157 中央路, 231, 新店區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(40/h)台北田徑場停車場",
+            "description": "\"致電台北田徑場 比照汽車的費率<br>感謝PTT車友\"",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.55107",
+            "25.050604"
+        ],
+        "address": "2 南京東路四段, 105, 松山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "公有汽車費率(適用停管法)",
+        "properties": {
+            "name": "(50/h 左車道進)國立臺灣師範大學運動場停車場",
+            "description": "左車道有後牌辨識",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "121.525278",
+            "25.026602"
+        ],
+        "address": "6 和平東路一段104巷, 106, 大安區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(30/h | 150/d)應安停車場(承德場)",
+            "description": "**倒車照屁股進場**<br>臨停：<br>平日：<br>09:00~21:00 半小時15元<br>21:00~09:00 半小時5元<br>平日當日最高150元<br><br>假日：<br>09:00~21:00 半小時15元<br>21:00~09:00 半小時5元<br>假日當日最高150元",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.516639",
+            "25.061743"
+        ],
+        "address": "民權西路144巷5弄, 103, 大同區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(30/h | 150/d)應安停車場(承德二場)",
+            "description": "**倒車照屁股進場**<br>臨停：<br>平日：<br>09:00~21:00 半小時15元<br>21:00~09:00 半小時5元<br>平日當日最高150元<br><br>假日：<br>09:00~21:00 半小時15元<br>21:00~09:00 半小時5元<br>假日當日最高150元",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.517956",
+            "25.061602"
+        ],
+        "address": "民權西路102巷33弄, 103, 大同區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(平30/h | 假60/h)淡水中山停車場",
+            "description": "**按鈕取票**<br>平日15/半小, 假日30/半小<br>隔壁幸福培菓寵物店消費可以折抵半小<br>妮妮小虎很可愛, 東西的價錢也很便宜",
+            "icon": "icon-6.png"
+        },
+        "geometry": [
+            "121.441387",
+            "25.171366"
+        ],
+        "address": "123 中山路, 251, 淡水區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(平30/h | 假60/h)廣三SOGO",
+            "description": "感謝PTT車友",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "120.661772",
+            "24.155279"
+        ],
+        "address": "459 臺灣大道二段, 403, 西區, 臺中市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(30/h | 300/d)桃園長庚紀念醫院停車場",
+            "description": "走左邊車道, 按重機按鈕人工拍後牌 <br>感謝傑哥會客室@YT",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "121.366228",
+            "25.028908"
+        ],
+        "address": "123 頂湖路, 333, 龜山區, Taoyuan, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(120/h)遠東SOGO 台北復興館",
+            "description": "露天重機專用格",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.542942",
+            "25.041135"
+        ],
+        "address": "300 忠孝東路三段, 106, 大安區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(100/h)台灣聯通停車場-晶華酒店場",
+            "description": "台灣聯通停車場-晶華酒店場 入場辨識, 場地承包商改為 USpace 現在改為車牌辨識閘門，但沒有後牌辨識，需聯繫場地管理員開啟。<br>----------<br>100/H 用餐不收費, 感謝PTT車友回報<br>----------<br>23/7/11更新<br>進出場時，無車牌辨識，需於機器上鍵入車牌號碼數字部分，加#後可騎入（不要按到通話鍵）<br>感謝Oliver@PTT<br>-----------",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.525346",
+            "25.054343"
+        ],
+        "address": "247 林森北路, 104, 中山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(60/h)大統領停車場",
+            "description": "重機專用格汽車, 警衛引導",
+            "icon": "icon-5.png"
+        },
+        "geometry": [
+            "121.551148",
+            "25.041716"
+        ],
+        "address": "183 忠孝東路四段, 106, 大安區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(100/h)合作金庫總行停車場",
+            "description": "",
+            "icon": "icon-4.png"
+        },
+        "geometry": [
+            "121.545894",
+            "25.0494"
+        ],
+        "address": "1 敦化北路4巷25弄, 105, 松山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(50/h)台大兒童醫療大樓汽車停車場",
+            "description": "管理員引導, 汽車",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.517826",
+            "25.044516"
+        ],
+        "address": "兒醫停車場出口, 100, 中正區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(平50/h | 假60/h)三創生活園區停車場",
+            "description": "滿500折半小",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "121.530626",
+            "25.044922"
+        ],
+        "address": "1 金山北路, 100, 中正區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(40/h)台北農會中正場",
+            "description": "按鈕取票",
+            "icon": "icon-6.png"
+        },
+        "geometry": [
+            "121.542719",
+            "25.036212"
+        ],
+        "address": "26 復興南路一段340巷, 106, 大安區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(60/h)永樂市場地下1樓停車場",
+            "description": "",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.510373",
+            "25.055445"
+        ],
+        "address": "永昌街, 103, 大同區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(100/h)大潤發 中崙店",
+            "description": "可折抵消費",
+            "icon": "icon-4.png"
+        },
+        "geometry": [
+            "121.542984",
+            "25.045639"
+        ],
+        "address": "八德路二段312巷, 104, 中山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(30/h)愛買 三重店",
+            "description": "按鈕取票",
+            "icon": "icon-6.png"
+        },
+        "geometry": [
+            "121.476197",
+            "25.071414"
+        ],
+        "address": "45 中正北路193巷, 241, 三重區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(平60/h | 假80/h)京站時尚廣場",
+            "description": "",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "121.517194",
+            "25.049308"
+        ],
+        "address": "1 承德路一段, 103, 大同區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(50/h)家樂福 新店店",
+            "description": "",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "121.546165",
+            "24.976509"
+        ],
+        "address": "1 中興路三段, 231, 新店區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(60/h | 300/d)台安醫院停車場",
+            "description": "",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.547036",
+            "25.047642"
+        ],
+        "address": "八德路二段410巷, 105, 松山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(60/h)遠東百貨 板橋中山店",
+            "description": "繁忙時間會被引導至機車區<br>收費統一為汽車費率",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "121.464444",
+            "25.010969"
+        ],
+        "address": "152 中山路一段, 220, 板橋區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(100/h)遠東百貨 信義A13",
+            "description": "",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "121.567955",
+            "25.036751"
+        ],
+        "address": "58 松仁路, 110, 信義區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(50/h)高雄大遠百地下停車場",
+            "description": "按鈕取票 50/h 感謝hompd43@ptt",
+            "icon": "icon-6.png"
+        },
+        "geometry": [
+            "120.304255",
+            "22.612456"
+        ],
+        "address": "21 三多四路, 802, 苓雅區, 高雄市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(Free)義享時尚廣場-汽車",
+            "description": "2023/5/4回報更新<br>汽機車停車場皆可停 /汽車停車場大重免費<br>---------------------------<br>管理員協助進場<br>感謝 大鳥@PTT",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "120.306302",
+            "22.65645"
+        ],
+        "address": "新順路, 804, 鼓山區, 高雄市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(Free)遠東巨城購物中心停車場",
+            "description": "三處停車場（機車，地下汽車，樓上汽車）都可以停；僅前車牌辨識，重機需按鈴請管理員協助，目前無需繳費即可按鈴出場。",
+            "icon": "icon-5.png"
+        },
+        "geometry": [
+            "120.975405",
+            "24.809547"
+        ],
+        "address": "241 中央路, 300, 東區, 新竹市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(30/h)明志書院立體停車場(汽車)",
+            "description": "後牌辨析<br>感謝 a07051226@ptt",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "120.965677",
+            "24.801609"
+        ],
+        "address": "323 西大路, 300, 東區, 新竹市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(45/h)台中文心秀泰影城",
+            "description": "",
+            "icon": "icon-6.png"
+        },
+        "geometry": [
+            "120.645766",
+            "24.129763"
+        ],
+        "address": "文心南七路, 408, 南屯區, 臺中市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(室內30/h | 室外20/h)南紡購物中心",
+            "description": "管理員協助 / 按鈴<br>停機車停車場有機率被開單<br>感謝jeff1445@ptt",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "120.232703",
+            "22.990786"
+        ],
+        "address": "366 中華東路一段, 701, 東區, 臺南市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(100/h)信義微風置地",
+            "description": "a9650615@ptt 2023年3月修正",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.566548",
+            "25.040314"
+        ],
+        "address": "興雅路, 110, 信義區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(40/h)銀河廣場",
+            "description": "感謝j901386@ptt<br>有後牌辨識",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "121.224092",
+            "24.961916"
+        ],
+        "address": "48 九和一街, 320, 中壢區, Taoyuan, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(40/h)IKEA宜家家居 台中店",
+            "description": "管理員協助 / 按鈴<br>入場告知管理員或按鈴告知車號<br>感謝 伸港陳禹勳",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "120.64324",
+            "24.14732"
+        ],
+        "address": "168 向上路二段, 408, 南屯區, 臺中市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(40/h)雙和醫院停車場",
+            "description": "管理員協助 / 按鈴",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.494006",
+            "24.993173"
+        ],
+        "address": "圓通路240巷, 235, 中和區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(80/h)全聯淡水淡大店",
+            "description": "***倒退嚕***<br>不限額消費折半小時<br>消費滿300元折一小時<br>折抵上限為一小時",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.446651",
+            "25.177699"
+        ],
+        "address": "大忠街113巷, 251, 淡水區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(--)台中大遠百Top City",
+            "description": "感謝ilove1530@PTT",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "120.644702",
+            "24.16311"
+        ],
+        "address": "大遠百停車場入口, 407, 西屯區, 臺中市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(30/h | 300/d)歐特儀-自強地下停車場",
+            "description": "停車場是前牌辨識, 直接繞過閘門入場<br>停車後再到管理室告知管理員 (管理室在入口, 如果管理有看到也會幫你開閘門)<br>離場須至管室繳費後, 繞過閘門出場<br>感謝gamania014@ptt",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "120.293785",
+            "22.631159"
+        ],
+        "address": "榮安街, 801, 前金區, 高雄市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(Free) 右車道進-新光三越台南新天地",
+            "description": "離場前需至1F服務台請服務員手動輸入車牌及完成消費折抵 如無需繳費即可直接離場 需繳費則需另尋自動繳費機<br>感謝Jeff1445@ptt<br>-----2024/04更新-----<br>入場辨識 重機靠右道進場 雖只有前牌掃描但偵測到重機會自動開閘 無需掃牌可進場 免費 出場靠左道也無需繳費、掃牌即可出場<br><br>不確定是否有重機專用格 但是大型停車場 我都直接停汽車格 位置也很夠",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "120.19825",
+            "22.986936"
+        ],
+        "address": "681 西門路一段, 700, 中西區, 臺南市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(30/h)置地生活廣場",
+            "description": "汽車入口, 重機專用鈕可辨識車牌<br>消費可折抵停車費",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.298936",
+            "24.965178"
+        ],
+        "address": "728 介壽路一段, 334, 八德區, Taoyuan, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(30h | 150/d)嘟嘟房(高鐵桃園3站)-專用格1/F",
+            "description": "按鈴<br>2 格以上專用格<br>感謝lr0119",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.215942",
+            "25.014091"
+        ],
+        "address": "高鐵停車場機車道, 320, 中壢區, Taoyuan, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(100/h)微風南山停車場",
+            "description": "管理員協助/按鈴<br>詢問是否為重機之後，管理員會要你下到B3汽車停車場。消費500元折抵0.5小時停車費，最多折抵3小時",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.56756",
+            "25.03456"
+        ],
+        "address": "松壽路20巷, 110, 信義區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(50/h)時代寓所",
+            "description": "車子在感應區15~30秒就會有管理員幫忙，或是從旁邊直接騎進去，停好車再去B1跟管理員講車牌號碼",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.523599",
+            "25.043521"
+        ],
+        "address": "19 林森南路, 100, 中正區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(40/h)嘟嘟房(高鐵新竹2站)",
+            "description": "汽車費率 40h 後牌辨析 40h 後牌辨析",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "121.040914",
+            "24.809842"
+        ],
+        "address": "光明六路東二段, 302, 竹北市, Hsinchu County, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(平30/h | 假40/h)景新大樓地下停車場",
+            "description": "假日上限120,. 按鈕取票",
+            "icon": "icon-6.png"
+        },
+        "geometry": [
+            "121.542301",
+            "24.990076"
+        ],
+        "address": "5 景後街149巷, 116, 文山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(40/h)松山文創園區(菸廠路進)",
+            "description": "後牌辨析<br>入內消費有特定會員才可折抵<br>感謝oliver",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "121.560638",
+            "25.043837"
+        ],
+        "address": "文創大街, 110, 信義區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(30/h)日月光廣場汽車停車場",
+            "description": "後牌辨析, 自由選擇汽機車停車場<br>感謝gamania014@ptt",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "121.444845",
+            "24.979333"
+        ],
+        "address": "中央路二段21巷, 236, 土城區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(平50/h | 假70/h)佳音168Parking停車場(限用悠遊卡)",
+            "description": "平日上限200元, 假日上限400元<br>悠遊卡進出",
+            "icon": "icon-6.png"
+        },
+        "geometry": [
+            "121.521532",
+            "25.025017"
+        ],
+        "address": "1 同安街28巷, 100, 中正區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(50/h) 普羅旺斯停車場 (7:30-23:00)",
+            "description": "按鈕取票",
+            "icon": "icon-6.png"
+        },
+        "geometry": [
+            "121.572637",
+            "25.041332"
+        ],
+        "address": "忠孝東路五段295巷2弄, 110, 信義區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(50/h)開封街室內停車場",
+            "description": "按鈕按票",
+            "icon": "icon-6.png"
+        },
+        "geometry": [
+            "121.512871",
+            "25.046036"
+        ],
+        "address": "33 開封街一段, 100, 中正區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(日40/h | 夜10/h)國軍桃園總醫院",
+            "description": "後牌辨析 *<br>汽車費率 前半小時免費，逾時以一小時算，<br>前半小時免費，逾時以一小時算，<br>07~22為40h ；22～07為10h，每日最高600元 <br>***感謝Ding",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "121.234866",
+            "24.877378"
+        ],
+        "address": "168 中興路228巷, 325, 龍潭區, Taoyuan, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(20/h)宜舍停車場-板橋力行",
+            "description": "悠遊卡進出",
+            "icon": "icon-6.png"
+        },
+        "geometry": [
+            "121.44731",
+            "25.00073"
+        ],
+        "address": "合安一路, 220, 板橋區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(50/h) LaLaport 台中 南館汽車停車場",
+            "description": "感謝Jacky",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "120.69154",
+            "24.134318"
+        ],
+        "address": "復興東一街, 401, 東區, 臺中市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(平30/h | 假40/h)萬華車站地下停車場",
+            "description": "",
+            "icon": "icon-4.png"
+        },
+        "geometry": [
+            "121.499422",
+            "25.033484"
+        ],
+        "address": "26 西園路一段306巷, 108, 萬華區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(50/h)宏達經營管理顧問安平停車場",
+            "description": "按鈕取票 2格專用格",
+            "icon": "icon-9.png"
+        },
+        "geometry": [
+            "121.51182",
+            "24.998093"
+        ],
+        "address": "安平路145巷, 235, 中和區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(40/h)綠川東街14號(*收費亭 不是times)",
+            "description": "汽車費率 20/半小時 停好跟管理員拿紙條，回來繳現金給他即可",
+            "icon": "icon-6.png"
+        },
+        "geometry": [
+            "120.682219",
+            "24.136506"
+        ],
+        "address": "8 綠川東街, 400, 中區, 臺中市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "（Free) 大江購物中心右側立體停車場 (汽車)",
+            "description": "無出入口管制<br>在立體停車場（位於大江購物中心右側）出入口旁邊約有五格，一格約可以停三到四台重機左右。",
+            "icon": "icon-9.png"
+        },
+        "geometry": [
+            "121.228654",
+            "25.000988"
+        ],
+        "address": "501 中園路二段, 320, 中壢區, Taoyuan, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(50/h)三井高發一路平面停車場",
+            "description": "汽車費率 50H 後車牌辨識且門口有人會引導，進去後看到汽車格皆可停 <br>入口位於高發一路快到歸仁十三路一段，不是前面的立體停車場  <br>感謝小鍾@FB",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "120.288642",
+            "22.924174"
+        ],
+        "address": "高發一路, 711, 歸仁區, 臺南市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(20/h | 100/d)App - USPACE 立功街122號",
+            "description": "App 控制出入 汽車費率 20h 日上限100 <br>感謝Kevin111123",
+            "icon": "icon-12.png"
+        },
+        "geometry": [
+            "121.473202",
+            "25.125065"
+        ],
+        "address": "120 立功街, 112, 北投區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(平30/h | 假40/h)捷運北投站轉乘停車場",
+            "description": "平日30/h, 假日40/h 後牌辨析",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "121.497929",
+            "25.133022"
+        ],
+        "address": "55 北投路二段, 112, 北投區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(60/h)Times 龜山南上路停車場",
+            "description": "汽車費率\t30h\t後牌辨析 線圈感應後取票進場。",
+            "icon": "icon-6.png"
+        },
+        "geometry": [
+            "121.29624",
+            "25.047395"
+        ],
+        "address": "南上路50巷, 333, 龜山區, Taoyuan, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(30/h)頭前國中地下停車場",
+            "description": "汽車費率 30h 管理員協助 / 按鈴<br>感謝fantong@ptt",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.4581",
+            "25.055012"
+        ],
+        "address": "昌德街, 242, 新莊區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(50/半天) 非24H-有樹林的停車場",
+            "description": "告知現場管理員後會告知停放位置,方可進入 每半天50元 <br>**** 非24H營業 ****",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.058863",
+            "24.700947"
+        ],
+        "address": "中興街, 314, 北埔鄉, Hsinchu County, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(40/h)亞東醫院地下停車場",
+            "description": "汽車費率 30/h 前兩小時40/h 前牌辨析（倒退） 晚間9點~上午7點，10元／小時。<br>進入停車場30分鐘內離開，免收停車費。",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.453038",
+            "24.998201"
+        ],
+        "address": "17 南雅南路二段, 220, 板橋區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(80/h)客限-板橋凱撒大飯店",
+            "description": "<img src=\"https://lh3.googleusercontent.com/umsh/AN6v0v7wlBqsT3K2NaDIxvAObrAU-eUkf1jPsvcoZnAGvcpBsSeUw_ukFFmRqcUZBnDFymqAV5mcsrwty7avKkNoaJ5u8DCOw955doGJJsZLGvMcA-_yc41UfYbabUwoL8NYdbl-jLetdoFF47ukpDXtp6vmB0VfMgJKfonmsGvS_4iJWkxF1mAlE_2-OVHY1u4KEQTkwUTzzY8Rs6OMaNt22h33_GLeF_eE4D8cOxU4h-3v0eEZ5WAGGdYKuEwL5mGLexhwEA4aLrii6seF7jj1TZ01u9SHXVVFAF5R_vLqPhajQDYN6VQBdrwOfjpJE7YbUy98-6he2o0ft8CL1qzNrjn9WGDIFb_wfqBe0aUxpPC-8mFNmU-OFxg5KPkO94jH8DI5PE-fhDXzefsLdEbcVHwQjuRoe-JtS30WAjMl7i9g40Ju3ToYG0zRfMrd_qZKJ38sLydNWAQYLsketNBYiqCoQXPqMomxi63RHyZqmoyCnVvFoeZqH4Rrhthsal-TUwuiAuyEhgTZRieCfomkb7SkBSpvlQrCN0EQ2xbWU_bXvdeySRY_ji6C0cFvDdAEKLtvOudoTNjiZeaqg-DZK8oWsIvD0RVyuqfp5kEb2t6w-Jd1458ZVRKTW0EExFApjgjYG_7S-tvfFFI9rBruDgaKtd82XQbXKELb2smUJUwE0QgIdVImk1qX_VDx5PizeSZCUI5Db8Bd3mUtTIzblZy6t7NoIjvnUnbCbzNMJLopMFrPay2tGyo0jTSXkRNk4XPmlRHQCGcdiYcHq_NgDC7To2cVAlr5-sas4XSgTTbP_tZUXf0f_CiZtmUTyWZTmGHodLdS6NJVDir4iMFTCumemw1tMbIkH6Kvr9X_pLYMnmYwSDCTzLpEyhvS0UR4dHOPc0Uata5EJ8aIoM7RaJ3a6OS-a24M8vYyr8CHLP5WhMfJ\" height=\"200\" width=\"auto\" /><br><br>感謝hoha5432提供<br>汽車費率 80h 按鈕取票 2 格 或以上 <br>目前對外說不開放臨停，僅供住宿與用餐客人停放。費用沒有公開，根據個人繳費經驗推估約 80h。<br>官網寫說「本飯店提供機車/汽車地下停車場(B2-B5) ，共220個車位。※B2停放機車（可供重型機車停靠，但如需要更大空間可改停靠汽車停車格）」但實際沒有機車格，而是只有大重停車格（為汽車格畫線切出）。",
+            "icon": "icon-9.png"
+        },
+        "geometry": [
+            "121.462737",
+            "25.01178"
+        ],
+        "address": "8 縣民大道二段, 220, 板橋區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(平25/d | 假100/d) 屏東夜市復興停車場-「不可過夜」-自由路入口",
+            "description": "**感謝停車場經營單位親自回報**<br>汽車費率 25D 按鈕取票 <br> 有謙正巷和自由路兩處入口，<br>露天停車場，不可過夜",
+            "icon": "icon-6.png"
+        },
+        "geometry": [
+            "120.489656",
+            "22.666616"
+        ],
+        "address": "自立路, 900, 屏東市, Pingtung County, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(平25/d | 假100/d) 屏東夜市復興停車場-「不可過夜」-謙正巷入口",
+            "description": "**感謝停車場經營單位親自回報**<br>汽車費率 25D 按鈕取票 <br> 有謙正巷和自由路兩處入口，<br>露天停車場，不可過夜",
+            "icon": "icon-6.png"
+        },
+        "geometry": [
+            "120.490317",
+            "22.668346"
+        ],
+        "address": "謙正巷, 900, 屏東市, Pingtung County, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(20/d)城市車旅-屏東民生立體停車場",
+            "description": "感謝lumis888@ptt<br>機車費率 20/d 後牌辨析",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "120.492628",
+            "22.669123"
+        ],
+        "address": "酒泉一橫巷, 900, 屏東市, Pingtung County, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(60/h | 260/d)國泰世興大樓",
+            "description": "國泰竹北世興大樓站地下停車場 汽車費率 30/0.5h；最高260/d 後牌辨析",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "121.042059",
+            "24.806894"
+        ],
+        "address": "高鐵七路東2巷, 302, 竹北市, Hsinchu County, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(80/h |假 240/d)金山停車場(永康街)",
+            "description": "感謝Yukikaze68@ptt<br>汽車費率 80h; 150/d (平日) 240/d (假日) 按鈕取票",
+            "icon": "icon-6.png"
+        },
+        "geometry": [
+            "121.52755",
+            "25.032787"
+        ],
+        "address": "11 愛國東路79巷, 106, 大安區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(80/h)城市車旅停車場 中正永昌站",
+            "description": "汽車費率 40／半小時 管理員協助 / 按鈴 無 親身經驗 或 車友/朋友/親人經驗<br>感謝kevinbig3",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.509901",
+            "25.027768"
+        ],
+        "address": "117 汀州路一段, 100, 中正區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(20/h) iRent彰師附工站",
+            "description": "汽車費率 20h 按鈕取票 無 親身經驗 或 車友/朋友/親人經驗<br>感謝",
+            "icon": "icon-6.png"
+        },
+        "geometry": [
+            "120.556214",
+            "24.084191"
+        ],
+        "address": "竹和路40巷, 500, 彰化市, Changhua County, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(50/h)金福順停車場",
+            "description": "汽車費率 25/半小時 按鈕取票 無 親身經驗 或 車友/朋友/親人經驗",
+            "icon": "icon-6.png"
+        },
+        "geometry": [
+            "120.609666",
+            "24.185536"
+        ],
+        "address": "29 玉門路, 407, 西屯區, 臺中市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(30/h) 營業時間0730-2200-停車場",
+            "description": "不管汽車或大型重機統一費率 30h 有人看守 無 親身經驗 或 車友/朋友/親人經驗 營業時間從早上七點半到晚上十點",
+            "icon": "icon-6.png"
+        },
+        "geometry": [
+            "120.54589",
+            "24.071934"
+        ],
+        "address": "68 南校街, 500, 彰化市, Changhua County, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(日40/h | 夜20/h)桃園長庚轉運站停車場-汽車",
+            "description": "自由選擇 汽車格07-22: 40h 22-07: 20h 機車格20d 後牌辨析 無 親身經驗 或 車友/朋友/親人經驗 停汽車格與機車格皆需由文化一路進入 <br>汽車格直接後排辨識過柵欄<br>若停機車格直接走最右邊機慢車道不用過柵欄 到轉運站二樓機車停車場才後排辨識 後面都很空 停機車格需由文化一路機慢車道離開 不用排隊<br>停汽車格可由文化一路或湖邊路離場  <br><br>ND@google",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "121.368364",
+            "25.062261"
+        ],
+        "address": "院前一路, 333, 龜山區, Taoyuan, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(平30/h | 假40/h)明倫社宅室內停車場",
+            "description": "感謝kevinbig3<br>汽車費率 平日30h（上限140元）;假日40h（無上限）",
+            "icon": "icon-7.png"
+        },
+        "geometry": [
+            "121.519897",
+            "25.072805"
+        ],
+        "address": "承德路三段283巷, 103, 大同區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(50/h)台南三井 停車場 北口",
+            "description": "台南三井停車場北口 重機專用格劃設情況 警衛聯繫；出場按鈕；50/h；重機專格無車時也可停汽車格",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "120.287468",
+            "22.926549"
+        ],
+        "address": "高發一路, 711, 歸仁區, 臺南市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(30/h)後港新公園地下停車場",
+            "description": "汽車費率 30h 管理員協助 / 按鈴 <br>專用1 格 <br>重機會有一格在角落繳費機前的汽車格，因為角度的關係一般汽車沒辦法停進去，會被管理員當成重機停車格。<br>進場要請管理員登記車牌，出場只要繳費機繳完錢就可出場。  ?<br>感謝Chris",
+            "icon": "icon-5.png"
+        },
+        "geometry": [
+            "121.424012",
+            "25.026072"
+        ],
+        "address": "100 民安路, 242, 新莊區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(60/h)逢甲大學體育館",
+            "description": "汽車費率 60h 管理員協助 / 按鈴 親身經驗 或 車友/朋友/親人經驗 進來後需到管理室說車牌 出去時也要先到管理室通知",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "120.648784",
+            "24.181639"
+        ],
+        "address": "西安街277巷, 407, 西屯區, 臺中市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(30/h)環球購物中心林口A9停車場",
+            "description": "汽車費率 一小時30元 按鈕取票<br>感謝自由飛翼",
+            "icon": "icon-6.png"
+        },
+        "geometry": [
+            "121.361399",
+            "25.066148"
+        ],
+        "address": "302 文化三路一段, 244, 林口區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(30/h)捷運迴龍站停車場",
+            "description": "感謝Marcus<br>汽車費率 30h 管理員協助 / 按鈴 <br> 走汽車入口",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.413102",
+            "25.022747"
+        ],
+        "address": "中正路746巷, 242, 新莊區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(30/h)CITY PARKING 城市車旅停車場 新竹晶品城站",
+            "description": "汽車費率 30/1H <br>有重車專用格<br> 廣場目前 商場歇業，停車場正常營運 使用。",
+            "icon": "icon-5.png"
+        },
+        "geometry": [
+            "120.97034",
+            "24.801965"
+        ],
+        "address": "汽車出入口, 300, 東區, 新竹市, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(50/h)板橋怡寶大樓停車場 0700-2400營業",
+            "description": "汽車費率 50h 按鈕取票 <br>只開放早上07:00至凌晨00:00",
+            "icon": "icon-6.png"
+        },
+        "geometry": [
+            "121.46039",
+            "25.008094"
+        ],
+        "address": "3 重慶路, 220, 板橋區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(平40/h | 假50/h)大同停車場",
+            "description": "汽車費率 平日40h、假日50h 按鈕取票",
+            "icon": "icon-6.png"
+        },
+        "geometry": [
+            "121.314611",
+            "24.990334"
+        ],
+        "address": "13 大同路, 330, 桃園區, Taoyuan, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(Free)漢神巨蛋購物廣場-機車",
+            "description": "地下二樓有收費機車專用格2格、<br>也可以選機車停車場不收費 50h 停汽車格需按鈕聯繫管理員，機車停車場可直接下去<br>專用2 格 或以上 親身經驗 或 車友/朋友/親人經驗",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "120.302933",
+            "22.669794"
+        ],
+        "address": "777 博愛二路, 813, 左營區, 高雄市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(30/d)雙峰停車場",
+            "description": "機車費率 30d 後牌辨析",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.313692",
+            "25.012668"
+        ],
+        "address": "501 民有三街, 330, 桃園區, Taoyuan, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(10/h | 20/d)  台北市立第二殯儀館",
+            "description": "新蓋好停車場目前比照一般白牌機車停車位及收費 <br>感謝eraser1101@PTT 回文",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.553025",
+            "25.013517"
+        ],
+        "address": "330 辛亥路三段, 106, 大安區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(Free)基隆七堵停車場-I",
+            "description": "機車費率 免費 無出入口管制",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.714078",
+            "25.095651"
+        ],
+        "address": "光明路, 206, 七堵區, 基隆市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(20/d)城市車旅-寶中停車場",
+            "description": "機車費率 20/d 後牌辨析",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.548166",
+            "24.978336"
+        ],
+        "address": "品牌路, 231, 新店區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(20/d)中國醫藥大學新竹附設醫院停車場",
+            "description": "中國醫藥大學新竹附設醫院停車場 機車費率 20d 後牌辨析",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.001796",
+            "24.825076"
+        ],
+        "address": "199 興隆路一段, 302, 竹北市, Hsinchu County, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(30/d)歐特儀A19體育園區站室內停車場",
+            "description": "機車費率 30d 後牌辨析<br>感謝Jason888@ptt",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.20283",
+            "25.002504"
+        ],
+        "address": "文康路, 320, 中壢區, Taoyuan, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(機車30/d) 岡山樂購停車場",
+            "description": "汽車 平30/h | 假50/h<br>自由選擇 <br> 汽車停車場按鈴<br> 機車停車場後牌辨識<br> 汽機車停車場均可停放 <br>感謝Jeff1445@PTT",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "120.300028",
+            "22.77989"
+        ],
+        "address": "1 捷安路1巷, 820, 岡山區, 高雄市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(10/h | 50/d) 家樂福三民店停車場",
+            "description": "後牌辨析 10/h；當日最高50；第一個小時免費 後牌辨析  重機走機車道進出場",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.563546",
+            "25.061656"
+        ],
+        "address": "新東街51巷, 105, 松山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(20/d)日月光廣場機車停車場",
+            "description": "後牌辨析, 自由選擇汽機車停車場<br>機車場閘門出入口是直角彎道, 出場時要注意<br>感謝gamania014@ptt",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.444271",
+            "24.979552"
+        ],
+        "address": "中央路二段21巷, 236, 土城區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(20/h)捷運文心崇德站機車停車場",
+            "description": "先前已問過嘟嘟房客服人員，文心崇德站機車停車場是可以停放重機的。<br>場內也有不少重機車友停放，顯示是可以正常停放的。<br>https://imgur.io/a/asJhfyP<br>感謝Hirate77@ppt",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "120.684854",
+            "24.172042"
+        ],
+        "address": "526 文心路四段, 406, 北屯區, 臺中市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(Free)[仁愛路進入]中正運動中心機車停車場(平面)",
+            "description": "無出入口管制<br>由仁愛路側進入，可與一般機車免費停放（平面，非地下停車場）<br>感謝Oliver",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.519564",
+            "25.038844"
+        ],
+        "address": "1 信義路一段, 100, 中正區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(Free)夢時代購物中心",
+            "description": "B1M機車停車區/免費（格子稍小請斟酌）<br>感謝tonyX@ptt",
+            "icon": "icon-13.png"
+        },
+        "geometry": [
+            "120.30871",
+            "22.595016"
+        ],
+        "address": "興發路, 806, 前鎮區, 高雄市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(30/d)高雄大遠百地下停車場",
+            "description": "露天機車停車區經詢問警衛可停，均為人工收費，30/d<br>感謝tonyX@ptt",
+            "icon": "icon-13.png"
+        },
+        "geometry": [
+            "120.304566",
+            "22.61254"
+        ],
+        "address": "21 三多四路, 802, 苓雅區, 高雄市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(Free)愛買 三重店",
+            "description": "室外機車格免費停<br>感謝LiamTiger@ptt",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.476544",
+            "25.071494"
+        ],
+        "address": "45 中正北路193巷, 241, 三重區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(自由樂捐)陽明黃帝神宮",
+            "description": "為宮廟的停車場，我的大羊有停過沒問題，但就是寬度有點窄，停車可能要注意，廟方是說自由捐獻，不過現場是沒看到香油錢的箱子<br>感謝s8802946@ptt",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.498068",
+            "25.13401"
+        ],
+        "address": "大同街, 112, 北投區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(60/d)城市車旅停車場(信義101停車場 )",
+            "description": "",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.56471",
+            "25.032315"
+        ],
+        "address": "20 信義路五段, 110, 信義區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(20/h | 60/d)SOGO天母店",
+            "description": "2022年12月下旬致電館方, 確認為自由選擇, 消費折抵當日",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.523968",
+            "25.104585"
+        ],
+        "address": "福華路164巷, 111, 士林區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(30/d)台中勤美機車停車場",
+            "description": "台中勤美機車停車場<br>可以停放大型重機，單次收費30元<br>入口大概在這個位置<br>感謝車友s8802946@ptt",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "120.663848",
+            "24.151235"
+        ],
+        "address": "68 公益路, 403, 西區, 臺中市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(40/h)新北宏匯停車場",
+            "description": "2024/5/1起，重機比照汽車停車",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "121.449299",
+            "25.058986"
+        ],
+        "address": "中央路, 242, 新莊區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(60/d)汐止東科停車場",
+            "description": "往機車停，按票卡的(最高60/天)<br>機車停好，往管理員收費方向走上1F，剛好是星巴克<br>(感謝車友 雷克斯索尼@ptt superbike 分享)<br>111/10/1",
+            "icon": "icon-13.png"
+        },
+        "geometry": [
+            "121.647577",
+            "25.060282"
+        ],
+        "address": "90 新台五路一段, 221, 汐止區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人汽車費率",
+        "properties": {
+            "name": "(50/h)漢神巨蛋購物廣場-汽車",
+            "description": "地下二樓有收費機車專用格2格、<br>也可以選機車停車場不收費 50h 停汽車格需按鈕聯繫管理員，機車停車場可直接下去<br>專用2 格 或以上 親身經驗 或 車友/朋友/親人經驗",
+            "icon": "icon-5.png"
+        },
+        "geometry": [
+            "120.303034",
+            "22.67015"
+        ],
+        "address": "777 博愛二路, 813, 左營區, 高雄市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(20/h)家樂福 桂林店",
+            "description": "機車停車區有重機專屬格位",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.505729",
+            "25.03792"
+        ],
+        "address": "1 桂林路, 108, 萬華區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(10/h | 100/d)IKEA 宜家家居 新店店",
+            "description": "重機停機車停車場<br>從路易莎旁進去<br>2022/8/1打電話向店方確認過<br><br>8/13實際到那邊門口有寫禁停 但裡面已有幾台大重停好了<br>有點傻眼 有要到這的車友建議停裡面一點的位置 低調",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.530056",
+            "24.97264"
+        ],
+        "address": "157 中央路, 231, 新店區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(Free)愛買南雅店機車停車場",
+            "description": "",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.456135",
+            "25.002659"
+        ],
+        "address": "80 貴興路, 220, 板橋區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(10/h | 30/d)博客停車場-三重迪卡儂場",
+            "description": "FB小編回覆 重機停機車停車場<br>原PO有實際去過OK, 要注意出入口有點小",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.489945",
+            "25.055305"
+        ],
+        "address": "18-7 集美街, 241, 三重區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(20/h)信義新光三越 A4",
+            "description": "機車, 半小時10元",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.566702",
+            "25.039654"
+        ],
+        "address": "19 松高路, 110, 信義區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(30/d)24TPS永固便利(湯城站)",
+            "description": "機車費率<br>但看評論和照片... 要不要停自己斟酌<br>感謝PTT車友",
+            "icon": "icon-13.png"
+        },
+        "geometry": [
+            "121.468881",
+            "25.046283"
+        ],
+        "address": "10 重新路五段609巷, 241, 三重區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(Free)新光三越 台中中港店",
+            "description": "感謝PTT車友",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "120.643708",
+            "24.165257"
+        ],
+        "address": "惠來路二段, 407, 西屯區, 臺中市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(40/d)桃園水利大樓停車場-復興路進",
+            "description": "\"重機停機車位一次40元, 友善<br>感謝中央大學同學@DCARD\"<br>入口在復興路, 請勿跑到後面另一個停車場",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.311451",
+            "24.990139"
+        ],
+        "address": "151 復興路, 330, 桃園區, Taoyuan, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(---)正捷停車場",
+            "description": "室內有人顧<br>待踩點確認,. 感謝DCARD",
+            "icon": "icon-13.png"
+        },
+        "geometry": [
+            "121.312427",
+            "24.988951"
+        ],
+        "address": "長壽街, 330, 桃園區, Taoyuan, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(20/d)桃園區原住民族集會所",
+            "description": "",
+            "icon": "icon-13.png"
+        },
+        "geometry": [
+            "121.326948",
+            "25.001417"
+        ],
+        "address": "公園路, 330, 桃園區, Taoyuan, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(Free)中友百貨",
+            "description": "露天免費, 重機專用格",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "120.684783",
+            "24.152217"
+        ],
+        "address": "161 三民路三段, 404, 北區, 臺中市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "整修中-(10/d)南門市場機車停車場",
+            "description": "投幣10元<br>2023/10/27 - 重建中 感謝will@ptt提供",
+            "icon": "icon-14.png"
+        },
+        "geometry": [
+            "121.523136",
+            "25.032293"
+        ],
+        "address": "3 愛國東路, 106, 大安區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(Free)潮境公園收費停車場",
+            "description": "鑽縫進出, 潛規則",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.80298",
+            "25.142713"
+        ],
+        "address": "61 北寧路446巷, 202, 中正區, 基隆市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(50/d)詮營停車場(信義101)",
+            "description": "刷悠遊卡進入",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.5647",
+            "25.032614"
+        ],
+        "address": "20 信義路五段, 110, 信義區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(10/h)自由時報停車大樓",
+            "description": "按鈕取票<br>感謝Joketrojan@ptt提供場地",
+            "icon": "icon-13.png"
+        },
+        "geometry": [
+            "121.57284",
+            "25.078615"
+        ],
+        "address": "210 瑞光路393巷, 114, 內湖區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(20/h)家樂福重慶店",
+            "description": "需要停到二樓機車停車場，沒有重機專用位，但有車格都能停，二樓機車入口在寧夏路的汽車出口旁邊，採按鈕取幣式，地上有感應線圈，若感應不到，得要車友踢側柱壓在線圈上<br>感謝車友補充VXXXX@gmail.com補充",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.513885",
+            "25.058924"
+        ],
+        "address": "寧夏路104巷, 103, 大同區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(Free)美麗華大直影城",
+            "description": "",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.557515",
+            "25.083217"
+        ],
+        "address": "285 樂群三路, 104, 中山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(30/d | 900/月)台大水源校區",
+            "description": "感謝Kyontw@ptt<br>24年3月修正月費為900",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.529979",
+            "25.013711"
+        ],
+        "address": "16 思源街, 100, 中正區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(10/h)樹林秀泰生活",
+            "description": "注意格位偏小，另短牌架辨析可能會失敗<br>感謝elynn889@ptt提醒",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.428574",
+            "24.994905"
+        ],
+        "address": "40 保安街一段20巷, 238, 樹林區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(Free)家樂福 樹林店",
+            "description": "",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.421114",
+            "24.996997"
+        ],
+        "address": "118 大安路, 238, 樹林區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(Free)家樂福B1 重新店",
+            "description": "機車, B1有大重專用格",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.467624",
+            "25.043296"
+        ],
+        "address": "654 重新路五段, 241, 三重區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(Free)大潤發中和店機車停車場",
+            "description": "",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.499392",
+            "25.003738"
+        ],
+        "address": "永和路, 235, 中和區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(Free)淡水禮萊國賓影城",
+            "description": "",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.429477",
+            "25.176517"
+        ],
+        "address": "2 中正路一段, 251, 淡水區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(20)東吳大學機車停車場",
+            "description": "",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.545425",
+            "25.094564"
+        ],
+        "address": "70 臨溪路, 111, 士林區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(10/h)三猿廣場",
+            "description": "",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.46873",
+            "25.02358"
+        ],
+        "address": "362 文化路一段, 220, 板橋區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(20/h | 50/d)麗寶百貨廣場地下停車場-文強停車",
+            "description": "",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.461844",
+            "25.012743"
+        ],
+        "address": "3 縣民大道二段, 220, 板橋區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(50/H)南港車站地下停車場",
+            "description": "2023/12/9起, 重機停車比照汽車",
+            "icon": "icon-1.png"
+        },
+        "geometry": [
+            "121.603632",
+            "25.052028"
+        ],
+        "address": "忠孝東路七段265巷, 115, 南港區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(平30/d | 假50/d)大葉高島屋天母停車場",
+            "description": "消費可折抵<br>2024年3月kevinbig網友修正可停機車停車場",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.531522",
+            "25.111826"
+        ],
+        "address": "55 忠誠路二段, 111, 士林區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(30/d)Uniqlo新莊中正店停車場",
+            "description": "機車停車場，機車費率，30元/次。<br>跟停車場管理公司反應後，機車停車場現在已可停重機。<br>感謝John  爭取合理停車權益",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.462662",
+            "25.040505"
+        ],
+        "address": "55 中正路, 242, 新莊區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(Free)林口三井",
+            "description": "",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.364799",
+            "25.07055"
+        ],
+        "address": "356 文化三路一段, 244, 林口區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(機10/h | 汽30/h)台茂購物中心立體停車場",
+            "description": "自由選擇",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.288564",
+            "25.05366"
+        ],
+        "address": "錦順街, 338, 蘆竹區, Taoyuan, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(20/d)中國信託金融園區停車場B1",
+            "description": "感謝sporplo0221@ptt更新資訊",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.616382",
+            "25.05833"
+        ],
+        "address": "經貿二路106巷, 115, 南港區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(20/d)南港展覽館停車場",
+            "description": "",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.620154",
+            "25.057121"
+        ],
+        "address": "77 經貿一路, 115, 南港區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(10/h)家樂福 蘆洲店",
+            "description": "有重機區, 在GOGORO換電站旁",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.486766",
+            "25.087879"
+        ],
+        "address": "282 五華街, 241, 三重區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(平40/h | 假60/h)環球購物中心 新北中和",
+            "description": "後牌；汽車費率；專用8格",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.474806",
+            "25.007169"
+        ],
+        "address": "122 中山路三段, 235, 中和區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(10/h | 50/d)iFG遠雄廣場停車場",
+            "description": "感謝c222ssss@PTT<br>機車停車場有隔大重區",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.648075",
+            "25.061945"
+        ],
+        "address": "93 新台五路一段, 221, 汐止區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(Free)IKEA 宜家家居 新莊店",
+            "description": "",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.464975",
+            "25.041332"
+        ],
+        "address": "1 中正路, 242, 新莊區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(20/d)國軍松山醫院機車停車場",
+            "description": "機車;20/d;後牌",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.557972",
+            "25.054086"
+        ],
+        "address": "131 健康路, 105, 松山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(30/d)高雄橋頭火車(捷運)站 站前街停車場",
+            "description": "機車費率\t30h\t按鈕取票<br>高雄橋頭火車(捷運)站 站前街停車場 https://maps.app.goo.gl/JzB3CBTL2xxCKj99A",
+            "icon": "icon-13.png"
+        },
+        "geometry": [
+            "120.309935",
+            "22.761265"
+        ],
+        "address": "14 站前街, 825, 橋頭區, 高雄市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(Free)遠東巨城購物中心停車場 (機車)",
+            "description": "機車場無任何設備管制，汽車場車牌辨識不會成功但門會開，離場按鈴管理員開門。<br>三處停車場（機車，地下汽車，樓上汽車）都可以停<br>感謝a07051226@ptt",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "120.974721",
+            "24.809486"
+        ],
+        "address": "223 中央路, 300, 東區, 新竹市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(20/d)新光三越 高雄左營店",
+            "description": "機車停車場後牌辨識<br>進門前警衛會依照重機體型決定<br>該停汽車或機車格<br>感謝jeff1445@ptt",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "120.310393",
+            "22.689138"
+        ],
+        "address": "123 高鐵路, 813, 左營區, 高雄市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(Free)奇美博物館",
+            "description": "大門詢問回覆重機請直接停放於機車停車場，機車停車場無收費無出入口管制<br>感謝 j901386@ptt",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "120.226027",
+            "22.934561"
+        ],
+        "address": "66 文華路二段, 717, 仁德區, 臺南市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(30/d)Times 忠孝臨沂停車場",
+            "description": "機車費率, 一次30, 推薦",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.530811",
+            "25.043298"
+        ],
+        "address": "1 臨沂街, 100, 中正區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(20/h | 50/d)嘟嘟房停車場（高雄美術館站）",
+            "description": "感謝s8802946@ptt",
+            "icon": "icon-13.png"
+        },
+        "geometry": [
+            "120.288028",
+            "22.655935"
+        ],
+        "address": "252 美術東二路, 804, 鼓山區, 高雄市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(20/h | 50/d)宏泰交易(一號)廣場",
+            "description": "感謝2023/1/1 rexsony@ptt 分享",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.569278",
+            "25.037028"
+        ],
+        "address": "91 松仁路, 110, 信義區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(20/h)新光三越 台北信義新天地A11",
+            "description": "比照機車 感謝tom1880043@PTT",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.567338",
+            "25.036596"
+        ],
+        "address": "香緹大道, 110, 信義區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(20/h)新光三越 台北信義新天地A8",
+            "description": "感謝c222ssss@PTT",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.566791",
+            "25.038224"
+        ],
+        "address": "16 松高路, 110, 信義區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(20/h)嘟嘟房機車停車場(台中朝富站)",
+            "description": "",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "120.638547",
+            "24.165142"
+        ],
+        "address": "166 市政北六路, 407, 西屯區, 臺中市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(--)禮客OUTLET內湖店",
+            "description": "",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.574758",
+            "25.064272"
+        ],
+        "address": "民善街, 114, 內湖區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(20/d)南港展覽館2館機車停車場",
+            "description": "",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.615549",
+            "25.055394"
+        ],
+        "address": "47 中南街, 115, 南港區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(--)家樂福 中壢店",
+            "description": "",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.244714",
+            "24.947087"
+        ],
+        "address": "445-1 中山東路二段, 320, 中壢區, Taoyuan, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(20/h) 台北101 - CITY PARKING 城市車旅機車停車場",
+            "description": "感謝Oliver<br>台北101\t機車費率\t20h\t後牌辨析 需從市府路/信義路五段路口那側，警衛會要你走機車道，進去後有非常多重機車友都停在一個區域。若從其他出入口（松智路）似乎要汽車費率，但不確定",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.564101",
+            "25.033493"
+        ],
+        "address": "7 信義路五段, 110, 信義區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(Free)義享時尚廣場-機車",
+            "description": "",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "120.306296",
+            "22.656148"
+        ],
+        "address": "新順路, 804, 鼓山區, 高雄市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(Free)愛買 台南店",
+            "description": "免費停放 自由選擇汽車或機車格<br>感謝 Jeff1445@PTT",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "120.22887",
+            "23.034586"
+        ],
+        "address": "426 中正南路, 710, 永康區, 臺南市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(10/h | 50/d )裕隆城地下(機車)停車場",
+            "description": "自由選擇<br>機車區設有重機專用格<br>機車位 10/h | 50/d ; <br>汽車位 平50/h | 假60/h",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.546828",
+            "24.978899"
+        ],
+        "address": "品牌路, 231, 新店區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(20/h)阿卡停車場",
+            "description": "機車費率 20H 後牌辨析 FOCUS汽車停車場旁  <br>感謝小鍾@FB",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "120.210328",
+            "22.995017"
+        ],
+        "address": "中山路164巷, 700, 中西區, 臺南市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(20/h)環球購物中心機車 屏東市",
+            "description": "後牌;20/h;機車;無專用\"<br>感謝paul40807@ptt",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "120.493547",
+            "22.673208"
+        ],
+        "address": "88 仁愛路, 900, 屏東市, Pingtung County, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(Free)建國市場-機車平面停車場",
+            "description": "從建成路土地公廟進入露天平面停車場，<br>2023/5/20 停放 無出入口管制<br>感謝 paul40807@ptt",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "120.694705",
+            "24.133886"
+        ],
+        "address": "556 建成路, 401, 東區, 臺中市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(Free)愛買 水湳店",
+            "description": "愛買水湳店大型重機限停機車區，停車格長度目測只有 1.5-1.8 m，建議找兩排的地方停 2 格。<br>進出在同一個地方，車道狹窄，轉彎半徑小，進出停車場時小心會車。",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "120.659642",
+            "24.192693"
+        ],
+        "address": "1187 中清路二段, 406, 北屯區, 臺中市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(20/d)考選部國家考場機車停車場",
+            "description": "",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.550187",
+            "24.986928"
+        ],
+        "address": "木柵路一段70巷, 116, 文山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(Free)迪卡儂 南屯店",
+            "description": "免費 入場感應到有機車直接開門",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "120.649536",
+            "24.13144"
+        ],
+        "address": "379 大墩南路, 408, 南屯區, 臺中市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(10/h)台北遠東通訊園區地下停車場",
+            "description": "2023/12/9更新-後牌辨識<br>B1走路上來剛好是TPKA 研發辦公大樓 1F大廳，24H可停<br>(感謝車友 雷克斯索尼@ptt superbike 分享)",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.456366",
+            "24.999069"
+        ],
+        "address": "1 遠東路, 220, 板橋區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(10/h)LaLaport 台中 南館機車停車場",
+            "description": "2023.12.22 詢問保全，於當日停進南館機車區。費率會取決於停放場域（機/汽車）。<br><br>南館機車區雖有標示大型重機專用格，但依照現場標線看起來比較像共用車格。<br><br>南館機車區大重專用位進閘門後繼續直行，將與左側看到。<br><br>------<br>感謝Jacky",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "120.691626",
+            "24.134102"
+        ],
+        "address": "復興東一街, 401, 東區, 臺中市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(20/d)凱達大飯店附屬停車場",
+            "description": "機車費率 20d 後牌辨析",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.49844",
+            "25.032818"
+        ],
+        "address": "167 艋舺大道, 108, 萬華區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(20/d)臺北自來水事業處水源停車場",
+            "description": "機車費率 20d 後牌辨析 2 格 或以上",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.534033",
+            "25.012872"
+        ],
+        "address": "汀州路三段104巷, 100, 中正區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(Free)耐斯廣場購物中心",
+            "description": "機車免費  無出入口管制  停車場進去一點有遮雨棚<br>感謝@wayne0355",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "120.452587",
+            "23.496571"
+        ],
+        "address": "600 Zhongxiao Road West District Chiayi City Taiwan 600, 600, 東區, 嘉義市, Chiayi City, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(Free)俥亭華江場",
+            "description": "免費 Free 無出入口管制 <br>感謝Kevin111123",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.484128",
+            "25.026702"
+        ],
+        "address": "新北環河快速道路, 220, 板橋區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(40/d)遠東通訊園區 立體停車場",
+            "description": "經詢問管理人員，得知小型車入口沒有後牌辨析，因此「目前」先停放機車區，不清楚是否之後會更改政策。實際體驗有看到幾輛紅黃牌，但由於機車區的格子大小不一，有些格子可能不適合停放。",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.454264",
+            "24.997511"
+        ],
+        "address": "高爾富路, 220, 板橋區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(20/d)遠東世界中心",
+            "description": "依機車收費，詳見以下停車場管理辦法<br>http://www.fewc.org.tw/uploads/tadnews/file/112/地下三樓停車管理辦法(112.11.15修訂).pdf",
+            "icon": "icon-9.png"
+        },
+        "geometry": [
+            "121.645818",
+            "25.060989"
+        ],
+        "address": "75 新台五路一段, 221, 汐止區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(Free)淡水漁人碼頭",
+            "description": "機車道進 無出入口管制，實際未聽聞被驅趕經驗",
+            "icon": "icon-13.png"
+        },
+        "geometry": [
+            "121.411408",
+            "25.183504"
+        ],
+        "address": "201 觀海路, 251, 淡水區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(20/d)淺水灣停車場",
+            "description": "淺水灣停車場 機車費率 20d 後牌辨析<br>感謝kevinbig3",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.470702",
+            "25.251924"
+        ],
+        "address": "淡金公路, 252, 三芝區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(10/h | 40/d)扇形車庫公有立體停車場-機車B1",
+            "description": "按鈕取票<br>感謝伸港陳禹勳@PTT",
+            "icon": "icon-13.png"
+        },
+        "geometry": [
+            "120.537008",
+            "24.08254"
+        ],
+        "address": "292 辭修路, 500, 彰化市, Changhua County, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(30/d)台南國泰置地機車停車場",
+            "description": "感謝o.m_r6@ig<br>機車費率 30d 現金投幣進入（可投10、50、100，可找零） 無",
+            "icon": "icon-13.png"
+        },
+        "geometry": [
+            "120.199609",
+            "22.988035"
+        ],
+        "address": "191 永福路一段, 700, 中西區, 臺南市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(50/d)CITY PARKING 城市車旅停車場 Focus中山站 機車停車場",
+            "description": "機車費率 50/d 後牌辨析<br>感謝小鍾@FB",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "120.21098",
+            "22.99533"
+        ],
+        "address": "170 中山路, 700, 中西區, 臺南市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(Free)家樂福台東店停車場",
+            "description": "購物專用  有重機專用格",
+            "icon": "icon-9.png"
+        },
+        "geometry": [
+            "121.149227",
+            "22.75561"
+        ],
+        "address": "中山路296巷, 950, 臺東市, Taitung County, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(40/d)Times 太原路【機車】停車場",
+            "description": "位置偏少自行斟酌車體大小<br>鳴謝pokejoe0603 (阿爽)@PTT 貼文",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.516201",
+            "25.051754"
+        ],
+        "address": "13 太原路97巷, 103, 大同區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(20/d)清水機車停車場",
+            "description": "想到淡水逛街的話 這邊是另一個選擇<br>也算是泛指的淡水老街觀光區一塊<br>因為1比較容易停滿位置也比較小<br>大台一點的車或找不到位置可以往這裡停<br>這邊忘記是後牌辨識還是悠遊卡進出 反正很好進就對了 一次20超爽<br>這裡離重建街清水街比較近<br>如果受夠外面靠海那條街的商業化<br>停這邊逛逛這裡的山逕舊街也是不錯的選擇<br>感謝 pokejoe0603 (阿爽) @PTT 貼文",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.441446",
+            "25.170149"
+        ],
+        "address": "48 清水街, 251, 淡水區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(30/d)叭叭房淡江Hicity ",
+            "description": "",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.448633",
+            "25.177875"
+        ],
+        "address": "32 北新路182巷, 251, 淡水區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(20/d)桃園長庚轉運站停車場-機車",
+            "description": "自由選擇 汽車格07-22: 40h 22-07: 20h 機車格20d 後牌辨析 無 親身經驗 或 車友/朋友/親人經驗 停汽車格與機車格皆需由文化一路進入 <br>汽車格直接後排辨識過柵欄<br>若停機車格直接走最右邊機慢車道不用過柵欄 到轉運站二樓機車停車場才後排辨識 後面都很空 停機車格需由文化一路機慢車道離開 不用排隊<br>停汽車格可由文化一路或湖邊路離場  <br><br>ND@google",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.367672",
+            "25.06248"
+        ],
+        "address": "院前一路, 333, 龜山區, Taoyuan, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(20/h)潭子街二段31巷機車停車場",
+            "description": "機車費率 1小時20 按鈕取票",
+            "icon": "icon-13.png"
+        },
+        "geometry": [
+            "120.706233",
+            "24.213701"
+        ],
+        "address": "潭子街一段31巷, 427, 潭子區, 臺中市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(Free)家樂福 南投店",
+            "description": "目前2F設立專用格, 按鈴進入後免費停放",
+            "icon": "icon-5.png"
+        },
+        "geometry": [
+            "120.689174",
+            "23.905386"
+        ],
+        "address": "21 三和三路, 540, 南投市, Nantou County, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(Free)潭子運動中心停車場入口",
+            "description": "不收費 0 無出入口管制<br>請沿指示至運動中心後方機車格",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "120.7011",
+            "24.209765"
+        ],
+        "address": "113 勝利路, 427, 潭子區, 臺中市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(20/h)城市車旅停車場 秋紅谷A",
+            "description": "機車費率 1小時20 後牌辨析",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "120.640218",
+            "24.166784"
+        ],
+        "address": "441 臺灣大道三段, 407, 西屯區, 臺中市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(20/h)五權立體停車場",
+            "description": "機車費率 1小時20 後牌辨析",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "120.68444",
+            "24.154399"
+        ],
+        "address": "499 五權路, 404, 北區, 臺中市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(40/h)環球購物中心汽車 屏東市",
+            "description": "汽車停車場 後牌；40/h;重機",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "120.493321",
+            "22.673371"
+        ],
+        "address": "75 仁愛路, 900, 屏東市, Pingtung County, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(30/d)逢甲大學凱旋停車場",
+            "description": "機車費率 30d 後牌辨析",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "120.650379",
+            "24.181918"
+        ],
+        "address": "凱旋七路, 407, 西屯區, 臺中市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(20/d)全聯平鎮新富停車場",
+            "description": "機車費率 20d 後牌辨析<br>感謝JT@ptt",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.213511",
+            "24.939562"
+        ],
+        "address": "62 新富五街, 324, 平鎮區, Taoyuan, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(30/d)享平方Shown Square",
+            "description": "機車費率 平日ㄧ天最高30<br>**好像是享平方的官方人員來投稿?",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.027159",
+            "24.818891"
+        ],
+        "address": "36 自強南路, 302, 竹北市, Hsinchu County, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(30/d | 電子票證 20/d)桃捷 A11 坑口站",
+            "description": "機車費率 30d 後牌辨析 僅有共享/優先格<br>電子票證20d<br>當時去停重車 管理員指示停機車即可<br>希望這個資訊有幫助 謝謝",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.26637",
+            "25.08646"
+        ],
+        "address": "460 坑菓路, 338, 蘆竹區, Taoyuan, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(30/d)承億酒店",
+            "description": "機車費率 30/D 後牌辨析",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "120.302358",
+            "22.609337"
+        ],
+        "address": "林森四路, 806, 前鎮區, 高雄市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(30/d)嘟嘟房(西門漢口站)",
+            "description": "機車費率 30d 後牌辨析",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.508358",
+            "25.045269"
+        ],
+        "address": "5 漢口街二段, 108, 萬華區, 臺北市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(10/h | 50/d)誠品生活480",
+            "description": "機車費率 10 /h 後牌辨析 <br> 不分平假日，一般計費收費標準<br>機車停車：10 元／1 小時(當日最高收費50元)",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "120.638527",
+            "24.160036"
+        ],
+        "address": "480 市政路, 407, 西屯區, 臺中市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(20/d)惠新停車場",
+            "description": "機車費率 20d 無出入口管制",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "120.642243",
+            "24.164438"
+        ],
+        "address": "166 市政北七路, 407, 西屯區, 臺中市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(10/d)恩主公醫院停車場 (詮營 Parkinsys)",
+            "description": "機車費率 10d 入口投十元開門",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.363069",
+            "24.938366"
+        ],
+        "address": "375 復興路, 237, 三峽區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(60/d起可能要留鑰匙)南安寄車處",
+            "description": "重機獨立費率 60起/D 人工登記 專用2 格 或以上 <br> 以日記費，費率要和櫃檯確定，多日可議價",
+            "icon": "icon-9.png"
+        },
+        "geometry": [
+            "120.211727",
+            "22.99603"
+        ],
+        "address": "177 北門路一段, 700, 中西區, 臺南市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(Free)限黃牌-士林運動中心",
+            "description": "機車停放區自由進出不用收費 無出入口管制 <br>公告禁停紅牌(黃牌可)但出入口無管制場內依然有許多紅牌",
+            "icon": "icon-15.png"
+        },
+        "geometry": [
+            "121.521562",
+            "25.089423"
+        ],
+        "address": "1 士商路, 111, 士林區, 臺北市, Taiwan"
+    },
+    {
+        "name": "重機個別費率(含公有/私人)",
+        "properties": {
+            "name": "(20/h)機車道進-赤土崎公園地下停車場",
+            "description": "重機獨立費率 20h 後牌辨析 僅有共享/優先格 親身經驗 或 車友/朋友/親人經驗 停車場設有機車停車場獨立出入口，在建中路管理室旁邊，是地下停車場，與一般機車共用停車格，停車格有加大，大部分重機都停的下，有210個位置有月租",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "120.993972",
+            "24.799265"
+        ],
+        "address": "汽機車出入口, 300, 東區, 新竹市, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(30/h)亞東停車場",
+            "description": "汽車費率 30h 後牌辨析 專用2 格 或以上<br>不是亞東醫院停車場，是亞東停車場 亞東科大學生在停的 也開放民眾停車 b1有圍重機專用停車區",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.452148",
+            "24.996476"
+        ],
+        "address": "134 南雅南路二段, 220, 板橋區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "私人機車費率",
+        "properties": {
+            "name": "(20/d)新北市立土城醫院",
+            "description": "機車費率 計次$20 後牌辨析 無 親身經驗 或 車友/朋友/親人經驗 重機可以停機車格",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.448725",
+            "24.97615"
+        ],
+        "address": "6 金城路二段, 236, 土城區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "重機個別費率(含公有/私人)",
+        "properties": {
+            "name": "(Free)家樂福 中正店",
+            "description": "大型重機免費停車；專用停車格6格 感謝Jeff 1445@ptt",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "120.228612",
+            "23.032797"
+        ],
+        "address": "中正南路, 710, 永康區, 臺南市, Taiwan"
+    },
+    {
+        "name": "重機個別費率(含公有/私人)",
+        "properties": {
+            "name": "(Free)家樂福 光華店",
+            "description": "汽車費率 有購物可折抵、或免費 按鈴，或直接從桿子末端進入  專用格2 格 或以上",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "120.317175",
+            "22.61092"
+        ],
+        "address": "80 光華二路, 806, 前鎮區, 高雄市, Taiwan"
+    },
+    {
+        "name": "重機個別費率(含公有/私人)",
+        "properties": {
+            "name": "(Free)家樂福淡新店",
+            "description": "汽車道下，繞擋條直接進入，限停重機專用格<br>可直接離場無須繳費 2023/3/11",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.443647",
+            "25.188204"
+        ],
+        "address": "3f 中山北路二段, 251, 淡水區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "重機個別費率(含公有/私人)",
+        "properties": {
+            "name": "(50/d)九份大、小車停車場",
+            "description": "機車20 重機50 計次(2021)",
+            "icon": "icon-13.png"
+        },
+        "geometry": [
+            "121.848312",
+            "25.111455"
+        ],
+        "address": "瑞雙公路, 224, 瑞芳區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "重機個別費率(含公有/私人)",
+        "properties": {
+            "name": "(Free)富基漁港",
+            "description": "\"末端有一個重機驛站免費停車<br>可以讓愛車和大海拍照<br>外面一點也有一個重機專用停車空間<br>友善重機 風景漂亮的漁港<br>另外張阿瑞生魚片超好吃\"",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.535791",
+            "25.293417"
+        ],
+        "address": "楓林路, 253, 石門區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "重機個別費率(含公有/私人)",
+        "properties": {
+            "name": "(30/d)文化機車&自行車停車場5F",
+            "description": "悠遊卡進入/出場",
+            "icon": "icon-9.png"
+        },
+        "geometry": [
+            "121.438743",
+            "25.172655"
+        ],
+        "address": "建設街, 251, 淡水區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "重機個別費率(含公有/私人)",
+        "properties": {
+            "name": "(10/h | 30/d)青埔新光影城/x-park 城市車旅",
+            "description": "10h/30d 重機比照機車停<br>感謝 ___@ptt (名字不見了)",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.214398",
+            "25.017698"
+        ],
+        "address": "105 春德路, 320, 中壢區, Taoyuan, Taiwan"
+    },
+    {
+        "name": "重機個別費率(含公有/私人)",
+        "properties": {
+            "name": "(Free)家樂福埔里店 Carrefour Pu Li Store",
+            "description": "家樂福（埔里）\t停汽車格，免收費。\t0\t管理員協助 / 按鈴 <br>感謝q64071239分享",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "120.957112",
+            "23.970835"
+        ],
+        "address": "982 信義路, 545, 埔里鎮, Nantou County, Taiwan"
+    },
+    {
+        "name": "重機個別費率(含公有/私人)",
+        "properties": {
+            "name": "(Free｜按鈴)野柳遊客中心",
+            "description": "野柳地質公園停車場/新北市萬里區港東路(野柳遊客中心旁)\t觀光臨停免費\t免費\t管理員協助 / 按鈴\t無 /未知 <br> （2023/7月）來觀光詢問管理員可停，依指示停放不收費。<br>感謝LAN@PTT",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "121.689946",
+            "25.205284"
+        ],
+        "address": "167 港東路, 207, 萬里區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "重機個別費率(含公有/私人)",
+        "properties": {
+            "name": "(50/d)歐特儀石牌圖書館停車場",
+            "description": "要從機車入口處進入，重機獨立費率 50d 按鈕後直接進場，<br>在欄杆前直接投幣50元，欄杆就會升起，直接離場",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "121.52286",
+            "25.11326"
+        ],
+        "address": "榮華二路, 112, 北投區, 臺北市, Taiwan"
+    },
+    {
+        "name": "重機個別費率(含公有/私人)",
+        "properties": {
+            "name": "(Free)家樂福 屏東店",
+            "description": "不收費 ; 檔桿較短，重機從右側縫隙進入，車身較大者可按鈴通知管理員開門 ; 專用格數2格，接近賣場入口  <br>感謝paul40807@ptt",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "120.497791",
+            "22.682396"
+        ],
+        "address": "188 仁愛路, 900, 屏東市, Pingtung County, Taiwan"
+    },
+    {
+        "name": "重機個別費率(含公有/私人)",
+        "properties": {
+            "name": "(Free)家樂福 內壢店",
+            "description": "免費 騎進汽車道 專用格2 格 或以上 <br>感謝Yang@YT",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.253677",
+            "24.972425"
+        ],
+        "address": "450 中華路一段, 320, 中壢區, Taoyuan, Taiwan"
+    },
+    {
+        "name": "重機個別費率(含公有/私人)",
+        "properties": {
+            "name": "(40/h)家樂福 豐原店",
+            "description": "汽車費率 1小時40元 倒退嚕掃牌",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "120.706382",
+            "24.252176"
+        ],
+        "address": "500 成功路, 420, 豐原區, 臺中市, Taiwan"
+    },
+    {
+        "name": "重機個別費率(含公有/私人)",
+        "properties": {
+            "name": "(Free)家樂福 林口店",
+            "description": "從汽車入口進去停專用格 不用錢 閘門旁邊進去 專用2 格 或以上",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "121.374064",
+            "25.077598"
+        ],
+        "address": "559 文化二路一段, 244, 林口區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "重機個別費率(含公有/私人)",
+        "properties": {
+            "name": "(Free)家樂福 嘉義店",
+            "description": "在B1停車場斜坡下去的右邊 共有5格車位<br>無出入口管制",
+            "icon": "icon-3.png"
+        },
+        "geometry": [
+            "120.431499",
+            "23.471124"
+        ],
+        "address": "461 博愛路二段, 600, 西區, 嘉義市, Chiayi City, Taiwan"
+    },
+    {
+        "name": "重機個別費率(含公有/私人)",
+        "properties": {
+            "name": "(20/d)市政公園停車場-機車",
+            "description": "機車費率 20/d 後牌辨析<br>台中市交通局試辦機車格停放大型重機區域  <br>紅黃牌可自由選擇停機車或汽車 機車20d 汽車20h 後牌辨析 2 格 或以上 <br>從機車道進場可停機車格或大型重機專用車格<br>從汽車道進場可停汽車格或大型重機專用車格<br>停車入口有兩邊可從文心路或惠中路進出，若大重從汽車道進請靠左側後車牌辨識才能準確，不建議從汽車道右邊辨識",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "120.644299",
+            "24.16092"
+        ],
+        "address": "109 惠中路一段, 407, 西屯區, 臺中市, Taiwan"
+    },
+    {
+        "name": "重機個別費率(含公有/私人)",
+        "properties": {
+            "name": "(20/h)市政公園地下停車場-機車",
+            "description": "機車費率 20/d 後牌辨析<br>台中市交通局試辦機車格停放大型重機區域 <br>紅黃牌可自由選擇停機車或汽車 機車20d 汽車20h 後牌辨析 2 格 或以上 <br>從機車道進場可停機車格或大型重機專用車格<br>從汽車道進場可停汽車格或大型重機專用車格<br>停車入口有兩邊可從文心路或惠中路進出，若大重從汽車道進請靠左側後車牌辨識才能準確，不建議從汽車道右邊辨識",
+            "icon": "icon-10.png"
+        },
+        "geometry": [
+            "120.647064",
+            "24.159184"
+        ],
+        "address": "201 文心路二段, 407, 西屯區, 臺中市, Taiwan"
+    },
+    {
+        "name": "重機個別費率(含公有/私人)",
+        "properties": {
+            "name": "(--)武聖夜市",
+            "description": "武聖夜市 裡面有大型重機的停車格<br>請遵循工作人員引導",
+            "icon": "icon-9.png"
+        },
+        "geometry": [
+            "120.19051",
+            "23.003458"
+        ],
+        "address": "武聖路69巷, 700, 中西區, 臺南市, Taiwan"
+    },
+    {
+        "name": "路邊友善車格",
+        "properties": {
+            "name": "(40/h)信義路四段199巷18號對面 重機專用格",
+            "description": "",
+            "icon": "icon-16.png"
+        },
+        "geometry": [
+            "121.551662",
+            "25.034331"
+        ],
+        "address": "22 信義路四段199巷, 106, 大安區, 臺北市, Taiwan"
+    },
+    {
+        "name": "路邊友善車格",
+        "properties": {
+            "name": "(20/h)哈密街59巷53弄 重機專用格",
+            "description": "",
+            "icon": "icon-16.png"
+        },
+        "geometry": [
+            "121.516874",
+            "25.075306"
+        ],
+        "address": "哈密街59巷53弄, 103, 大同區, 臺北市, Taiwan"
+    },
+    {
+        "name": "路邊友善車格",
+        "properties": {
+            "name": "(30/h)松河街238號 重機專用格",
+            "description": "",
+            "icon": "icon-16.png"
+        },
+        "geometry": [
+            "121.578453",
+            "25.051726"
+        ],
+        "address": "松河街, 105, 松山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "路邊友善車格",
+        "properties": {
+            "name": "(30/h)辛亥路二段台大側門 重機專用格2個",
+            "description": "週一至週六 09-17 (30/h)<br>平日17-09 ; 週日 (不收費)",
+            "icon": "icon-16.png"
+        },
+        "geometry": [
+            "121.54153",
+            "25.02101"
+        ],
+        "address": "170 辛亥路二段, 106, 大安區, 臺北市, Taiwan"
+    },
+    {
+        "name": "重機個別費率(含公有/私人)",
+        "properties": {
+            "name": "整修中-(40/d)三民機車停車場",
+            "description": "重機40元/次 專用5格",
+            "icon": "icon-14.png"
+        },
+        "geometry": [
+            "121.472261",
+            "25.085827"
+        ],
+        "address": "9 復興路, 247, 蘆洲區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "路邊友善車格",
+        "properties": {
+            "name": "(30/h)鄭州路143巷 重機專用格",
+            "description": "",
+            "icon": "icon-16.png"
+        },
+        "geometry": [
+            "121.509861",
+            "25.051111"
+        ],
+        "address": "鄭州路143巷, 103, 大同區, 臺北市, Taiwan"
+    },
+    {
+        "name": "路邊友善車格",
+        "properties": {
+            "name": "(40/h)天祥路 重機專用格",
+            "description": "",
+            "icon": "icon-16.png"
+        },
+        "geometry": [
+            "121.520885",
+            "25.062254"
+        ],
+        "address": "64 天祥路, 104, 中山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "路邊友善車格",
+        "properties": {
+            "name": "(30/h)文林路 共用車格",
+            "description": "",
+            "icon": "icon-17.png"
+        },
+        "geometry": [
+            "121.523928",
+            "25.097176"
+        ],
+        "address": "529 文林路, 111, 士林區, 臺北市, Taiwan"
+    },
+    {
+        "name": "路邊友善車格",
+        "properties": {
+            "name": "(50/d)大業路 共用車格",
+            "description": "",
+            "icon": "icon-17.png"
+        },
+        "geometry": [
+            "121.497378",
+            "25.12956"
+        ],
+        "address": "大興街, 112, 北投區, 臺北市, Taiwan"
+    },
+    {
+        "name": "路邊友善車格",
+        "properties": {
+            "name": "(30/h) 瑞光路與瑞光路112巷路口 重機專用格2個",
+            "description": "",
+            "icon": "icon-16.png"
+        },
+        "geometry": [
+            "121.580674",
+            "25.072118"
+        ],
+        "address": "瑞光路112巷, 114, 內湖區, 臺北市, Taiwan"
+    },
+    {
+        "name": "路邊友善車格",
+        "properties": {
+            "name": "(Free - 平日夜間20-7 / 假日限定) 敦化南路一段  仁愛路四段112巷 汽機車共用停車格",
+            "description": "",
+            "icon": "icon-18.png"
+        },
+        "geometry": [
+            "121.549408",
+            "25.03554"
+        ],
+        "address": "7 敦化南路一段295巷, 106, 大安區, 臺北市, Taiwan"
+    },
+    {
+        "name": "路邊友善車格",
+        "properties": {
+            "name": "(Free - 平日夜間20-7 / 假日限定) 仁愛路四段122巷4號對面汽機車共用車格",
+            "description": "",
+            "icon": "icon-18.png"
+        },
+        "geometry": [
+            "121.550336",
+            "25.037243"
+        ],
+        "address": "仁愛路四段122巷, 106, 大安區, 臺北市, Taiwan"
+    },
+    {
+        "name": "路邊友善車格",
+        "properties": {
+            "name": "(Free - 平日夜間20-7 / 假日限定) 敦化北路199巷2弄 (宏國大樓後方) 汽機車共用停車格",
+            "description": "",
+            "icon": "icon-18.png"
+        },
+        "geometry": [
+            "121.550027",
+            "25.054991"
+        ],
+        "address": "敦化北路199巷2弄, 105, 松山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "路邊友善車格",
+        "properties": {
+            "name": "(Free - 平日夜間19-7 / 假日限定) 大業路452巷(彰銀前) 汽機車共用停車格",
+            "description": "",
+            "icon": "icon-18.png"
+        },
+        "geometry": [
+            "121.497208",
+            "25.131783"
+        ],
+        "address": "6 大業路自行車道, 112, 北投區, 臺北市, Taiwan"
+    },
+    {
+        "name": "路邊友善車格",
+        "properties": {
+            "name": "(Free - 平日夜間19-7 / 假日限定) 建國北路二段120號",
+            "description": "免付費 無出入口管制  汽機車共用車格20:00-8:00",
+            "icon": "icon-18.png"
+        },
+        "geometry": [
+            "121.536435",
+            "25.058958"
+        ],
+        "address": "松江路116巷, 104, 中山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "禁停重機",
+        "properties": {
+            "name": "(禁止)屏東公園仁愛路停車場",
+            "description": "",
+            "icon": "icon-19.png"
+        },
+        "geometry": [
+            "120.494064",
+            "22.676449"
+        ],
+        "address": "98 仁愛路, 900, 屏東市, Pingtung County, Taiwan"
+    },
+    {
+        "name": "禁停重機",
+        "properties": {
+            "name": "(禁止)淡水區中正市場機車停車場",
+            "description": "1/10日到訪 已明文禁止重機進入",
+            "icon": "icon-19.png"
+        },
+        "geometry": [
+            "121.439762",
+            "25.170106"
+        ],
+        "address": "115 中正路, 251, 淡水區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "禁停重機",
+        "properties": {
+            "name": "(禁止)中山市場立體機車停車場",
+            "description": "1/10到訪 已明文禁止重機進入",
+            "icon": "icon-19.png"
+        },
+        "geometry": [
+            "121.44272",
+            "25.170416"
+        ],
+        "address": "93 中山路, 251, 淡水區, New Taipei City, Taiwan"
+    },
+    {
+        "name": "禁停重機",
+        "properties": {
+            "name": "(禁止)Focus 時尚流行館汽車停車場",
+            "description": "機械車位因安全理由禁止停放，請至123巷機車停車場<br>感謝小鍾@FB",
+            "icon": "icon-19.png"
+        },
+        "geometry": [
+            "120.210208",
+            "22.995531"
+        ],
+        "address": "166 中山路, 700, 中西區, 臺南市, Taiwan"
+    },
+    {
+        "name": "禁停重機",
+        "properties": {
+            "name": "(2023起禁止停機車場)明志書院立體停車場（機車)",
+            "description": "2023年7月起更新禁停 <br>感謝豆漿",
+            "icon": "icon-19.png"
+        },
+        "geometry": [
+            "120.965934",
+            "24.801395"
+        ],
+        "address": "西大路315巷1弄, 300, 東區, 新竹市, Taiwan"
+    },
+    {
+        "name": "禁停重機",
+        "properties": {
+            "name": "⇨ (禁止)Times 台北地下街停車場 西出入口",
+            "description": "禁停重機，不開閘門，要自行迴轉",
+            "icon": "icon-19.png"
+        },
+        "geometry": [
+            "121.511067",
+            "25.049973"
+        ],
+        "address": "109 鄭州路, 103, 大同區, 臺北市, Taiwan"
+    },
+    {
+        "name": "禁停重機",
+        "properties": {
+            "name": "⇦ (禁止)Times 台北地下街停車場 東出入口",
+            "description": "禁停重機，不開閘門，要自行迴轉",
+            "icon": "icon-19.png"
+        },
+        "geometry": [
+            "121.518169",
+            "25.048613"
+        ],
+        "address": "209 市民大道一段, 103, 大同區, 臺北市, Taiwan"
+    },
+    {
+        "name": "禁停重機",
+        "properties": {
+            "name": "(禁止)宏泰交易(二號)廣場",
+            "description": "請至對面一號廣場停放",
+            "icon": "icon-19.png"
+        },
+        "geometry": [
+            "121.569488",
+            "25.036525"
+        ],
+        "address": "97 松仁路, 110, 信義區, 臺北市, Taiwan"
+    },
+    {
+        "name": "禁停重機",
+        "properties": {
+            "name": "(禁止)光華商場 (光華數位新天地)",
+            "description": "半平面半機械",
+            "icon": "icon-19.png"
+        },
+        "geometry": [
+            "121.532033",
+            "25.045272"
+        ],
+        "address": "8 市民大道三段, 100, 中正區, 臺北市, Taiwan"
+    },
+    {
+        "name": "禁停重機",
+        "properties": {
+            "name": "(禁止)嘟嘟房(富邦遼寧大樓站)",
+            "description": "",
+            "icon": "icon-19.png"
+        },
+        "geometry": [
+            "121.543063",
+            "25.05325"
+        ],
+        "address": "15 遼寧街185巷, 104, 中山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "禁停重機",
+        "properties": {
+            "name": "(禁止)聯邦佳佳大樓停車場",
+            "description": "",
+            "icon": "icon-19.png"
+        },
+        "geometry": [
+            "121.534087",
+            "25.058782"
+        ],
+        "address": "22 松江路235巷, 104, 中山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "禁停重機",
+        "properties": {
+            "name": "(禁止)濱江果菜市場地下停車場",
+            "description": "地下停車場本身禁停重機，但管理員說可停放至一樓機車區（據說每個管理員說詞不同）",
+            "icon": "icon-19.png"
+        },
+        "geometry": [
+            "121.538243",
+            "25.067132"
+        ],
+        "address": "民族東路410巷, 104, 中山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "路邊友善車格",
+        "properties": {
+            "name": "(--)八德路四段106巷8弄5號前 重機專用格3格",
+            "description": "費率不詳，專用路邊車格3格",
+            "icon": "icon-16.png"
+        },
+        "geometry": [
+            "121.56081",
+            "25.047025"
+        ],
+        "address": "八德路四段106巷8弄, 105, 松山區, 臺北市, Taiwan"
+    },
+    {
+        "name": "禁停重機",
+        "properties": {
+            "name": "(禁止)星聚點KTV 台北旗艦館",
+            "description": "有消費也不行",
+            "icon": "icon-19.png"
+        },
+        "geometry": [
+            "121.512114",
+            "25.056285"
+        ],
+        "address": "83 延平北路二段, 103, 大同區, 臺北市, Taiwan"
+    },
+    {
+        "name": "禁停重機",
+        "properties": {
+            "name": "(禁止)台南市永康區中華立體停車場(俥亭)",
+            "description": "禁止停放 門口立牌表明不給重機停<br>感謝小鍾@FB",
+            "icon": "icon-19.png"
+        },
+        "geometry": [
+            "120.237602",
+            "23.000689"
+        ],
+        "address": "57 華興街, 710, 永康區, 臺南市, Taiwan"
+    },
+    {
+        "name": "禁停重機",
+        "properties": {
+            "name": "(禁止)臺北市內湖運動中心 Taipei Neihu Sports Center",
+            "description": "臺北市內湖運動中心 停車場  禁止停放",
+            "icon": "icon-19.png"
+        },
+        "geometry": [
+            "121.574765",
+            "25.078157"
+        ],
+        "address": "12 洲子街, 114, 內湖區, 臺北市, Taiwan"
+    },
+    {
+        "name": "禁停重機",
+        "properties": {
+            "name": "(禁止)屏東太平洋百貨",
+            "description": "感謝paul40807@ptt",
+            "icon": "icon-19.png"
+        },
+        "geometry": [
+            "120.489824",
+            "22.674243"
+        ],
+        "address": "72 中正路, 900, 屏東市, Pingtung County, Taiwan"
+    },
+    {
+        "name": "禁停重機",
+        "properties": {
+            "name": "(維修中) 富邦金融中心停車場",
+            "description": "因為場地辨識機台問題，目前拒收重機。 23/6/28",
+            "icon": "icon-14.png"
+        },
+        "geometry": [
+            "121.551836",
+            "25.038384"
+        ],
+        "address": "安和路一段49巷, 106, 大安區, 臺北市, Taiwan"
+    },
+    {
+        "name": "禁停重機",
+        "properties": {
+            "name": "(禁止)農水署臺中管理處尊賢大樓 (水利大樓)",
+            "description": "2023/5/20造訪 出入口管理員表明禁止重機臨停  <br>感謝paul40807@ptt",
+            "icon": "icon-19.png"
+        },
+        "geometry": [
+            "120.685196",
+            "24.148683"
+        ],
+        "address": "7 尊賢街, 404, 北區, 臺中市, Taiwan"
+    },
+    {
+        "name": "台中市停管處黃先生恥辱柱 中市交停管字第1110071254號公告",
+        "properties": {
+            "name": "(--)東勢立體停車場",
+            "description": "中市交停管字第1110071254號公告禁止<br>6/1被議員關切後會勘前趕快開放",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "120.828467",
+            "24.25566"
+        ],
+        "address": "49 第三橫街, 423, 東勢區, 臺中市, Taiwan"
+    },
+    {
+        "name": "台中市停管處黃先生恥辱柱 中市交停管字第1110071254號公告",
+        "properties": {
+            "name": "(--)臺中市政府陽明市政大樓",
+            "description": "中市交停管字第1110071254號公告禁止<br>6/1被議員關切後會勘前趕快開放",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "120.720623",
+            "24.246738"
+        ],
+        "address": "36 陽明街, 420, 豐原區, 臺中市, Taiwan"
+    },
+    {
+        "name": "台中市停管處黃先生恥辱柱 中市交停管字第1110071254號公告",
+        "properties": {
+            "name": "(--)府後街地下停車場",
+            "description": "中市交停管字第1110071254號公告禁止<br>6/1被議員關切後會勘前趕快開放",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "120.675085",
+            "24.136244"
+        ],
+        "address": "府後街, 403, 西區, 臺中市, Taiwan"
+    },
+    {
+        "name": "台中市停管處黃先生恥辱柱 中市交停管字第1110071254號公告",
+        "properties": {
+            "name": "(--)萬壽棒球場附地下停車場",
+            "description": "中市交停管字第1110071254號公告禁止<br>6/1被議員關切後會勘前趕快開放",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "120.650036",
+            "24.14613"
+        ],
+        "address": "466 大墩路, 403, 西區, 臺中市, Taiwan"
+    },
+    {
+        "name": "台中市停管處黃先生恥辱柱 中市交停管字第1110071254號公告",
+        "properties": {
+            "name": "(--)干城停車場",
+            "description": "中市交停管字第1110071254號公告禁止<br>6/1被議員關切後會勘前趕快開放",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "120.688162",
+            "24.143156"
+        ],
+        "address": "50 自由路三段, 401, 東區, 臺中市, Taiwan"
+    },
+    {
+        "name": "台中市停管處黃先生恥辱柱 中市交停管字第1110071254號公告",
+        "properties": {
+            "name": "(--)台中市南京路立體停車場",
+            "description": "地「上」層禁止通行<br>中市交停管字第1110071254號公告禁止<br>6/1被議員關切後會勘前趕快開放",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "120.690682",
+            "24.140119"
+        ],
+        "address": "72 南京路, 401, 東區, 臺中市, Taiwan"
+    },
+    {
+        "name": "台中市停管處黃先生恥辱柱 中市交停管字第1110071254號公告",
+        "properties": {
+            "name": "(--)福星立體停車場",
+            "description": "中市交停管字第1110071254號公告禁止<br>6/1被議員關切後會勘前趕快開放",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "120.646047",
+            "24.175636"
+        ],
+        "address": "575 福星路, 407, 西屯區, 臺中市, Taiwan"
+    },
+    {
+        "name": "台中市停管處黃先生恥辱柱 中市交停管字第1110071254號公告",
+        "properties": {
+            "name": "(--)健康公園附屬停車場",
+            "description": "中市交停管字第1110071254號公告禁止<br>6/1被議員關切後會勘前趕快開放",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "120.669823",
+            "24.120985"
+        ],
+        "address": "325 五權南路, 402, 南區, 臺中市, Taiwan"
+    },
+    {
+        "name": "台中市停管處黃先生恥辱柱 中市交停管字第1110071254號公告",
+        "properties": {
+            "name": "(--)逢甲夜市-星享道公有停車場",
+            "description": "禁止地「上」層通行<br>中市交停管字第1110071254號公告禁止<br>6/1被議員關切後會勘前趕快開放",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "120.645533",
+            "24.183181"
+        ],
+        "address": "18 福星北路, 407, 西屯區, 臺中市, Taiwan"
+    },
+    {
+        "name": "台中市停管處黃先生恥辱柱 中市交停管字第1110071254號公告",
+        "properties": {
+            "name": "(--)大雅區停四停車場",
+            "description": "中市交停管字第1110071254號公告禁止<br>6/1被議員關切後會勘前趕快開放",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "120.656334",
+            "24.225882"
+        ],
+        "address": "10 神林南路146巷, 428, 大雅區, 臺中市, Taiwan"
+    },
+    {
+        "name": "台中市停管處黃先生恥辱柱 中市交停管字第1110071254號公告",
+        "properties": {
+            "name": "(--)臺中中央公園",
+            "description": "禁止地「上」層通行<br>中市交停管字第1110071254號公告禁止<br>6/1被議員關切後會勘前趕快開放",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "120.653354",
+            "24.185738"
+        ],
+        "address": "敦化路二段, 407, 西屯區, 臺中市, Taiwan"
+    },
+    {
+        "name": "台中市停管處黃先生恥辱柱 中市交停管字第1110071254號公告",
+        "properties": {
+            "name": "(--)大雅公有停一停車場",
+            "description": "中市交停管字第1110071254號公告禁止<br>6/1被議員關切後會勘前趕快開放",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "120.647233",
+            "24.223862"
+        ],
+        "address": "中清東路189巷, 428, 大雅區, 臺中市, Taiwan"
+    },
+    {
+        "name": "台中市停管處黃先生恥辱柱 中市交停管字第1110071254號公告",
+        "properties": {
+            "name": "(--)大墩國中地下停車場",
+            "description": "中市交停管字第1110071254號公告禁止<br>6/1被議員關切後會勘前趕快開放",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "120.639211",
+            "24.14538"
+        ],
+        "address": "692 河南路四段, 408, 南屯區, 臺中市, Taiwan"
+    },
+    {
+        "name": "台中市停管處黃先生恥辱柱 中市交停管字第1110071254號公告",
+        "properties": {
+            "name": "(--)太平區中興立體停車場",
+            "description": "中市交停管字第1110071254號公告禁止<br>6/1被議員關切後會勘前趕快開放",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "120.720663",
+            "24.130637"
+        ],
+        "address": "142 中興東路, 411, 太平區, 臺中市, Taiwan"
+    },
+    {
+        "name": "台中市停管處黃先生恥辱柱 中市交停管字第1110071254號公告",
+        "properties": {
+            "name": "(--)阿罩霧本堂公園",
+            "description": "中市交停管字第1110071254號公告禁止<br>6/1被議員關切後會勘前趕快開放",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "120.698222",
+            "24.06009"
+        ],
+        "address": "756 中正路, 413, 霧峰區, 臺中市, Taiwan"
+    },
+    {
+        "name": "禁停重機",
+        "properties": {
+            "name": "(禁止)大車河停車場-辰淵雙十場",
+            "description": "2023/5/20 造訪一中街時向管理員表明欲停車被拒絕停放<br>感謝  paul40807@ptt",
+            "icon": "icon-19.png"
+        },
+        "geometry": [
+            "120.685688",
+            "24.147435"
+        ],
+        "address": "22-1 太平路, 404, 北區, 臺中市, Taiwan"
+    },
+    {
+        "name": "台中市停管處黃先生恥辱柱 中市交停管字第1110071254號公告",
+        "properties": {
+            "name": "(--)文昌地下停車場",
+            "description": "中市交停管字第1110071254號公告禁止<br>6/1被議員關切後會勘前趕快開放",
+            "icon": "icon-2.png"
+        },
+        "geometry": [
+            "120.624783",
+            "24.3485"
+        ],
+        "address": "113 育德路, 437, 大甲區, 臺中市, Taiwan"
+    }
+]

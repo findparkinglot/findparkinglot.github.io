@@ -1,6 +1,7 @@
 <script setup>
 import { onMounted, ref,watch } from 'vue'
 import axios from 'axios';
+import addressMap from '@/assets/json/address.json';
 
 import mapboxgl from 'mapbox-gl';
 
@@ -146,28 +147,44 @@ const setMaker = () => {
             essential: true,
           });
 
-          axios.get('https://api.mapbox.com/search/geocode/v6/reverse?longitude='+marker.geometry.coordinates[0]+'&latitude='+marker.geometry.coordinates[1]+'&limit=1&access_token='+mapData.value.accessToken).then(function (addressData) {
+          var data = {
+            name: MapGroup.name,
+            properties: marker.properties,
+            geometry: marker.geometry.coordinates,
+            address: ''
+          }
 
-            var data = {
-              name: MapGroup.name,
-              properties: marker.properties,
-              geometry: marker.geometry.coordinates,
-              address: addressData.data.features[0].properties.full_address
+          for(let key in addressMap){
+            if(marker.geometry.coordinates[0] == addressMap[key].geometry[0] && marker.geometry.coordinates[1] == addressMap[key].geometry[1]){
+              data.address = addressMap[key].address
+              break;
             }
+          }
+          
+          emits("parkingInfo", data);
 
-            emits("parkingInfo", data);
+          // axios.get('https://api.mapbox.com/search/geocode/v6/reverse?longitude='+marker.geometry.coordinates[0]+'&latitude='+marker.geometry.coordinates[1]+'&limit=1&access_token='+mapData.value.accessToken).then(function (addressData) {
 
-          }).catch(function (error) {
-            console.log(error);
-            var data = {
-              name: MapGroup.name,
-              properties: marker.properties,
-              geometry: marker.geometry.coordinates,
-              address: ''
-            }
+          //   var data = {
+          //     name: MapGroup.name,
+          //     properties: marker.properties,
+          //     geometry: marker.geometry.coordinates,
+          //     address: addressData.data.features[0].properties.full_address
+          //   }
 
-            emits("parkingInfo", data);
-          });
+          //   emits("parkingInfo", data);
+
+          // }).catch(function (error) {
+          //   console.log(error);
+          //   var data = {
+          //     name: MapGroup.name,
+          //     properties: marker.properties,
+          //     geometry: marker.geometry.coordinates,
+          //     address: ''
+          //   }
+
+          //   emits("parkingInfo", data);
+          // });
 
           // window.alert(marker.properties.info);
         });
@@ -430,6 +447,40 @@ const removeRoutes = () => {
 
 
 
+const initAllMarkerAddress = () => {
+
+  let AllMarkerAddress = [];
+  console.log(props.mapDataList);
+
+  for(let cateKey in props.mapDataList){
+    for(let markerKey in props.mapDataList[cateKey].features){
+      let marker = props.mapDataList[cateKey].features[markerKey];
+      axios.get('https://api.mapbox.com/search/geocode/v6/reverse?longitude='+marker.geometry.coordinates[0]+'&latitude='+marker.geometry.coordinates[1]+'&limit=1&access_token='+mapData.value.accessToken).then(function (addressData) {
+        var data = {
+          name: props.mapDataList[cateKey].name,
+          properties: marker.properties,
+          geometry: marker.geometry.coordinates,
+          address: addressData.data.features[0].properties.full_address
+        }
+        AllMarkerAddress.push(data);
+      }).catch(function (error) {
+        console.log(error);
+        var data = {
+          name: props.mapDataList[cateKey].name,
+          properties: marker.properties,
+          geometry: marker.geometry.coordinates,
+          address: ''
+        }
+        AllMarkerAddress.push(data);
+      });
+    }
+  
+  }
+
+  console.log(AllMarkerAddress);
+
+}
+
 
 onMounted(()=>{
   mapboxgl.accessToken = mapData.value.accessToken;
@@ -439,6 +490,13 @@ onMounted(()=>{
     console.log("NONE");
   }
 
+
+})
+
+watch(() => props.mapDataList, (newVal, oldVal) => {
+
+  // 重新抓取所有地址 省流量
+  // initAllMarkerAddress();
 
 })
 
