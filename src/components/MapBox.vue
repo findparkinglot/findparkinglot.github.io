@@ -227,13 +227,13 @@ const setUserArea = () => {
 
   var lngLat = mapData.value.center[0] + ',' + mapData.value.center[1];
 
-  axios.get('https://api.mapbox.com/geocoding/v5/mapbox.places/'+lngLat+'.json?access_token='+mapData.value.accessToken)
-  .then(function (response) {
-    console.log("test: ",response.data);
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
+  // axios.get('https://api.mapbox.com/geocoding/v5/mapbox.places/'+lngLat+'.json?access_token='+mapData.value.accessToken)
+  // .then(function (response) {
+  //   console.log("test: ",response.data);
+  // })
+  // .catch(function (error) {
+  //   console.log(error);
+  // });
 
 }
 
