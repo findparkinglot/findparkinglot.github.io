@@ -14,12 +14,19 @@ const MapDataList = ref([])
 const findIcon = (iconMapId) => {
   let icon = '';
 
+  let num = 0;
+
   for (const key in xml.kml.Document[0].StyleMap) {
     let id = xml.kml.Document[0].StyleMap[key].$.id;
     if(id == iconMapId.replace('#','')){
       icon = xml.kml.Document[0].StyleMap[key].Pair[0].styleUrl[0];
       break;
     }
+    num++;
+  }
+
+  if(xml.kml.Document[0].StyleMap.length == num){
+    icon = iconMapId;
   }
 
   for (const key in xml.kml.Document[0].Style) {
@@ -45,6 +52,7 @@ const MapDataInit = () =>{
           properties:{
             name: place.name[0],
             description: place.description?place.description[0]:'',
+            iconId: place.styleUrl[0],
             icon: findIcon(place.styleUrl[0]),
           },
           geometry: {
@@ -145,10 +153,14 @@ const parkingTypeList = ref([
       "icon-5.png",
       "icon-6.png",
       "icon-7.png",
+      "icon-8.png",
       "icon-9.png",
       "icon-10.png",
       "icon-11.png",
+      "icon-12.png",
       "icon-13.png",
+      "icon-14.png",
+      "icon-15.png",
       "icon-16.png",
       "icon-17.png",
       "icon-18.png",
@@ -160,8 +172,8 @@ const parkingTypeList = ref([
     value: "car",
     key: [
       "icon-1.png",
-      "icon-6.png",
       "icon-2.png",
+      "icon-6.png",
       "icon-7.png"
     ]
   },
@@ -172,37 +184,38 @@ const parkingTypeList = ref([
       "icon-3.png",
       "icon-4.png",
       "icon-5.png",
-      "icon-9.png"
+      "icon-8.png"
     ]
   },
   {
     name: "機車：機車格",
     value: "scooter",
     key: [
+      "icon-9.png",
       "icon-10.png",
-      "icon-11.png",
-      "icon-13.png",
+      "icon-12.png",
+      "icon-14.png",
     ]
   },
   {
     name: "綠P:重機專用路邊停車格",
     value: "greenP",
     key: [
-      "icon-16.png",
+      "icon-15.png",
     ]
   },
   {
     name: "黃P:重機與汽車共享路邊停車格",
     value: "yellowP",
     key: [
-      "icon-17.png",
+      "icon-16.png",
     ]
   },
   {
     name: "紫P:時段性汽機車共用停車格，注意使用時間喔!",
     value: "purpleP",
     key: [
-      "icon-18.png",
+      "icon-17.png",
     ]
   },
   {
@@ -210,6 +223,13 @@ const parkingTypeList = ref([
     value: "redX",
     key: [
       "icon-19.png",
+    ]
+  },
+  {
+    name: "施工中",
+    value: "fix",
+    key: [
+      "icon-13.png",
     ]
   },
 
@@ -228,10 +248,14 @@ const degreeOfFriendlinessList = ref([
       "icon-5.png",
       "icon-6.png",
       "icon-7.png",
+      "icon-8.png",
       "icon-9.png",
       "icon-10.png",
       "icon-11.png",
+      "icon-12.png",
       "icon-13.png",
+      "icon-14.png",
+      "icon-15.png",
       "icon-16.png",
       "icon-17.png",
       "icon-18.png",
@@ -242,9 +266,10 @@ const degreeOfFriendlinessList = ref([
     name: "最友善：有後牌辨析",
     value: "friendly",
     key: [
-      "icon-1.png",
+      "icon-2.png",
       "icon-3.png",
       "icon-10.png",
+      "icon-15.png",
     ]
   },
   {
@@ -252,25 +277,25 @@ const degreeOfFriendlinessList = ref([
     value: "normal",
     key: [
       "icon-6.png",
-      "icon-9.png",
-      "icon-13.png",
+      "icon-8.png",
+      "icon-12.png",
     ]
   },
   {
     name: "最靠北：按鈕請管理員協助、前牌辨析",
     value: "unfriendly",
     key: [
-      "icon-2.png",
+      "icon-1.png",
       "icon-5.png",
-      "icon-11.png",
+      "icon-10.png",
     ]
   },
   {
     name: "未確定",
     value: "unknown",
     key: [
-      "icon-7.png",
       "icon-4.png",
+      "icon-7.png",
     ]
   },
 ])
@@ -403,31 +428,31 @@ watch(() => routeData.value , (val) => {
       </h4>
       <h5 style="text-align: left">
         <div class="faq-content">
-          <img src="@/assets/MapData/My Maps/PackingMarkerList/images/icon-1.png" alt="">
+          <img src="@/assets/MapData/My Maps/PackingMarkerList/images-info/icon-1.png" alt="">
           汽車：汽車格(含未確認是否有重機格)
         </div>
         <div class="faq-content">
-          <img src="@/assets/MapData/My Maps/PackingMarkerList/images/icon-3.png" alt="">
+          <img src="@/assets/MapData/My Maps/PackingMarkerList/images-info/icon-3.png" alt="">
           重機(有人)：有設重機專用格
         </div>
         <div class="faq-content">
-          <img src="@/assets/MapData/My Maps/PackingMarkerList/images/icon-10.png" alt="">
+          <img src="@/assets/MapData/My Maps/PackingMarkerList/images-info/icon-10.png" alt="">
           機車(沒人)：機車格
         </div>
         <div class="faq-content">
-          <img src="@/assets/MapData/My Maps/PackingMarkerList/images/icon-16.png" alt="">
+          <img src="@/assets/MapData/My Maps/PackingMarkerList/images-info/icon-16.png" alt="">
           綠P：重機專用路邊停車格
         </div>
         <div class="faq-content">
-          <img src="@/assets/MapData/My Maps/PackingMarkerList/images/icon-17.png" alt="">
+          <img src="@/assets/MapData/My Maps/PackingMarkerList/images-info/icon-17.png" alt="">
           黃P：重機與汽車共享路邊停車格(黃P共享格不再更新，四輪爺不在乎，形同虛設)
         </div>
         <div class="faq-content">
-          <img src="@/assets/MapData/My Maps/PackingMarkerList/images/icon-18.png" alt="">
+          <img src="@/assets/MapData/My Maps/PackingMarkerList/images-info/icon-18.png" alt="">
           紫P：時段性汽機車共用停車格，注意使用時間喔!
         </div>
         <div class="faq-content">
-          <img src="@/assets/MapData/My Maps/PackingMarkerList/images/icon-19.png" alt="">
+          <img src="@/assets/MapData/My Maps/PackingMarkerList/images-info/icon-19.png" alt="">
           紅X：停都不給停
         </div>
       </h5>
@@ -437,26 +462,26 @@ watch(() => routeData.value , (val) => {
       </h4>
       <h5 style="text-align: left">
         <div class="faq-content">
-          <img src="@/assets/MapData/My Maps/PackingMarkerList/images/icon-1.png" alt="">
-          <img src="@/assets/MapData/My Maps/PackingMarkerList/images/icon-3.png" alt="">
-          <img src="@/assets/MapData/My Maps/PackingMarkerList/images/icon-10.png" alt="">
+          <img src="@/assets/MapData/My Maps/PackingMarkerList/images-info/icon-1.png" alt="">
+          <img src="@/assets/MapData/My Maps/PackingMarkerList/images-info/icon-3.png" alt="">
+          <img src="@/assets/MapData/My Maps/PackingMarkerList/images-info/icon-10.png" alt="">
           綠色最友善：有後牌辨析
         </div>
         <div class="faq-content">
-          <img src="@/assets/MapData/My Maps/PackingMarkerList/images/icon-6.png" alt="">
-          <img src="@/assets/MapData/My Maps/PackingMarkerList/images/icon-9.png" alt="">
-          <img src="@/assets/MapData/My Maps/PackingMarkerList/images/icon-13.png" alt="">
+          <img src="@/assets/MapData/My Maps/PackingMarkerList/images-info/icon-6.png" alt="">
+          <img src="@/assets/MapData/My Maps/PackingMarkerList/images-info/icon-9.png" alt="">
+          <img src="@/assets/MapData/My Maps/PackingMarkerList/images-info/icon-13.png" alt="">
           藍色最傳統：悠遊卡 或 按鈕取票
         </div>
         <div class="faq-content">
-          <img src="@/assets/MapData/My Maps/PackingMarkerList/images/icon-2.png" alt="">
-          <img src="@/assets/MapData/My Maps/PackingMarkerList/images/icon-5.png" alt="">
-          <img src="@/assets/MapData/My Maps/PackingMarkerList/images/icon-11.png" alt="">
+          <img src="@/assets/MapData/My Maps/PackingMarkerList/images-info/icon-2.png" alt="">
+          <img src="@/assets/MapData/My Maps/PackingMarkerList/images-info/icon-5.png" alt="">
+          <img src="@/assets/MapData/My Maps/PackingMarkerList/images-info/icon-11.png" alt="">
           紅色最靠北：按鈕請管理員協助 或 倒退嚕前牌辨析
         </div>
         <div class="faq-content">
-          <img src="@/assets/MapData/My Maps/PackingMarkerList/images/icon-7.png" alt="">
-          <img src="@/assets/MapData/My Maps/PackingMarkerList/images/icon-4.png" alt="">
+          <img src="@/assets/MapData/My Maps/PackingMarkerList/images-info/icon-7.png" alt="">
+          <img src="@/assets/MapData/My Maps/PackingMarkerList/images-info/icon-4.png" alt="">
           <!-- <img src="@/assets/MapData/My Maps/PackingMarkerList/images/icon-10.png" alt=""> -->
           灰色未確定：有可能是上述任何情況，有停到灰色的拜託表單回報
         </div>
@@ -467,7 +492,7 @@ watch(() => routeData.value , (val) => {
       </h4>
       <h5 style="text-align: left">
         <div class="faq-content">
-          <img src="@/assets/MapData/My Maps/PackingMarkerList/images/icon-3.png" alt="">
+          <img src="@/assets/MapData/My Maps/PackingMarkerList/images-info/icon-3.png" alt="">
           (30/h)三張里地下停車場
         </div>
         <div class="faq-content">
@@ -626,7 +651,7 @@ watch(() => routeData.value , (val) => {
         font-size: 12px;
         padding: 6px 8px;
         margin: 0 5px 5px 0">
-        大重停車記事[240423更新]
+        大重停車記事[240527更新]
       </button>
     </a>
 
@@ -653,7 +678,8 @@ watch(() => routeData.value , (val) => {
     </a>
 
     <h5 style="padding: 10px 0 0 0">資訊</h5>
-    <p style="color: #ccc;font-size: 12px;">版本資訊：v1.0.0</p>
+    <p style="color: #ccc;font-size: 12px;">版本資訊：v1.0.1</p>
+    <p style="color: #ccc;font-size: 12px;">地圖資料更新日期：240527</p>
     <p style="color: #ccc;font-size: 12px;">Web製作：爽爽</p>
     <p style="color: #ccc;font-size: 12px;">資料參考：大重停車記事 google my map資料</p>
     <p style="color: #ccc;font-size: 12px;">地圖API：Mapbox GL JS API</p>
