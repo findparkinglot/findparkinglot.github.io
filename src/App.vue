@@ -600,107 +600,109 @@ watch(() => routeData.value , (val) => {
       <div></div>
     </div>
     <h3 style="padding: 0 25px 0 0">設定</h3>
-
-    <h5>甚麼格位</h5>
-    <select
-      style="width: 100%; margin-bottom: 10px"
-      v-model="parkingType"
-    >
-      <option
-        :value="key.value"
-        v-for="(key, index) in parkingTypeList"
-        :key="index"
+    <div class="box">
+      <h5>甚麼格位</h5>
+      <select
+        style="width: 100%; margin-bottom: 10px"
+        v-model="parkingType"
       >
-        {{ key.name }}
-      </option>
-    </select>
+        <option
+          :value="key.value"
+          v-for="(key, index) in parkingTypeList"
+          :key="index"
+        >
+          {{ key.name }}
+        </option>
+      </select>
 
-    <h5>友善程度</h5>
-    <select
-      style="width: 100%; margin-bottom: 10px"
-      v-model="degreeOfFriendliness"
-    >
-      <option
-        :value="key.value"
-        v-for="(key, index) in degreeOfFriendlinessList"
-        :key="index"
+      <h5>友善程度</h5>
+      <select
+        style="width: 100%; margin-bottom: 10px"
+        v-model="degreeOfFriendliness"
       >
-        {{ key.name }}
-      </option>
-    </select>
+        <option
+          :value="key.value"
+          v-for="(key, index) in degreeOfFriendlinessList"
+          :key="index"
+        >
+          {{ key.name }}
+        </option>
+      </select>
 
 
-    <h5>地圖顏色</h5>
-    <select
-      style="width: 100%; margin-bottom: 10px"
-      :value="mapOptions.mapStylesSelected"
-      v-model="mapOptions.mapStylesSelected"
-    >
-      <option
-        :value="key.value"
-        v-for="(key, index) in mapStyle"
-        :key="index"
+      <h5>地圖顏色</h5>
+      <select
+        style="width: 100%; margin-bottom: 10px"
+        :value="mapOptions.mapStylesSelected"
+        v-model="mapOptions.mapStylesSelected"
       >
-        {{ key.name }}
-      </option>
-    </select>
+        <option
+          :value="key.value"
+          v-for="(key, index) in mapStyle"
+          :key="index"
+        >
+          {{ key.name }}
+        </option>
+      </select>
 
-    <h5 style="padding: 0">停車場資料來源</h5>
-    <a href="https://linktr.ee/hueythegentry" target="_blank">
-      <button class="btn" style="
-        font-size: 12px;
-        padding: 6px 8px;
-        margin: 0 5px 5px 0">
-        大重停車記事[240527更新]
-      </button>
-    </a>
+      <h5 style="padding: 0">停車場資料來源</h5>
+      <a href="https://linktr.ee/hueythegentry" target="_blank">
+        <button class="btn" style="
+          font-size: 12px;
+          padding: 6px 8px;
+          margin: 0 5px 5px 0">
+          大重停車記事[240527更新]
+        </button>
+      </a>
 
-    <h5 style="padding: 10px 0 0 0">問題回報</h5>
+      <h5 style="padding: 10px 0 0 0">問題回報</h5>
 
-    <p style="color: #ccc;font-size: 12px;">1. 停車場資訊相關，如發現有新的停車場或是錯誤的收費資訊等相關問題，可點此回報：</p>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdnEyoJJlxGxKhf1UmZ_6pfMrjOiidD2SkvV5ZKFDFrQ6AvdA/viewform" target="_blank">
-      <button class="btn" style="
-        font-size: 12px;
-        padding: 6px 8px;
-        margin: 0 5px 5px 0">
-        大重停車記事 回報表單
-      </button>
-    </a>
+      <p style="color: #ccc;font-size: 12px;">1. 停車場資訊相關，如發現有新的停車場或是錯誤的收費資訊等相關問題，可點此回報：</p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdnEyoJJlxGxKhf1UmZ_6pfMrjOiidD2SkvV5ZKFDFrQ6AvdA/viewform" target="_blank">
+        <button class="btn" style="
+          font-size: 12px;
+          padding: 6px 8px;
+          margin: 0 5px 5px 0">
+          大重停車記事 回報表單
+        </button>
+      </a>
 
-    <!-- <h5 style="margin-top: 10px; margin-bottom: 10px">回報</h5> -->
-    <!-- <a href="https://forms.gle/siWoYMo9PtxAk38w9" target="_blank"
-      ><button class="btn" style="font-size: 10px; margin: 0 5px 5px 0">
-        提供停車場資訊
-      </button></a
-    > -->
-    <p style="color: #ccc;font-size: 12px;">2. 網頁BUG、畫面跑板問題，可點此回報：</p>
-    <a href="https://forms.gle/iJCyfqVtpL35WtZM7" target="_blank">
-      <button class="btn" style="font-size: 12px;padding: 6px 8px;margin: 0 5px 5px 0">
-        重機能停哪? 回報表單
-      </button>
-    </a>
+      <!-- <h5 style="margin-top: 10px; margin-bottom: 10px">回報</h5> -->
+      <!-- <a href="https://forms.gle/siWoYMo9PtxAk38w9" target="_blank"
+        ><button class="btn" style="font-size: 10px; margin: 0 5px 5px 0">
+          提供停車場資訊
+        </button></a
+      > -->
+      <p style="color: #ccc;font-size: 12px;">2. 網頁BUG、畫面跑板問題，可點此回報：</p>
+      <a href="https://forms.gle/iJCyfqVtpL35WtZM7" target="_blank">
+        <button class="btn" style="font-size: 12px;padding: 6px 8px;margin: 0 5px 5px 0">
+          重機能停哪? 回報表單
+        </button>
+      </a>
 
-    <h5 style="padding: 10px 0 0 0">資訊</h5>
-    <p style="color: #ccc;font-size: 12px;">版本資訊：v1.0.2</p>
-    <p style="color: #ccc;font-size: 12px;">地圖資料更新日期：240527</p>
-    <p style="color: #ccc;font-size: 12px;">Web製作：爽爽</p>
-    <p style="color: #ccc;font-size: 12px;">資料參考：大重停車記事 google my map資料</p>
-    <p style="color: #ccc;font-size: 12px;">地圖API：Mapbox GL JS API</p>
-    <p style="color: #ccc;font-size: 12px;">版權宣告：© 2024 爽爽 版權所有。本網頁未經准許，禁止任何商業行為</p>
-    <a href="https://buymeacoffee.com/jamestim923" target="_blank">
-      <button class="btn" style="font-size: 12px;padding: 6px 8px;margin: 0 5px 5px 0">
-        請我喝杯咖啡 ☕️，讓我有動力繼續更新
-      </button>
-    </a>
+      <h5 style="padding: 10px 0 0 0">資訊</h5>
+      <p style="color: #ccc;font-size: 12px;">版本資訊：v1.0.2</p>
+      <p style="color: #ccc;font-size: 12px;">地圖資料更新日期：240527</p>
+      <p style="color: #ccc;font-size: 12px;">Web製作：爽爽</p>
+      <p style="color: #ccc;font-size: 12px;">資料參考：大重停車記事 google my map資料</p>
+      <p style="color: #ccc;font-size: 12px;">地圖API：Mapbox GL JS API</p>
+      <p style="color: #ccc;font-size: 12px;">版權宣告：© 2024 爽爽 版權所有。本網頁未經准許，禁止任何商業行為</p>
+      <a href="https://buymeacoffee.com/jamestim923" target="_blank">
+        <button class="btn" style="font-size: 12px;padding: 6px 8px;margin: 0 5px 5px 0">
+          請我喝杯咖啡 ☕️，讓我有動力繼續更新
+        </button>
+      </a>
 
-    <!-- <ins
-      class="adsbygoogle"
-      style="display: block"
-      data-ad-format="fluid"
-      data-ad-layout-key="-fb+5w+4e-db+86"
-      data-ad-client="ca-pub-6596839701234097"
-      data-ad-slot="5429225032"
-    ></ins> -->
+      <!-- <ins
+        class="adsbygoogle"
+        style="display: block"
+        data-ad-format="fluid"
+        data-ad-layout-key="-fb+5w+4e-db+86"
+        data-ad-client="ca-pub-6596839701234097"
+        data-ad-slot="5429225032"
+      ></ins> --> 
+    </div>
+
   </div>
 
   

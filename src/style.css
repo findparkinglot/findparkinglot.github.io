@@ -170,6 +170,13 @@ h2,h3,h4,h5,h6,p{
   overflow-y: auto; */
 }
 
+.mainInfoBox .box{
+  position: relative;
+  max-height: calc(100dvh - 150px);
+  overflow: hidden;
+  overflow-y: auto;
+}
+
 .mainInfoBox2{
   /* top: 180px; */
   top: 90px;
@@ -194,11 +201,11 @@ h2,h3,h4,h5,h6,p{
 }
 
 
-.mainInfoBox>h3{
+.mainInfoBox h3{
   color: #2ee7d6;
   margin-bottom: 5px;
 }
-.mainInfoBox>h5{
+.mainInfoBox h5{
   color: #2ee7d6;
   margin-bottom: 5px;
 }
