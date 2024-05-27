@@ -656,6 +656,8 @@ watch(() => routeData.value , (val) => {
     </a>
 
     <h5 style="padding: 10px 0 0 0">問題回報</h5>
+
+    <p style="color: #ccc;font-size: 12px;">1. 停車場資訊相關，如發現有新的停車場或是錯誤的收費資訊等相關問題，可點此回報：</p>
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSdnEyoJJlxGxKhf1UmZ_6pfMrjOiidD2SkvV5ZKFDFrQ6AvdA/viewform" target="_blank">
       <button class="btn" style="
         font-size: 12px;
@@ -671,14 +673,15 @@ watch(() => routeData.value , (val) => {
         提供停車場資訊
       </button></a
     > -->
+    <p style="color: #ccc;font-size: 12px;">2. 網頁BUG、畫面跑板問題，可點此回報：</p>
     <a href="https://forms.gle/iJCyfqVtpL35WtZM7" target="_blank">
       <button class="btn" style="font-size: 12px;padding: 6px 8px;margin: 0 5px 5px 0">
-        (重機能停哪?) Web錯誤資訊回報
+        重機能停哪? 回報表單
       </button>
     </a>
 
     <h5 style="padding: 10px 0 0 0">資訊</h5>
-    <p style="color: #ccc;font-size: 12px;">版本資訊：v1.0.1</p>
+    <p style="color: #ccc;font-size: 12px;">版本資訊：v1.0.2</p>
     <p style="color: #ccc;font-size: 12px;">地圖資料更新日期：240527</p>
     <p style="color: #ccc;font-size: 12px;">Web製作：爽爽</p>
     <p style="color: #ccc;font-size: 12px;">資料參考：大重停車記事 google my map資料</p>
