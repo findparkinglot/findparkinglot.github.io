@@ -12,6 +12,9 @@ const props = defineProps({
   mapDataList: Array,
   getLngLat: Boolean,
   mapStylesSelected: String,
+  parkingPriceType: String,
+  priceRangeMin: Number,
+  priceRangeMax: Number,
   goToParkingPlaceData: Object,
   routeData: Object,
 })
@@ -50,6 +53,43 @@ const isShowMarker = (icon) => {
     isShow = false;
   }
   
+  return isShow;
+}
+
+const isShowPrice = (priceInfo,priceArray) => {
+  let isShow = false;
+  if (props.parkingPriceType == 'h' && priceInfo.match(/\/h/)) {
+    
+    //取出 priceArray 內含有 "/h" 的價格 並取得價格範圍
+    for(let key in priceArray){
+      if(priceArray[key].match(/\/h/)){
+        let price = priceArray[key].replace(/[^0-9]/g, '');
+        console.log(price);
+        if(price >= props.priceRangeMin && price <= props.priceRangeMax){
+          isShow = true;
+          break;
+        }
+      }
+    }
+  }else if (props.parkingPriceType == 'd' && priceInfo.match(/\/d/)) {
+      
+    //取出 priceArray 內含有 "/d" 的價格 並取得價格範圍
+    for(let key in priceArray){
+      if(priceArray[key].match(/\/d/)){
+        let price = priceArray[key].replace(/[^0-9]/g, '');
+        console.log(price);
+        if(price >= props.priceRangeMin && price <= props.priceRangeMax){
+          isShow = true;
+          break;
+        }
+      }
+    }
+  }else if (props.parkingPriceType == 'free' && priceInfo.match(/Free/)) {
+    isShow = true;
+  }else if (props.parkingPriceType == '') {
+    isShow = true;
+  }
+
   return isShow;
 }
 
@@ -93,7 +133,8 @@ const setMaker = () => {
     for (const marker of MapGroup.features) {
       if (
         isMatchLngLat(marker.geometry.coordinates) &&
-        isShowMarker(marker.properties.icon)
+        isShowMarker(marker.properties.icon) &&
+        isShowPrice(marker.properties.priceInfo, marker.properties.priceArray)
       ) {
         // Create a DOM element for each marker.
         const el = document.createElement("div");
@@ -528,6 +569,18 @@ watch(() => props.parkingTypeKeyArray, (newVal, oldVal) => {
 })
 
 watch(() => props.degreeOfFriendlinessKeyArray, (newVal, oldVal) => {
+  setMaker();
+})
+
+watch(() => props.priceRangeMin, (newVal, oldVal) => {
+  setMaker();
+})
+
+watch(() => props.priceRangeMax, (newVal, oldVal) => {
+  setMaker();
+})
+
+watch(() => props.parkingPriceType, (newVal, oldVal) => {
   setMaker();
 })
 

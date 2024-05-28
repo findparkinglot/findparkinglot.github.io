@@ -40,20 +40,43 @@ const findIcon = (iconMapId) => {
   return icon;
 }
 
+const getPriceAndType = (place) => {
+  // console.log(place);
+  let priceType = place.split('(')[1].split(')')[0].replace(/ /g,'');
+  // let priceType = '';
+  let priceArray =  priceType.split('|');
+
+  if(priceArray.length>0){
+    priceArray[0].match(/---|--/)? priceArray = [] : priceArray = priceArray;
+  }
+  if(priceArray.length>0){
+    priceArray[0].match(/-/)? priceArray =  priceArray[0].split('-') : priceArray = priceArray;
+  }
+
+  let _data = {
+    priceType: priceType,
+    priceValue: priceArray,
+  }
+  return _data
+}
+
 const MapDataInit = () =>{
-  console.log(xml.kml.Document[0]);
 
   let _cateData = xml.kml.Document[0].Folder.map((folder)=>{
     return {
       name: folder.name[0],
       features: folder.Placemark.map((place)=>{
         var parts = place.Point[0].coordinates[0].trim().split(',');
+        let priceInfo = getPriceAndType(place.name[0]);
+      
         return {
           properties:{
             name: place.name[0],
             description: place.description?place.description[0]:'',
             iconId: place.styleUrl[0],
             icon: findIcon(place.styleUrl[0]),
+            priceInfo: priceInfo.priceType,
+            priceArray: priceInfo.priceValue,
           },
           geometry: {
             coordinates: [parts[0],parts[1]]
@@ -64,8 +87,6 @@ const MapDataInit = () =>{
   })
 
   MapDataList.value = _cateData;
-
-  console.log(MapDataList.value);
 }
 
 
@@ -268,7 +289,7 @@ const degreeOfFriendlinessList = ref([
     key: [
       "icon-2.png",
       "icon-3.png",
-      "icon-10.png",
+      "icon-9.png",
       "icon-15.png",
     ]
   },
@@ -299,6 +320,10 @@ const degreeOfFriendlinessList = ref([
     ]
   },
 ])
+
+const parkingPriceType = ref("") //  h:hour d:day m:month
+const priceRangeMin = ref(0)
+const priceRangeMax = ref(100)
 
 const goToParkingPlaceData = ref(null);
 const routeData = ref(null)
@@ -383,6 +408,9 @@ watch(() => routeData.value , (val) => {
     :mapDataList="MapDataList"
     :getLngLat="mapOptions.getLngLat"
     :mapStylesSelected="mapOptions.mapStylesSelected"
+    :parkingPriceType="parkingPriceType"
+    :priceRangeMin="priceRangeMin"
+    :priceRangeMax="priceRangeMax"
     v-model:goToParkingPlaceData="goToParkingPlaceData"
     v-model:routeData="routeData"
     @parkingInfo="onSetParkingInfo"
@@ -428,31 +456,31 @@ watch(() => routeData.value , (val) => {
       </h4>
       <h5 style="text-align: left">
         <div class="faq-content">
-          <img src="@/assets/MapData/My Maps/PackingMarkerList/images-info/icon-1.png" alt="">
+          <img src="@/assets/images/icon/icon-1.png" alt="">
           汽車：汽車格(含未確認是否有重機格)
         </div>
         <div class="faq-content">
-          <img src="@/assets/MapData/My Maps/PackingMarkerList/images-info/icon-3.png" alt="">
+          <img src="@/assets/images/icon/icon-3.png" alt="">
           重機(有人)：有設重機專用格
         </div>
         <div class="faq-content">
-          <img src="@/assets/MapData/My Maps/PackingMarkerList/images-info/icon-10.png" alt="">
+          <img src="@/assets/images/icon/icon-10.png" alt="">
           機車(沒人)：機車格
         </div>
         <div class="faq-content">
-          <img src="@/assets/MapData/My Maps/PackingMarkerList/images-info/icon-16.png" alt="">
+          <img src="@/assets/images/icon/icon-16.png" alt="">
           綠P：重機專用路邊停車格
         </div>
         <div class="faq-content">
-          <img src="@/assets/MapData/My Maps/PackingMarkerList/images-info/icon-17.png" alt="">
+          <img src="@/assets/images/icon/icon-17.png" alt="">
           黃P：重機與汽車共享路邊停車格(黃P共享格不再更新，四輪爺不在乎，形同虛設)
         </div>
         <div class="faq-content">
-          <img src="@/assets/MapData/My Maps/PackingMarkerList/images-info/icon-18.png" alt="">
+          <img src="@/assets/images/icon/icon-18.png" alt="">
           紫P：時段性汽機車共用停車格，注意使用時間喔!
         </div>
         <div class="faq-content">
-          <img src="@/assets/MapData/My Maps/PackingMarkerList/images-info/icon-19.png" alt="">
+          <img src="@/assets/images/icon/icon-19.png" alt="">
           紅X：停都不給停
         </div>
       </h5>
@@ -462,26 +490,26 @@ watch(() => routeData.value , (val) => {
       </h4>
       <h5 style="text-align: left">
         <div class="faq-content">
-          <img src="@/assets/MapData/My Maps/PackingMarkerList/images-info/icon-1.png" alt="">
-          <img src="@/assets/MapData/My Maps/PackingMarkerList/images-info/icon-3.png" alt="">
-          <img src="@/assets/MapData/My Maps/PackingMarkerList/images-info/icon-10.png" alt="">
+          <img src="@/assets/images/icon/icon-1.png" alt="">
+          <img src="@/assets/images/icon/icon-3.png" alt="">
+          <img src="@/assets/images/icon/icon-10.png" alt="">
           綠色最友善：有後牌辨析
         </div>
         <div class="faq-content">
-          <img src="@/assets/MapData/My Maps/PackingMarkerList/images-info/icon-6.png" alt="">
-          <img src="@/assets/MapData/My Maps/PackingMarkerList/images-info/icon-9.png" alt="">
-          <img src="@/assets/MapData/My Maps/PackingMarkerList/images-info/icon-13.png" alt="">
+          <img src="@/assets/images/icon/icon-6.png" alt="">
+          <img src="@/assets/images/icon/icon-9.png" alt="">
+          <img src="@/assets/images/icon/icon-13.png" alt="">
           藍色最傳統：悠遊卡 或 按鈕取票
         </div>
         <div class="faq-content">
-          <img src="@/assets/MapData/My Maps/PackingMarkerList/images-info/icon-2.png" alt="">
-          <img src="@/assets/MapData/My Maps/PackingMarkerList/images-info/icon-5.png" alt="">
-          <img src="@/assets/MapData/My Maps/PackingMarkerList/images-info/icon-11.png" alt="">
+          <img src="@/assets/images/icon/icon-2.png" alt="">
+          <img src="@/assets/images/icon/icon-5.png" alt="">
+          <img src="@/assets/images/icon/icon-11.png" alt="">
           紅色最靠北：按鈕請管理員協助 或 倒退嚕前牌辨析
         </div>
         <div class="faq-content">
-          <img src="@/assets/MapData/My Maps/PackingMarkerList/images-info/icon-7.png" alt="">
-          <img src="@/assets/MapData/My Maps/PackingMarkerList/images-info/icon-4.png" alt="">
+          <img src="@/assets/images/icon/icon-7.png" alt="">
+          <img src="@/assets/images/icon/icon-4.png" alt="">
           <!-- <img src="@/assets/MapData/My Maps/PackingMarkerList/images/icon-10.png" alt=""> -->
           灰色未確定：有可能是上述任何情況，有停到灰色的拜託表單回報
         </div>
@@ -492,7 +520,7 @@ watch(() => routeData.value , (val) => {
       </h4>
       <h5 style="text-align: left">
         <div class="faq-content">
-          <img src="@/assets/MapData/My Maps/PackingMarkerList/images-info/icon-3.png" alt="">
+          <img src="@/assets/images/icon/icon-3.png" alt="">
           (30/h)三張里地下停車場
         </div>
         <div class="faq-content">
@@ -569,7 +597,10 @@ watch(() => routeData.value , (val) => {
         你可以依據分類"友善程度"、"停車格類型"尋找合適的停車場，且可查看路線規劃，根據你選擇的停車場開啟GOOGLE或APPLE MAP導航。
         方便你前往停車場。<br /><br />
         
-        目前此停車地圖處於"<b style="color: #2ee7d6">測試階段</b>",停車資訊僅供參考。停車資料預計每周或每月不定期更新，功能陸續推出。地圖API(免費方案)，回應有次數限制，如發生無法使用地圖的情況，則代表測試結束。<br /><br />
+        此停車地圖免費提供車友使用,
+        停車資料不定期更新，功能陸續推出。地圖API(免費方案)，回應有次數限制，如發生無法使用地圖的情況，則代表免費額度到到期，麻煩至"<b><a href="https://forms.gle/iJCyfqVtpL35WtZM7" style="color: #2ee7d6" target="_blank">錯誤資訊回報</a></b>"
+        ，也歡迎<a href="https://buymeacoffee.com/jamestim923" target="_blank">請我喝杯咖啡 ☕️</a>，
+        讓我有動力繼續更新。<br /><br />
 
         資料取源於<b><a href="https://linktr.ee/hueythegentry" style="color: #2ee7d6" target="_blank">大重停車記事</a></b>，
         非常感謝大大們的努力，讓我們有更多的停車位資訊。
@@ -628,6 +659,33 @@ watch(() => routeData.value , (val) => {
           {{ key.name }}
         </option>
       </select>
+
+      <h5>收費範圍</h5>
+      <div class="flex">
+        <select 
+          v-model="priceRangeMin"
+          style="width: 100%;margin:0;text-align: center"
+          v-if="parkingPriceType.match(/d|h/)"
+        >
+          <option :value="(key-1)*10" v-for="key in (priceRangeMax/10+1)">{{ (key-1)*10 }}</option>
+        </select>
+        <div style="margin:0 10px" v-if="parkingPriceType.match(/d|h/)">~</div>
+        <select 
+          v-model="priceRangeMax" 
+          style="width: 100%;margin:0;text-align: center"
+          v-if="parkingPriceType.match(/d|h/)"
+        >
+          <option :value="(key-1)*10+priceRangeMin" v-for="key in (31 - (priceRangeMin/10))">{{ (key-1)*10+priceRangeMin }}</option>
+        </select>
+        <div style="margin:0 10px" v-if="parkingPriceType.match(/d|h/)">/</div>
+        <select v-model="parkingPriceType" style="width: 100%;margin: 0;">
+          <option value="">全部</option>
+          <option value="free">免費</option>
+          <option value="h">小時</option>
+          <option value="d">每日</option>
+          <!-- <option value="m">每月</option> -->
+        </select>
+      </div>
 
 
       <h5>地圖顏色</h5>
