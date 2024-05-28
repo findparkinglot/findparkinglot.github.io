@@ -591,28 +591,24 @@ watch(() => routeData.value , (val) => {
       <h3>
         嗨!歡迎使用 重機能停哪?
       </h3>
-      <h4 style="margin: 15px 0; text-align: left">
+      <h4 style="margin: 15px 0; text-align: justify;">
 
-        這是一個提供重機停車資訊的地圖，<br />
-        你可以依據分類"友善程度"、"停車格類型"尋找合適的停車場，且可查看路線規劃，根據你選擇的停車場開啟GOOGLE或APPLE MAP導航。
-        方便你前往停車場。<br /><br />
-        
-        此停車地圖免費提供車友使用,
-        停車資料不定期更新，功能陸續推出。地圖API(免費方案)，回應有次數限制，如發生無法使用地圖的情況，則代表免費額度到到期，麻煩至"<b><a href="https://forms.gle/iJCyfqVtpL35WtZM7" style="color: #2ee7d6" target="_blank">錯誤資訊回報</a></b>"
-        ，也歡迎<a href="https://buymeacoffee.com/jamestim923" target="_blank">請我喝杯咖啡 ☕️</a>，
-        讓我有動力繼續更新。<br /><br />
+        這是一個提供重機停車資訊的地圖，
+        你可以依據分類"友善程度"、"停車格類型"、"收費範圍"，尋找合適的停車場，並指引您開啟GOOGLE或APPLE MAP導航前往。
+        <br /><br />
 
         資料取源於<b><a href="https://linktr.ee/hueythegentry" style="color: #2ee7d6" target="_blank">大重停車記事</a></b>，
-        非常感謝大大們的努力，讓我們有更多的停車位資訊。
-        此站只提供停車場資訊，如有停車場相關問題，請至 "<b><a href="https://linktr.ee/hueythegentry" style="color: #2ee7d6" target="_blank">大重停車記事</a></b>" 填寫回報表單。
-        如有任何此網站使用上的問題，請至"<b><a href="https://forms.gle/iJCyfqVtpL35WtZM7" style="color: #2ee7d6" target="_blank">錯誤資訊回報</a></b>"填寫表單‧
+        非常感謝大大們的努力，讓我們有更多的停車位資訊。如有停車場相關問題，請至 "<b><a href="https://linktr.ee/hueythegentry" style="color: #2ee7d6" target="_blank">大重停車記事</a></b>" 填寫回報表單。
         <br /><br />
-        感謝各位車友的幫忙!<br />
-        一起打造更好的停車環境!<br />
 
-        非常感謝您的使用，祝您停車愉快！<br />
+        此停車地圖免費提供車友使用, 停車資訊僅供參考，請以實際狀況為主。資料不定期更新，功能陸續推出。如發生無法使用情況，可能是系統上的問題或是地圖額度沒了，麻煩至"<b><a href="https://forms.gle/iJCyfqVtpL35WtZM7" style="color: #2ee7d6" target="_blank">錯誤資訊回報</a></b>"，也歡迎<a href="https://buymeacoffee.com/jamestim923" target="_blank">請我喝杯咖啡 ☕️</a>，讓我有動力繼續更新。
+        <br /><br />
+
+        讓我們一起打造更好的停車環境!<br />感謝您的使用，祝您停車愉快！
+      </h4>
+      <h4 style="margin: 15px 0; text-align: right">
         by 爽爽
-        </h4>
+      </h4>
 
       <button class="btn" @click="closeMesBox()">確定</button>
     </div>
