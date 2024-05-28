@@ -601,7 +601,7 @@ watch(() => routeData.value , (val) => {
         非常感謝大大們的努力，讓我們有更多的停車位資訊。如有停車場相關問題，請至 "<b><a href="https://linktr.ee/hueythegentry" style="color: #2ee7d6" target="_blank">大重停車記事</a></b>" 填寫回報表單。
         <br /><br />
 
-        此停車地圖免費提供車友使用, 停車資訊僅供參考，請以實際狀況為主。資料不定期更新，功能陸續推出。如發生無法使用情況，可能是系統上的問題或是地圖額度沒了，麻煩至"<b><a href="https://forms.gle/iJCyfqVtpL35WtZM7" style="color: #2ee7d6" target="_blank">錯誤資訊回報</a></b>"，也歡迎<a href="https://buymeacoffee.com/jamestim923" target="_blank">請我喝杯咖啡 ☕️</a>，讓我有動力繼續更新。
+        此停車地圖免費提供車友使用, 停車資訊僅供參考，請以實際狀況為主。資料不定期更新，功能陸續推出。如發生無法使用情況，可能是系統上的問題或是地圖額度沒了，麻煩至"<b><a href="https://forms.gle/iJCyfqVtpL35WtZM7" style="color: #2ee7d6" target="_blank">錯誤資訊回報</a></b>"，也歡迎<a href="https://buymeacoffee.com/jamestim923" style="color: #2ee7d6" target="_blank">請我喝杯咖啡 ☕️</a>，讓我有動力繼續更新。
         <br /><br />
 
         讓我們一起打造更好的停車環境!<br />感謝您的使用，祝您停車愉快！
