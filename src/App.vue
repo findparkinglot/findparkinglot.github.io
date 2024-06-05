@@ -344,10 +344,35 @@ const openInMap = (type,geometry) => {
   window.open(url, '_blank');
 }
 
+const loadAd = () => {
+  let adContainers = document.querySelectorAll('.googleAdClass'); 
+
+  console.log(adContainers);
+
+  for(let i=0; i<adContainers.length; i++){
+    let ins = document.createElement('ins');
+    ins.className = 'adsbygoogle';
+    ins.style.display = 'block';
+    ins.setAttribute('data-ad-client', 'ca-pub-6596839701234097');
+    ins.setAttribute('data-ad-slot', '5885589098');
+    ins.setAttribute('data-ad-format', 'auto');
+    ins.setAttribute('data-full-width-responsive', 'true');
+    adContainers[i].appendChild(ins);
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  }
+
+
+  // (adsbygoogle = window.adsbygoogle || []).push({});
+}
+
 onMounted(() => {
   MapDataInit();
-  (adsbygoogle = window.adsbygoogle || []).push({});
+  // (adsbygoogle = window.adsbygoogle || []).push({});
+  loadAd();
+
 })
+
+
 
 watch(() => routeData.value , (val) => {
   if(val!=null){
@@ -449,8 +474,8 @@ watch(() => routeData.value , (val) => {
   </div>
 
   <!-- 教學 -->
-  <div class="window-box-cover" v-if="windowFAQOpen">
-    <div class="window-box">
+  <div class="window-box-cover" :class="windowFAQOpen?'active':''">
+    <div class="window-box" :class="windowFAQOpen?'active':''">
       <h3 style="text-align: left">地圖怎麼看?</h3>
       <h4 style="text-align: left">
         圖案代表甚麼格位
@@ -530,14 +555,15 @@ watch(() => routeData.value , (val) => {
           - Free 代表免錢        
         </div>
       </h5>
+      <div class="googleAdClass"></div>
       <br />
       <button class="btn" @click="windowFAQOpen = false">確定</button>
     </div>
   </div>
 
   <!-- 教學 -->
-  <div class="window-box-cover" v-if="windowHowToUseOpen">
-    <div class="window-box">
+  <div class="window-box-cover" :class="windowHowToUseOpen?'active':''">
+    <div class="window-box" :class="windowHowToUseOpen?'active':''">
       <h3 style="text-align: left">地圖怎麼用?</h3>
       <h4 style="text-align: left">
         1. 介面說明
@@ -553,14 +579,15 @@ watch(() => routeData.value , (val) => {
         <br />
 
       </h4>
+      <div class="googleAdClass"></div>
       <br />
       <button class="btn" @click="windowHowToUseOpen = false">確定</button>
     </div>
   </div>
   
   <!-- 加入手機桌面 類APP -->
-  <div class="window-box-cover" v-if="windowMobileFAQOpen">
-    <div class="window-box">
+  <div class="window-box-cover" :class="windowMobileFAQOpen?'active':''">
+    <div class="window-box" :class="windowMobileFAQOpen?'active':''">
       <h3 style="margin-bottom: 15px; text-align: left">如何加入手機桌面?</h3>
       <br />
       <h4 style="text-align: left">
@@ -582,13 +609,14 @@ watch(() => routeData.value , (val) => {
         <img width="100%" src="@/assets/images/ios_04.jpg" alt="" />
         <br />
       </h4>
+      <div class="googleAdClass"></div>
       <br />
       <button class="btn" @click="windowMobileFAQOpen = false">確定</button>
     </div>
   </div>
 
-  <div class="window-box-cover" v-if="windowMessageOpen">
-    <div class="window-box">
+  <div class="window-box-cover" :class="windowMessageOpen?'active':''">
+    <div class="window-box" :class="windowMessageOpen?'active':''">
       <h3>
         嗨!歡迎使用 重機能停哪?
       </h3>
@@ -748,13 +776,7 @@ watch(() => routeData.value , (val) => {
       <p style="color: #ccc;font-size: 12px;">地圖API：Mapbox GL JS API</p>
       <p style="color: #ccc;font-size: 12px;">版權宣告：© 2024 爽爽 版權所有。本網頁未經准許，禁止任何商業行為</p>
 
-      <!-- menuAd -->
-      <ins class="adsbygoogle"
-          style="display:block"
-          data-ad-client="ca-pub-6596839701234097"
-          data-ad-slot="5885589098"
-          data-ad-format="auto"
-          data-full-width-responsive="true"></ins>
+      <div class="googleAdClass"></div>
     </div>
 
   </div>
@@ -806,7 +828,14 @@ watch(() => routeData.value , (val) => {
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+
+
+.googleAdClass{
+  position: relative;
+  width: 100%;
+  height: auto;
+}
 
 .gotoBtn-div{
   display: flex;

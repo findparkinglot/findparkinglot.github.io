@@ -120,6 +120,11 @@ h2,h3,h4,h5,h6,p{
   right: 0;
   background-color: rgba(19, 75, 68, 0.7);
   overflow: auto;
+  visibility: hidden;
+}
+
+.window-box-cover.active{
+  visibility: visible;
 }
 
 .window-box{
@@ -136,6 +141,14 @@ h2,h3,h4,h5,h6,p{
   padding: 15px;
   color: #ccc;
   text-align: center;
+  transition: 0.3s ease-in-out;
+  transform: translate(0, -120%);
+  opacity: 0;
+}
+
+.window-box.active{
+  transform: translate(0, 0);
+  opacity: 1;
 }
 
 .window-box>h3{

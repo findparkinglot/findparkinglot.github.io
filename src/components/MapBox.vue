@@ -279,6 +279,7 @@ const setUserArea = () => {
 }
 
 const setMap = () => {
+  console.log(mapData.value.center);
   map.value = new mapboxgl.Map({
     container: 'map', // container ID
     style: props.mapStylesSelected, // style URL
@@ -317,12 +318,29 @@ const setMap = () => {
 
 const successCallback = (position) => {
 
-  console.log(position.coords.heading);
+  console.log(position.coords);
 
-  mapData.value.userCoordinates[0] = position.coords.longitude;
-  mapData.value.userCoordinates[1] = position.coords.latitude;
-  mapData.value.center[0] = position.coords.longitude;
-  mapData.value.center[1] = position.coords.latitude;
+  // 假如 座標不再台灣範圍內，則使用台灣中心座標
+  // bounds: [
+  //   [119.3620389067818, 21.83282743468497],
+  //   [122.07013958372167, 25.34391086143183],
+  // ],
+  // center: [121.5173399, 25.0475613],
+
+  if (
+    position.coords.longitude < mapData.value.bounds[0][0] ||
+    position.coords.longitude > mapData.value.bounds[1][0] ||
+    position.coords.latitude < mapData.value.bounds[0][1] ||
+    position.coords.latitude > mapData.value.bounds[1][1]
+  ) {
+    mapData.value.center[0] = 121.5173399;
+    mapData.value.center[1] = 25.0475613;
+  }else{
+    mapData.value.userCoordinates[0] = position.coords.longitude;
+    mapData.value.userCoordinates[1] = position.coords.latitude;
+    mapData.value.center[0] = position.coords.longitude;
+    mapData.value.center[1] = position.coords.latitude;
+  }
   setMap();
 }
 
