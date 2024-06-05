@@ -345,7 +345,8 @@ const openInMap = (type,geometry) => {
 }
 
 onMounted(() => {
-  MapDataInit()
+  MapDataInit();
+  (adsbygoogle = window.adsbygoogle || []).push({});
 })
 
 watch(() => routeData.value , (val) => {
@@ -733,6 +734,11 @@ watch(() => routeData.value , (val) => {
           重機能停哪? 回報表單
         </button>
       </a>
+      <a href="https://buymeacoffee.com/jamestim923" target="_blank">
+        <button class="btn" style="font-size: 12px;padding: 6px 8px;margin: 0 5px 5px 0">
+          請我喝杯咖啡 ☕️，讓我有動力繼續更新
+        </button>
+      </a>
 
       <h5 style="padding: 10px 0 0 0">資訊</h5>
       <p style="color: #ccc;font-size: 12px;">版本資訊：v1.0.2</p>
@@ -741,20 +747,14 @@ watch(() => routeData.value , (val) => {
       <p style="color: #ccc;font-size: 12px;">資料參考：大重停車記事 google my map資料</p>
       <p style="color: #ccc;font-size: 12px;">地圖API：Mapbox GL JS API</p>
       <p style="color: #ccc;font-size: 12px;">版權宣告：© 2024 爽爽 版權所有。本網頁未經准許，禁止任何商業行為</p>
-      <a href="https://buymeacoffee.com/jamestim923" target="_blank">
-        <button class="btn" style="font-size: 12px;padding: 6px 8px;margin: 0 5px 5px 0">
-          請我喝杯咖啡 ☕️，讓我有動力繼續更新
-        </button>
-      </a>
 
-      <!-- <ins
-        class="adsbygoogle"
-        style="display: block"
-        data-ad-format="fluid"
-        data-ad-layout-key="-fb+5w+4e-db+86"
-        data-ad-client="ca-pub-6596839701234097"
-        data-ad-slot="5429225032"
-      ></ins> --> 
+      <!-- menuAd -->
+      <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-6596839701234097"
+          data-ad-slot="5885589098"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
     </div>
 
   </div>
