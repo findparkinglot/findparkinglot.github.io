@@ -360,15 +360,11 @@ const loadAd = () => {
     adContainers[i].appendChild(ins);
     (adsbygoogle = window.adsbygoogle || []).push({});
   }
-
-
-  // (adsbygoogle = window.adsbygoogle || []).push({});
 }
 
 onMounted(() => {
   MapDataInit();
-  // (adsbygoogle = window.adsbygoogle || []).push({});
-  loadAd();
+  // loadAd();
 
 })
 
@@ -555,7 +551,7 @@ watch(() => routeData.value , (val) => {
           - Free 代表免錢        
         </div>
       </h5>
-      <div class="googleAdClass"></div>
+      <!-- <div class="googleAdClass"></div> -->
       <br />
       <button class="btn" @click="windowFAQOpen = false">確定</button>
     </div>
@@ -579,7 +575,7 @@ watch(() => routeData.value , (val) => {
         <br />
 
       </h4>
-      <div class="googleAdClass"></div>
+      <!-- <div class="googleAdClass"></div> -->
       <br />
       <button class="btn" @click="windowHowToUseOpen = false">確定</button>
     </div>
@@ -609,7 +605,7 @@ watch(() => routeData.value , (val) => {
         <img width="100%" src="@/assets/images/ios_04.jpg" alt="" />
         <br />
       </h4>
-      <div class="googleAdClass"></div>
+      <!-- <div class="googleAdClass"></div> -->
       <br />
       <button class="btn" @click="windowMobileFAQOpen = false">確定</button>
     </div>
@@ -630,7 +626,7 @@ watch(() => routeData.value , (val) => {
         非常感謝大大們的努力，讓我們有更多的停車位資訊。如有停車場相關問題，請至 "<b><a href="https://linktr.ee/hueythegentry" style="color: #2ee7d6" target="_blank">大重停車記事</a></b>" 填寫回報表單。
         <br /><br />
 
-        此停車地圖免費提供車友使用, 停車資訊僅供參考，請以實際狀況為主。資料不定期更新，功能陸續推出。如發生無法使用情況，可能是系統上的問題或是地圖額度沒了，麻煩至"<b><a href="https://forms.gle/iJCyfqVtpL35WtZM7" style="color: #2ee7d6" target="_blank">錯誤資訊回報</a></b>"，也歡迎<a href="https://buymeacoffee.com/jamestim923" style="color: #2ee7d6" target="_blank">請我喝杯咖啡 ☕️</a>，讓我有動力繼續更新。
+        此停車地圖免費提供車友使用, 停車資訊僅供參考，請以實際狀況為主。資料不定期更新，功能陸續推出。如發生無法使用情況，可能是系統上的問題或是地圖額度沒了，麻煩至"<b><a href="https://forms.gle/iJCyfqVtpL35WtZM7" style="color: #2ee7d6" target="_blank">錯誤資訊回報</a></b>"，也歡迎<a href="https://buymeacoffee.com/jamestim923" style="color: #2ee7d6" target="_blank">請我喝杯咖啡 ☕️</a>，讓我有動力繼續更新與維護。
         <br /><br />
 
         讓我們一起打造更好的停車環境!<br />感謝您的使用，祝您停車愉快！
@@ -737,6 +733,14 @@ watch(() => routeData.value , (val) => {
           大重停車記事[240527更新]
         </button>
       </a>
+      <a href="https://docs.google.com/document/d/16mq-fcaaaLaFSMcwFLrrbliBCsVjtYZZds90rWy7CVk/edit" target="_blank">
+        <button class="btn" style="
+          font-size: 12px;
+          padding: 6px 8px;
+          margin: 0 5px 5px 0">
+          大重停車記事公告[240607]
+        </button>
+      </a>
 
       <h5 style="padding: 10px 0 0 0">問題回報</h5>
 
@@ -772,11 +776,11 @@ watch(() => routeData.value , (val) => {
       <p style="color: #ccc;font-size: 12px;">版本資訊：v1.0.2</p>
       <p style="color: #ccc;font-size: 12px;">地圖資料更新日期：240527</p>
       <p style="color: #ccc;font-size: 12px;">Web製作：爽爽</p>
-      <p style="color: #ccc;font-size: 12px;">資料參考：大重停車記事 google my map資料</p>
+      <p style="color: #ccc;font-size: 12px;">資料參考：大重停車記事 Google My Map資料</p>
       <p style="color: #ccc;font-size: 12px;">地圖API：Mapbox GL JS API</p>
       <p style="color: #ccc;font-size: 12px;">版權宣告：© 2024 爽爽 版權所有。本網頁未經准許，禁止任何商業行為</p>
 
-      <div class="googleAdClass"></div>
+      <!-- <div class="googleAdClass"></div> -->
     </div>
 
   </div>
