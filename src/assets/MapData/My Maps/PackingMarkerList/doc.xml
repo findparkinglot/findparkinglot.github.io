@@ -2,7 +2,7 @@
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
     <name>PackingMarkerList</name>
-    <description/>
+    <description>2024/5/27更新</description>
     <Style id="icon-1538-0288D1-labelson">
       <IconStyle>
         <scale>1</scale>
@@ -2632,9 +2632,9 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>(30/h)輔大醫療大樓停車場B2</name>
-        <description>B2 重機臨停</description>
-        <styleUrl>#icon-1633-757575-labelson</styleUrl>
+        <name>(30/h)汽車右道進-輔大醫療大樓停車場B2</name>
+        <description>B2 重機專用5格</description>
+        <styleUrl>#icon-1633-7CB342-labelson</styleUrl>
         <Point>
           <coordinates>
             121.4315987,25.0389581,0
@@ -2728,7 +2728,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>(30/h | 120/d)右道進-基隆東岸地下停車場站</name>
+        <name>(30/h)汽車右道進-基隆東岸地下停車場站</name>
         <description><![CDATA[@通勤者之歌SHORT<br>汽車道進入, 管理室旁有重機專用區]]></description>
         <styleUrl>#icon-1633-7CB342-labelson</styleUrl>
         <Point>
@@ -2982,7 +2982,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>(60/h | 300/d)台安醫院停車場</name>
+        <name>(70/h | 350/d)台安醫院停車場</name>
         <styleUrl>#icon-1538-757575-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
@@ -3390,11 +3390,11 @@
       </Placemark>
       <Placemark>
         <name>(80/h)客限-板橋凱撒大飯店</name>
-        <description><![CDATA[<img src="https://mymaps.usercontent.google.com/hostedimage/m/*/3AFclZuE-GBoL-iPlloqB40Zh8p2kz9Bp1qpU5qSBtSWmF9AFoqodqvzuR3EK-j2lR9vRsjHf6nzkkhi3tl1zbzknlimoNyhlpOpOIYXnP1KQUQl04OCSAatBRBhhtr2pHcMT02z_tgD_WmiBqKagY5HYqX9oeAGEo99nqWC0R7Y6bXA0jnhhAwem2MYayZ2MSVuieCPErd0pMd-fmpkDGW4BqHxs6ysopJ_7GWCXPdUkrPATYl0WzywNGRoGRR0?fife=s16383" height="200" width="auto" /><br><br>感謝hoha5432提供<br>汽車費率 80h 按鈕取票 2 格 或以上 <br>目前對外說不開放臨停，僅供住宿與用餐客人停放。費用沒有公開，根據個人繳費經驗推估約 80h。<br>官網寫說「本飯店提供機車/汽車地下停車場(B2-B5) ，共220個車位。※B2停放機車（可供重型機車停靠，但如需要更大空間可改停靠汽車停車格）」但實際沒有機車格，而是只有大重停車格（為汽車格畫線切出）。  ]]></description>
+        <description><![CDATA[<img src="https://mymaps.usercontent.google.com/hostedimage/m/*/3AFclZuGZphzNye2wLubPtjENV0ZZaCAiSLb2lgRO1uk5mjY2IT4N_vjSvdD9c8QNY_ZjTi73gRsZOqEWREFFtF2WaqLLxAGDPDm80127NpEM-oeCRXkHM9jiInHTsBLgnfQJ6Vn1K6fLuF2w0UlkD8rzR5uHoLMjRnNETa-QlduD_oaQO7PkPjnlgCf_Wf2kmirfKSryyIdGJ6a_Nc-VG6tT38wc9XwiIu2heWxm4_qFMXzT5iKNCfipiVf3EOQ?fife=s16383" height="200" width="auto" /><br><br>感謝hoha5432提供<br>汽車費率 80h 按鈕取票 2 格 或以上 <br>目前對外說不開放臨停，僅供住宿與用餐客人停放。費用沒有公開，根據個人繳費經驗推估約 80h。<br>官網寫說「本飯店提供機車/汽車地下停車場(B2-B5) ，共220個車位。※B2停放機車（可供重型機車停靠，但如需要更大空間可改停靠汽車停車格）」但實際沒有機車格，而是只有大重停車格（為汽車格畫線切出）。  ]]></description>
         <styleUrl>#icon-1633-0288D1-labelson</styleUrl>
         <ExtendedData>
           <Data name="gx_media_links">
-            <value>https://mymaps.usercontent.google.com/hostedimage/m/*/3AFclZuE-GBoL-iPlloqB40Zh8p2kz9Bp1qpU5qSBtSWmF9AFoqodqvzuR3EK-j2lR9vRsjHf6nzkkhi3tl1zbzknlimoNyhlpOpOIYXnP1KQUQl04OCSAatBRBhhtr2pHcMT02z_tgD_WmiBqKagY5HYqX9oeAGEo99nqWC0R7Y6bXA0jnhhAwem2MYayZ2MSVuieCPErd0pMd-fmpkDGW4BqHxs6ysopJ_7GWCXPdUkrPATYl0WzywNGRoGRR0?fife=s16383</value>
+            <value>https://mymaps.usercontent.google.com/hostedimage/m/*/3AFclZuGZphzNye2wLubPtjENV0ZZaCAiSLb2lgRO1uk5mjY2IT4N_vjSvdD9c8QNY_ZjTi73gRsZOqEWREFFtF2WaqLLxAGDPDm80127NpEM-oeCRXkHM9jiInHTsBLgnfQJ6Vn1K6fLuF2w0UlkD8rzR5uHoLMjRnNETa-QlduD_oaQO7PkPjnlgCf_Wf2kmirfKSryyIdGJ6a_Nc-VG6tT38wc9XwiIu2heWxm4_qFMXzT5iKNCfipiVf3EOQ?fife=s16383</value>
           </Data>
         </ExtendedData>
         <Point>
@@ -4319,8 +4319,8 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>(Free)家樂福B1 重新店</name>
-        <description>機車, B1有大重專用格</description>
+        <name>(30/d | 1200/隔夜)家樂福B1 重新店</name>
+        <description><![CDATA[機車, B1有大重專用格<br>家樂福B1 重新店 收費 （費率不符 或 免費變收費) 30/d;有消費當日即免費;停放隔夜1200/d        ]]></description>
         <styleUrl>#icon-1633-7CB342-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -4365,7 +4365,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>(平30/h | 假60/d)麗寶百貨廣場地下停車場-文強停車</name>
+        <name>(平30/h | 假60/h)麗寶百貨廣場地下停車場-文強停車</name>
         <description>板橋麗寶停車場機車停車場 汽/機車費率 及 汽/機車停放位置 電話問管理員管理員說是要停汽車（2023）        </description>
         <styleUrl>#icon-1538-7CB342-labelson</styleUrl>
         <Point>
@@ -4424,7 +4424,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>(20/d)南港展覽館2館機車停車場</name>
+        <name>(30/d)南港展覽館2館機車停車場</name>
         <styleUrl>#icon-1632-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
@@ -4433,7 +4433,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>(20/d)南港展覽館停車場</name>
+        <name>(30/d)南港展覽館停車場</name>
         <styleUrl>#icon-1632-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
@@ -5891,6 +5891,16 @@
         <Point>
           <coordinates>
             120.6850512,24.1426197,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(禁止)嘟嘟房停車場捷運南港展覽館站（機車）</name>
+        <description>雙北捷運系統不允許重機停機車格</description>
+        <styleUrl>#icon-1898-E65100-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.6188629,25.0553269,0
           </coordinates>
         </Point>
       </Placemark>

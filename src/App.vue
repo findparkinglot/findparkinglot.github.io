@@ -774,7 +774,7 @@ watch(() => routeData.value , (val) => {
 
       <h5 style="padding: 10px 0 0 0">資訊</h5>
       <p style="color: #ccc;font-size: 12px;">版本資訊：v1.0.2</p>
-      <p style="color: #ccc;font-size: 12px;">地圖資料更新日期：240527</p>
+      <p style="color: #ccc;font-size: 12px;">地圖資料更新日期：240608</p>
       <p style="color: #ccc;font-size: 12px;">Web製作：爽爽</p>
       <p style="color: #ccc;font-size: 12px;">資料參考：大重停車記事 Google My Map資料</p>
       <p style="color: #ccc;font-size: 12px;">地圖API：Mapbox GL JS API</p>
