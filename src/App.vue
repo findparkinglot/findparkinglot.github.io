@@ -419,7 +419,7 @@ watch(() => routeData.value , (val) => {
     @click="windowMobileFAQOpen ? (windowMobileFAQOpen = false) : (windowMobileFAQOpen = true)"
     v-show="!stepsOpen"
   >
-    <span class="material-icons-outlined">help_outline</span> [教學]如何加到手機桌面?類APP
+    <span class="material-icons-outlined">help_outline</span> [教學]加到手機桌面
   </button>
   <button
     class="btn btnFAQ"
