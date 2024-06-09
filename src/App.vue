@@ -382,7 +382,15 @@ const shareLinkHandler = (type) => {
     shareUrl = `https://twitter.com/share?url=${url}&amp;via=`;
   }
 
-  window.open(shareUrl, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');
+  if(type == 'link'){
+    navigator.clipboard.writeText(url).then(function() {
+      alert('已複製連結');
+    }, function(err) {
+      alert('複製失敗');
+    });
+  }else{
+    window.open(shareUrl, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');
+  }
 }
 
 
@@ -596,6 +604,10 @@ watch(() => routeData.value , (val) => {
         <div class="share-btn" @click="shareLinkHandler('twitter')">
           <img src="@/assets/images/icon/003-twitter.png" alt="">
         </div>
+        <div class="share-btn" @click="shareLinkHandler('link')">
+          <img src="@/assets/images/icon/004-link.png" alt="">
+        </div>
+
       </div>
 
       <button class="btn" @click="windowShareOpen = false">關閉</button>
