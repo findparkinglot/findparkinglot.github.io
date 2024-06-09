@@ -136,6 +136,7 @@ const closeMesBox = () => {
 const windowMobileFAQOpen = ref(false)
 const windowFAQOpen = ref(false)
 const windowHowToUseOpen = ref(false)
+const windowShareOpen = ref(false)
 const menuActive = ref(false)
 const infoActive = ref(false)
 const stepsOpen = ref(false)
@@ -368,6 +369,22 @@ onMounted(() => {
 
 })
 
+const shareLinkHandler = (type) => {
+  let url = 'https://findparkinglot.github.io/';
+  let text = '重機能停哪?';
+  let shareUrl = '';
+
+  if(type == 'facebook'){
+    shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}&amp;t=`;
+  }else if(type == 'line'){
+    shareUrl = `https://social-plugins.line.me/lineit/share?url=${url}`;
+  }else if(type == 'twitter'){
+    shareUrl = `https://twitter.com/share?url=${url}&amp;via=`;
+  }
+
+  window.open(shareUrl, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');
+}
+
 
 
 watch(() => routeData.value , (val) => {
@@ -402,14 +419,14 @@ watch(() => routeData.value , (val) => {
     @click="windowMobileFAQOpen ? (windowMobileFAQOpen = false) : (windowMobileFAQOpen = true)"
     v-show="!stepsOpen"
   >
-    如何加入手機桌面? 類APP
+    <span class="material-icons-outlined">help_outline</span> [教學]如何加到手機桌面?類APP
   </button>
   <button
     class="btn btnFAQ"
     @click="windowFAQOpen ? (windowFAQOpen = false) : (windowFAQOpen = true)"
     v-show="!stepsOpen"
   >
-    教學 地圖怎麼看?
+    <span class="material-icons-outlined">help_outline</span> [教學]地圖怎麼看
   </button>
 
   <button
@@ -417,7 +434,15 @@ watch(() => routeData.value , (val) => {
     @click="windowHowToUseOpen ? (windowHowToUseOpen = false) : (windowHowToUseOpen = true)"
     v-show="!stepsOpen"
   >
-    教學 怎麼用?
+    <span class="material-icons-outlined">help_outline</span> [教學]怎麼用
+  </button>
+
+  <button
+    class="btn btnShare"
+    @click="windowShareOpen ? (windowShareOpen = false) : (windowShareOpen = true)"
+    v-show="!stepsOpen"
+  >
+    <span class="material-icons-outlined">share</span> 分享
   </button>
 
   
@@ -554,6 +579,26 @@ watch(() => routeData.value , (val) => {
       <!-- <div class="googleAdClass"></div> -->
       <br />
       <button class="btn" @click="windowFAQOpen = false">確定</button>
+    </div>
+  </div>
+
+  <!-- 分享 -->
+  <div class="window-box-cover" :class="windowShareOpen?'active':''">
+    <div class="window-box" :class="windowShareOpen?'active':''">
+
+      <div class="share-div">
+        <div class="share-btn" @click="shareLinkHandler('facebook')">
+          <img src="@/assets/images/icon/001-facebook.png" alt="">
+        </div>
+        <div class="share-btn" @click="shareLinkHandler('line')">
+          <img src="@/assets/images/icon/002-line.png" alt="">
+        </div>
+        <div class="share-btn" @click="shareLinkHandler('twitter')">
+          <img src="@/assets/images/icon/003-twitter.png" alt="">
+        </div>
+      </div>
+
+      <button class="btn" @click="windowShareOpen = false">關閉</button>
     </div>
   </div>
 
@@ -773,7 +818,7 @@ watch(() => routeData.value , (val) => {
       </a>
 
       <h5 style="padding: 10px 0 0 0">資訊</h5>
-      <p style="color: #ccc;font-size: 12px;">版本資訊：v1.0.2</p>
+      <p style="color: #ccc;font-size: 12px;">版本資訊：v1.0.3</p>
       <p style="color: #ccc;font-size: 12px;">地圖資料更新日期：240608</p>
       <p style="color: #ccc;font-size: 12px;">Web製作：爽爽</p>
       <p style="color: #ccc;font-size: 12px;">資料參考：大重停車記事 Google My Map資料</p>

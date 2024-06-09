@@ -329,6 +329,7 @@ button.btn.active{
   transform: rotate(-45deg);
 }
 
+
 button.btnMobileFAQ{
   position: absolute;
   z-index: 999;
@@ -336,26 +337,75 @@ button.btnMobileFAQ{
   right: 40px;
   font-size: 12px;
   padding: 6px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
 button.btnFAQ{
   position: absolute;
   z-index: 999;
-  top: 50px;
+  top: 45px;
   right: 40px;
   font-size: 12px;
   padding: 6px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
 button.btnHowToUse{
   position: absolute;
   z-index: 999;
-  top: 90px;
+  top: 80px;
   right: 40px;
   font-size: 12px;
   padding: 6px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button.btnShare{
+  position: absolute;
+  z-index: 999;
+  top: 115px;
+  right: 40px;
+  font-size: 12px;
+  padding: 6px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button.btnShare>.material-icons-outlined,
+button.btnHowToUse>.material-icons-outlined,
+button.btnFAQ>.material-icons-outlined,
+button.btnMobileFAQ>.material-icons-outlined{
+  font-size: 12px;
+  vertical-align: middle;
+  margin-right: 3px;
+}
+
+.share-div{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 40px 20px;
+}
+
+.share-div>.share-btn{
+  cursor: pointer;
+}
+.share-div>.share-btn>img{
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  object-position: center center;
+  background: #fff;
+  border-radius: 10px;
 }
 
 
