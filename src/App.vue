@@ -446,11 +446,11 @@ watch(() => routeData.value , (val) => {
   </button>
 
   <button
-    class="btn btnShare"
+    class="btn btnShare btnFocus"
     @click="windowShareOpen ? (windowShareOpen = false) : (windowShareOpen = true)"
     v-show="!stepsOpen"
   >
-    <span class="material-icons-outlined">share</span> 分享
+    <span class="material-icons-outlined">share</span> [New]分享
   </button>
 
   

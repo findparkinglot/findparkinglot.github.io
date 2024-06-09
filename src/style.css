@@ -409,6 +409,24 @@ button.btnMobileFAQ>.material-icons-outlined{
   border: 2px solid #2ee7d6;
 }
 
+@keyframes shinning {
+  0% {
+    box-shadow: 0 0 0px #2ee7d6;
+  }
+  50% {
+    box-shadow: 0 0 10px #2ee7d6;
+  }
+  100% {
+    box-shadow: 0 0 0px #2ee7d6;
+  }
+}
+
+
+.btnFocus{
+  animation: shinning 1s infinite;
+
+}
+
 
 button.btnGetLngLat{
   position: absolute;
