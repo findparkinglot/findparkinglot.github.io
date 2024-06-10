@@ -345,17 +345,16 @@ const openInMap = (type,geometry) => {
   window.open(url, '_blank');
 }
 
-const loadAd = () => {
-  let adContainers = document.querySelectorAll('.googleAdClass'); 
-
+const loadAd = (id) => {
+  let str = '.ad-id-'+id;
+  let adContainers = document.querySelectorAll(str);
   console.log(adContainers);
-
   for(let i=0; i<adContainers.length; i++){
     let ins = document.createElement('ins');
     ins.className = 'adsbygoogle';
     ins.style.display = 'block';
     ins.setAttribute('data-ad-client', 'ca-pub-6596839701234097');
-    ins.setAttribute('data-ad-slot', '5885589098');
+    ins.setAttribute('data-ad-slot', id);
     ins.setAttribute('data-ad-format', 'auto');
     ins.setAttribute('data-full-width-responsive', 'true');
     adContainers[i].appendChild(ins);
@@ -365,8 +364,7 @@ const loadAd = () => {
 
 onMounted(() => {
   MapDataInit();
-  // loadAd();
-
+  loadAd('5885589098');
 })
 
 const shareLinkHandler = (type) => {
@@ -584,7 +582,7 @@ watch(() => routeData.value , (val) => {
           - Free 代表免錢        
         </div>
       </h5>
-      <!-- <div class="googleAdClass"></div> -->
+      <div class="googleAdClass ad-id-5885589098"></div>
       <br />
       <button class="btn" @click="windowFAQOpen = false">確定</button>
     </div>
@@ -609,6 +607,7 @@ watch(() => routeData.value , (val) => {
         </div>
 
       </div>
+      <div class="googleAdClass ad-id-5885589098"></div>
 
       <button class="btn" @click="windowShareOpen = false">關閉</button>
     </div>
@@ -632,7 +631,7 @@ watch(() => routeData.value , (val) => {
         <br />
 
       </h4>
-      <!-- <div class="googleAdClass"></div> -->
+      <div class="googleAdClass ad-id-5885589098"></div>
       <br />
       <button class="btn" @click="windowHowToUseOpen = false">確定</button>
     </div>
@@ -662,7 +661,7 @@ watch(() => routeData.value , (val) => {
         <img width="100%" src="@/assets/images/ios_04.jpg" alt="" />
         <br />
       </h4>
-      <!-- <div class="googleAdClass"></div> -->
+      <div class="googleAdClass ad-id-5885589098"></div>
       <br />
       <button class="btn" @click="windowMobileFAQOpen = false">確定</button>
     </div>
@@ -673,25 +672,23 @@ watch(() => routeData.value , (val) => {
       <h3>
         嗨!歡迎使用 重機能停哪?
       </h3>
-      <h4 style="margin: 15px 0; text-align: justify;">
-
+      <h4 style="margin: 5px 0; text-align: justify;text-indent: 2em;">
         這是一個提供重機停車資訊的地圖，
         你可以依據分類"友善程度"、"停車格類型"、"收費範圍"，尋找合適的停車場，並指引您開啟GOOGLE或APPLE MAP導航前往。
-        <br /><br />
-
+      </h4>
+      <h4 style="margin: 5px 0; text-align: justify;text-indent: 2em;">
         資料取源於<b><a href="https://linktr.ee/hueythegentry" style="color: #2ee7d6" target="_blank">大重停車記事</a></b>，
-        非常感謝大大們的努力，讓我們有更多的停車位資訊。如有停車場相關問題，請至 "<b><a href="https://linktr.ee/hueythegentry" style="color: #2ee7d6" target="_blank">大重停車記事</a></b>" 填寫回報表單。
-        <br /><br />
-
-        此停車地圖免費提供車友使用, 停車資訊僅供參考，請以實際狀況為主。資料根據"大重停車記事"一個月或一週更新，功能陸續推出。如發生無法使用情況，可能是系統上的問題或是地圖無法正常顯示，麻煩至"<b><a href="https://forms.gle/iJCyfqVtpL35WtZM7" style="color: #2ee7d6" target="_blank">錯誤資訊回報</a></b>"，也歡迎<a href="https://buymeacoffee.com/jamestim923" style="color: #2ee7d6" target="_blank">請我喝杯咖啡 ☕️</a>，讓我有動力繼續更新與維護。
-        <br /><br />
-
+        如有停車場相關問題，請至 "<b><a href="https://linktr.ee/hueythegentry" style="color: #2ee7d6" target="_blank">大重停車記事</a></b>" 填寫回報表單。
+      </h4>
+      <h4 style="margin: 5px 0; text-align: justify;text-indent: 2em;">
+        此地圖免費提供車友使用, 資訊僅供參考，請以實際狀況為主。資料根據一個月或一週更新，功能陸續推出。如發生無法使用情況，麻煩至"<b><a href="https://forms.gle/iJCyfqVtpL35WtZM7" style="color: #2ee7d6" target="_blank">錯誤資訊回報</a></b>"，也歡迎<a href="https://buymeacoffee.com/jamestim923" style="color: #2ee7d6" target="_blank">請我喝杯咖啡 ☕️</a>，讓我有動力繼續更新。
+      </h4>
+      <h4 style="margin: 5px 0; text-align: justify;text-indent: 2em;">
         讓我們一起打造更好的停車環境!<br />感謝您的使用，祝您停車愉快！
       </h4>
       <h4 style="margin: 15px 0; text-align: right">
         by 爽爽
       </h4>
-
       <button class="btn" @click="closeMesBox()">確定</button>
     </div>
   </div>
@@ -837,7 +834,7 @@ watch(() => routeData.value , (val) => {
       <p style="color: #ccc;font-size: 12px;">地圖API：Mapbox GL JS API</p>
       <p style="color: #ccc;font-size: 12px;">版權宣告：© 2024 爽爽 版權所有。本網頁未經准許，禁止任何商業行為</p>
 
-      <!-- <div class="googleAdClass"></div> -->
+      <div class="googleAdClass ad-id-5885589098"></div>
     </div>
 
   </div>
