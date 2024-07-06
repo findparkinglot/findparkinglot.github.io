@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
-    <name>PackingMarkerList</name>
-    <description>2024/5/27更新</description>
+    <name>PackingMarkerList0706</name>
+    <description>2024/6/15更新</description>
     <Style id="icon-1538-0288D1-labelson">
       <IconStyle>
         <scale>1</scale>
@@ -45,7 +45,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-2.png</href>
+          <href>images/icon-1.png</href>
         </Icon>
       </IconStyle>
     </Style>
@@ -53,7 +53,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-2.png</href>
+          <href>images/icon-1.png</href>
         </Icon>
       </IconStyle>
       <BalloonStyle>
@@ -64,7 +64,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-1.png</href>
+          <href>images/icon-3.png</href>
         </Icon>
       </IconStyle>
       <LabelStyle>
@@ -75,7 +75,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-1.png</href>
+          <href>images/icon-3.png</href>
         </Icon>
       </IconStyle>
       <LabelStyle>
@@ -96,7 +96,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-1.png</href>
+          <href>images/icon-3.png</href>
         </Icon>
       </IconStyle>
     </Style>
@@ -104,7 +104,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-1.png</href>
+          <href>images/icon-3.png</href>
         </Icon>
       </IconStyle>
       <BalloonStyle>
@@ -115,7 +115,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-12.png</href>
+          <href>images/icon-13.png</href>
         </Icon>
       </IconStyle>
     </Style>
@@ -123,7 +123,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-12.png</href>
+          <href>images/icon-13.png</href>
         </Icon>
       </IconStyle>
       <BalloonStyle>
@@ -161,7 +161,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-14.png</href>
+          <href>images/icon-15.png</href>
         </Icon>
       </IconStyle>
     </Style>
@@ -172,6 +172,17 @@
           <href>images/icon-8.png</href>
         </Icon>
       </IconStyle>
+    </Style>
+    <Style id="icon-1633-0288D1-labelson-nodesc">
+      <IconStyle>
+        <scale>1</scale>
+        <Icon>
+          <href>images/icon-8.png</href>
+        </Icon>
+      </IconStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
     </Style>
     <Style id="icon-1633-757575-labelson">
       <IconStyle>
@@ -196,7 +207,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-3.png</href>
+          <href>images/icon-2.png</href>
         </Icon>
       </IconStyle>
     </Style>
@@ -204,7 +215,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-3.png</href>
+          <href>images/icon-2.png</href>
         </Icon>
       </IconStyle>
       <BalloonStyle>
@@ -230,19 +241,11 @@
         <text><![CDATA[<h3>$[name]</h3>]]></text>
       </BalloonStyle>
     </Style>
-    <Style id="icon-1644-795548-labelson">
-      <IconStyle>
-        <scale>1</scale>
-        <Icon>
-          <href>images/icon-18.png</href>
-        </Icon>
-      </IconStyle>
-    </Style>
     <Style id="icon-1644-7CB342-labelson">
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-15.png</href>
+          <href>images/icon-16.png</href>
         </Icon>
       </IconStyle>
     </Style>
@@ -250,7 +253,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-15.png</href>
+          <href>images/icon-16.png</href>
         </Icon>
       </IconStyle>
       <BalloonStyle>
@@ -261,7 +264,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-17.png</href>
+          <href>images/icon-18.png</href>
         </Icon>
       </IconStyle>
     </Style>
@@ -269,7 +272,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-17.png</href>
+          <href>images/icon-18.png</href>
         </Icon>
       </IconStyle>
       <BalloonStyle>
@@ -280,7 +283,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-16.png</href>
+          <href>images/icon-17.png</href>
         </Icon>
       </IconStyle>
       <BalloonStyle>
@@ -299,7 +302,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-13.png</href>
+          <href>images/icon-14.png</href>
         </Icon>
       </IconStyle>
     </Style>
@@ -307,7 +310,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-19.png</href>
+          <href>images/icon-12.png</href>
         </Icon>
       </IconStyle>
     </Style>
@@ -315,7 +318,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-19.png</href>
+          <href>images/icon-12.png</href>
         </Icon>
       </IconStyle>
       <BalloonStyle>
@@ -324,6 +327,25 @@
     </Style>
     <Folder>
       <name>公有汽車費率(適用停管法)</name>
+      <Placemark>
+        <name>(Free)口湖休息站</name>
+        <styleUrl>#icon-1538-7CB342-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            120.1513533,23.5744888,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(Free)大安休息站</name>
+        <description>Free 無出入口管制</description>
+        <styleUrl>#icon-1633-7CB342-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            120.5918876,24.3782236,0
+          </coordinates>
+        </Point>
+      </Placemark>
       <Placemark>
         <name>(20/h - 按鈴)捷運永寧站轉乘停車場(承天路)</name>
         <styleUrl>#icon-1538-E65100-labelson-nodesc</styleUrl>
@@ -540,7 +562,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>(---)文化部</name>
+        <name>(Free/3h)文化部</name>
         <styleUrl>#icon-1538-757575-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
@@ -736,8 +758,8 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>(平30/h | 假40/h)新北市市民廣場 地下停車場 | 歐特儀</name>
-        <description><![CDATA[走汽車道，是車牌辯識系統，<br>專屬大型重機專用停車格在停車場柵欄處旁邊<br>@節錄自DCARD]]></description>
+        <name>(平30/h | 假40/h)市民廣場地下停車場 | 歐特儀 - 平日上限150</name>
+        <description><![CDATA[走汽車道，是車牌辯識系統，<br>專屬大型重機專用停車格在停車場柵欄處旁邊<br>@節錄自DCARD<br>平日上限,150, 假日無上限]]></description>
         <styleUrl>#icon-1633-7CB342-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -1386,9 +1408,9 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>(平40/h | 假50/h)八德立體停車場</name>
-        <description><![CDATA[有可專用停重機的車格非常少，入場需要請管理員協助或倒退嚕照車牌<br>感謝Una]]></description>
-        <styleUrl>#icon-1633-E65100-labelson</styleUrl>
+        <name>(平40/h | 假50/h - 後牌)八德立體停車場</name>
+        <description><![CDATA[有可專用停重機的車格非常少，入場需要請管理員協助或倒退嚕照車牌<br>感謝Una<br>24年6月增加後牌辨識]]></description>
+        <styleUrl>#icon-1633-7CB342-labelson</styleUrl>
         <Point>
           <coordinates>
             121.5717127,25.0495998,0
@@ -1425,8 +1447,8 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>(30/h)中正運動中心機車停車場</name>
-        <styleUrl>#icon-1538-757575-labelson-nodesc</styleUrl>
+        <name>(30/h)中正運動中心停車場 - 注意部份為機械位</name>
+        <styleUrl>#icon-1538-0288D1-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
             121.5193082,25.0382225,0
@@ -1434,8 +1456,8 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>(平40/h | 假50/h)兩廳院停車場</name>
-        <styleUrl>#icon-1538-757575-labelson-nodesc</styleUrl>
+        <name>(平40/h | 假50/h - 後牌)兩廳院停車場</name>
+        <styleUrl>#icon-1538-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
             121.5170729,25.0351962,0
@@ -1558,7 +1580,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>(50/h 左車道進)國立臺灣師範大學運動場停車場</name>
+        <name>(70/h 左車道進)國立臺灣師範大學運動場停車場</name>
         <description>左車道有後牌辨識</description>
         <styleUrl>#icon-1538-7CB342-labelson</styleUrl>
         <Point>
@@ -2382,7 +2404,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>(30/h)新北高工地下停車場</name>
+        <name>(30/h - 後牌)新北高工地下停車場</name>
         <description>汽車費率 每小時$30 後牌辨析</description>
         <styleUrl>#icon-1538-7CB342-labelson</styleUrl>
         <Point>
@@ -2529,9 +2551,9 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>(40/h - 按鈴)中正公園地下停車場（中友百貨特約停車場）</name>
-        <description>汽車費率 1h/40  客服建議停汽車格</description>
-        <styleUrl>#icon-1538-E65100-labelson</styleUrl>
+        <name>(20/d)中正公園地下停車場</name>
+        <description>機車格試辦場地</description>
+        <styleUrl>#icon-1632-7CB342-labelson</styleUrl>
         <Point>
           <coordinates>
             120.6815183,24.157537,0
@@ -2555,6 +2577,117 @@
         <Point>
           <coordinates>
             120.362435,22.6242582,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(平20/h | 假30/h)城市車旅海安路地下停車場2</name>
+        <description><![CDATA[汽車費率 20-30h <br>平日10半H，假日15半H  ]]></description>
+        <styleUrl>#icon-1538-E65100-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            120.1963574,22.9951091,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(40/h - 後牌)城市車旅文昌公園地下停車場2</name>
+        <description>後牌辨析 專用2格以上</description>
+        <styleUrl>#icon-1633-7CB342-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.309288,24.99229,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(20/h | 100/d - 進場靠左)中路四號社會住宅</name>
+        <styleUrl>#icon-1633-7CB342-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.2868819,25.0076794,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(平40/h | 假50/h - 後牌)展演中心地下停車場</name>
+        <styleUrl>#icon-1538-7CB342-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.2990343,25.0162711,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(20/h | 120/d)嵿埔之星科技廣場停車場</name>
+        <styleUrl>#icon-1538-757575-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4201916,24.9585364,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(30/h | 300/d - 後牌)財稅大樓地下停車場</name>
+        <description>可電子支付</description>
+        <styleUrl>#icon-1633-7CB342-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            120.3096932,22.6304052,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(30/h - 後牌)公有學成停車場</name>
+        <styleUrl>#icon-1633-7CB342-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4514575,24.988058,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(20/d)捷運水安宮站(文心路)</name>
+        <styleUrl>#icon-1632-7CB342-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            120.646965,24.152727,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(20/h - 管理員)台65高架橋下新莊端停車場</name>
+        <styleUrl>#icon-1538-E65100-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4420336,25.0442514,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(40/h - 後牌)大豐公園地下停車場</name>
+        <styleUrl>#icon-1538-7CB342-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.5042121,25.1310894,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(30/h - 管理員)三重正義國小地下停車場</name>
+        <styleUrl>#icon-1538-E65100-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.495267,25.064565,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(平50/h | 假60/h)城市車旅臺北大巨蛋園區站</name>
+        <styleUrl>#icon-1633-7CB342-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.560796,25.041616,0
           </coordinates>
         </Point>
       </Placemark>
@@ -3390,11 +3523,11 @@
       </Placemark>
       <Placemark>
         <name>(80/h)客限-板橋凱撒大飯店</name>
-        <description><![CDATA[<img src="https://mymaps.usercontent.google.com/hostedimage/m/*/3AFclZuGZphzNye2wLubPtjENV0ZZaCAiSLb2lgRO1uk5mjY2IT4N_vjSvdD9c8QNY_ZjTi73gRsZOqEWREFFtF2WaqLLxAGDPDm80127NpEM-oeCRXkHM9jiInHTsBLgnfQJ6Vn1K6fLuF2w0UlkD8rzR5uHoLMjRnNETa-QlduD_oaQO7PkPjnlgCf_Wf2kmirfKSryyIdGJ6a_Nc-VG6tT38wc9XwiIu2heWxm4_qFMXzT5iKNCfipiVf3EOQ?fife=s16383" height="200" width="auto" /><br><br>感謝hoha5432提供<br>汽車費率 80h 按鈕取票 2 格 或以上 <br>目前對外說不開放臨停，僅供住宿與用餐客人停放。費用沒有公開，根據個人繳費經驗推估約 80h。<br>官網寫說「本飯店提供機車/汽車地下停車場(B2-B5) ，共220個車位。※B2停放機車（可供重型機車停靠，但如需要更大空間可改停靠汽車停車格）」但實際沒有機車格，而是只有大重停車格（為汽車格畫線切出）。  ]]></description>
+        <description><![CDATA[<img src="https://mymaps.usercontent.google.com/hostedimage/m/*/3AFclZuEwPZTVm1k8xwHbyyfcvKf5hDMxclyhRgryuaCdhH_eKK4ZutbH8IkQzOV3mLVa9QbuN3tdS-xMX1l_UPYcYsc2XVrNJUkpg3--bs7xvBcvpl7GUrur5F-g66--p3hnlt6NVlMTgFAQ4K_156QOR-mI1kk4i-hxlrH0hjdWD-z5vrEGi2HkxotNg_BpoHrqkjAtAqK9PvIhiU-dFTDgj36aDMBA1k8uy2IJw1Z74DZexU1Yg9goc5T2HBc?fife=s16383" height="200" width="auto" /><br><br>感謝hoha5432提供<br>汽車費率 80h 按鈕取票 2 格 或以上 <br>目前對外說不開放臨停，僅供住宿與用餐客人停放。費用沒有公開，根據個人繳費經驗推估約 80h。<br>官網寫說「本飯店提供機車/汽車地下停車場(B2-B5) ，共220個車位。※B2停放機車（可供重型機車停靠，但如需要更大空間可改停靠汽車停車格）」但實際沒有機車格，而是只有大重停車格（為汽車格畫線切出）。  ]]></description>
         <styleUrl>#icon-1633-0288D1-labelson</styleUrl>
         <ExtendedData>
           <Data name="gx_media_links">
-            <value>https://mymaps.usercontent.google.com/hostedimage/m/*/3AFclZuGZphzNye2wLubPtjENV0ZZaCAiSLb2lgRO1uk5mjY2IT4N_vjSvdD9c8QNY_ZjTi73gRsZOqEWREFFtF2WaqLLxAGDPDm80127NpEM-oeCRXkHM9jiInHTsBLgnfQJ6Vn1K6fLuF2w0UlkD8rzR5uHoLMjRnNETa-QlduD_oaQO7PkPjnlgCf_Wf2kmirfKSryyIdGJ6a_Nc-VG6tT38wc9XwiIu2heWxm4_qFMXzT5iKNCfipiVf3EOQ?fife=s16383</value>
+            <value>https://mymaps.usercontent.google.com/hostedimage/m/*/3AFclZuEwPZTVm1k8xwHbyyfcvKf5hDMxclyhRgryuaCdhH_eKK4ZutbH8IkQzOV3mLVa9QbuN3tdS-xMX1l_UPYcYsc2XVrNJUkpg3--bs7xvBcvpl7GUrur5F-g66--p3hnlt6NVlMTgFAQ4K_156QOR-mI1kk4i-hxlrH0hjdWD-z5vrEGi2HkxotNg_BpoHrqkjAtAqK9PvIhiU-dFTDgj36aDMBA1k8uy2IJw1Z74DZexU1Yg9goc5T2HBc?fife=s16383</value>
           </Data>
         </ExtendedData>
         <Point>
@@ -3464,9 +3597,9 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>(80/h) 富邦金融中心停車場</name>
-        <description>重機獨立費率 80/h 後牌辨析</description>
-        <styleUrl>#icon-1538-7CB342-labelson</styleUrl>
+        <name>(禁止) 富邦金融中心停車場</name>
+        <description><![CDATA[重機獨立費率 80/h 後牌辨析<br>24年6月起禁止停放]]></description>
+        <styleUrl>#icon-1898-E65100-labelson</styleUrl>
         <Point>
           <coordinates>
             121.5518362,25.0383839,0
@@ -3574,9 +3707,9 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>(50/h)板橋怡寶大樓停車場 0700-2400營業</name>
+        <name>(禁止)板橋怡寶大樓停車場 0700-2400營業</name>
         <description><![CDATA[汽車費率 50h 按鈕取票 <br>只開放早上07:00至凌晨00:00  ]]></description>
-        <styleUrl>#icon-1538-0288D1-labelson</styleUrl>
+        <styleUrl>#icon-1898-E65100-labelson</styleUrl>
         <Point>
           <coordinates>
             121.4603895,25.0080942,0
@@ -3614,9 +3747,8 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>(平40/h | 假60/h)台灣聯通停車場-阿曼TIT場 (汽車費用停機車格)</name>
-        <description>機車格汽車費率，禁止停汽車格 平日40/1h 假日60/1h 機車汽車皆後牌辨識，重機要在汽車閘門辨識後去機車閘門按鈴 2 格 或以上 親身經驗 或 車友/朋友/親人經驗 對重機非常不友善，並且汽車費率禁止停汽車格，最後全場皆有障礙設施設計  </description>
-        <styleUrl>#icon-1633-E65100-labelson</styleUrl>
+        <name>(禁止)台灣聯通停車場-阿曼TIT場</name>
+        <styleUrl>#icon-1898-E65100-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
             121.5065085,25.0443442,0
@@ -3744,7 +3876,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>(30/h | 150/d)城市車旅 社頭停車場</name>
+        <name>(30/h | 150/d)城市車旅 社頭停車場 - 進場後牌/出場前牌</name>
         <description>城市車旅社頭</description>
         <styleUrl>#icon-1538-7CB342-labelson</styleUrl>
         <Point>
@@ -3887,6 +4019,71 @@
         <Point>
           <coordinates>
             121.448948,25.0544167,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(20/h - 前牌)文茂路停車場</name>
+        <description>汽車費率 20h 倒退嚕可以辨識到</description>
+        <styleUrl>#icon-1538-E65100-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.3884367,25.0506859,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(平50/d | 假100/d)八里左岸計次停車場</name>
+        <styleUrl>#icon-1538-757575-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4309453,25.1602418,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(展期60/h | 無展20/h - 後牌)世貿公園地下停車場 - 現金/悠遊卡</name>
+        <styleUrl>#icon-1538-7CB342-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.6145904,25.0578528,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(40/h - 按鈕)寶盛停車場-中東場</name>
+        <styleUrl>#icon-1538-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            120.3124488,22.6331904,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(日60/h | 夜20/h - 管理員)政大公企中心停車場</name>
+        <description>日6-23 夜23-6</description>
+        <styleUrl>#icon-1538-E65100-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.5274305,25.0307573,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(30/h | 150/d - 後牌)力揚文二立體停車場</name>
+        <styleUrl>#icon-1538-7CB342-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.3637684,25.0610162,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(100/h - 管理員)國泰慕軒飯店站</name>
+        <styleUrl>#icon-1538-E65100-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.5492548,25.0340662,0
           </coordinates>
         </Point>
       </Placemark>
@@ -4290,8 +4487,8 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>(30/d | 900/月)台大水源校區</name>
-        <description><![CDATA[感謝Kyontw@ptt<br>24年3月修正月費為900]]></description>
+        <name>(30/d | 300/月)台大水源校區</name>
+        <description><![CDATA[感謝Kyontw@ptt<br>24年3月修正月費為900<br>24年7月修正月費為300]]></description>
         <styleUrl>#icon-1632-7CB342-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -4996,7 +5193,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>(30/d)承億酒店</name>
+        <name>(10/h | 30/d)高雄總圖/承億酒店</name>
         <description>機車費率 30/D 後牌辨析</description>
         <styleUrl>#icon-1632-7CB342-labelson</styleUrl>
         <Point>
@@ -5252,12 +5449,94 @@
           </coordinates>
         </Point>
       </Placemark>
+      <Placemark>
+        <name>(Free)樹林興仁花園夜市</name>
+        <styleUrl>#icon-1632-7CB342-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4154278,25.0031642,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(Free - 公有)停七免費機車停車場-自行承擔風險</name>
+        <description>政府轄下停車場，請自行承擔風險</description>
+        <styleUrl>#icon-1632-7CB342-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.4834885,25.0547793,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(30/d)太子文旅機車停車場</name>
+        <styleUrl>#icon-1632-7CB342-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            120.2178816,22.9951998,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(10/h - 窄車道)NOVA資訊廣場 新竹店</name>
+        <styleUrl>#icon-1632-7CB342-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.0004859,24.7942812,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(Free)中研院機車棚</name>
+        <styleUrl>#icon-1632-7CB342-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.6158427,25.0439533,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(Free - 窄車道)特力屋 南崁店</name>
+        <styleUrl>#icon-1632-7CB342-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.294785,25.0400904,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(30/d)逢甲停車場</name>
+        <styleUrl>#icon-1632-7CB342-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            120.6465247,24.1716841,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(25/d)領袖天下工業園區停車場</name>
+        <styleUrl>#icon-1632-7CB342-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.455916,24.9963056,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(Free)光復橋下</name>
+        <styleUrl>#icon-1632-7CB342-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4853339,25.0224298,0
+          </coordinates>
+        </Point>
+      </Placemark>
     </Folder>
     <Folder>
       <name>重機個別費率(含公有/私人)</name>
       <Placemark>
-        <name>(黃60/d | 紅80/d)中山機車腳踏車保管處</name>
-        <description>重機獨立費率 黃牌60/DAY 紅牌80/DAY 阿嬤在入口引導</description>
+        <name>(黃60/d | 紅100/d)中山機車腳踏車保管處</name>
+        <description>重機獨立費率 黃牌60/DAY 紅牌100/DAY 阿嬤在入口引導</description>
         <styleUrl>#icon-1633-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -5505,6 +5784,25 @@
           </coordinates>
         </Point>
       </Placemark>
+      <Placemark>
+        <name>(Free)新豐休息站</name>
+        <description>61快速公路 新豐休息站</description>
+        <styleUrl>#icon-1633-7CB342-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            120.972294,24.9158078,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(100/d - 營業時間)PIT147 重機維修｜保養改裝｜重機停車｜新車買賣 - 有月租</name>
+        <styleUrl>#icon-1633-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            120.310615,22.687881,0
+          </coordinates>
+        </Point>
+      </Placemark>
     </Folder>
     <Folder>
       <name>路邊友善車格</name>
@@ -5669,10 +5967,19 @@
       <Placemark>
         <name>(Free - 夜間20-7限定)仁愛路三段123巷13弄</name>
         <description>夜間限定共用車格</description>
-        <styleUrl>#icon-1644-795548-labelson</styleUrl>
+        <styleUrl>#icon-1644-9C27B0-labelson</styleUrl>
         <Point>
           <coordinates>
             121.543305555556,25.0398888888889,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(Free - 平日夜間20-7 / 假日限定) 吉祥路182號</name>
+        <styleUrl>#icon-1644-9C27B0-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.5625329,25.0510057,0
           </coordinates>
         </Point>
       </Placemark>
@@ -5910,6 +6217,33 @@
         <Point>
           <coordinates>
             120.5911564,24.181266,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(禁止)老虎城購物中心</name>
+        <styleUrl>#icon-1898-E65100-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            120.6381239,24.1642474,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(禁止)天京停車場</name>
+        <styleUrl>#icon-1898-E65100-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4482648,24.9831732,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(禁止)榕樹下停車場</name>
+        <styleUrl>#icon-1898-E65100-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.549192,25.0351333,0
           </coordinates>
         </Point>
       </Placemark>
