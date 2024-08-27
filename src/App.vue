@@ -193,7 +193,7 @@ const parkingTypeList = ref([
     name: "汽車：汽車格(含未確認是否有重機格)",
     value: "car",
     key: [
-      "icon-1.png",
+      "icon-2.png",
       "icon-3.png",
       "icon-6.png",
       "icon-7.png"
@@ -203,7 +203,7 @@ const parkingTypeList = ref([
     name: "重機：有設重機專用格",
     value: "motorcycle",
     key: [
-      "icon-2.png",
+      "icon-1.png",
       "icon-4.png",
       "icon-5.png",
       "icon-8.png"
@@ -786,7 +786,7 @@ watch(() => routeData.value , (val) => {
           font-size: 12px;
           padding: 6px 8px;
           margin: 0 5px 5px 0">
-          大重停車記事[更新至240615]
+          大重停車記事[更新至240825]
         </button>
       </a>
       <a href="https://docs.google.com/document/d/16mq-fcaaaLaFSMcwFLrrbliBCsVjtYZZds90rWy7CVk/edit" target="_blank">
@@ -829,8 +829,8 @@ watch(() => routeData.value , (val) => {
       </a>
 
       <h5 style="padding: 10px 0 0 0">資訊</h5>
-      <p style="color: #ccc;font-size: 12px;">版本資訊：v1.0.3</p>
-      <p style="color: #ccc;font-size: 12px;">地圖資料更新日期：240706</p>
+      <p style="color: #ccc;font-size: 12px;">版本資訊：v1.0.4</p>
+      <p style="color: #ccc;font-size: 12px;">地圖資料更新日期：240827</p>
       <p style="color: #ccc;font-size: 12px;">Web製作：爽爽</p>
       <p style="color: #ccc;font-size: 12px;">資料參考：大重停車記事 Google My Map資料</p>
       <p style="color: #ccc;font-size: 12px;">地圖API：Mapbox GL JS API</p>
