@@ -504,6 +504,8 @@ button.btnGetLngLat{
   object-fit: cover;
   object-position: center center;
 }
+
+
 @media (max-width: 768px) {
   .mainInfoBox2{
       top: auto;

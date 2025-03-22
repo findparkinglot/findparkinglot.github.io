@@ -117,11 +117,22 @@ const mapStyle = [
   // { name: "Navigation Day", value: "mapbox://styles/mapbox/navigation-day-v1"},         //Navigation Day
   // { name: "Navigation Night", value: "mapbox://styles/mapbox/navigation-night-v1"}      //Navigation Night
 ]
-
+const themeType = ref(0)
 const mapOptions = ref({
   getLngLat: false,
   mapStylesSelected: "mapbox://styles/jamestim9215/ckvkdj5cd1q4115nzwxa9rny3",
 })
+
+if(localStorage.getItem('mapStyles') == '亮色模式'){
+  mapOptions.value.mapStylesSelected = mapStyle[1].value;
+  themeType.value = 1;
+  document.body.classList.add('light-theme');
+}else{
+  mapOptions.value.mapStylesSelected = mapStyle[0].value;
+  themeType.value = 0;
+  document.body.classList.remove('light-theme');
+}
+
 const windowMessageOpen = ref(true)
 
 // if(localStorage.getItem('isReadFirstMessage') && localStorage.getItem('isReadFirstMessage') == 'true'){
@@ -193,19 +204,19 @@ const parkingTypeList = ref([
     name: "汽車：汽車格(含未確認是否有重機格)",
     value: "car",
     key: [
-      "icon-2.png",
+      "icon-1.png",
       "icon-3.png",
-      "icon-6.png",
-      "icon-7.png"
+      "icon-5.png",
+      "icon-6.png"
     ]
   },
   {
     name: "重機：有設重機專用格",
     value: "motorcycle",
     key: [
-      "icon-1.png",
+      "icon-2.png",
       "icon-4.png",
-      "icon-5.png",
+      "icon-7.png",
       "icon-8.png"
     ]
   },
@@ -216,35 +227,34 @@ const parkingTypeList = ref([
       "icon-9.png",
       "icon-10.png",
       "icon-13.png",
-      "icon-15.png",
     ]
   },
   {
     name: "綠P:重機專用路邊停車格",
     value: "greenP",
     key: [
-      "icon-16.png",
+      "icon-15.png",
     ]
   },
   {
     name: "黃P:重機與汽車共享路邊停車格",
     value: "yellowP",
     key: [
-      "icon-17.png",
+      "icon-16.png",
     ]
   },
   {
     name: "紫P:時段性汽機車共用停車格，注意使用時間喔!",
     value: "purpleP",
     key: [
-      "icon-18.png",
+      "icon-17.png",
     ]
   },
   {
     name: "紅X:停都不給停",
     value: "redX",
     key: [
-      "icon-19.png",
+      "icon-12.png",
     ]
   },
   {
@@ -288,17 +298,17 @@ const degreeOfFriendlinessList = ref([
     name: "最友善：有後牌辨析",
     value: "friendly",
     key: [
-      "icon-1.png",
       "icon-2.png",
+      "icon-3.png",
       "icon-9.png",
-      "icon-16.png",
+      "icon-15.png",
     ]
   },
   {
     name: "最傳統：悠遊卡、按鈕取票",
     value: "normal",
     key: [
-      "icon-6.png",
+      "icon-5.png",
       "icon-8.png",
       "icon-11.png",
       "icon-13.png",
@@ -308,8 +318,8 @@ const degreeOfFriendlinessList = ref([
     name: "最靠北：按鈕請管理員協助、前牌辨析",
     value: "unfriendly",
     key: [
-      "icon-3.png",
-      "icon-5.png",
+      "icon-1.png",
+      "icon-7.png",
       "icon-10.png",
       "icon-12.png",
     ]
@@ -319,7 +329,7 @@ const degreeOfFriendlinessList = ref([
     value: "unknown",
     key: [
       "icon-4.png",
-      "icon-7.png",
+      "icon-6.png",
     ]
   },
 ])
@@ -403,6 +413,24 @@ watch(() => routeData.value , (val) => {
   }
 })
 
+watch(() => mapOptions.value.mapStylesSelected , (val) => {
+  console.log(val);
+
+  mapStyle.map((item)=>{
+    if(item.value == val){
+      localStorage.setItem('mapStyles', item.name);
+      if(item.name == '亮色模式'){
+        themeType.value = 1;
+        document.body.classList.add('light-theme');
+      }else{
+        themeType.value = 0;
+        document.body.classList.remove('light-theme');
+      }
+    }
+  })
+
+})
+
 
 </script>
 
@@ -450,7 +478,7 @@ watch(() => routeData.value , (val) => {
     @click="windowShareOpen ? (windowShareOpen = false) : (windowShareOpen = true)"
     v-show="!stepsOpen"
   >
-    <span class="material-icons-outlined">share</span> [New]分享
+    <span class="material-icons-outlined">share</span> 分享
   </button>
 
   
@@ -584,7 +612,6 @@ watch(() => routeData.value , (val) => {
           - Free 代表免錢        
         </div>
       </h5>
-      <div class="googleAdClass ad-id-5885589098"></div>
       <br />
       <button class="btn" @click="windowFAQOpen = false">確定</button>
     </div>
@@ -609,7 +636,6 @@ watch(() => routeData.value , (val) => {
         </div>
 
       </div>
-      <div class="googleAdClass ad-id-5885589098"></div>
 
       <button class="btn" @click="windowShareOpen = false">關閉</button>
     </div>
@@ -631,10 +657,7 @@ watch(() => routeData.value , (val) => {
         3. 選單
         <img width="100%" src="@/assets/images/FAQ3.jpg" alt="">
         <br />
-
       </h4>
-      <div class="googleAdClass ad-id-5885589098"></div>
-      <br />
       <button class="btn" @click="windowHowToUseOpen = false">確定</button>
     </div>
   </div>
@@ -661,9 +684,7 @@ watch(() => routeData.value , (val) => {
         <br />
         4. 即可在桌面開啟 並無網頁狀態列
         <img width="100%" src="@/assets/images/ios_04.jpg" alt="" />
-        <br />
       </h4>
-      <div class="googleAdClass ad-id-5885589098"></div>
       <br />
       <button class="btn" @click="windowMobileFAQOpen = false">確定</button>
     </div>
@@ -683,7 +704,7 @@ watch(() => routeData.value , (val) => {
         如有停車場相關問題，請至 "<b><a href="https://linktr.ee/hueythegentry" style="color: #2ee7d6" target="_blank">大重停車記事</a></b>" 填寫回報表單。
       </h4>
       <h4 style="margin: 5px 0; text-align: justify;text-indent: 2em;">
-        此地圖免費提供車友使用, 資訊僅供參考，請以實際狀況為主。資料根據一個月或一週更新，功能陸續推出。如發生無法使用情況，麻煩至"<b><a href="https://forms.gle/iJCyfqVtpL35WtZM7" style="color: #2ee7d6" target="_blank">錯誤資訊回報</a></b>"，也歡迎<a href="https://buymeacoffee.com/jamestim923" style="color: #2ee7d6" target="_blank">請我喝杯咖啡 ☕️</a>，讓我有動力繼續更新。
+        此地圖免費提供車友使用, 資訊僅供參考，請以實際狀況為主。資料不定期更新，如發生無法使用情況，麻煩至"<b><a href="https://forms.gle/iJCyfqVtpL35WtZM7" style="color: #2ee7d6" target="_blank">錯誤資訊回報</a></b>"，也歡迎<a href="https://buymeacoffee.com/jamestim923" style="color: #2ee7d6" target="_blank">請我喝杯咖啡 ☕️</a>，讓我有動力繼續更新。
       </h4>
       <h4 style="margin: 5px 0; text-align: justify;text-indent: 2em;">
         讓我們一起打造更好的停車環境!<br />感謝您的使用，祝您停車愉快！
@@ -765,7 +786,7 @@ watch(() => routeData.value , (val) => {
       </div>
 
 
-      <h5>地圖顏色</h5>
+      <h5>主題顏色</h5>
       <select
         style="width: 100%; margin-bottom: 10px"
         :value="mapOptions.mapStylesSelected"
@@ -786,7 +807,7 @@ watch(() => routeData.value , (val) => {
           font-size: 12px;
           padding: 6px 8px;
           margin: 0 5px 5px 0">
-          大重停車記事[更新至240825]
+          大重停車記事[更新至241231]
         </button>
       </a>
       <a href="https://docs.google.com/document/d/16mq-fcaaaLaFSMcwFLrrbliBCsVjtYZZds90rWy7CVk/edit" target="_blank">
@@ -829,14 +850,12 @@ watch(() => routeData.value , (val) => {
       </a>
 
       <h5 style="padding: 10px 0 0 0">資訊</h5>
-      <p style="color: #ccc;font-size: 12px;">版本資訊：v1.0.4</p>
-      <p style="color: #ccc;font-size: 12px;">地圖資料更新日期：240827</p>
+      <p style="color: #ccc;font-size: 12px;">版本資訊：v1.0.5</p>
+      <p style="color: #ccc;font-size: 12px;">地圖資料更新日期：250322</p>
       <p style="color: #ccc;font-size: 12px;">Web製作：爽爽</p>
       <p style="color: #ccc;font-size: 12px;">資料參考：大重停車記事 Google My Map資料</p>
       <p style="color: #ccc;font-size: 12px;">地圖API：Mapbox GL JS API</p>
-      <p style="color: #ccc;font-size: 12px;">版權宣告：© 2024 爽爽 版權所有。本網頁未經准許，禁止任何商業行為</p>
-
-      <div class="googleAdClass ad-id-5885589098"></div>
+      <p style="color: #ccc;font-size: 12px;">版權宣告：© 2025 爽爽 版權所有。本網頁未經准許，禁止任何商業行為</p>
     </div>
 
   </div>
