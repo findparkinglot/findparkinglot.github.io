@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, ref, watch } from 'vue'
+import { onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import mapboxgl from 'mapbox-gl'
 import addressMap from '@/assets/json/address.json'
 import { resolveIconUrl } from '@/utils/parseKml.js'
@@ -187,9 +187,33 @@ const setMaker = () => {
   }
 }
 
-// ----- 合併過的 marker refresh -----
+// ----- 合併過的 marker refresh（debounce + idle，避免拖動時掃代 setMaker 阻塞主執行緒） -----
+let refreshTimeoutId = null
+let refreshIdleId = null
+const cancelPendingRefresh = () => {
+  if (refreshTimeoutId != null) {
+    clearTimeout(refreshTimeoutId)
+    refreshTimeoutId = null
+  }
+  if (refreshIdleId != null) {
+    if (typeof cancelIdleCallback === 'function') cancelIdleCallback(refreshIdleId)
+    refreshIdleId = null
+  }
+}
 const refreshMarkers = () => {
-  if (props.goToParkingPlaceData == null) setMaker()
+  cancelPendingRefresh()
+  refreshTimeoutId = setTimeout(() => {
+    refreshTimeoutId = null
+    const runRefresh = () => {
+      refreshIdleId = null
+      if (props.goToParkingPlaceData == null) setMaker()
+    }
+    if (typeof requestIdleCallback === 'function') {
+      refreshIdleId = requestIdleCallback(runRefresh, { timeout: 250 })
+    } else {
+      runRefresh()
+    }
+  }, 80)
 }
 
 const hideLoading = () => {
@@ -371,13 +395,28 @@ const removeRoutes = () => {
 }
 
 // ----- Lifecycle -----
-onMounted(() => {
+onMounted(async () => {
   mapboxgl.accessToken = mapData.value.accessToken
-  if ('geolocation' in navigator) {
+  // Chrome 不允許「未經使用者互動」直接呼叫 geolocation；
+  // 先檢查授權狀態,只有已 granted 才自動定位,否則直接用預設座標開地圖
+  let canAutoLocate = false
+  try {
+    if ('permissions' in navigator) {
+      const status = await navigator.permissions.query({ name: 'geolocation' })
+      canAutoLocate = status.state === 'granted'
+    }
+  } catch {
+    canAutoLocate = false
+  }
+  if (canAutoLocate && 'geolocation' in navigator) {
     navigator.geolocation.getCurrentPosition(successCallback, errorCallback)
   } else {
     setMap()
   }
+})
+
+onBeforeUnmount(() => {
+  cancelPendingRefresh()
 })
 
 // ----- Watchers（合併 5 個 watch 為單一 refresh） -----
