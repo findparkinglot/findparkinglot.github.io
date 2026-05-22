@@ -10,14 +10,22 @@
 import { initializeApp } from 'firebase/app'
 import { getDatabase } from 'firebase/database'
 
+// 防呆:secret 若不小心夾雜換行 / 等號 / 逗號等雜訊,只取第一段乾淨值
+const sanitize = (v) => {
+  if (!v) return ''
+  return String(v)
+    .split(/[\r\n,=\s]/)[0]
+    .trim()
+}
+
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-  databaseURL: import.meta.env.VITE_FIREBASE_DATABASE_URL,
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
-  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  apiKey: sanitize(import.meta.env.VITE_FIREBASE_API_KEY),
+  authDomain: sanitize(import.meta.env.VITE_FIREBASE_AUTH_DOMAIN),
+  projectId: sanitize(import.meta.env.VITE_FIREBASE_PROJECT_ID),
+  databaseURL: sanitize(import.meta.env.VITE_FIREBASE_DATABASE_URL),
+  storageBucket: sanitize(import.meta.env.VITE_FIREBASE_STORAGE_BUCKET),
+  messagingSenderId: sanitize(import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID),
+  appId: sanitize(import.meta.env.VITE_FIREBASE_APP_ID),
 }
 
 export const isFirebaseConfigured = Boolean(
