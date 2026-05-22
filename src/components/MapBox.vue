@@ -8,6 +8,7 @@ import {
   shouldShowByPrice,
   isCoordInBounds,
 } from '@/composables/useMarkerFilters.js'
+import { favoriteId } from '@/composables/useFavorites.js'
 
 const props = defineProps({
   parkingTypeKeyArray: Array,
@@ -20,6 +21,10 @@ const props = defineProps({
   priceRangeMax: Number,
   goToParkingPlaceData: Object,
   routeData: Object,
+  favoriteIds: { type: Object, default: () => new Set() },
+  onlyFavorites: { type: Boolean, default: false },
+  focusCoord: { type: Array, default: null },
+  routeProfile: { type: String, default: 'driving' },
 })
 const emits = defineEmits([
   'parkingInfo',
@@ -64,8 +69,11 @@ const setMaker = () => {
 
   for (const MapGroup of props.mapDataList) {
     for (const marker of MapGroup.features) {
+      const id = favoriteId(marker.properties.name, marker.geometry.coordinates)
+      const isFav = props.favoriteIds?.has?.(id)
       if (
         !isCoordInBounds(bounds, marker.geometry.coordinates) ||
+        (props.onlyFavorites && !isFav) ||
         !shouldShowByIcon(
           marker.properties.icon,
           props.parkingTypeKeyArray,
@@ -84,6 +92,7 @@ const setMaker = () => {
 
       const el = document.createElement('div')
       el.className = 'marker'
+      if (isFav) el.classList.add('is-fav')
 
       const tag = document.createElement('div')
       tag.className = 'tag'
@@ -247,7 +256,7 @@ async function getRoute(start, end) {
   }
 
   const query = await fetch(
-    `https://api.mapbox.com/directions/v5/mapbox/driving/${start[0]},${start[1]};${end[0]},${end[1]}?alternatives=false&language=zh-Hant&overview=full&steps=true&exclude=toll,ferry,cash_only_tolls&geometries=geojson&access_token=${mapData.value.accessToken}`,
+    `https://api.mapbox.com/directions/v5/mapbox/${props.routeProfile || 'driving'}/${start[0]},${start[1]};${end[0]},${end[1]}?alternatives=false&language=zh-Hant&overview=full&steps=true&exclude=ferry&geometries=geojson&access_token=${mapData.value.accessToken}`,
     { method: 'GET' }
   )
   const json = await query.json()
@@ -336,8 +345,38 @@ watch(
     () => props.priceRangeMin,
     () => props.priceRangeMax,
     () => props.parkingPriceType,
+    () => props.onlyFavorites,
+    () => props.favoriteIds,
   ],
   () => refreshMarkers()
+)
+
+watch(
+  () => props.focusCoord,
+  (val) => {
+    if (!val || !map.value) return
+    map.value.flyTo({
+      center: val,
+      zoom: 17,
+      bearing: 0,
+      speed: 1.5,
+      curve: 1.5,
+      essential: true,
+    })
+  }
+)
+
+watch(
+  () => props.routeProfile,
+  () => {
+    // 重新規劃路線使用新的交通方式
+    if (
+      props.goToParkingPlaceData !== null &&
+      mapData.value.userCoordinates[0] !== null
+    ) {
+      getRoute(mapData.value.userCoordinates, props.goToParkingPlaceData)
+    }
+  }
 )
 
 watch(

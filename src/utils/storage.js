@@ -23,4 +23,21 @@ export const storage = {
       /* noop */
     }
   },
+  getJSON(key, fallback = null) {
+    try {
+      const v = window.localStorage.getItem(key)
+      if (v === null) return fallback
+      return JSON.parse(v)
+    } catch {
+      return fallback
+    }
+  },
+  setJSON(key, value) {
+    try {
+      window.localStorage.setItem(key, JSON.stringify(value))
+      return true
+    } catch {
+      return false
+    }
+  },
 }

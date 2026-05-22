@@ -231,6 +231,13 @@ body.modal-open {
   background: var(--danger);
   border-color: var(--danger);
 }
+.marker.is-fav {
+  border-color: #ffc107;
+  box-shadow: 0 0 0 2px rgba(255, 193, 7, 0.35), 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+.marker.is-fav > .tag {
+  background: #ffc107;
+}
 
 /* =================== 座標顯示 =================== */
 .coordinates {

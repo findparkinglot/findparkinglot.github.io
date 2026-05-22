@@ -6,10 +6,13 @@ import FabMenu from './components/FabMenu.vue'
 import SettingsPanel from './components/SettingsPanel.vue'
 import ParkingInfoPanel from './components/ParkingInfoPanel.vue'
 import RouteSteps from './components/RouteSteps.vue'
+import SearchBar from './components/SearchBar.vue'
 
 import xml from '@/assets/MapData/My Maps/PackingMarkerList/doc.xml'
+import addressMap from '@/assets/json/address.json'
 import { parseKml, resolveIconUrl } from '@/utils/parseKml.js'
 import { storage } from '@/utils/storage.js'
+import { useFavorites, favoriteId } from '@/composables/useFavorites.js'
 import {
   parkingTypeList,
   degreeOfFriendlinessList,
@@ -89,6 +92,16 @@ const parkingPriceType = ref('')
 const priceRangeMin = ref(0)
 const priceRangeMax = ref(100)
 
+// ---------- 我的最愛 ----------
+const { favorites, favoriteIdSet, isFavorite, toggleFavorite } = useFavorites()
+const onlyFavorites = ref(false)
+
+// ---------- 路線交通方式（每次點路線規劃時重設為 driving） ----------
+const routeProfile = ref('driving')
+
+// ---------- 搜尋聚焦座標 ----------
+const searchFocusCoord = ref(null)
+
 const parkingTypeKeys = computed(
   () => parkingTypeList.find((i) => i.value === parkingType.value)?.key || []
 )
@@ -104,9 +117,17 @@ const ParkingInfo = ref({
   parkingNameDes: '',
   parkingType: '',
   parkingIcon: '',
+  parkingIconKey: '',
   geometry: [null, null],
   address: '',
 })
+
+const currentParkingId = computed(() =>
+  favoriteId(ParkingInfo.value.parkingName, ParkingInfo.value.geometry)
+)
+const currentIsFavorite = computed(() =>
+  isFavorite(currentParkingId.value)
+)
 
 const onSetParkingInfo = (data) => {
   ParkingInfo.value = {
@@ -114,10 +135,47 @@ const onSetParkingInfo = (data) => {
     parkingNameDes: data.properties.description,
     parkingType: data.name,
     parkingIcon: resolveIconUrl(data.properties.icon),
+    parkingIconKey: data.properties.icon,
     geometry: data.geometry,
     address: data.address,
   }
   infoActive.value = true
+}
+
+const onToggleFavorite = () => {
+  if (!ParkingInfo.value.parkingName) return
+  toggleFavorite({
+    id: currentParkingId.value,
+    name: ParkingInfo.value.parkingName,
+    parkingType: ParkingInfo.value.parkingType,
+    geometry: ParkingInfo.value.geometry,
+    address: ParkingInfo.value.address,
+    icon: ParkingInfo.value.parkingIconKey,
+  })
+}
+
+// ---------- 搜尋選取處理 ----------
+const findAddress = (coord) => {
+  for (const key in addressMap) {
+    if (
+      coord[0] == addressMap[key].geometry[0] &&
+      coord[1] == addressMap[key].geometry[1]
+    ) {
+      return addressMap[key].address
+    }
+  }
+  return ''
+}
+
+const onSearchSelect = (item) => {
+  // 選中搜尋結果：充填資訊面板 × 讓地圖 flyTo
+  onSetParkingInfo({
+    name: item.groupName,
+    properties: item.properties,
+    geometry: item.geometry,
+    address: findAddress(item.geometry),
+  })
+  searchFocusCoord.value = [...item.geometry]
 }
 
 // ---------- 路線規劃 ----------
@@ -125,6 +183,8 @@ const goToParkingPlaceData = ref(null)
 const routeData = ref(null)
 
 const goToParkingPlace = (geometry) => {
+  // 每次發起路線規劃，預設交通方式為汽機車
+  routeProfile.value = 'driving'
   goToParkingPlaceData.value = geometry
   infoActive.value = false
   routeData.value = null
@@ -250,6 +310,13 @@ const fabItems = computed(() => [
   <!-- 浮動選單（右下）；路線/資訊面板開啟時隱藏以避免遮擋 -->
   <FabMenu v-show="!stepsOpen && !infoActive" :items="fabItems" />
 
+  <!-- 搜尋列 -->
+  <SearchBar
+    v-show="!stepsOpen && !infoActive"
+    :map-data-list="MapDataList"
+    @select="onSearchSelect"
+  />
+
   <pre id="coordinates" class="coordinates"></pre>
 
   <!-- 地圖 -->
@@ -262,6 +329,10 @@ const fabItems = computed(() => [
     :parkingPriceType="parkingPriceType"
     :priceRangeMin="priceRangeMin"
     :priceRangeMax="priceRangeMax"
+    :favorite-ids="favoriteIdSet"
+    :only-favorites="onlyFavorites"
+    :focus-coord="searchFocusCoord"
+    :route-profile="routeProfile"
     v-model:goToParkingPlaceData="goToParkingPlaceData"
     v-model:routeData="routeData"
     @parkingInfo="onSetParkingInfo"
@@ -271,6 +342,8 @@ const fabItems = computed(() => [
   <RouteSteps
     :route-data="routeData"
     :active="stepsOpen"
+    :profile="routeProfile"
+    @update:profile="routeProfile = $event"
     @cancel="cancelRoute"
   />
 
@@ -283,6 +356,8 @@ const fabItems = computed(() => [
     v-model:priceRangeMax="priceRangeMax"
     v-model:mapStyle="mapOptions.mapStylesSelected"
     v-model:active="menuActive"
+    v-model:onlyFavorites="onlyFavorites"
+    :favorites-count="favorites.length"
   />
 
   <!-- 停車場資訊 -->
@@ -294,9 +369,11 @@ const fabItems = computed(() => [
     :is-apple="isApple"
     :is-android="isAndroid"
     :has-route="goToParkingPlaceData !== null"
+    :is-favorite="currentIsFavorite"
     @close="infoActive = false"
     @route="goToParkingPlace(ParkingInfo.geometry)"
     @open-map="openInMap"
+    @toggle-favorite="onToggleFavorite"
   />
 
   <!-- 地圖怎麼看 Modal -->

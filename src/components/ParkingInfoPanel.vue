@@ -6,8 +6,9 @@ const props = defineProps({
   isApple: Boolean,
   isAndroid: Boolean,
   hasRoute: Boolean,
+  isFavorite: Boolean,
 })
-const emit = defineEmits(['close', 'route', 'openMap'])
+const emit = defineEmits(['close', 'route', 'openMap', 'toggleFavorite'])
 </script>
 
 <template>
@@ -28,6 +29,17 @@ const emit = defineEmits(['close', 'route', 'openMap'])
         alt=""
       />
       <h3 class="info-title">{{ info.parkingName }}</h3>
+      <button
+        class="fav-btn"
+        :class="{ active: isFavorite }"
+        @click="emit('toggleFavorite')"
+        :aria-label="isFavorite ? '從我的最愛移除' : '加入我的最愛'"
+        :title="isFavorite ? '從我的最愛移除' : '加入我的最愛'"
+      >
+        <span class="material-icons-outlined">
+          {{ isFavorite ? 'star' : 'star_border' }}
+        </span>
+      </button>
     </header>
 
     <div
@@ -135,6 +147,33 @@ const emit = defineEmits(['close', 'route', 'openMap'])
   margin: 0;
   color: var(--primary);
   font-size: 1.05rem;
+  flex: 1;
+  min-width: 0;
+}
+.fav-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 0;
+  background: var(--surface-2);
+  color: var(--muted);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: color 0.15s, background 0.15s, transform 0.15s;
+}
+.fav-btn:hover {
+  background: var(--surface-3, var(--surface-2));
+  color: #ffc107;
+  transform: scale(1.08);
+}
+.fav-btn.active {
+  color: #ffc107;
+}
+.fav-btn .material-icons-outlined {
+  font-size: 20px;
 }
 .info-desc {
   font-size: 0.88rem;

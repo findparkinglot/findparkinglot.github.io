@@ -1,14 +1,39 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 
 const props = defineProps({
   routeData: Object,
   active: Boolean,
+  profile: { type: String, default: 'driving' },
 })
-const emit = defineEmits(['cancel'])
+const emit = defineEmits(['cancel', 'update:profile'])
 
 const expanded = ref(true)
 const toggle = () => (expanded.value = !expanded.value)
+
+const profileOptions = [
+  { value: 'driving', label: '汽機車', icon: 'directions_car' },
+  { value: 'cycling', label: '單車', icon: 'directions_bike' },
+  { value: 'walking', label: '步行', icon: 'directions_walk' },
+]
+
+const distanceText = computed(() => {
+  const d = props.routeData?.distance
+  if (typeof d !== 'number') return ''
+  return d >= 1000 ? `${(d / 1000).toFixed(1)} km` : `${Math.round(d)} m`
+})
+
+const durationText = computed(() => {
+  const s = props.routeData?.duration
+  if (typeof s !== 'number') return ''
+  const min = Math.round(s / 60)
+  if (min < 60) return `${min} 分`
+  const h = Math.floor(min / 60)
+  const m = min % 60
+  return m ? `${h} 時 ${m} 分` : `${h} 時`
+})
+
+const changeProfile = (v) => emit('update:profile', v)
 </script>
 
 <template>
@@ -24,6 +49,30 @@ const toggle = () => (expanded.value = !expanded.value)
         </span>
       </button>
     </header>
+
+    <div v-if="routeData" class="route-summary">
+      <div class="route-summary-item">
+        <span class="material-icons-outlined">schedule</span>
+        <strong>{{ durationText }}</strong>
+      </div>
+      <div class="route-summary-item">
+        <span class="material-icons-outlined">straighten</span>
+        <strong>{{ distanceText }}</strong>
+      </div>
+    </div>
+
+    <div class="route-profile" role="tablist" aria-label="交通方式">
+      <button
+        v-for="opt in profileOptions"
+        :key="opt.value"
+        :class="['profile-btn', { active: profile === opt.value }]"
+        @click="changeProfile(opt.value)"
+        :aria-pressed="profile === opt.value"
+      >
+        <span class="material-icons-outlined">{{ opt.icon }}</span>
+        <span class="profile-label">{{ opt.label }}</span>
+      </button>
+    </div>
 
     <ol v-if="routeData && expanded" class="route-steps">
       <li
@@ -93,6 +142,63 @@ const toggle = () => (expanded.value = !expanded.value)
   background: var(--surface-2);
   color: var(--text);
 }
+.route-summary {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.route-summary-item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--surface-2);
+  border-radius: var(--radius-md);
+  padding: 8px 10px;
+  font-size: 0.85rem;
+  color: var(--text);
+}
+.route-summary-item .material-icons-outlined {
+  font-size: 16px;
+  color: var(--primary);
+}
+.route-summary-item strong {
+  color: var(--text);
+  font-weight: 700;
+}
+.route-profile {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 8px;
+  background: var(--surface-2);
+  border-radius: var(--radius-md);
+  padding: 3px;
+}
+.profile-btn {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 6px 8px;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.78rem;
+  transition: background 0.15s, color 0.15s;
+}
+.profile-btn:hover {
+  color: var(--text);
+}
+.profile-btn.active {
+  background: var(--primary);
+  color: var(--primary-contrast);
+}
+.profile-btn .material-icons-outlined {
+  font-size: 16px;
+}
 .route-steps {
   list-style: decimal;
   padding-left: 20px;
@@ -125,6 +231,9 @@ const toggle = () => (expanded.value = !expanded.value)
   }
   .route-panel.active {
     transform: translateY(0);
+  }
+  .profile-label {
+    display: none;
   }
 }
 </style>

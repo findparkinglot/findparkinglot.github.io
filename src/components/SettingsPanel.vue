@@ -5,6 +5,7 @@ import {
   degreeOfFriendlinessList,
   mapStyleList,
 } from '@/constants/parking.js'
+import RangeSlider from './RangeSlider.vue'
 
 const props = defineProps({
   parkingType: String,
@@ -14,6 +15,8 @@ const props = defineProps({
   priceRangeMax: Number,
   mapStyle: String,
   active: Boolean,
+  onlyFavorites: Boolean,
+  favoritesCount: { type: Number, default: 0 },
 })
 const emit = defineEmits([
   'update:parkingType',
@@ -23,6 +26,7 @@ const emit = defineEmits([
   'update:priceRangeMax',
   'update:mapStyle',
   'update:active',
+  'update:onlyFavorites',
 ])
 
 const close = () => emit('update:active', false)
@@ -45,6 +49,22 @@ const close = () => emit('update:active', false)
     </header>
 
     <div class="side-panel-body">
+      <section class="form-group">
+        <label class="form-toggle">
+          <span class="form-toggle-text">
+            <span class="material-icons-outlined fav-icon">star</span>
+            只看我的最愛
+            <span v-if="favoritesCount" class="fav-count">{{ favoritesCount }}</span>
+          </span>
+          <input
+            type="checkbox"
+            class="switch"
+            :checked="onlyFavorites"
+            @change="emit('update:onlyFavorites', $event.target.checked)"
+          />
+        </label>
+      </section>
+
       <section class="form-group">
         <label class="form-label">甚麼格位</label>
         <select
@@ -77,48 +97,47 @@ const close = () => emit('update:active', false)
 
       <section class="form-group">
         <label class="form-label">收費範圍</label>
-        <div class="price-row">
-          <template v-if="/d|h/.test(parkingPriceType)">
-            <select
-              class="form-control compact"
-              :value="priceRangeMin"
-              @change="emit('update:priceRangeMin', Number($event.target.value))"
-            >
-              <option
-                :value="(k - 1) * 10"
-                v-for="k in priceRangeMax / 10 + 1"
-                :key="k"
-              >
-                {{ (k - 1) * 10 }}
-              </option>
-            </select>
-            <span class="sep">~</span>
-            <select
-              class="form-control compact"
-              :value="priceRangeMax"
-              @change="emit('update:priceRangeMax', Number($event.target.value))"
-            >
-              <option
-                :value="(k - 1) * 10 + priceRangeMin"
-                v-for="k in 31 - priceRangeMin / 10"
-                :key="k"
-              >
-                {{ (k - 1) * 10 + priceRangeMin }}
-              </option>
-            </select>
-            <span class="sep">/</span>
-          </template>
-          <select
-            class="form-control compact"
-            :value="parkingPriceType"
-            @change="emit('update:parkingPriceType', $event.target.value)"
+        <div class="price-chips">
+          <button
+            type="button"
+            class="chip"
+            :class="{ active: parkingPriceType === '' }"
+            @click="emit('update:parkingPriceType', '')"
+          >全部</button>
+          <button
+            type="button"
+            class="chip chip-free"
+            :class="{ active: parkingPriceType === 'free' }"
+            @click="emit('update:parkingPriceType', parkingPriceType === 'free' ? '' : 'free')"
           >
-            <option value="">全部</option>
-            <option value="free">免費</option>
-            <option value="h">小時</option>
-            <option value="d">每日</option>
-          </select>
+            <span class="material-icons-outlined">money_off</span>
+            免費
+          </button>
+          <button
+            type="button"
+            class="chip"
+            :class="{ active: parkingPriceType === 'h' }"
+            @click="emit('update:parkingPriceType', 'h')"
+          >計時 /時</button>
+          <button
+            type="button"
+            class="chip"
+            :class="{ active: parkingPriceType === 'd' }"
+            @click="emit('update:parkingPriceType', 'd')"
+          >計次 /日</button>
         </div>
+        <RangeSlider
+          v-if="/d|h/.test(parkingPriceType)"
+          class="mt-8"
+          :min="0"
+          :max="300"
+          :step="10"
+          :model-min="priceRangeMin"
+          :model-max="priceRangeMax"
+          :suffix="parkingPriceType === 'h' ? ' /時' : ' /日'"
+          @update:model-min="emit('update:priceRangeMin', $event)"
+          @update:model-max="emit('update:priceRangeMax', $event)"
+        />
       </section>
 
       <section class="form-group">
@@ -328,6 +347,122 @@ const close = () => emit('update:active', false)
 .price-row .sep {
   color: var(--muted);
   font-size: 0.9rem;
+}
+.price-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s, transform 0.1s;
+}
+.chip:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+.chip:active {
+  transform: scale(0.96);
+}
+.chip.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--primary-contrast);
+}
+.chip .material-icons-outlined {
+  font-size: 14px;
+}
+.chip-free {
+  border-color: rgba(102, 187, 106, 0.5);
+  color: #66bb6a;
+}
+.chip-free:hover {
+  border-color: #66bb6a;
+  color: #66bb6a;
+}
+.chip-free.active {
+  background: #66bb6a;
+  border-color: #66bb6a;
+  color: #fff;
+}
+.form-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 10px 12px;
+  cursor: pointer;
+  user-select: none;
+}
+.form-toggle-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text);
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+.fav-icon {
+  color: #ffc107;
+  font-size: 18px;
+}
+.fav-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: var(--primary);
+  color: var(--primary-contrast);
+  font-size: 0.72rem;
+  font-weight: 700;
+  margin-left: 4px;
+}
+.switch {
+  appearance: none;
+  -webkit-appearance: none;
+  position: relative;
+  width: 38px;
+  height: 22px;
+  border-radius: 999px;
+  background: var(--surface-3, var(--border));
+  cursor: pointer;
+  transition: background 0.2s;
+  flex-shrink: 0;
+  margin: 0;
+}
+.switch::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform 0.2s;
+  box-shadow: var(--shadow-sm);
+}
+.switch:checked {
+  background: var(--primary);
+}
+.switch:checked::after {
+  transform: translateX(16px);
 }
 .link-list {
   display: flex;
