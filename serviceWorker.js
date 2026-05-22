@@ -1,7 +1,7 @@
 // Service Worker — 重機能停哪?
 // 對 navigation（HTML）採 network-first，避免舊版 index.html 被快取卡住；
 // 其餘 same-origin GET 用 cache-first。
-const CACHE_NAME = 'penueling-v3'   // ← 每次部署有重大變動就 +1
+const CACHE_NAME = 'penueling-v4'   // ← 每次部署有重大變動就 +1
 const PRECACHE_URLS = ['./', './index.html', './manifest.json', './logo.png']
 
 self.addEventListener('install', (e) => {
