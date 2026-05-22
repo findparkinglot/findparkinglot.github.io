@@ -395,21 +395,15 @@ const removeRoutes = () => {
 }
 
 // ----- Lifecycle -----
-onMounted(async () => {
+onMounted(() => {
   mapboxgl.accessToken = mapData.value.accessToken
-  // Chrome 不允許「未經使用者互動」直接呼叫 geolocation；
-  // 先檢查授權狀態,只有已 granted 才自動定位,否則直接用預設座標開地圖
-  let canAutoLocate = false
-  try {
-    if ('permissions' in navigator) {
-      const status = await navigator.permissions.query({ name: 'geolocation' })
-      canAutoLocate = status.state === 'granted'
-    }
-  } catch {
-    canAutoLocate = false
-  }
-  if (canAutoLocate && 'geolocation' in navigator) {
-    navigator.geolocation.getCurrentPosition(successCallback, errorCallback)
+  // 進站直接請求 GPS;第一次會跳權限提示,之後已授權則自動定位到使用者位置
+  if ('geolocation' in navigator) {
+    navigator.geolocation.getCurrentPosition(successCallback, errorCallback, {
+      enableHighAccuracy: false,
+      timeout: 8000,
+      maximumAge: 60000,
+    })
   } else {
     setMap()
   }
