@@ -63,6 +63,55 @@
 yarn
 ```
 
+## 環境變數 (.env.local)
+
+在專案根目錄建立 `.env.local`(不要 commit):
+
+```ini
+# Mapbox（必填,缺少時地圖無法顯示）
+VITE_MAPBOX_TOKEN=pk.xxx...
+
+# Firebase（「共筆停車點」功能;Realtime Database;不填則該功能停用,KML 仍可正常使用）
+VITE_FIREBASE_API_KEY=...
+VITE_FIREBASE_AUTH_DOMAIN=xxx.firebaseapp.com
+VITE_FIREBASE_PROJECT_ID=xxx
+VITE_FIREBASE_DATABASE_URL=https://xxx-default-rtdb.asia-southeast1.firebasedatabase.app
+VITE_FIREBASE_STORAGE_BUCKET=xxx.appspot.com
+VITE_FIREBASE_MESSAGING_SENDER_ID=...
+VITE_FIREBASE_APP_ID=1:xxx:web:xxx
+```
+
+### Firebase Realtime Database 設定步驟
+
+1. 到 [Firebase Console](https://console.firebase.google.com/) 建立專案
+2. 左側選單 → **Realtime Database** → 「建立資料庫」(亞洲區建議選 `asia-southeast1`)
+3. 啟動時選「測試模式」(30 天內任何人都能讀寫,之後請改 rules)
+4. 「專案設定 → 一般 → 你的應用程式」加入一個 Web 應用,複製 `firebaseConfig` 的所有欄位貼到 `.env.local`
+5. 節點 `/community_parkings` 會由前端在新增第一筆時自動建立
+
+### Realtime Database Security Rules(無審核 MVP)
+
+到 Console → Realtime Database → 規則:
+
+```json
+{
+  "rules": {
+    "community_parkings": {
+      ".read": true,
+      ".write": true,
+      ".indexOn": ["updatedAt"]
+    }
+  }
+}
+```
+
+> `.indexOn` 是讓 `orderByChild("updatedAt")` 查詢有索引(不加只是會在 console 看到警告,功能仍正常)。
+> 若日後想加防呆可加上 `".validate": "newData.child('name').isString() && newData.child('name').val().length < 60"` 之類條件。
+
+### 清空所有「共筆停車點」資料
+
+到 Firebase Console → Realtime Database → `community_parkings` 節點 → 右側「⋮」→ 刪除。
+
 ## 開發
 
 ```bash
@@ -76,3 +125,10 @@ yarn dev
 # 編譯為生產環境
 yarn build
 ```
+
+## 「共筆停車點」功能說明
+
+- 地圖上「薰衣草紫色底」的標記是使用者新增的停車位
+- 任何人都可以新增、編輯、刪除資料（無需登入、無需審核）
+- 左下角「共筆停車點」FAB 提供「新增停車位置」與「使用說明」入口
+- 使用者識別:本機自動產生 8 碼 ID + 選填暱稱,儲存在 localStorage

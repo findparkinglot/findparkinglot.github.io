@@ -193,7 +193,7 @@ body.modal-open {
 }
 .marker {
   display: block;
-  border: 3px solid var(--primary);
+  border: 3px solid transparent;
   background: var(--primary);
   border-radius: 50%;
   cursor: pointer;
@@ -229,13 +229,23 @@ body.modal-open {
 .marker > .tag.marker-type-0,
 .marker > .img.marker-type-0 {
   background: var(--danger);
-  border-color: var(--danger);
 }
 .marker.is-fav {
   border-color: #ffc107;
-  box-shadow: 0 0 0 2px rgba(255, 193, 7, 0.35), 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 .marker.is-fav > .tag {
+  background: #ffc107;
+}
+.marker.is-community {
+  background: #b39ddb;
+}
+.marker.is-community > .tag {
+  background: #b39ddb;
+}
+.marker.is-community.is-fav {
+  border-color: #ffc107;
+}
+.marker.is-community.is-fav > .tag {
   background: #ffc107;
 }
 

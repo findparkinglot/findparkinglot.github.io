@@ -7,12 +7,16 @@ import SettingsPanel from './components/SettingsPanel.vue'
 import ParkingInfoPanel from './components/ParkingInfoPanel.vue'
 import RouteSteps from './components/RouteSteps.vue'
 import SearchBar from './components/SearchBar.vue'
+import CommunityParkingEditor from './components/CommunityParkingEditor.vue'
 
 import xml from '@/assets/MapData/My Maps/PackingMarkerList/doc.xml'
 import addressMap from '@/assets/json/address.json'
 import { parseKml, resolveIconUrl } from '@/utils/parseKml.js'
 import { storage } from '@/utils/storage.js'
 import { useFavorites, favoriteId } from '@/composables/useFavorites.js'
+import { useCommunityParkings } from '@/composables/useCommunityParkings.js'
+import { useUserProfile } from '@/composables/useUserProfile.js'
+import { isFirebaseConfigured } from '@/utils/firebase.js'
 import {
   parkingTypeList,
   degreeOfFriendlinessList,
@@ -54,6 +58,7 @@ const windowMobileFAQOpen = ref(false)
 const windowFAQOpen = ref(false)
 const windowHowToUseOpen = ref(false)
 const windowShareOpen = ref(false)
+const windowCommunityHelpOpen = ref(false)
 
 // 每次開啟都顯示歡迎頁面
 const closeMesBox = () => {
@@ -74,6 +79,7 @@ const openOnly = (key) => {
   if (key !== 'faq') windowFAQOpen.value = false
   if (key !== 'howto') windowHowToUseOpen.value = false
   if (key !== 'share') windowShareOpen.value = false
+  if (key !== 'communityHelp') windowCommunityHelpOpen.value = false
   // 路線面板（stepsOpen）與路線規劃不互斥，另外處理
 }
 
@@ -84,6 +90,7 @@ watch(windowMobileFAQOpen, (v) => v && openOnly('mobileFAQ'))
 watch(windowFAQOpen, (v) => v && openOnly('faq'))
 watch(windowHowToUseOpen, (v) => v && openOnly('howto'))
 watch(windowShareOpen, (v) => v && openOnly('share'))
+watch(windowCommunityHelpOpen, (v) => v && openOnly('communityHelp'))
 
 // ---------- 篩選器 ----------
 const parkingType = ref('')
@@ -98,6 +105,131 @@ const onlyFavorites = ref(false)
 
 // ---------- 路線交通方式（每次點路線規劃時重設為 driving） ----------
 const routeProfile = ref('driving')
+
+// ---------- 社群停車場 ----------
+const { items: communityParkings, addParking, updateParking, deleteParking } =
+  useCommunityParkings()
+const { userId, nickname } = useUserProfile()
+const mapBoxRef = ref(null)
+
+// 編輯器狀態
+const editorOpen = ref(false)
+const editorMode = ref('add') // 'add' | 'edit'
+const editorInitial = ref(null)
+const editorSubmitting = ref(false)
+const editorDefaultCoord = ref([121.5173399, 25.0475613])
+// 「選位置」模式：顯示十字線 + 頂部提示列
+const addPickMode = ref(false)
+// 目前查看中的社群項目
+const currentCommunity = ref(null)
+
+const openAddEditor = () => {
+  if (!isFirebaseConfigured) {
+    alert('「共筆停車點」功能尚未設定。請讓站方設定 Firebase 後再試。')
+    return
+  }
+  // 先進入「選位置」模式，使用者確認後才開編輯器
+  addPickMode.value = true
+}
+
+const confirmPickLocation = () => {
+  const center = mapBoxRef.value?.getCenter?.() || [121.5173399, 25.0475613]
+  editorDefaultCoord.value = center
+  editorMode.value = 'add'
+  editorInitial.value = null
+  addPickMode.value = false
+  editorOpen.value = true
+}
+
+const cancelPickLocation = () => {
+  addPickMode.value = false
+}
+
+const openEditEditor = (community) => {
+  editorDefaultCoord.value = community.coordinates
+    ? [...community.coordinates]
+    : mapBoxRef.value?.getCenter?.() || [121.5173399, 25.0475613]
+  editorMode.value = 'edit'
+  editorInitial.value = community
+  editorOpen.value = true
+}
+
+const onCommunityParkingClick = (community) => {
+  currentCommunity.value = community
+  // 以 InfoPanel 顯示 (含「編輯」按鈕)
+  onSetParkingInfo({
+    name: '共筆停車點',
+    properties: {
+      name: community.name,
+      description: community.description,
+      icon: community.iconKey,
+      priceInfo: community.priceInfo,
+      priceArray: [],
+    },
+    geometry: community.coordinates,
+    address: '',
+  })
+}
+
+const onEditCurrentCommunity = () => {
+  if (currentCommunity.value) {
+    infoActive.value = false
+    openEditEditor(currentCommunity.value)
+  }
+}
+
+const onEditorSubmit = async (payload) => {
+  editorSubmitting.value = true
+  try {
+    const user = { id: userId, nickname: nickname.value }
+    if (editorMode.value === 'edit' && editorInitial.value?.id) {
+      await updateParking(editorInitial.value.id, payload, user)
+    } else {
+      await addParking(payload, user)
+    }
+    editorOpen.value = false
+    currentCommunity.value = null
+  } catch (err) {
+    // eslint-disable-next-line no-console
+    console.error('[community] submit failed', err)
+    alert('儲存失敗:' + (err?.message || err))
+  } finally {
+    editorSubmitting.value = false
+  }
+}
+
+const onEditorDelete = async (id) => {
+  editorSubmitting.value = true
+  try {
+    await deleteParking(id)
+    editorOpen.value = false
+    currentCommunity.value = null
+  } catch (err) {
+    // eslint-disable-next-line no-console
+    console.error('[community] delete failed', err)
+    alert('刪除失敗:' + (err?.message || err))
+  } finally {
+    editorSubmitting.value = false
+  }
+}
+
+// ---------- 現在查看的是社群 marker 嗎？ ----------
+const currentIsCommunity = computed(() => {
+  if (!currentCommunity.value || !ParkingInfo.value.parkingName) return false
+  // 只要名稱与座標同時匹配即視為同一點
+  const cc = currentCommunity.value
+  return (
+    cc.name === ParkingInfo.value.parkingName &&
+    Array.isArray(ParkingInfo.value.geometry) &&
+    cc.coordinates?.[0] === ParkingInfo.value.geometry[0] &&
+    cc.coordinates?.[1] === ParkingInfo.value.geometry[1]
+  )
+})
+
+// 關閉 InfoPanel 時清除 currentCommunity
+watch(infoActive, (v) => {
+  if (!v) currentCommunity.value = null
+})
 
 // ---------- 搜尋聚焦座標 ----------
 const searchFocusCoord = ref(null)
@@ -289,12 +421,30 @@ const fabItems = computed(() => [
     onClick: () => (windowMobileFAQOpen.value = true),
   },
 ])
+
+// ---------- 左下社群 FAB 選單 ----------
+const communityFabItems = computed(() => [
+  {
+    key: 'add',
+    icon: 'add_location_alt',
+    label: '新增停車位置',
+    highlight: true,
+    onClick: openAddEditor,
+  },
+  {
+    key: 'help',
+    icon: 'menu_book',
+    label: '編輯教學',
+    onClick: () => (windowCommunityHelpOpen.value = true),
+  },
+])
 </script>
 
 <template>
   <!-- Logo / 標題 -->
   <div class="app-title">
     <button
+      v-if="!addPickMode"
       class="title-toggle"
       @click="menuActive = !menuActive"
       :aria-label="menuActive ? '收合設定' : '開啟設定'"
@@ -304,15 +454,25 @@ const fabItems = computed(() => [
         {{ menuActive ? 'close' : 'menu' }}
       </span>
     </button>
+    <img v-else class="title-logo" src="/logo.png" alt="重機能停哪" />
     <h1>重機能停哪?</h1>
   </div>
 
   <!-- 浮動選單（右下）；路線/資訊面板開啟時隱藏以避免遮擋 -->
-  <FabMenu v-show="!stepsOpen && !infoActive" :items="fabItems" />
+  <FabMenu v-show="!stepsOpen && !infoActive && !addPickMode" :items="fabItems" />
+
+  <!-- 共筆停車點選單（左下） -->
+  <FabMenu
+    v-show="!stepsOpen && !infoActive && !addPickMode"
+    :items="communityFabItems"
+    placement="left"
+    main-icon="add_location_alt"
+    main-label="共筆停車點"
+  />
 
   <!-- 搜尋列 -->
   <SearchBar
-    v-show="!stepsOpen && !infoActive"
+    v-show="!stepsOpen && !infoActive && !addPickMode"
     :map-data-list="MapDataList"
     @select="onSearchSelect"
   />
@@ -321,6 +481,7 @@ const fabItems = computed(() => [
 
   <!-- 地圖 -->
   <MapBox
+    ref="mapBoxRef"
     :parkingTypeKeyArray="parkingTypeKeys"
     :degreeOfFriendlinessKeyArray="degreeOfFriendlinessKeys"
     :mapDataList="MapDataList"
@@ -333,9 +494,11 @@ const fabItems = computed(() => [
     :only-favorites="onlyFavorites"
     :focus-coord="searchFocusCoord"
     :route-profile="routeProfile"
+    :community-parkings="communityParkings"
     v-model:goToParkingPlaceData="goToParkingPlaceData"
     v-model:routeData="routeData"
     @parkingInfo="onSetParkingInfo"
+    @communityParkingClick="onCommunityParkingClick"
   />
 
   <!-- 路線步驟 -->
@@ -370,10 +533,13 @@ const fabItems = computed(() => [
     :is-android="isAndroid"
     :has-route="goToParkingPlaceData !== null"
     :is-favorite="currentIsFavorite"
+    :is-community="currentIsCommunity"
+    :community-meta="currentIsCommunity ? currentCommunity : null"
     @close="infoActive = false"
     @route="goToParkingPlace(ParkingInfo.geometry)"
     @open-map="openInMap"
     @toggle-favorite="onToggleFavorite"
+    @edit-community="onEditCurrentCommunity"
   />
 
   <!-- 地圖怎麼看 Modal -->
@@ -510,6 +676,33 @@ const fabItems = computed(() => [
       這是一個提供重機停車資訊的地圖，你可以依據「友善程度」「停車格類型」「收費範圍」尋找合適的停車場，並一鍵開啟 Google 或 Apple Map 導航。
     </p>
 
+    <div class="whatsnew-card">
+      <div class="whatsnew-title">
+        <span class="material-icons-outlined">auto_awesome</span>
+        本次新功能
+      </div>
+      <ul class="whatsnew-list">
+        <li>
+          <span class="material-icons-outlined">star</span>
+          <span><strong>我的最愛</strong> 
+            <br>
+            可以將喜歡的停車場加入我的最愛</span>
+        </li>
+        <li>
+          <span class="material-icons-outlined">search</span>
+          <span><strong>地點搜尋</strong> 
+            <br>
+            可以搜尋指定的停車地點</span>
+        </li>
+        <li>
+          <span class="material-icons-outlined">edit_location_alt</span>
+          <span><strong>共筆停車點</strong> 
+            <br>
+            可自由新增、編輯, 大家一起分享停車地點</span>
+        </li>
+      </ul>
+    </div>
+
     <p class="welcome-text">
       資料取源於
       <a href="https://linktr.ee/hueythegentry" target="_blank" rel="noopener" class="link"
@@ -529,6 +722,69 @@ const fabItems = computed(() => [
     <template #footer>
       <button class="btn btn-primary" @click="closeMesBox">開始使用</button>
     </template>
+  </BaseModal>
+
+  <!-- 共筆停車點編輯器 -->
+  <CommunityParkingEditor
+    v-model:open="editorOpen"
+    :mode="editorMode"
+    :initial="editorInitial"
+    :default-coord="editorDefaultCoord"
+    :nickname="nickname"
+    :is-owner="true"
+    :submitting="editorSubmitting"
+    @update:nickname="nickname = $event"
+    @submit="onEditorSubmit"
+    @delete="onEditorDelete"
+  />
+
+  <!-- 「新增位置」選點模式：畫面中心十字線 + 頂部提示列 -->
+  <div v-if="addPickMode" class="pick-crosshair" aria-hidden="true">
+    <span class="material-icons-outlined dot">gps_fixed</span>
+  </div>
+  <div v-if="addPickMode" class="pick-banner">
+    <span class="pick-banner-text">
+      <span class="material-icons-outlined">touch_app</span>
+      拖動地圖，將十字線對準目標位置
+    </span>
+    <div class="pick-banner-actions">
+      <button class="btn btn-outline btn-sm" @click="cancelPickLocation">取消</button>
+      <button class="btn btn-primary btn-sm" @click="confirmPickLocation">
+        <span class="material-icons-outlined">check</span>
+        使用此位置
+      </button>
+    </div>
+  </div>
+
+  <!-- 共筆停車點說明 Modal -->
+  <BaseModal v-model="windowCommunityHelpOpen" title="共筆停車點說明" close-text="我知道了" size="lg">
+    <p class="welcome-text">
+      <strong style="color: var(--primary)">這是一個公開共享的「共筆停車點」區。</strong>
+      除了官方收錄的「大重停車記事」資料外,任何人都可以新增、修改、補充停車位置——不需要註冊、不需要審核。
+    </p>
+
+    <h4 class="modal-section-title">如何新增停車位置</h4>
+    <ol class="welcome-text" style="padding-left: 22px; line-height: 1.9">
+      <li>點左下角的「共筆停車點」按鈕,再點「新增停車位置」</li>
+      <li>畫面中心會出現青色十字游標,拖動地圖將游標對準目標位置</li>
+      <li>按頂部「使用此位置」,填寫名稱、類別、友善程度、收費等資料</li>
+      <li>按「新增」即完成(座標已自動記錄,圖示會依類別自動套用)</li>
+    </ol>
+
+    <h4 class="modal-section-title">如何編輯他人新增的位置</h4>
+    <ol class="welcome-text" style="padding-left: 22px; line-height: 1.9">
+      <li>地圖上「薰衣草紫色底」的標記即為使用者新增的「共筆停車點」</li>
+      <li>點擊該標記,在資訊面板按「編輯」</li>
+      <li>修改後按「儲存修改」</li>
+    </ol>
+
+    <h4 class="modal-section-title">注意事項</h4>
+    <ul class="welcome-text" style="padding-left: 22px; line-height: 1.9">
+      <li>請確認資訊正確,避免造成他人困擾</li>
+      <li>不要新增不雅、惡意或無關內容</li>
+      <li>暱稱可選填,留空將顯示為「匿名#xxx-xxx」</li>
+      <li>站方保留必要時清空所有「共筆停車點」資料的權利</li>
+    </ul>
   </BaseModal>
 </template>
 
@@ -569,6 +825,16 @@ const fabItems = computed(() => [
 }
 .title-toggle:hover {
   transform: rotate(90deg);
+}
+.title-toggle.is-invisible {
+  visibility: hidden;
+}
+.title-logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
 }
 .title-toggle .material-icons-outlined {
   font-size: 18px;
@@ -679,6 +945,51 @@ const fabItems = computed(() => [
   width: fit-content;
   text-align: center;
 }
+.whatsnew-card {
+  margin: 12px 0 14px;
+  padding: 12px 14px;
+  background: var(--primary-soft, rgba(46, 231, 214, 0.10));
+  border: 1px solid rgba(46, 231, 214, 0.35);
+  border-radius: var(--radius-md);
+}
+.whatsnew-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 0.92rem;
+  margin-bottom: 8px;
+}
+.whatsnew-title .material-icons-outlined {
+  font-size: 18px;
+}
+.whatsnew-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.whatsnew-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--text);
+}
+.whatsnew-list li .material-icons-outlined {
+  font-size: 18px;
+  color: var(--primary);
+  margin-top: 1px;
+  flex-shrink: 0;
+}
+.whatsnew-list strong {
+  color: var(--primary);
+  font-weight: 700;
+}
 .welcome-text {
   margin: 0 0 10px;
   color: var(--text);
@@ -698,5 +1009,69 @@ const fabItems = computed(() => [
 }
 .link:hover {
   text-decoration: underline;
+}
+
+/* =================== 新增位置：中心十字 + 頂部提示列 =================== */
+.pick-crosshair {
+  position: fixed;
+  inset: 0;
+  z-index: 800;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pick-crosshair .dot {
+  font-size: 36px;
+  color: #2ee7d6;
+  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.6)) drop-shadow(0 0 8px rgba(46, 231, 214, 0.5));
+  animation: pick-pulse 1.4s ease-in-out infinite;
+}
+@keyframes pick-pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.15); opacity: 0.85; }
+}
+.pick-banner {
+  position: fixed;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 900;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: calc(100% - 28px);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.pick-banner-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text);
+  font-size: 0.88rem;
+}
+.pick-banner-text .material-icons-outlined {
+  font-size: 18px;
+  color: var(--primary);
+}
+.pick-banner-actions {
+  display: inline-flex;
+  gap: 6px;
+}
+.pick-banner-actions .material-icons-outlined {
+  font-size: 16px;
+}
+@media (max-width: 480px) {
+  .pick-banner {
+    top: 60px; /* 避開左上角標題 */
+    flex-direction: column;
+    gap: 8px;
+  }
 }
 </style>

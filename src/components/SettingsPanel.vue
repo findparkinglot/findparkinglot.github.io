@@ -210,7 +210,7 @@ const close = () => emit('update:active', false)
       <section class="form-group">
         <label class="form-label">資訊</label>
         <ul class="info-list">
-          <li>版本：v1.1.0</li>
+          <li>版本：v2.0.0</li>
           <li>地圖資料更新：260522</li>
           <li>Web 製作：爽爽</li>
           <li>資料參考：大重停車記事 Google My Map</li>

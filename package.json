@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "axios": "^1.6.8",
+    "firebase": "^12.13.0",
     "mapbox-gl": "^3.3.0",
     "material-icons": "^1.13.12",
     "vue": "^3.4.21"

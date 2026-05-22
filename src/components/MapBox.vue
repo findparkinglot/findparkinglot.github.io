@@ -25,9 +25,11 @@ const props = defineProps({
   onlyFavorites: { type: Boolean, default: false },
   focusCoord: { type: Array, default: null },
   routeProfile: { type: String, default: 'driving' },
+  communityParkings: { type: Array, default: () => [] },
 })
 const emits = defineEmits([
   'parkingInfo',
+  'communityParkingClick',
   'update:goToParkingPlaceData',
   'update:routeData',
 ])
@@ -141,6 +143,47 @@ const setMaker = () => {
         .addTo(map.value)
       currentMarkers.value.push(oneMarker)
     }
+  }
+
+  // ----- 「共筆停車點」 markers (同官方樣式，薰衣草紫色底) -----
+  for (const community of props.communityParkings || []) {
+    const coord = community.coordinates
+    if (!coord || coord[0] == null || coord[1] == null) continue
+    if (!isCoordInBounds(bounds, coord)) continue
+
+    const id = favoriteId(community.name, coord)
+    const isFav = props.favoriteIds?.has?.(id)
+    if (props.onlyFavorites && !isFav) continue
+
+    const el = document.createElement('div')
+    el.className = 'marker is-community'
+    if (isFav) el.classList.add('is-fav')
+
+    const tag = document.createElement('div')
+    tag.className = 'tag'
+    const img = document.createElement('div')
+    img.className = 'img'
+    if (community.iconKey) {
+      img.style.backgroundImage = `url(${resolveIconUrl(community.iconKey)})`
+      img.style.backgroundSize = 'cover'
+      img.style.backgroundPosition = 'center center'
+    }
+    el.appendChild(tag)
+    el.appendChild(img)
+
+    el.addEventListener('click', () => {
+      map.value.flyTo({
+        center: coord,
+        zoom: 17,
+        speed: 1.5,
+        curve: 1.5,
+        essential: true,
+      })
+      emits('communityParkingClick', community)
+    })
+
+    const oneMarker = new mapboxgl.Marker(el).setLngLat(coord).addTo(map.value)
+    currentMarkers.value.push(oneMarker)
   }
 }
 
@@ -347,6 +390,7 @@ watch(
     () => props.parkingPriceType,
     () => props.onlyFavorites,
     () => props.favoriteIds,
+    () => props.communityParkings,
   ],
   () => refreshMarkers()
 )
@@ -408,6 +452,19 @@ watch(
     if (props.getLngLat === true) setLngLatMaker()
   }
 )
+
+// 提供給父元件使用 (如：嵌入欄位初始值)
+defineExpose({
+  getCenter: () => {
+    if (!map.value) return [...mapData.value.center]
+    const c = map.value.getCenter()
+    return [c.lng, c.lat]
+  },
+  flyTo: (coord, zoom = 17) => {
+    if (!map.value || !coord) return
+    map.value.flyTo({ center: coord, zoom, essential: true })
+  },
+})
 </script>
 
 <template>

@@ -7,6 +7,9 @@ const props = defineProps({
     required: true,
     // [{ key, icon, label, onClick, highlight? }]
   },
+  placement: { type: String, default: 'right' }, // 'right' | 'left'
+  mainIcon: { type: String, default: 'apps' },
+  mainLabel: { type: String, default: '' },
 })
 
 const open = ref(false)
@@ -28,7 +31,7 @@ onBeforeUnmount(() => document.removeEventListener('click', handleClickOutside))
 </script>
 
 <template>
-  <div class="fab-root" ref="rootEl">
+  <div class="fab-root" :class="`fab-placement-${placement}`" ref="rootEl">
     <transition-group name="fab-item" tag="div" class="fab-items">
       <button
         v-for="(item, idx) in (open ? items : [])"
@@ -46,21 +49,26 @@ onBeforeUnmount(() => document.removeEventListener('click', handleClickOutside))
       class="fab-main"
       :class="{ active: open }"
       @click.stop="toggle"
-      :aria-label="open ? '收合選單' : '展開選單'"
+      :aria-label="open ? '收合選單' : (mainLabel || '展開選單')"
       :aria-expanded="open"
     >
-      <span class="material-icons-outlined">{{ open ? 'close' : 'apps' }}</span>
+      <span class="material-icons-outlined">{{ open ? 'close' : mainIcon }}</span>
     </button>
   </div>
 </template>
 
 <style scoped>
-/* 右下角 FAB，連續項往上展開；避開底部 Mapbox attribution */
+/* 浮動 FAB，可配置左下或右下；連續項往上展開 */
 .fab-root {
   position: fixed;
   bottom: 30px;
-  right: 14px;
   z-index: 999;
+}
+.fab-root.fab-placement-right {
+  right: 14px;
+}
+.fab-root.fab-placement-left {
+  left: 14px;
 }
 .fab-main {
   width: 48px;
@@ -85,13 +93,17 @@ onBeforeUnmount(() => document.removeEventListener('click', handleClickOutside))
 }
 .fab-items {
   position: absolute;
-  right: 0;
   bottom: 58px; /* 主按鈕高度 48 + 10 間距 */
   pointer-events: none;
 }
+.fab-placement-right .fab-items {
+  right: 0;
+}
+.fab-placement-left .fab-items {
+  left: 0;
+}
 .fab-item {
   position: absolute;
-  right: 0;
   pointer-events: auto;
   display: inline-flex;
   align-items: center;
@@ -106,6 +118,12 @@ onBeforeUnmount(() => document.removeEventListener('click', handleClickOutside))
   box-shadow: var(--shadow-md);
   transition: background 0.15s, color 0.15s, transform 0.15s;
   white-space: nowrap;
+}
+.fab-placement-right .fab-item {
+  right: 0;
+}
+.fab-placement-left .fab-item {
+  left: 0;
 }
 .fab-item:hover {
   background: var(--surface-2);
