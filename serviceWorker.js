@@ -1,29 +1,30 @@
-const cacheName = "penueling";
+// Service Worker — 重機能停哪?
+// 採用 cache-first，並在每次 install 時跳過等待
+const CACHE_NAME = 'penueling-v2'
+const PRECACHE_URLS = ['./', './index.html', './manifest.json', './logo.png']
 
-if ('serviceworker' in navigator) {
-    self.addEventListener("install", e => {
-        e.waitUntil(
-            caches.open(cacheName).then(cache => {
-                return cache.addAll(["./", "./index.html", "./manifest.json"]);
-            }),
-        );
-    });
-    
-    self.addEventListener("fetch", fetchEvent => {
-        fetchEvent.respondWith(
-            caches.match(fetchEvent.request).then(res => {
-                return res || fetch(fetchEvent.request)
-            })
-        )
-    })
-    // self.addEventListener("fetch", event => {
-    // event.respondWith(
-    //     caches
-    //     .open(cacheName)
-    //     .then(cache => cache.match(event.request, { ignoreSearch: true }))
-    //     .then(response => {
-    //         return response || fetch(event.request);
-    //     }),
-    // );
-    // });
-}
+self.addEventListener('install', (e) => {
+  self.skipWaiting()
+  e.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(PRECACHE_URLS)))
+})
+
+self.addEventListener('activate', (e) => {
+  e.waitUntil(
+    caches.keys().then((keys) =>
+      Promise.all(keys.filter((k) => k !== CACHE_NAME).map((k) => caches.delete(k)))
+    )
+  )
+  self.clients.claim()
+})
+
+self.addEventListener('fetch', (event) => {
+  const req = event.request
+  // 只快取 GET，避免攔截 mapbox 等動態請求
+  if (req.method !== 'GET') return
+  const url = new URL(req.url)
+  if (url.origin !== self.location.origin) return
+
+  event.respondWith(
+    caches.match(req).then((res) => res || fetch(req))
+  )
+})
