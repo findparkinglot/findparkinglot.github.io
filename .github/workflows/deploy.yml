@@ -27,6 +27,8 @@ jobs:
       - uses: actions/checkout@v2
       
       - name: Install & Build # 執行指令
+        env:
+          VITE_MAPBOX_TOKEN: ${{ secrets.VITE_MAPBOX_TOKEN }}
         run: |
           npm install
           npm run build 
