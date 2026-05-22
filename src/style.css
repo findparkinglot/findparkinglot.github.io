@@ -85,6 +85,17 @@ body.modal-open {
   overflow: hidden;
 }
 
+/* =================== 防止 iOS Safari 聚焦表單時自動放大 =================== */
+/* 觸控裝置上,任何 input/textarea/select 的字體必須 >= 16px,否則 iOS Safari 會自動 zoom-in。
+   桌面版維持原樣式,因此只在 hover 不可用(touch only)的裝置套用。 */
+@media (hover: none) and (pointer: coarse) {
+  input,
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+}
+
 /* =================== 按鈕系統 =================== */
 .btn {
   display: inline-flex;
