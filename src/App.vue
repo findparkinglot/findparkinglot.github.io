@@ -17,6 +17,7 @@ import { useFavorites, favoriteId } from '@/composables/useFavorites.js'
 import { useCommunityParkings } from '@/composables/useCommunityParkings.js'
 import { useUserProfile } from '@/composables/useUserProfile.js'
 import { isFirebaseConfigured } from '@/utils/firebase.js'
+import { track } from '@/utils/analytics.js'
 import {
   parkingTypeList,
   degreeOfFriendlinessList,
@@ -81,6 +82,7 @@ const openOnly = (key) => {
   if (key !== 'share') windowShareOpen.value = false
   if (key !== 'communityHelp') windowCommunityHelpOpen.value = false
   // 路線面板（stepsOpen）與路線規劃不互斥，另外處理
+  track('panel_open', { panel: key })
 }
 
 watch(menuActive, (v) => v && openOnly('menu'))
@@ -130,6 +132,7 @@ const openAddEditor = () => {
   }
   // 先進入「選位置」模式，使用者確認後才開編輯器
   addPickMode.value = true
+  track('community_add_start')
 }
 
 const confirmPickLocation = () => {
@@ -184,8 +187,10 @@ const onEditorSubmit = async (payload) => {
     const user = { id: userId, nickname: nickname.value }
     if (editorMode.value === 'edit' && editorInitial.value?.id) {
       await updateParking(editorInitial.value.id, payload, user)
+      track('community_edit_submit', { name: payload?.name })
     } else {
       await addParking(payload, user)
+      track('community_add_submit', { name: payload?.name })
     }
     editorOpen.value = false
     currentCommunity.value = null
@@ -202,6 +207,7 @@ const onEditorDelete = async (id) => {
   editorSubmitting.value = true
   try {
     await deleteParking(id)
+    track('community_delete', { id })
     editorOpen.value = false
     currentCommunity.value = null
   } catch (err) {
@@ -272,10 +278,16 @@ const onSetParkingInfo = (data) => {
     address: data.address,
   }
   infoActive.value = true
+  track('parking_view', {
+    parking_name: data.properties?.name,
+    parking_type: data.name,
+    icon: data.properties?.icon,
+  })
 }
 
 const onToggleFavorite = () => {
   if (!ParkingInfo.value.parkingName) return
+  const willBeFav = !currentIsFavorite.value
   toggleFavorite({
     id: currentParkingId.value,
     name: ParkingInfo.value.parkingName,
@@ -283,6 +295,10 @@ const onToggleFavorite = () => {
     geometry: ParkingInfo.value.geometry,
     address: ParkingInfo.value.address,
     icon: ParkingInfo.value.parkingIconKey,
+  })
+  track(willBeFav ? 'favorite_add' : 'favorite_remove', {
+    parking_name: ParkingInfo.value.parkingName,
+    parking_type: ParkingInfo.value.parkingType,
   })
 }
 
@@ -308,6 +324,10 @@ const onSearchSelect = (item) => {
     address: findAddress(item.geometry),
   })
   searchFocusCoord.value = [...item.geometry]
+  track('search_select', {
+    parking_name: item.properties?.name,
+    group: item.groupName,
+  })
 }
 
 // ---------- 路線規劃 ----------
@@ -320,6 +340,10 @@ const goToParkingPlace = (geometry) => {
   goToParkingPlaceData.value = geometry
   infoActive.value = false
   routeData.value = null
+  track('route_start', {
+    parking_name: ParkingInfo.value.parkingName,
+    profile: 'driving',
+  })
 }
 const cancelRoute = () => {
   goToParkingPlaceData.value = null
@@ -339,7 +363,13 @@ const openInMap = (type) => {
   } else if (type === 'google') {
     url = `https://www.google.com/maps/dir/?api=1&destination=${geometry[1]},${geometry[0]}&travelmode=driving`
   }
-  if (url) window.open(url, '_blank', 'noopener,noreferrer')
+  if (url) {
+    track('open_external_map', {
+      provider: type,
+      parking_name: ParkingInfo.value.parkingName,
+    })
+    window.open(url, '_blank', 'noopener,noreferrer')
+  }
 }
 
 // ---------- 分享 ----------
@@ -353,6 +383,7 @@ const shareLinkHandler = (type) => {
   } else if (type === 'twitter') {
     shareUrl = `https://twitter.com/share?url=${encodeURIComponent(url)}`
   }
+  track('share', { method: type })
   if (type === 'link') {
     navigator.clipboard.writeText(url).then(
       () => alert('已複製連結'),

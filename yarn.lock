@@ -1550,9 +1550,9 @@ wrap-ansi@^7.0.0:
     string-width "^4.1.0"
     strip-ansi "^6.0.0"
 
-"xlsx@https://cdn.sheetjs.com/xlsx-0.20.2/xlsx-0.20.2.tgz":
+"xlsx@https://cdn.sheetjs.com/xlsx-0.20.0/xlsx-0.20.0.tgz":
   version "0.20.0"
-  resolved "https://cdn.sheetjs.com/xlsx-0.20.2/xlsx-0.20.2.tgz#ca1826e53a4fe32f8789ae6c584457e7bf10841e"
+  resolved "https://cdn.sheetjs.com/xlsx-0.20.0/xlsx-0.20.0.tgz#ca1826e53a4fe32f8789ae6c584457e7bf10841e"
 
 xml2js@^0.6.2:
   version "0.6.2"
