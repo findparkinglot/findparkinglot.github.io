@@ -1,7 +1,20 @@
 // 將 Google My Map 匯出的 KML/XML 解析為地圖用資料結構
 // 原本邏輯來自 App.vue MapDataInit()，抽出方便維護與測試
 
-const ICON_DIR = '/src/assets/MapData/My Maps/PackingMarkerList/images/'
+// 透過 Vite 的 import.meta.glob 把所有 marker icon 在 build 時一起打包，
+// 並產生帶 hash 的最終 URL（dev / production 都通用）。
+const ICON_MODULES = import.meta.glob(
+  '../assets/MapData/My Maps/PackingMarkerList/images/*.png',
+  { eager: true, query: '?url', import: 'default' }
+)
+
+// 以檔名（例如 "icon-5.png"）為 key 建立查表
+const ICON_URL_MAP = Object.fromEntries(
+  Object.entries(ICON_MODULES).map(([path, url]) => {
+    const filename = path.split('/').pop()
+    return [filename, url]
+  })
+)
 
 const findIcon = (xml, iconMapId) => {
   let icon = ''
@@ -71,5 +84,7 @@ export function parseKml(xml) {
 export function resolveIconUrl(url) {
   if (!url) return ''
   if (url.match('http')) return url
-  return new URL(`${ICON_DIR}${url}`, import.meta.url).href
+  // url 可能是 "icon-5.png" 或含路徑，統一取檔名查表
+  const filename = url.split('/').pop()
+  return ICON_URL_MAP[filename] || ''
 }
