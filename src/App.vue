@@ -256,6 +256,7 @@ const ParkingInfo = ref({
   parkingType: '',
   parkingIcon: '',
   parkingIconKey: '',
+  priceInfo: '',
   geometry: [null, null],
   address: '',
 })
@@ -274,6 +275,7 @@ const onSetParkingInfo = (data) => {
     parkingType: data.name,
     parkingIcon: resolveIconUrl(data.properties.icon),
     parkingIconKey: data.properties.icon,
+    priceInfo: data.properties.priceInfo || '',
     geometry: data.geometry,
     address: data.address,
   }

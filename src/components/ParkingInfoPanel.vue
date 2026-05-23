@@ -52,6 +52,11 @@ const emit = defineEmits(['close', 'route', 'openMap', 'toggleFavorite', 'editCo
 
     <div v-if="info.address" class="info-address">{{ info.address }}</div>
 
+    <div v-if="info.priceInfo" class="info-price">
+      <span class="material-icons-outlined">payments</span>
+      <span>{{ info.priceInfo }}</span>
+    </div>
+
     <div v-if="isCommunity" class="community-tag">
       <span class="material-icons-outlined">push_pin</span>
       <span>
@@ -207,6 +212,21 @@ const emit = defineEmits(['close', 'route', 'openMap', 'toggleFavorite', 'editCo
   font-size: 0.78rem;
   color: var(--muted);
   margin: 4px 0;
+}
+.info-price {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 6px 0 4px;
+  padding: 4px 10px;
+  background: var(--primary-soft);
+  color: var(--primary);
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+.info-price .material-icons-outlined {
+  font-size: 16px;
 }
 .community-tag {
   display: inline-flex;
