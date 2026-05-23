@@ -57,7 +57,7 @@ const emit = defineEmits(['close', 'route', 'openMap', 'toggleFavorite', 'editCo
       <span>{{ info.priceInfo }}</span>
     </div>
 
-    <div v-if="isCommunity" class="community-tag">
+    <div v-if="isCommunity" class="community-tag" style="margin-left: 8px">
       <span class="material-icons-outlined">push_pin</span>
       <span>
         共筆停車點
