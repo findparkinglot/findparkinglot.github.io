@@ -86,6 +86,11 @@ const emit = defineEmits([
       </span>
     </div>
 
+    <div v-if="!isCommunity && info.sourceLabel" class="source-tag">
+      <span class="material-icons-outlined">push_pin</span>
+      <span>資料來源 · {{ info.sourceLabel }}</span>
+    </div>
+
     <div class="info-meta">
       <span class="badge">{{ info.parkingType }}</span>
       <span class="coord">
@@ -278,6 +283,22 @@ const emit = defineEmits([
   font-weight: 700;
 }
 .override-tag .material-icons-outlined {
+  font-size: 14px;
+}
+.source-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin: 6px 0 4px;
+  padding: 4px 10px;
+  background: var(--surface-2);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+.source-tag .material-icons-outlined {
   font-size: 14px;
 }
 .info-meta {

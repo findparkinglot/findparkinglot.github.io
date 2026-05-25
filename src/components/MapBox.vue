@@ -1,7 +1,7 @@
 <script setup>
 import { onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import mapboxgl from 'mapbox-gl'
-import addressMap from '@/assets/json/address.json'
+// 隱藏 src/assets/json/address.json 查表;目前主要依賴 KML 來源的資料
 import { resolveIconUrl } from '@/utils/parseKml.js'
 import {
   shouldShowByIcon,
@@ -59,10 +59,12 @@ const lngLatMaker = ref(null)
 const currentMarkers = ref([])
 
 // Cluster 設定
-// 當 zoom >= 此值，顯示原本 PIN；小於此值會依像素網格聚合為數字圈
-const CLUSTER_ZOOM_THRESHOLD = 18
+// 當 zoom >= 此值，全部顯示原本 PIN，完全不叢集
+// (S2 資料密度提升後，把門檻往下調，讓使用者在較低縮放就能看到實際停車點)
+const CLUSTER_ZOOM_THRESHOLD = 16
 // 叢集像素網格大小（越大叢集越粗），單一格內的點會被合併
-const CLUSTER_CELL_PX = 140
+// (縮小網格 → 只有真正像素重疊的點才會被合併，避免一般街區距離就被聚合)
+const CLUSTER_CELL_PX = 60
 
 // 確認座標為有效的 [lng, lat]
 const isValidCoord = (c) =>
@@ -101,15 +103,7 @@ const createOfficialMarkerEl = (MapGroup, marker, isFav) => {
     })
 
     let address = ''
-    for (const key in addressMap) {
-      if (
-        marker.geometry.coordinates[0] == addressMap[key].geometry[0] &&
-        marker.geometry.coordinates[1] == addressMap[key].geometry[1]
-      ) {
-        address = addressMap[key].address
-        break
-      }
-    }
+    // address.json 查表已隱藏;如未來要重新啟用,在此補回查表邏輯即可
 
     emits('parkingInfo', {
       name: MapGroup.name,
@@ -223,6 +217,29 @@ const setMaker = () => {
     const id = favoriteId(community.name, coord)
     const isFav = props.favoriteIds?.has?.(id)
     if (props.onlyFavorites && !isFav) continue
+    // 共筆停車點同樣套用分類 / 友善程度 / 價格篩選
+    if (
+      !shouldShowByIcon(
+        community.iconKey,
+        props.parkingTypeKeyArray,
+        props.degreeOfFriendlinessKeyArray
+      )
+    ) {
+      continue
+    }
+    const priceInfo = community.priceInfo || ''
+    const priceArray = priceInfo ? priceInfo.split('|') : []
+    if (
+      !shouldShowByPrice(
+        priceInfo,
+        priceArray,
+        props.parkingPriceType,
+        props.priceRangeMin,
+        props.priceRangeMax
+      )
+    ) {
+      continue
+    }
     points.push({
       coord: [Number(coord[0]), Number(coord[1])],
       createEl: () => createCommunityMarkerEl(community, isFav),

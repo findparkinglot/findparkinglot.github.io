@@ -157,21 +157,22 @@ const close = () => emit('update:active', false)
         <label class="form-label">停車場資料來源</label>
         <div class="link-list">
           <a
+            href="https://www.google.com/maps/d/viewer?mid=1ORD5DnL6yqrCrtQJYB9TeTgOOlvo-Yc&g_ep=CAESBjI2LjguNRgAIN1iKpUBLDk0MjY3NzI3LDk0MjkyMTk1LDk0Mjk5NTMyLDEwMDc5NjQ5OCwxMDA3OTc3NTcsMTAwNzk2NTMxLDk0MjgwNTc2LDk0MjA3Mzk0LDk0MjA3NTA2LDk0MjA4NTA2LDk0MjE4NjUzLDk0MjI5ODM5LDk0Mjc1MTY4LDk0Mjc5NjE5LDEwMDc5MjU3MiwxMDA3OTE0ODNCAlRX&skid=9984dc32-0eac-4e02-b7a8-241e8910f915&shorturl=1&ll=25.078951126084913%2C121.45397636318671&z=11"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-outline btn-sm"
+          >
+            Alan大重停車記事
+          </a>
+          <a
             href="https://linktr.ee/hueythegentry"
             target="_blank"
             rel="noopener"
             class="btn btn-outline btn-sm"
           >
-            大重停車記事[更新至241231]
+            大重停車記事
           </a>
-          <a
-            href="https://docs.google.com/document/d/16mq-fcaaaLaFSMcwFLrrbliBCsVjtYZZds90rWy7CVk/edit"
-            target="_blank"
-            rel="noopener"
-            class="btn btn-outline btn-sm"
-          >
-            大重停車記事公告[240607]
-          </a>
+
         </div>
       </section>
 
@@ -180,6 +181,14 @@ const close = () => emit('update:active', false)
         <p class="muted-text">
           1. 停車場資訊相關（新場地、收費錯誤）：
         </p>
+        <a
+          href="https://forms.gle/euRCPCPSmvYLm5Rj8"
+          target="_blank"
+          rel="noopener"
+          class="btn btn-outline btn-sm"
+        >
+          Alan大重停車記事 回報表單
+        </a>
         <a
           href="https://docs.google.com/forms/d/e/1FAIpQLSdnEyoJJlxGxKhf1UmZ_6pfMrjOiidD2SkvV5ZKFDFrQ6AvdA/viewform"
           target="_blank"

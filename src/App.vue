@@ -9,9 +9,7 @@ import RouteSteps from './components/RouteSteps.vue'
 import SearchBar from './components/SearchBar.vue'
 import CommunityParkingEditor from './components/CommunityParkingEditor.vue'
 
-import xml from '@/assets/MapData/My Maps/PackingMarkerList/doc.xml'
-import addressMap from '@/assets/json/address.json'
-import { parseKml, resolveIconUrl } from '@/utils/parseKml.js'
+import { loadKmlSources, mergeKmlSources, resolveIconUrl, getSourceLabel } from '@/utils/parseKml.js'
 import { storage } from '@/utils/storage.js'
 import { useFavorites, favoriteId } from '@/composables/useFavorites.js'
 import { useCommunityParkings } from '@/composables/useCommunityParkings.js'
@@ -442,6 +440,7 @@ const ParkingInfo = ref({
   priceInfo: '',
   geometry: [null, null],
   address: '',
+  sourceLabel: '',
 })
 
 // 目前查看中的「官方點原始資料」與「覆寫資料」
@@ -495,6 +494,10 @@ const onSetParkingInfo = (data) => {
     priceInfo: display.priceInfo || '',
     geometry: data.geometry,
     address: data.address,
+    // 官方點才有資料來源;共筆點由 communityMeta 顯示變更者
+    sourceLabel: isCommunityPoint
+      ? ''
+      : getSourceLabel(data.properties?.sourceFolderIndex),
   }
   infoActive.value = true
   track('parking_view', {
@@ -523,15 +526,9 @@ const onToggleFavorite = () => {
 }
 
 // ---------- 搜尋選取處理 ----------
-const findAddress = (coord) => {
-  for (const key in addressMap) {
-    if (
-      coord[0] == addressMap[key].geometry[0] &&
-      coord[1] == addressMap[key].geometry[1]
-    ) {
-      return addressMap[key].address
-    }
-  }
+const findAddress = (_coord) => {
+  // 暫時關閉:原來查 src/assets/json/address.json 的邏輯已隱藏,
+  // 目前主要依賴 src/assets/MapData/My Maps 的 KML 來源。
   return ''
 }
 
@@ -734,7 +731,12 @@ watch(MapDataList, resolvePendingSpot, { deep: false })
 
 // ---------- 啟動 ----------
 onMounted(() => {
-  MapDataList.value = parseKml(xml)
+  // 自動掃描 src/assets/MapData/My Maps/PackingMarkerList* 底下所有來源
+  // 自動掃描 src/assets/MapData/My Maps/PackingMarkerList* 底下所有來源
+  // 優先順序:資料夾編號越大 (越新) 越優先。例如 PackingMarkerList2 > PackingMarkerList。
+  // 同名同座標的重複點依優先順序保留「較新」那一個;新來源獨有的 icon 則加入並以規範檔名重新對映
+  // 與規範重複 (名稱 + 座標相同) 的點會被排除,新點則加入並把 icon 重新對映
+  MapDataList.value = mergeKmlSources(loadKmlSources())
   tryOpenFromUrl()
 })
 
@@ -896,72 +898,78 @@ const communityFabItems = computed(() => [
     <h4 class="modal-section-title">圖案代表甚麼格位</h4>
     <div class="legend-list">
       <div class="legend-row">
-        <img src="@/assets/images/icon/icon-1.png" alt="" />
+        <img :src="resolveIconUrl('icon-3.png')" alt="" />
         汽車：汽車格(含未確認是否有重機格)
       </div>
       <div class="legend-row">
-        <img src="@/assets/images/icon/icon-3.png" alt="" />
-        重機(有人)：有設重機專用格
+        <img :src="resolveIconUrl('icon-8.png')" alt="" />
+        重機(有人):有設重機專用格
       </div>
       <div class="legend-row">
-        <img src="@/assets/images/icon/icon-10.png" alt="" />
-        機車(沒人)：機車格
+        <img :src="resolveIconUrl('icon-10.png')" alt="" />
+        機車(沒人):機車格
       </div>
       <div class="legend-row">
-        <img src="@/assets/images/icon/icon-16.png" alt="" />
-        綠P：重機專用路邊停車格
+        <img :src="resolveIconUrl('icon-15.png')" alt="" />
+        綠P:重機專用路邊停車格
       </div>
       <div class="legend-row">
-        <img src="@/assets/images/icon/icon-17.png" alt="" />
-        黃P：重機與汽車共享路邊停車格(黃P共享格不再更新)
+        <img :src="resolveIconUrl('icon-18.png')" alt="" />
+        紫P:時段性汽機車共用停車格
       </div>
       <div class="legend-row">
-        <img src="@/assets/images/icon/icon-18.png" alt="" />
-        紫P：時段性汽機車共用停車格
+        <img :src="resolveIconUrl('icon-19.png')" alt="" />
+        紅X:停都不給停
       </div>
       <div class="legend-row">
-        <img src="@/assets/images/icon/icon-19.png" alt="" />
-        紅X：停都不給停
+        <img :src="resolveIconUrl('icon-20.png')" alt="" />
+        ?:類型未確認,歡迎透過共筆回報
+      </div>
+      <div class="legend-row">
+        <div class="legend-text">
+          ・黃P(重機與汽車共享路邊停車格)目前資料來源已停止更新,故新版地圖不再出現
+        </div>
       </div>
     </div>
 
     <h4 class="modal-section-title">顏色代表入場方式</h4>
     <div class="legend-list">
       <div class="legend-row">
-        <img src="@/assets/images/icon/icon-1.png" alt="" />
-        <img src="@/assets/images/icon/icon-3.png" alt="" />
-        <img src="@/assets/images/icon/icon-10.png" alt="" />
-        綠色最友善：有後牌辨析
+        <img :src="resolveIconUrl('icon-2.png')" alt="" />
+        <img :src="resolveIconUrl('icon-6.png')" alt="" />
+        <img :src="resolveIconUrl('icon-9.png')" alt="" />
+        綠色最友善:有後牌辨析
       </div>
       <div class="legend-row">
-        <img src="@/assets/images/icon/icon-6.png" alt="" />
-        <img src="@/assets/images/icon/icon-9.png" alt="" />
-        <img src="@/assets/images/icon/icon-13.png" alt="" />
-        藍色最傳統：悠遊卡 / 按鈕取票
+        <img :src="resolveIconUrl('icon-5.png')" alt="" />
+        <img :src="resolveIconUrl('icon-12.png')" alt="" />
+        <img :src="resolveIconUrl('icon-11.png')" alt="" />
+        藍色最傳統:悠遊卡 / 按鈕取票
       </div>
       <div class="legend-row">
-        <img src="@/assets/images/icon/icon-2.png" alt="" />
-        <img src="@/assets/images/icon/icon-5.png" alt="" />
-        <img src="@/assets/images/icon/icon-11.png" alt="" />
-        紅色最靠北：請管理員協助 / 倒退嚕前牌辨析
+        <img :src="resolveIconUrl('icon-1.png')" alt="" />
+        <img :src="resolveIconUrl('icon-13.png')" alt="" />
+        <img :src="resolveIconUrl('icon-7.png')" alt="" />
+        紅色最靠北:請管理員協助 / 倒退嚕前牌辨析
       </div>
       <div class="legend-row">
-        <img src="@/assets/images/icon/icon-7.png" alt="" />
-        <img src="@/assets/images/icon/icon-4.png" alt="" />
-        灰色未確定：有可能是上述任何情況，停到請回報
+        <img :src="resolveIconUrl('icon-3.png')" alt="" />
+        <img :src="resolveIconUrl('icon-8.png')" alt="" />
+        <img :src="resolveIconUrl('icon-10.png')" alt="" />
+        灰色未確定:有可能是上述任何情況,停到請回報
       </div>
     </div>
 
     <h4 class="modal-section-title">名稱前有價錢</h4>
     <div class="legend-list">
       <div class="legend-row">
-        <img src="@/assets/images/icon/icon-3.png" alt="" />
+        <img :src="resolveIconUrl('icon-3.png')" alt="" />
         (30/h)三張里地下停車場
       </div>
       <div class="legend-row">
         <div class="legend-text">
-          ・數字：金額，時段費率複雜會以最高收費標示<br />
-          ・d/h：d 為計次，h 為計時<br />
+          ・數字:金額,時段費率複雜會以最高收費標示<br />
+          ・d/h:d 為計次,h 為計時<br />
           ・Free 代表免費
         </div>
       </div>
@@ -1082,10 +1090,13 @@ const communityFabItems = computed(() => [
     </div>
 
     <p class="welcome-text">
-      資料取源於
-      <a href="https://linktr.ee/hueythegentry" target="_blank" rel="noopener" class="link"
+      資料取源於: 
+      1. <a href="https://linktr.ee/hueythegentry" target="_blank" rel="noopener" class="link"
         >大重停車記事</a
-      >，如有停車場相關問題請至該頁面填寫回報表單。
+      >
+      2. <a href="https://www.google.com/maps/d/viewer?mid=1ORD5DnL6yqrCrtQJYB9TeTgOOlvo-Yc&g_ep=CAESBjI2LjguNRgAIN1iKpUBLDk0MjY3NzI3LDk0MjkyMTk1LDk0Mjk5NTMyLDEwMDc5NjQ5OCwxMDA3OTc3NTcsMTAwNzk2NTMxLDk0MjgwNTc2LDk0MjA3Mzk0LDk0MjA3NTA2LDk0MjA4NTA2LDk0MjE4NjUzLDk0MjI5ODM5LDk0Mjc1MTY4LDk0Mjc5NjE5LDEwMDc5MjU3MiwxMDA3OTE0ODNCAlRX&skid=9984dc32-0eac-4e02-b7a8-241e8910f915&shorturl=1&ll=25.078951126084913%2C121.45397636318671&z=11"
+        target="_blank" rel="noopener" class="link"
+        >Alan大重停車記事</a>，如有停車場相關問題請至該頁面填寫回報表單。
     </p>
     <p class="welcome-text">
       此地圖免費提供車友使用，資料不定期更新；若發生無法使用情況，請至

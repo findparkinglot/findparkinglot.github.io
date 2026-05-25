@@ -1,8 +1,11 @@
 // Marker 顯示判斷邏輯：分類、友善程度、價格範圍
 
+// typeKeys / friendlyKeys 為 null 或空陣列代表「全部」 (不過濾)。
 export function shouldShowByIcon(icon, typeKeys, friendlyKeys) {
   if (!icon) return false
-  return typeKeys.indexOf(icon) !== -1 && friendlyKeys.indexOf(icon) !== -1
+  const matchType = !typeKeys || typeKeys.length === 0 || typeKeys.indexOf(icon) !== -1
+  const matchFri = !friendlyKeys || friendlyKeys.length === 0 || friendlyKeys.indexOf(icon) !== -1
+  return matchType && matchFri
 }
 
 export function shouldShowByPrice(priceInfo, priceArray, priceType, min, max) {

@@ -1,26 +1,34 @@
 // 停車場分類、友善程度、地圖風格常數
 // 原本散在 App.vue 內，抽出來方便維護
+//
+// icon-N.png 的編號來自「canonical KML 來源」的 images/icon-N.png。
+// 目前 canonical = src/assets/MapData/My Maps/PackingMarkerList2。
+// S2 對應關係 (shape-color → 檔名):
+//   汽車 1538: 紅=1 綠=2 灰=3 藍=5      叉 1898: 紅X=19
+//   重機 1632: 綠=6 灰=8 藍=12 紅=13   變體 1684綠=4 / 1502綠=14
+//   機車 1633: 紅=7 綠=9 灰=10 藍=11   ?    1594灰=20
+//   P標 1644: 綠=15 灰=16 藍=17 紫=18
 
 export const parkingTypeList = [
   {
     name: '全部',
     value: '',
-    key: Array.from({ length: 19 }, (_, i) => `icon-${i + 1}.png`),
+    key: null, // null = match-all (包含未分類的新 icon)
   },
   {
     name: '汽車：汽車格(含未確認是否有重機格)',
     value: 'car',
-    key: ['icon-1.png', 'icon-3.png', 'icon-5.png', 'icon-6.png'],
+    key: ['icon-1.png', 'icon-2.png', 'icon-3.png', 'icon-5.png'],
   },
   {
     name: '重機：有設重機專用格',
     value: 'motorcycle',
-    key: ['icon-2.png', 'icon-4.png', 'icon-7.png', 'icon-8.png'],
+    key: ['icon-4.png', 'icon-6.png', 'icon-8.png', 'icon-12.png', 'icon-13.png', 'icon-14.png'],
   },
   {
     name: '機車：機車格',
     value: 'scooter',
-    key: ['icon-9.png', 'icon-10.png', 'icon-13.png'],
+    key: ['icon-7.png', 'icon-9.png', 'icon-10.png', 'icon-11.png'],
   },
   {
     name: '綠P:重機專用路邊停車格',
@@ -28,24 +36,19 @@ export const parkingTypeList = [
     key: ['icon-15.png'],
   },
   {
-    name: '黃P:重機與汽車共享路邊停車格',
-    value: 'yellowP',
-    key: ['icon-16.png'],
-  },
-  {
     name: '紫P:時段性汽機車共用停車格，注意使用時間喔!',
     value: 'purpleP',
-    key: ['icon-17.png'],
+    key: ['icon-18.png'],
   },
   {
     name: '紅X:停都不給停',
     value: 'redX',
-    key: ['icon-12.png'],
+    key: ['icon-19.png'],
   },
   {
-    name: '施工中',
-    value: 'fix',
-    key: ['icon-14.png'],
+    name: '?:類型未確認',
+    value: 'unknown',
+    key: ['icon-20.png'],
   },
 ]
 
@@ -53,27 +56,27 @@ export const degreeOfFriendlinessList = [
   {
     name: '全部',
     value: '',
-    key: Array.from({ length: 19 }, (_, i) => `icon-${i + 1}.png`),
+    key: null, // null = match-all (包含未分類的新 icon)
   },
   {
     name: '最友善：有後牌辨析',
     value: 'friendly',
-    key: ['icon-2.png', 'icon-3.png', 'icon-9.png', 'icon-15.png'],
+    key: ['icon-2.png', 'icon-4.png', 'icon-6.png', 'icon-9.png', 'icon-14.png', 'icon-15.png'],
   },
   {
     name: '最傳統：悠遊卡、按鈕取票',
     value: 'normal',
-    key: ['icon-5.png', 'icon-8.png', 'icon-11.png', 'icon-13.png'],
+    key: ['icon-5.png', 'icon-11.png', 'icon-12.png', 'icon-17.png'],
   },
   {
     name: '最靠北：按鈕請管理員協助、前牌辨析',
     value: 'unfriendly',
-    key: ['icon-1.png', 'icon-7.png', 'icon-10.png', 'icon-12.png'],
+    key: ['icon-1.png', 'icon-7.png', 'icon-13.png', 'icon-19.png'],
   },
   {
     name: '未確定',
     value: 'unknown',
-    key: ['icon-4.png', 'icon-6.png'],
+    key: ['icon-3.png', 'icon-8.png', 'icon-10.png', 'icon-16.png', 'icon-20.png'],
   },
 ]
 
