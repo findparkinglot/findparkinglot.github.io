@@ -275,9 +275,9 @@ const emit = defineEmits([
   gap: 4px;
   margin: 6px 0 4px;
   padding: 4px 10px;
-  background: #ffe082;
-  color: #5b3a00;
-  border: 1px solid #ffb300;
+  background: #5692ff;
+  color: #000;
+  border: 1px solid #2f6fd6;
   border-radius: var(--radius-sm);
   font-size: 0.78rem;
   font-weight: 700;
