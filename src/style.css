@@ -259,14 +259,14 @@ body.modal-open {
 .marker.is-community.is-fav > .tag {
   background: #ffc107;
 }
-/* 官方點被車友覆寫過 → 淺橘色 */
+/* 官方點被車友覆寫過 → 靛藍 */
 .marker.is-override {
-  background: #ffb74d;
+  background: #3f51b5;
 }
 .marker.is-override > .tag {
-  background: #ffb74d;
+  background: #3f51b5;
 }
-/* 同時被覆寫 + 加入最愛 → 邊框/標籤改為黃色,但底色仍為淺橘 */
+/* 同時被覆寫 + 加入最愛 → 邊框/標籤改為黃色,但底色仍為靛藍 */
 .marker.is-override.is-fav {
   border-color: #ffc107;
 }
