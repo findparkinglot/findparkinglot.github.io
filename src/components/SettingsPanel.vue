@@ -280,7 +280,7 @@ const close = () => emit('update:active', false)
   padding: 16px 48px 12px 16px;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   border-bottom: 1px solid var(--border);
 }
 .side-panel-logo {
@@ -288,7 +288,6 @@ const close = () => emit('update:active', false)
   height: 44px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid var(--primary);
   flex-shrink: 0;
 }
 .side-panel-titles {
