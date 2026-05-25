@@ -63,8 +63,17 @@ const currentMarkers = ref([])
 // (S2 資料密度提升後，把門檻往下調，讓使用者在較低縮放就能看到實際停車點)
 const CLUSTER_ZOOM_THRESHOLD = 16
 // 叢集像素網格大小（越大叢集越粗），單一格內的點會被合併
-// (縮小網格 → 只有真正像素重疊的點才會被合併，避免一般街區距離就被聚合)
-const CLUSTER_CELL_PX = 60
+// 依目前 zoom 動態調整：縮得越小 → 網格越大 → 更多點被合併，避免遠視角顯示過多 marker 造成 lag
+// zoom >= 15  : 60px （接近原本密度）
+// zoom 13~15  : 60 ~ 120px
+// zoom 11~13  : 120 ~ 200px
+// zoom <= 11  : 240px （大範圍直接粗略聚合）
+const getClusterCellPx = (zoom) => {
+  if (zoom >= 15) return 60
+  if (zoom >= 13) return 60 + (15 - zoom) * 30   // 13→120, 14→90
+  if (zoom >= 11) return 120 + (13 - zoom) * 60  // 11→240, 12→180
+  return 240
+}
 
 // 確認座標為有效的 [lng, lat]
 const isValidCoord = (c) =>
@@ -260,11 +269,12 @@ const setMaker = () => {
   }
 
   // 3. 像素網格叢集：同格內 >= 2 個點顯示為 cluster 圈
+  const cellPx = getClusterCellPx(zoom)
   const cells = new Map()
   for (const p of points) {
     const px = map.value.project(p.coord)
-    const cx = Math.floor(px.x / CLUSTER_CELL_PX)
-    const cy = Math.floor(px.y / CLUSTER_CELL_PX)
+    const cx = Math.floor(px.x / cellPx)
+    const cy = Math.floor(px.y / cellPx)
     const key = `${cx}:${cy}`
     let cell = cells.get(key)
     if (!cell) {
