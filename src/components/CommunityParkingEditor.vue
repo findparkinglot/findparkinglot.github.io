@@ -51,7 +51,10 @@ const friendlinessOptions = computed(() =>
 // 檔名依 canonical KML (目前 = PackingMarkerList2) 的 icon-N.png
 const SPECIAL_ICON = {
   greenStar: 'icon-14.png',
+  friendlyShop: 'icon-4.png',
   greenP: 'icon-15.png',
+  greyP: 'icon-16.png',
+  blueP: 'icon-17.png',
   purpleP: 'icon-18.png',
   redX: 'icon-19.png',
   unknown: 'icon-20.png',

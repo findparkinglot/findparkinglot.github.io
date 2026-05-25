@@ -914,8 +914,20 @@ const communityFabItems = computed(() => [
         綠星:路邊友善車格
       </div>
       <div class="legend-row">
+        <img :src="resolveIconUrl('icon-4.png')" alt="" />
+        重機友善店家:用餐/消費時可停重機的店家
+      </div>
+      <div class="legend-row">
         <img :src="resolveIconUrl('icon-15.png')" alt="" />
         綠P:重機專用路邊停車格
+      </div>
+      <div class="legend-row">
+        <img :src="resolveIconUrl('icon-16.png')" alt="" />
+        灰P:重機專用路邊停車格(未確認精準座標,歡迎回報)
+      </div>
+      <div class="legend-row">
+        <img :src="resolveIconUrl('icon-17.png')" alt="" />
+        藍P:普通大型共用機車格(台北市試辦)
       </div>
       <div class="legend-row">
         <img :src="resolveIconUrl('icon-18.png')" alt="" />

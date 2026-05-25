@@ -23,7 +23,7 @@ export const parkingTypeList = [
   {
     name: '重機：有設重機專用格',
     value: 'motorcycle',
-    key: ['icon-4.png', 'icon-6.png', 'icon-8.png', 'icon-12.png', 'icon-13.png'],
+    key: ['icon-6.png', 'icon-8.png', 'icon-12.png', 'icon-13.png'],
   },
   {
     name: '機車：機車格',
@@ -36,12 +36,25 @@ export const parkingTypeList = [
     key: ['icon-14.png'],
   },
   {
+    name: '重機友善店家:用餐/消費可停重機',
+    value: 'friendlyShop',
+    key: ['icon-4.png'],
+  },
+  {
     name: '綠P:重機專用路邊停車格',
     value: 'greenP',
     key: ['icon-15.png'],
   },
+  {    name: '灰P:重機專用路邊停車格(未確認精準座標)',
+    value: 'greyP',
+    key: ['icon-16.png'],
+  },
   {
-    name: '紫P:時段性汽機車共用停車格，注意使用時間喔!',
+    name: '藍P:普通大型共用機車格(台北市試辦)',
+    value: 'blueP',
+    key: ['icon-17.png'],
+  },
+  {    name: '紫P:時段性汽機車共用停車格，注意使用時間喔!',
     value: 'purpleP',
     key: ['icon-18.png'],
   },
