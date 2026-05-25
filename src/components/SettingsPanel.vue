@@ -164,14 +164,14 @@ const close = () => emit('update:active', false)
           >
             Alan大重停車記事
           </a>
-          <a
+          <!-- <a
             href="https://linktr.ee/hueythegentry"
             target="_blank"
             rel="noopener"
             class="btn btn-outline btn-sm"
           >
             大重停車記事
-          </a>
+          </a> -->
 
         </div>
       </section>
@@ -189,14 +189,14 @@ const close = () => emit('update:active', false)
         >
           Alan大重停車記事 回報表單
         </a>
-        <a
+        <!-- <a
           href="https://docs.google.com/forms/d/e/1FAIpQLSdnEyoJJlxGxKhf1UmZ_6pfMrjOiidD2SkvV5ZKFDFrQ6AvdA/viewform"
           target="_blank"
           rel="noopener"
           class="btn btn-outline btn-sm"
         >
           大重停車記事 回報表單
-        </a>
+        </a> -->
         <p class="muted-text mt-8">2. 網頁 BUG、畫面跑版：</p>
         <a
           href="https://forms.gle/iJCyfqVtpL35WtZM7"

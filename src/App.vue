@@ -1091,12 +1091,16 @@ const communityFabItems = computed(() => [
 
     <p class="welcome-text">
       資料取源於: 
-      1. <a href="https://linktr.ee/hueythegentry" target="_blank" rel="noopener" class="link"
+      <!-- 1. <a href="https://linktr.ee/hueythegentry" target="_blank" rel="noopener" class="link"
         >大重停車記事</a
       >
-      2. <a href="https://www.google.com/maps/d/viewer?mid=1ORD5DnL6yqrCrtQJYB9TeTgOOlvo-Yc&g_ep=CAESBjI2LjguNRgAIN1iKpUBLDk0MjY3NzI3LDk0MjkyMTk1LDk0Mjk5NTMyLDEwMDc5NjQ5OCwxMDA3OTc3NTcsMTAwNzk2NTMxLDk0MjgwNTc2LDk0MjA3Mzk0LDk0MjA3NTA2LDk0MjA4NTA2LDk0MjE4NjUzLDk0MjI5ODM5LDk0Mjc1MTY4LDk0Mjc5NjE5LDEwMDc5MjU3MiwxMDA3OTE0ODNCAlRX&skid=9984dc32-0eac-4e02-b7a8-241e8910f915&shorturl=1&ll=25.078951126084913%2C121.45397636318671&z=11"
+      2.  -->
+      <a href="https://www.google.com/maps/d/viewer?mid=1ORD5DnL6yqrCrtQJYB9TeTgOOlvo-Yc&g_ep=CAESBjI2LjguNRgAIN1iKpUBLDk0MjY3NzI3LDk0MjkyMTk1LDk0Mjk5NTMyLDEwMDc5NjQ5OCwxMDA3OTc3NTcsMTAwNzk2NTMxLDk0MjgwNTc2LDk0MjA3Mzk0LDk0MjA3NTA2LDk0MjA4NTA2LDk0MjE4NjUzLDk0MjI5ODM5LDk0Mjc1MTY4LDk0Mjc5NjE5LDEwMDc5MjU3MiwxMDA3OTE0ODNCAlRX&skid=9984dc32-0eac-4e02-b7a8-241e8910f915&shorturl=1&ll=25.078951126084913%2C121.45397636318671&z=11"
         target="_blank" rel="noopener" class="link"
         >Alan大重停車記事</a>，如有停車場相關問題請至該頁面填寫回報表單。
+    </p>
+    <p class="welcome-text">
+      公告: 原始資料"大重停車記事已無更新" 已改由 Alan大重停車記事 提供，感謝Alan的辛苦整理與分享！
     </p>
     <p class="welcome-text">
       本站僅提供資料整合服務，地圖免費提供車友使用，資料不定期更新；若發生無法使用情況，請至

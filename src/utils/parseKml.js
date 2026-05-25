@@ -80,7 +80,7 @@ export function loadKmlSources() {
 //   1 → PackingMarkerList  (原版)
 //   2 → PackingMarkerList2 (Alan 維護的分支)
 export const SOURCE_LABELS = {
-  1: '大重停車記事',
+  // 1: '大重停車記事',
   2: 'Alan大重停車記事',
 }
 
