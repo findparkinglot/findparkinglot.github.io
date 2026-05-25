@@ -1099,7 +1099,7 @@ const communityFabItems = computed(() => [
         >Alan大重停車記事</a>，如有停車場相關問題請至該頁面填寫回報表單。
     </p>
     <p class="welcome-text">
-      此地圖免費提供車友使用，資料不定期更新；若發生無法使用情況，請至
+      本站僅提供資料整合服務，地圖免費提供車友使用，資料不定期更新；若發生無法使用情況，請至
       <a href="https://forms.gle/iJCyfqVtpL35WtZM7" target="_blank" rel="noopener" class="link"
         >錯誤資訊回報</a
       >，也歡迎
