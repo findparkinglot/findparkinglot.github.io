@@ -260,6 +260,27 @@ body.modal-open {
   background: #ffc107;
 }
 
+/* =================== Marker Cluster（叢集數字圈） =================== */
+.marker-cluster {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  border: 3px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+  user-select: none;
+}
+.marker-cluster:hover {
+  filter: brightness(1.08);
+}
+
 /* =================== 座標顯示 =================== */
 .coordinates {
   background: var(--surface);

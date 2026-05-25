@@ -58,7 +58,122 @@ const mapData = ref({
 const lngLatMaker = ref(null)
 const currentMarkers = ref([])
 
-// ----- 建立 marker（合併過的版本，含 fade-in） -----
+// Cluster 設定
+// 當 zoom >= 此值，顯示原本 PIN；小於此值會依像素網格聚合為數字圈
+const CLUSTER_ZOOM_THRESHOLD = 18
+// 叢集像素網格大小（越大叢集越粗），單一格內的點會被合併
+const CLUSTER_CELL_PX = 140
+
+// 確認座標為有效的 [lng, lat]
+const isValidCoord = (c) =>
+  Array.isArray(c) &&
+  c.length >= 2 &&
+  Number.isFinite(Number(c[0])) &&
+  Number.isFinite(Number(c[1]))
+
+// 建立官方 marker 的 DOM 元素（含 click handler）
+const createOfficialMarkerEl = (MapGroup, marker, isFav) => {
+  const el = document.createElement('div')
+  el.className = 'marker'
+  if (isFav) el.classList.add('is-fav')
+
+  const tag = document.createElement('div')
+  tag.className = 'tag'
+  const img = document.createElement('div')
+  img.className = 'img'
+  if (marker.properties.icon) {
+    img.style.backgroundImage = `url(${resolveIconUrl(marker.properties.icon)})`
+    img.style.backgroundSize = 'cover'
+    img.style.backgroundPosition = 'center center'
+  }
+  el.appendChild(tag)
+  el.appendChild(img)
+
+  el.addEventListener('click', () => {
+    map.value.flyTo({
+      center: marker.geometry.coordinates,
+      zoom: 17,
+      bearing: 0,
+      speed: 1.5,
+      curve: 1.5,
+      easing: (t) => t,
+      essential: true,
+    })
+
+    let address = ''
+    for (const key in addressMap) {
+      if (
+        marker.geometry.coordinates[0] == addressMap[key].geometry[0] &&
+        marker.geometry.coordinates[1] == addressMap[key].geometry[1]
+      ) {
+        address = addressMap[key].address
+        break
+      }
+    }
+
+    emits('parkingInfo', {
+      name: MapGroup.name,
+      properties: marker.properties,
+      geometry: marker.geometry.coordinates,
+      address,
+    })
+  })
+  return el
+}
+
+// 建立共筆 marker 的 DOM 元素
+const createCommunityMarkerEl = (community, isFav) => {
+  const el = document.createElement('div')
+  el.className = 'marker is-community'
+  if (isFav) el.classList.add('is-fav')
+
+  const tag = document.createElement('div')
+  tag.className = 'tag'
+  const img = document.createElement('div')
+  img.className = 'img'
+  if (community.iconKey) {
+    img.style.backgroundImage = `url(${resolveIconUrl(community.iconKey)})`
+    img.style.backgroundSize = 'cover'
+    img.style.backgroundPosition = 'center center'
+  }
+  el.appendChild(tag)
+  el.appendChild(img)
+
+  el.addEventListener('click', () => {
+    map.value.flyTo({
+      center: community.coordinates,
+      zoom: 17,
+      speed: 1.5,
+      curve: 1.5,
+      essential: true,
+    })
+    emits('communityParkingClick', community)
+  })
+  return el
+}
+
+// 建立 cluster 數字圈：尺寸依 log(count) 連續放大
+const CLUSTER_MIN_SIZE = 34
+const CLUSTER_MAX_SIZE = 84
+const createClusterEl = (count) => {
+  const el = document.createElement('div')
+  el.className = 'marker-cluster'
+  // count = 2 → 約 min，count = 500 → 約 max，介於兩者間連續變化
+  const t = Math.min(1, Math.log2(Math.max(2, count)) / Math.log2(500))
+  const size = Math.round(
+    CLUSTER_MIN_SIZE + (CLUSTER_MAX_SIZE - CLUSTER_MIN_SIZE) * t
+  )
+  // 字級也跟著縮放
+  const fontSize = Math.round(12 + 10 * t)
+  el.style.width = `${size}px`
+  el.style.height = `${size}px`
+  el.style.lineHeight = `${size}px`
+  el.style.fontSize = `${fontSize}px`
+  el.textContent = String(count)
+  return el
+}
+
+// ----- 建立 marker（含 cluster） -----
 const setMaker = () => {
   // 移除舊 marker
   for (let i = currentMarkers.value.length - 1; i >= 0; i--) {
@@ -69,12 +184,16 @@ const setMaker = () => {
   if (!map.value) return
   const bounds = map.value.getBounds?.()
 
+  // 1. 收集所有可見點（官方 + 共筆），統一資料結構
+  const points = []
   for (const MapGroup of props.mapDataList) {
     for (const marker of MapGroup.features) {
-      const id = favoriteId(marker.properties.name, marker.geometry.coordinates)
+      const coord = marker.geometry.coordinates
+      if (!isValidCoord(coord)) continue
+      const id = favoriteId(marker.properties.name, coord)
       const isFav = props.favoriteIds?.has?.(id)
       if (
-        !isCoordInBounds(bounds, marker.geometry.coordinates) ||
+        !isCoordInBounds(bounds, coord) ||
         (props.onlyFavorites && !isFav) ||
         !shouldShowByIcon(
           marker.properties.icon,
@@ -91,99 +210,81 @@ const setMaker = () => {
       ) {
         continue
       }
-
-      const el = document.createElement('div')
-      el.className = 'marker'
-      if (isFav) el.classList.add('is-fav')
-
-      const tag = document.createElement('div')
-      tag.className = 'tag'
-      const img = document.createElement('div')
-      img.className = 'img'
-      if (marker.properties.icon) {
-        img.style.backgroundImage = `url(${resolveIconUrl(marker.properties.icon)})`
-        img.style.backgroundSize = 'cover'
-        img.style.backgroundPosition = 'center center'
-      }
-      el.appendChild(tag)
-      el.appendChild(img)
-
-      el.addEventListener('click', () => {
-        map.value.flyTo({
-          center: marker.geometry.coordinates,
-          zoom: 17,
-          bearing: 0,
-          speed: 1.5,
-          curve: 1.5,
-          easing: (t) => t,
-          essential: true,
-        })
-
-        let address = ''
-        for (const key in addressMap) {
-          if (
-            marker.geometry.coordinates[0] == addressMap[key].geometry[0] &&
-            marker.geometry.coordinates[1] == addressMap[key].geometry[1]
-          ) {
-            address = addressMap[key].address
-            break
-          }
-        }
-
-        emits('parkingInfo', {
-          name: MapGroup.name,
-          properties: marker.properties,
-          geometry: marker.geometry.coordinates,
-          address,
-        })
+      points.push({
+        coord: [Number(coord[0]), Number(coord[1])],
+        createEl: () => createOfficialMarkerEl(MapGroup, marker, isFav),
       })
-
-      const oneMarker = new mapboxgl.Marker(el)
-        .setLngLat(marker.geometry.coordinates)
-        .addTo(map.value)
-      currentMarkers.value.push(oneMarker)
     }
   }
-
-  // ----- 「共筆停車點」 markers (同官方樣式，薰衣草紫色底) -----
   for (const community of props.communityParkings || []) {
     const coord = community.coordinates
-    if (!coord || coord[0] == null || coord[1] == null) continue
+    if (!isValidCoord(coord)) continue
     if (!isCoordInBounds(bounds, coord)) continue
-
     const id = favoriteId(community.name, coord)
     const isFav = props.favoriteIds?.has?.(id)
     if (props.onlyFavorites && !isFav) continue
-
-    const el = document.createElement('div')
-    el.className = 'marker is-community'
-    if (isFav) el.classList.add('is-fav')
-
-    const tag = document.createElement('div')
-    tag.className = 'tag'
-    const img = document.createElement('div')
-    img.className = 'img'
-    if (community.iconKey) {
-      img.style.backgroundImage = `url(${resolveIconUrl(community.iconKey)})`
-      img.style.backgroundSize = 'cover'
-      img.style.backgroundPosition = 'center center'
-    }
-    el.appendChild(tag)
-    el.appendChild(img)
-
-    el.addEventListener('click', () => {
-      map.value.flyTo({
-        center: coord,
-        zoom: 17,
-        speed: 1.5,
-        curve: 1.5,
-        essential: true,
-      })
-      emits('communityParkingClick', community)
+    points.push({
+      coord: [Number(coord[0]), Number(coord[1])],
+      createEl: () => createCommunityMarkerEl(community, isFav),
     })
+  }
 
-    const oneMarker = new mapboxgl.Marker(el).setLngLat(coord).addTo(map.value)
-    currentMarkers.value.push(oneMarker)
+  const zoom = map.value.getZoom?.() ?? 0
+
+  // 2. 縮放足夠大時，全部以原 PIN 樣式顯示
+  if (zoom >= CLUSTER_ZOOM_THRESHOLD) {
+    for (const p of points) {
+      const m = new mapboxgl.Marker(p.createEl())
+        .setLngLat(p.coord)
+        .addTo(map.value)
+      currentMarkers.value.push(m)
+    }
+    return
+  }
+
+  // 3. 像素網格叢集：同格內 >= 2 個點顯示為 cluster 圈
+  const cells = new Map()
+  for (const p of points) {
+    const px = map.value.project(p.coord)
+    const cx = Math.floor(px.x / CLUSTER_CELL_PX)
+    const cy = Math.floor(px.y / CLUSTER_CELL_PX)
+    const key = `${cx}:${cy}`
+    let cell = cells.get(key)
+    if (!cell) {
+      cell = { points: [], sumLng: 0, sumLat: 0 }
+      cells.set(key, cell)
+    }
+    cell.points.push(p)
+    cell.sumLng += p.coord[0]
+    cell.sumLat += p.coord[1]
+  }
+
+  for (const cell of cells.values()) {
+    if (cell.points.length === 1) {
+      const p = cell.points[0]
+      const m = new mapboxgl.Marker(p.createEl())
+        .setLngLat(p.coord)
+        .addTo(map.value)
+      currentMarkers.value.push(m)
+    } else {
+      const center = [
+        cell.sumLng / cell.points.length,
+        cell.sumLat / cell.points.length,
+      ]
+      const el = createClusterEl(cell.points.length)
+      el.addEventListener('click', () => {
+        const nextZoom = Math.min((map.value.getZoom?.() ?? 0) + 2, 17)
+        map.value.flyTo({
+          center,
+          zoom: nextZoom,
+          speed: 1.5,
+          curve: 1.5,
+          essential: true,
+        })
+      })
+      const m = new mapboxgl.Marker(el).setLngLat(center).addTo(map.value)
+      currentMarkers.value.push(m)
+    }
   }
 }
 
@@ -228,6 +329,20 @@ const setMakerInit = () => {
   map.value.on('zoomend', refreshMarkers)
   setMaker()
   hideLoading()
+  // 若 App 在 map 建立前已設定 focusCoord (例：分享連結進站)，這時補一次 flyTo
+  map.value.once('load', () => {
+    const fc = props.focusCoord
+    if (Array.isArray(fc) && fc[0] != null && fc[1] != null) {
+      map.value.flyTo({
+        center: [Number(fc[0]), Number(fc[1])],
+        zoom: 17,
+        bearing: 0,
+        speed: 1.5,
+        curve: 1.5,
+        essential: true,
+      })
+    }
+  })
 }
 
 const setMap = () => {

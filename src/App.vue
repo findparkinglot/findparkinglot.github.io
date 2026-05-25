@@ -16,6 +16,10 @@ import { storage } from '@/utils/storage.js'
 import { useFavorites, favoriteId } from '@/composables/useFavorites.js'
 import { useCommunityParkings } from '@/composables/useCommunityParkings.js'
 import { useUserProfile } from '@/composables/useUserProfile.js'
+import {
+  useParkingOverrides,
+  applyOverride,
+} from '@/composables/useParkingOverrides.js'
 import { isFirebaseConfigured } from '@/utils/firebase.js'
 import { track } from '@/utils/analytics.js'
 import {
@@ -94,16 +98,32 @@ watch(windowHowToUseOpen, (v) => v && openOnly('howto'))
 watch(windowShareOpen, (v) => v && openOnly('share'))
 watch(windowCommunityHelpOpen, (v) => v && openOnly('communityHelp'))
 
-// ---------- 篩選器 ----------
-const parkingType = ref('')
-const degreeOfFriendliness = ref('')
-const parkingPriceType = ref('')
-const priceRangeMin = ref(0)
-const priceRangeMax = ref(100)
+// ---------- 篩選器（持久化到 localStorage.filters_v1） ----------
+const FILTERS_STORAGE_KEY = 'filters_v1'
+const savedFilters = storage.getJSON(FILTERS_STORAGE_KEY, {}) || {}
+const parkingType = ref(typeof savedFilters.parkingType === 'string' ? savedFilters.parkingType : '')
+const degreeOfFriendliness = ref(typeof savedFilters.degreeOfFriendliness === 'string' ? savedFilters.degreeOfFriendliness : '')
+const parkingPriceType = ref(typeof savedFilters.parkingPriceType === 'string' ? savedFilters.parkingPriceType : '')
+const priceRangeMin = ref(typeof savedFilters.priceRangeMin === 'number' ? savedFilters.priceRangeMin : 0)
+const priceRangeMax = ref(typeof savedFilters.priceRangeMax === 'number' ? savedFilters.priceRangeMax : 100)
 
 // ---------- 我的最愛 ----------
 const { favorites, favoriteIdSet, isFavorite, toggleFavorite } = useFavorites()
-const onlyFavorites = ref(false)
+const onlyFavorites = ref(savedFilters.onlyFavorites === true)
+
+watch(
+  [parkingType, degreeOfFriendliness, parkingPriceType, priceRangeMin, priceRangeMax, onlyFavorites],
+  ([pt, df, ppt, prMin, prMax, fav]) => {
+    storage.setJSON(FILTERS_STORAGE_KEY, {
+      parkingType: pt,
+      degreeOfFriendliness: df,
+      parkingPriceType: ppt,
+      priceRangeMin: prMin,
+      priceRangeMax: prMax,
+      onlyFavorites: fav,
+    })
+  }
+)
 
 // ---------- 路線交通方式（每次點路線規劃時重設為 driving） ----------
 const routeProfile = ref('driving')
@@ -111,15 +131,42 @@ const routeProfile = ref('driving')
 // ---------- 社群停車場 ----------
 const { items: communityParkings, addParking, updateParking, deleteParking } =
   useCommunityParkings()
-const { userId, nickname } = useUserProfile()
+const { userId, nickname, isAdmin } = useUserProfile()
 const mapBoxRef = ref(null)
+
+// ---------- 官方停車點「覆寫層」 ----------
+// 讓車友可以在不變動原始 KML 資料的前提下,對同一官方點提供「覆寫資訊」(如實際費率)。
+// 顯示時若某個官方點存在覆寫,就以覆寫資料為主。
+const { getOverride, getOverrideHistory, upsertOverride, resetOverride } =
+  useParkingOverrides()
 
 // 編輯器狀態
 const editorOpen = ref(false)
-const editorMode = ref('add') // 'add' | 'edit'
+const editorMode = ref('add') // 'add' | 'edit' | 'override'
 const editorInitial = ref(null)
 const editorSubmitting = ref(false)
 const editorDefaultCoord = ref([121.5173399, 25.0475613])
+// override 模式專用:是否已存在覆寫 (決定是否顯示「重設」按鈕)
+const editorHasExistingOverride = ref(false)
+
+// 編輯器內顯示的「修改紀錄」陣列 — 依目前 mode 自動從對應資料來源取得
+const editorHistory = computed(() => {
+  if (!editorOpen.value) return []
+  if (editorMode.value === 'override') {
+    if (!currentOriginal.value) return []
+    return getOverrideHistory(
+      currentOriginal.value.name,
+      currentOriginal.value.geometry
+    )
+  }
+  if (editorMode.value === 'edit' && editorInitial.value?.id) {
+    const item = (communityParkings.value || []).find(
+      (it) => it.id === editorInitial.value.id
+    )
+    return item?.history || []
+  }
+  return []
+})
 // 「選位置」模式：顯示十字線 + 頂部提示列
 const addPickMode = ref(false)
 // 目前查看中的社群項目
@@ -181,6 +228,113 @@ const onEditCurrentCommunity = () => {
   }
 }
 
+// ---------- 官方點覆寫:編輯 / 儲存 / 重設 ----------
+const openOverrideEditor = () => {
+  if (!isFirebaseConfigured) {
+    alert('「修改官方停車點」功能尚未設定。請讓站方設定 Firebase 後再試。')
+    return
+  }
+  if (!currentOriginal.value) return
+  // 以「目前顯示資料」 (已合併覆寫) 作為編輯起始值
+  const orig = currentOriginal.value
+  const ov = currentOverride.value
+  const initial = {
+    id: null,
+    // 名稱固定使用官方原名,override 模式下不可修改
+    name: orig.name,
+    description: ov?.description || orig.description,
+    iconKey: ov?.iconKey || orig.iconKey,
+    category: ov?.category || guessCategory(orig.iconKey),
+    friendliness: ov?.friendliness || guessFriendliness(orig.iconKey),
+    priceInfo: ov?.priceInfo || orig.priceInfo,
+    coordinates: orig.geometry ? [...orig.geometry] : [...editorDefaultCoord.value],
+  }
+  editorDefaultCoord.value = initial.coordinates
+  editorMode.value = 'override'
+  editorInitial.value = initial
+  editorHasExistingOverride.value = Boolean(ov)
+  infoActive.value = false
+  editorOpen.value = true
+  track('override_edit_start', { name: orig.name })
+}
+
+// 由 icon 反查 category/friendliness,讓編輯器預設值與原 icon 一致
+function guessCategory(iconKey) {
+  if (!iconKey) return 'motorcycle'
+  const hit = parkingTypeList.find(
+    (p) => p.value && p.key.includes(iconKey)
+  )
+  return hit?.value || 'motorcycle'
+}
+function guessFriendliness(iconKey) {
+  if (!iconKey) return 'friendly'
+  const hit = degreeOfFriendlinessList.find(
+    (p) => p.value && p.key.includes(iconKey)
+  )
+  return hit?.value || 'friendly'
+}
+
+const onOverrideSubmit = async (payload) => {
+  if (!currentOriginal.value) return
+  editorSubmitting.value = true
+  try {
+    const user = { id: userId, nickname: nickname.value }
+    await upsertOverride(currentOriginal.value, payload, user)
+    track('override_submit', { name: currentOriginal.value.name })
+    // 重新以原始資料 + 最新覆寫套用並重開 InfoPanel
+    const orig = currentOriginal.value
+    editorOpen.value = false
+    onSetParkingInfo({
+      name: orig.parkingType,
+      properties: {
+        name: orig.name,
+        description: orig.description,
+        icon: orig.iconKey,
+        priceInfo: orig.priceInfo,
+        priceArray: [],
+      },
+      geometry: orig.geometry,
+      address: ParkingInfo.value.address,
+    })
+  } catch (err) {
+    // eslint-disable-next-line no-console
+    console.error('[override] submit failed', err)
+    alert('儲存失敗:' + (err?.message || err))
+  } finally {
+    editorSubmitting.value = false
+  }
+}
+
+const onOverrideReset = async () => {
+  if (!currentOriginal.value) return
+  editorSubmitting.value = true
+  try {
+    const orig = currentOriginal.value
+    const user = { id: userId, nickname: nickname.value }
+    await resetOverride(orig.name, orig.geometry, user)
+    track('override_reset', { name: orig.name })
+    editorOpen.value = false
+    onSetParkingInfo({
+      name: orig.parkingType,
+      properties: {
+        name: orig.name,
+        description: orig.description,
+        icon: orig.iconKey,
+        priceInfo: orig.priceInfo,
+        priceArray: [],
+      },
+      geometry: orig.geometry,
+      address: ParkingInfo.value.address,
+    })
+  } catch (err) {
+    // eslint-disable-next-line no-console
+    console.error('[override] reset failed', err)
+    alert('重設失敗:' + (err?.message || err))
+  } finally {
+    editorSubmitting.value = false
+  }
+}
+
 const onEditorSubmit = async (payload) => {
   editorSubmitting.value = true
   try {
@@ -206,7 +360,8 @@ const onEditorSubmit = async (payload) => {
 const onEditorDelete = async (id) => {
   editorSubmitting.value = true
   try {
-    await deleteParking(id)
+    const user = { id: userId, nickname: nickname.value }
+    await deleteParking(id, user)
     track('community_delete', { id })
     editorOpen.value = false
     currentCommunity.value = null
@@ -261,6 +416,11 @@ const ParkingInfo = ref({
   address: '',
 })
 
+// 目前查看中的「官方點原始資料」與「覆寫資料」
+// (為了達成「修改官方點」編輯 / 重設、以及顯示「車友修改資訊」標記)
+const currentOriginal = ref(null) // { name, description, iconKey, priceInfo, geometry, parkingType }
+const currentOverride = ref(null) // RTDB 覆寫物件
+
 const currentParkingId = computed(() =>
   favoriteId(ParkingInfo.value.parkingName, ParkingInfo.value.geometry)
 )
@@ -269,13 +429,42 @@ const currentIsFavorite = computed(() =>
 )
 
 const onSetParkingInfo = (data) => {
-  ParkingInfo.value = {
-    parkingName: data.properties.name,
-    parkingNameDes: data.properties.description,
-    parkingType: data.name,
-    parkingIcon: resolveIconUrl(data.properties.icon),
-    parkingIconKey: data.properties.icon,
+  // 1. 先准備「官方原始資料」
+  const originalIconKey = data.properties.icon
+  const original = {
+    name: data.properties.name,
+    description: data.properties.description,
+    iconKey: originalIconKey,
     priceInfo: data.properties.priceInfo || '',
+    geometry: data.geometry,
+    parkingType: data.name,
+  }
+
+  // 2. 如果是官方點 (非共筆) 且有覆寫,就套上去
+  //    共筆點不需要覆寫 (本身就是可被編輯的)
+  const isCommunityPoint = Boolean(
+    currentCommunity.value &&
+      currentCommunity.value.name === data.properties.name &&
+      Array.isArray(data.geometry) &&
+      currentCommunity.value.coordinates?.[0] === data.geometry[0] &&
+      currentCommunity.value.coordinates?.[1] === data.geometry[1]
+  )
+  let override = null
+  let display = original
+  if (!isCommunityPoint) {
+    override = getOverride(original.name, original.geometry)
+    if (override) display = applyOverride(original, override)
+  }
+  currentOriginal.value = isCommunityPoint ? null : original
+  currentOverride.value = override
+
+  ParkingInfo.value = {
+    parkingName: display.name,
+    parkingNameDes: display.description,
+    parkingType: original.parkingType,
+    parkingIcon: resolveIconUrl(display.iconKey),
+    parkingIconKey: display.iconKey,
+    priceInfo: display.priceInfo || '',
     geometry: data.geometry,
     address: data.address,
   }
@@ -284,6 +473,7 @@ const onSetParkingInfo = (data) => {
     parking_name: data.properties?.name,
     parking_type: data.name,
     icon: data.properties?.icon,
+    overridden: Boolean(override),
   })
 }
 
@@ -375,8 +565,8 @@ const openInMap = (type) => {
 }
 
 // ---------- 分享 ----------
-const shareLinkHandler = (type) => {
-  const url = 'https://findparkinglot.github.io/'
+const shareLinkHandler = (type, urlOverride = null) => {
+  const url = urlOverride || 'https://findparkinglot.github.io/'
   let shareUrl = ''
   if (type === 'facebook') {
     shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`
@@ -385,7 +575,7 @@ const shareLinkHandler = (type) => {
   } else if (type === 'twitter') {
     shareUrl = `https://twitter.com/share?url=${encodeURIComponent(url)}`
   }
-  track('share', { method: type })
+  track('share', { method: type, scope: urlOverride ? 'spot' : 'site' })
   if (type === 'link') {
     navigator.clipboard.writeText(url).then(
       () => alert('已複製連結'),
@@ -400,30 +590,124 @@ const shareLinkHandler = (type) => {
   }
 }
 
-// ---------- AdSense ----------
-const loadAd = (id) => {
-  const els = document.querySelectorAll(`.ad-id-${id}`)
-  els.forEach((c) => {
-    const ins = document.createElement('ins')
-    ins.className = 'adsbygoogle'
-    ins.style.display = 'block'
-    ins.setAttribute('data-ad-client', 'ca-pub-6596839701234097')
-    ins.setAttribute('data-ad-slot', id)
-    ins.setAttribute('data-ad-format', 'auto')
-    ins.setAttribute('data-full-width-responsive', 'true')
-    c.appendChild(ins)
-    try {
-      ;(window.adsbygoogle = window.adsbygoogle || []).push({})
-    } catch {
-      /* noop */
-    }
+// ---------- 分享單一停車點 (URL query + Web Share API) ----------
+const SITE_ORIGIN = 'https://findparkinglot.github.io/'
+
+const buildSpotShareUrl = () => {
+  const g = ParkingInfo.value.geometry
+  if (!Array.isArray(g) || g[0] == null || g[1] == null) return ''
+  const params = new URLSearchParams({
+    lng: Number(g[0]).toFixed(6),
+    lat: Number(g[1]).toFixed(6),
   })
+  return `${SITE_ORIGIN}?${params.toString()}`
 }
+
+const shareCurrentSpot = () => {
+  const url = buildSpotShareUrl()
+  if (!url) return
+  spotShareUrl.value = url
+  spotShareName.value = ParkingInfo.value.parkingName || '停車點'
+  windowSpotShareOpen.value = true
+  track('share_spot_open', { name: spotShareName.value })
+}
+
+// 「分享停車點」 Modal 狀態
+const windowSpotShareOpen = ref(false)
+const spotShareUrl = ref('')
+const spotShareName = ref('')
+
+// 開啟資訊面板時把 URL 更新成可分享連結；關閉時清掉 query
+const syncSpotQuery = () => {
+  try {
+    if (!infoActive.value) {
+      if (window.location.search) {
+        window.history.replaceState({}, '', window.location.pathname)
+      }
+      return
+    }
+    const url = buildSpotShareUrl()
+    if (!url) return
+    const qs = url.slice(url.indexOf('?'))
+    window.history.replaceState({}, '', window.location.pathname + qs)
+  } catch {
+    /* history API 失敗就忽略 */
+  }
+}
+watch([infoActive, ParkingInfo], syncSpotQuery, { deep: true })
+
+// 進站若 URL 帶座標參數 → 嘗試開啟對應停車點
+const pendingSpotQuery = ref(null)
+const coordMatches = (a, b) => Math.abs(Number(a) - Number(b)) < 1e-5
+
+const resolvePendingSpot = () => {
+  const q = pendingSpotQuery.value
+  if (!q) return
+  const lng = Number(q.lng)
+  const lat = Number(q.lat)
+  if (!isFinite(lng) || !isFinite(lat)) {
+    pendingSpotQuery.value = null
+    return
+  }
+  // 1) 共筆優先 (資料可能變動，同座標的共筆點比較重要)
+  const c = (communityParkings.value || []).find(
+    (cc) =>
+      cc.coordinates &&
+      coordMatches(cc.coordinates[0], lng) &&
+      coordMatches(cc.coordinates[1], lat)
+  )
+  if (c) {
+    onCommunityParkingClick(c)
+    searchFocusCoord.value = [lng, lat]
+    pendingSpotQuery.value = null
+    return
+  }
+  // 2) 靜態 KML
+  for (const group of MapDataList.value || []) {
+    for (const f of group.features || []) {
+      const cc = f.geometry?.coordinates
+      if (cc && coordMatches(cc[0], lng) && coordMatches(cc[1], lat)) {
+        onSetParkingInfo({
+          name: group.name,
+          properties: f.properties,
+          geometry: f.geometry.coordinates,
+          address: '',
+        })
+        searchFocusCoord.value = [lng, lat]
+        pendingSpotQuery.value = null
+        return
+      }
+    }
+  }
+  // 3) 連源頭資料都未載入 → 等 watcher 試下一輪 (不清掉 pendingSpotQuery)
+  // 並先 flyTo 到坐標讓使用者看到位置
+  if (Array.isArray(MapDataList.value) && MapDataList.value.length > 0) {
+    // KML 已載 但沒匹配 → 可能是共筆點 (Firebase 還未回) → flyTo 先帶過去
+    searchFocusCoord.value = [lng, lat]
+  }
+}
+
+const tryOpenFromUrl = () => {
+  try {
+    const params = new URLSearchParams(window.location.search)
+    const lng = params.get('lng')
+    const lat = params.get('lat')
+    if (!lng || !lat) return
+    pendingSpotQuery.value = { lng, lat }
+    resolvePendingSpot()
+  } catch {
+    /* noop */
+  }
+}
+
+// 共筆與 KML 任一資料抵達時重試 resolve
+watch(communityParkings, resolvePendingSpot, { deep: false })
+watch(MapDataList, resolvePendingSpot, { deep: false })
 
 // ---------- 啟動 ----------
 onMounted(() => {
   MapDataList.value = parseKml(xml)
-  loadAd('5885589098')
+  tryOpenFromUrl()
 })
 
 // ---------- FAB 選單項目 ----------
@@ -568,11 +852,15 @@ const communityFabItems = computed(() => [
     :is-favorite="currentIsFavorite"
     :is-community="currentIsCommunity"
     :community-meta="currentIsCommunity ? currentCommunity : null"
+    :is-overridden="!currentIsCommunity && Boolean(currentOverride)"
+    :override-meta="currentOverride"
     @close="infoActive = false"
     @route="goToParkingPlace(ParkingInfo.geometry)"
     @open-map="openInMap"
     @toggle-favorite="onToggleFavorite"
     @edit-community="onEditCurrentCommunity"
+    @edit-override="openOverrideEditor"
+    @share="shareCurrentSpot"
   />
 
   <!-- 地圖怎麼看 Modal -->
@@ -674,6 +962,29 @@ const communityFabItems = computed(() => [
     </div>
   </BaseModal>
 
+  <!-- 分享單一停車點 Modal -->
+  <BaseModal v-model="windowSpotShareOpen" :title="`分享：${spotShareName}`" size="sm">
+    <p class="modal-hint" style="word-break:break-all">{{ spotShareUrl }}</p>
+    <div class="share-grid">
+      <button class="share-btn" @click="shareLinkHandler('facebook', spotShareUrl)" aria-label="Facebook">
+        <img src="@/assets/images/icon/001-facebook.png" alt="" />
+        <span>Facebook</span>
+      </button>
+      <button class="share-btn" @click="shareLinkHandler('line', spotShareUrl)" aria-label="LINE">
+        <img src="@/assets/images/icon/002-line.png" alt="" />
+        <span>LINE</span>
+      </button>
+      <button class="share-btn" @click="shareLinkHandler('twitter', spotShareUrl)" aria-label="Twitter">
+        <img src="@/assets/images/icon/003-twitter.png" alt="" />
+        <span>Twitter</span>
+      </button>
+      <button class="share-btn" @click="shareLinkHandler('link', spotShareUrl)" aria-label="複製連結">
+        <img src="@/assets/images/icon/004-link.png" alt="" />
+        <span>複製連結</span>
+      </button>
+    </div>
+  </BaseModal>
+
   <!-- 怎麼用 Modal -->
   <BaseModal v-model="windowHowToUseOpen" title="地圖怎麼用?" close-text="知道了" size="lg">
     <h4 class="modal-section-title">1. 介面說明</h4>
@@ -733,6 +1044,12 @@ const communityFabItems = computed(() => [
             <br>
             可自由新增、編輯, 大家一起分享停車地點</span>
         </li>
+        <li>
+          <span class="material-icons-outlined">edit_note</span>
+          <span><strong>官方點異議 / 補充</strong>
+            <br>
+            點開任一官方停車點 → 「異議 / 補充」, 可在不改動原始資料的前提下, 補上實際費率、更正分類或加註說明, 全車友共享</span>
+        </li>
       </ul>
     </div>
 
@@ -765,10 +1082,14 @@ const communityFabItems = computed(() => [
     :default-coord="editorDefaultCoord"
     :nickname="nickname"
     :is-owner="true"
+    :is-admin="isAdmin"
     :submitting="editorSubmitting"
+    :has-existing-override="editorHasExistingOverride"
+    :history="editorHistory"
     @update:nickname="nickname = $event"
-    @submit="onEditorSubmit"
+    @submit="editorMode === 'override' ? onOverrideSubmit($event) : onEditorSubmit($event)"
     @delete="onEditorDelete"
+    @reset="onOverrideReset"
   />
 
   <!-- 「新增位置」選點模式：畫面中心十字線 + 頂部提示列 -->

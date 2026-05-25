@@ -9,8 +9,18 @@ const props = defineProps({
   isFavorite: Boolean,
   isCommunity: { type: Boolean, default: false },
   communityMeta: { type: Object, default: null },
+  isOverridden: { type: Boolean, default: false },
+  overrideMeta: { type: Object, default: null },
 })
-const emit = defineEmits(['close', 'route', 'openMap', 'toggleFavorite', 'editCommunity'])
+const emit = defineEmits([
+  'close',
+  'route',
+  'openMap',
+  'toggleFavorite',
+  'editCommunity',
+  'editOverride',
+  'share',
+])
 </script>
 
 <template>
@@ -52,18 +62,25 @@ const emit = defineEmits(['close', 'route', 'openMap', 'toggleFavorite', 'editCo
 
     <div v-if="info.address" class="info-address">{{ info.address }}</div>
 
-    <div v-if="info.priceInfo" class="info-price">
-      <span class="material-icons-outlined">payments</span>
-      <span>{{ info.priceInfo }}</span>
-    </div>
-
-    <div v-if="isCommunity" class="community-tag" style="margin-left: 8px">
+    <div v-if="isCommunity" class="community-tag">
       <span class="material-icons-outlined">push_pin</span>
       <span>
         共筆停車點
         <template v-if="communityMeta?.updatedBy?.nickname || communityMeta?.updatedBy?.id">
           · 由
           {{ communityMeta.updatedBy.nickname || `匿名#${communityMeta.updatedBy.id}` }}
+          更新
+        </template>
+      </span>
+    </div>
+
+    <div v-else-if="isOverridden" class="override-tag">
+      <span class="material-icons-outlined">edit_note</span>
+      <span>
+        車友修改資訊
+        <template v-if="overrideMeta?.updatedBy?.nickname || overrideMeta?.updatedBy?.id">
+          · 由
+          {{ overrideMeta.updatedBy.nickname || `匿名#${overrideMeta.updatedBy.id}` }}
           更新
         </template>
       </span>
@@ -76,7 +93,33 @@ const emit = defineEmits(['close', 'route', 'openMap', 'toggleFavorite', 'editCo
         {{ Number(info.geometry[1]).toFixed(5) }}
       </span>
     </div>
-
+    <div class="info-actions">
+      <button
+        v-if="isCommunity"
+          class="btn btn-outline btn-sm"
+          @click="emit('editCommunity')"
+      >
+        <span class="material-icons-outlined">edit</span>
+        編輯
+      </button>
+      <button
+        v-else
+        class="btn btn-outline btn-sm"
+        @click="emit('editOverride')"
+        :title="isOverridden ? '修改車友提供的資訊 (不會變動官方資料)' : '異議 / 補充官方資料 (不會變動官方資料)'"
+      >
+        <span class="material-icons-outlined">edit_note</span>
+        {{ isOverridden ? '修改車友資訊' : '異議 / 補充' }}
+      </button>
+      <button
+        class="btn btn-outline btn-sm"
+        @click="emit('share')"
+        title="分享這個停車點"
+      >
+        <span class="material-icons-outlined">share</span>
+        分享
+      </button>
+    </div>
     <div class="info-actions">
       <button
         v-if="!isAndroid"
@@ -100,14 +143,6 @@ const emit = defineEmits(['close', 'route', 'openMap', 'toggleFavorite', 'editCo
       >
         <span class="material-icons-outlined">directions</span>
         路線規劃
-      </button>
-      <button
-        v-if="isCommunity"
-        class="btn btn-outline btn-sm"
-        @click="emit('editCommunity')"
-      >
-        <span class="material-icons-outlined">edit</span>
-        編輯
       </button>
     </div>
   </aside>
@@ -213,21 +248,6 @@ const emit = defineEmits(['close', 'route', 'openMap', 'toggleFavorite', 'editCo
   color: var(--muted);
   margin: 4px 0;
 }
-.info-price {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  margin: 6px 0 4px;
-  padding: 4px 10px;
-  background: var(--primary-soft);
-  color: var(--primary);
-  border-radius: var(--radius-sm);
-  font-size: 0.82rem;
-  font-weight: 600;
-}
-.info-price .material-icons-outlined {
-  font-size: 16px;
-}
 .community-tag {
   display: inline-flex;
   align-items: center;
@@ -242,6 +262,22 @@ const emit = defineEmits(['close', 'route', 'openMap', 'toggleFavorite', 'editCo
   font-weight: 700;
 }
 .community-tag .material-icons-outlined {
+  font-size: 14px;
+}
+.override-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin: 6px 0 4px;
+  padding: 4px 10px;
+  background: #ffe082;
+  color: #5b3a00;
+  border: 1px solid #ffb300;
+  border-radius: var(--radius-sm);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+.override-tag .material-icons-outlined {
   font-size: 14px;
 }
 .info-meta {
@@ -263,8 +299,12 @@ const emit = defineEmits(['close', 'route', 'openMap', 'toggleFavorite', 'editCo
 }
 .info-actions {
   display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
+  /* flex-wrap: wrap; */
+  /* gap: 6px; */
+
+  margin-top: 8px; 
+  display: flex; 
+  justify-content: space-between;
 }
 .info-actions .btn {
   display: inline-flex;
