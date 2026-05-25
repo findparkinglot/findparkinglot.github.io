@@ -910,6 +910,10 @@ const communityFabItems = computed(() => [
         機車(沒人):機車格
       </div>
       <div class="legend-row">
+        <img :src="resolveIconUrl('icon-14.png')" alt="" />
+        綠星:路邊友善車格
+      </div>
+      <div class="legend-row">
         <img :src="resolveIconUrl('icon-15.png')" alt="" />
         綠P:重機專用路邊停車格
       </div>

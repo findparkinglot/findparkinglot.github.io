@@ -23,12 +23,17 @@ export const parkingTypeList = [
   {
     name: '重機：有設重機專用格',
     value: 'motorcycle',
-    key: ['icon-4.png', 'icon-6.png', 'icon-8.png', 'icon-12.png', 'icon-13.png', 'icon-14.png'],
+    key: ['icon-4.png', 'icon-6.png', 'icon-8.png', 'icon-12.png', 'icon-13.png'],
   },
   {
     name: '機車：機車格',
     value: 'scooter',
     key: ['icon-7.png', 'icon-9.png', 'icon-10.png', 'icon-11.png'],
+  },
+  {
+    name: '綠星:路邊友善車格(機車格開放重機停放)',
+    value: 'greenStar',
+    key: ['icon-14.png'],
   },
   {
     name: '綠P:重機專用路邊停車格',

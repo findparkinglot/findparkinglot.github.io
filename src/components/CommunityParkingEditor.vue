@@ -50,6 +50,7 @@ const friendlinessOptions = computed(() =>
 // 特殊類別固定圖示（不受友善程度影響）
 // 檔名依 canonical KML (目前 = PackingMarkerList2) 的 icon-N.png
 const SPECIAL_ICON = {
+  greenStar: 'icon-14.png',
   greenP: 'icon-15.png',
   purpleP: 'icon-18.png',
   redX: 'icon-19.png',
