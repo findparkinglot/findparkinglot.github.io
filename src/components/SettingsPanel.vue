@@ -219,10 +219,10 @@ const close = () => emit('update:active', false)
       <section class="form-group">
         <label class="form-label">資訊</label>
         <ul class="info-list">
-          <li>版本：v2.1.0</li>
-          <li>地圖資料更新：260522</li>
+          <li>版本：v2.2.1</li>
+          <li>地圖資料更新：260525</li>
           <li>Web 製作：爽爽</li>
-          <li>資料參考：大重停車記事 Google My Map</li>
+          <li>資料參考：Alan大重停車記事 Google My Map</li>
           <li>地圖：Mapbox GL JS API</li>
           <li>© 2026 爽爽 版權所有。本網頁未經准許，禁止任何商業行為</li>
         </ul>
