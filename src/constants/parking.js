@@ -79,6 +79,11 @@ export const degreeOfFriendlinessList = [
 
 export const mapStyleList = [
   {
+    name: '依系統設定',
+    value: 'system',
+    theme: 'system',
+  },
+  {
     name: '暗色模式',
     value: 'mapbox://styles/jamestim9215/ckvkdj5cd1q4115nzwxa9rny3',
     theme: 'dark',

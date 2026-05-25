@@ -38,24 +38,52 @@ const isAndroid = /Android/i.test(ua)
 const MapDataList = ref([])
 
 // ---------- 主題 / 地圖樣式 ----------
-const initialStyle =
-  mapStyleList.find((s) => s.name === storage.get('mapStyles'))?.value ||
-  mapStyleList[0].value
+// 使用者偏好 (themePref) 與實際套用的 Mapbox style URL (mapStylesSelected) 分離
+// themePref 可能為 'system' / 暗色 URL / 亮色 URL；當為 'system' 時依系統 prefers-color-scheme 動態決定
+const systemPrefersLight = () =>
+  !!window.matchMedia?.('(prefers-color-scheme: light)').matches
+
+const resolveStyle = (pref) => {
+  if (pref === 'system') {
+    const theme = systemPrefersLight() ? 'light' : 'dark'
+    return mapStyleList.find((s) => s.theme === theme)?.value
+  }
+  return pref
+}
+
+const storedStyleEntry = mapStyleList.find(
+  (s) => s.name === storage.get('mapStyles'),
+)
+// 預設仍為暗色模式（清單中第一個非 system 的選項）
+const initialPref =
+  storedStyleEntry?.value ||
+  mapStyleList.find((s) => s.theme === 'dark')?.value
+
+const themePref = ref(initialPref)
 
 const mapOptions = ref({
   getLngLat: false,
-  mapStylesSelected: initialStyle,
+  mapStylesSelected: resolveStyle(initialPref),
 })
 
-const applyTheme = (styleValue) => {
-  const s = mapStyleList.find((m) => m.value === styleValue)
+const applyTheme = (pref) => {
+  const resolved = resolveStyle(pref)
+  mapOptions.value.mapStylesSelected = resolved
+  const s = mapStyleList.find((m) => m.value === resolved)
   const isLight = s?.theme === 'light'
   document.body.classList.toggle('light-theme', isLight)
   document.body.classList.toggle('dark-theme', !isLight)
-  if (s) storage.set('mapStyles', s.name)
+  const prefEntry = mapStyleList.find((m) => m.value === pref)
+  if (prefEntry) storage.set('mapStyles', prefEntry.name)
 }
-applyTheme(mapOptions.value.mapStylesSelected)
-watch(() => mapOptions.value.mapStylesSelected, applyTheme)
+applyTheme(themePref.value)
+watch(themePref, applyTheme)
+
+// 監聽系統主題變更，僅在使用者選擇「依系統設定」時自動切換
+const _mqLight = window.matchMedia?.('(prefers-color-scheme: light)')
+_mqLight?.addEventListener?.('change', () => {
+  if (themePref.value === 'system') applyTheme('system')
+})
 
 // ---------- Modal 狀態 ----------
 const windowMessageOpen = ref(true)
@@ -834,7 +862,7 @@ const communityFabItems = computed(() => [
     v-model:parkingPriceType="parkingPriceType"
     v-model:priceRangeMin="priceRangeMin"
     v-model:priceRangeMax="priceRangeMax"
-    v-model:mapStyle="mapOptions.mapStylesSelected"
+    v-model:mapStyle="themePref"
     v-model:active="menuActive"
     v-model:onlyFavorites="onlyFavorites"
     :favorites-count="favorites.length"
