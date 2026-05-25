@@ -941,11 +941,6 @@ const communityFabItems = computed(() => [
         <img :src="resolveIconUrl('icon-20.png')" alt="" />
         ?:類型未確認,歡迎透過共筆回報
       </div>
-      <div class="legend-row">
-        <div class="legend-text">
-          ・黃P(重機與汽車共享路邊停車格)目前資料來源已停止更新,故新版地圖不再出現
-        </div>
-      </div>
     </div>
 
     <h4 class="modal-section-title">顏色代表入場方式</h4>
