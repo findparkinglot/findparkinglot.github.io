@@ -259,6 +259,20 @@ body.modal-open {
 .marker.is-community.is-fav > .tag {
   background: #ffc107;
 }
+/* 官方點被車友覆寫過 → 淺橘色 */
+.marker.is-override {
+  background: #ffb74d;
+}
+.marker.is-override > .tag {
+  background: #ffb74d;
+}
+/* 同時被覆寫 + 加入最愛 → 邊框/標籤改為黃色,但底色仍為淺橘 */
+.marker.is-override.is-fav {
+  border-color: #ffc107;
+}
+.marker.is-override.is-fav > .tag {
+  background: #ffc107;
+}
 
 /* =================== Marker Cluster（叢集數字圈） =================== */
 .marker-cluster {

@@ -9,6 +9,7 @@ import {
   isCoordInBounds,
 } from '@/composables/useMarkerFilters.js'
 import { favoriteId } from '@/composables/useFavorites.js'
+import { overrideKey } from '@/composables/useParkingOverrides.js'
 
 const props = defineProps({
   parkingTypeKeyArray: Array,
@@ -22,6 +23,7 @@ const props = defineProps({
   goToParkingPlaceData: Object,
   routeData: Object,
   favoriteIds: { type: Object, default: () => new Set() },
+  overrideKeys: { type: Object, default: () => new Set() },
   onlyFavorites: { type: Boolean, default: false },
   focusCoord: { type: Array, default: null },
   routeProfile: { type: String, default: 'driving' },
@@ -83,9 +85,10 @@ const isValidCoord = (c) =>
   Number.isFinite(Number(c[1]))
 
 // 建立官方 marker 的 DOM 元素（含 click handler）
-const createOfficialMarkerEl = (MapGroup, marker, isFav) => {
+const createOfficialMarkerEl = (MapGroup, marker, isFav, isOverridden) => {
   const el = document.createElement('div')
   el.className = 'marker'
+  if (isOverridden) el.classList.add('is-override')
   if (isFav) el.classList.add('is-fav')
 
   const tag = document.createElement('div')
@@ -195,6 +198,8 @@ const setMaker = () => {
       if (!isValidCoord(coord)) continue
       const id = favoriteId(marker.properties.name, coord)
       const isFav = props.favoriteIds?.has?.(id)
+      const ovKey = overrideKey(marker.properties.name, coord)
+      const isOverridden = ovKey ? props.overrideKeys?.has?.(ovKey) : false
       if (
         !isCoordInBounds(bounds, coord) ||
         (props.onlyFavorites && !isFav) ||
@@ -215,7 +220,7 @@ const setMaker = () => {
       }
       points.push({
         coord: [Number(coord[0]), Number(coord[1])],
-        createEl: () => createOfficialMarkerEl(MapGroup, marker, isFav),
+        createEl: () => createOfficialMarkerEl(MapGroup, marker, isFav, isOverridden),
       })
     }
   }

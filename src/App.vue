@@ -163,8 +163,11 @@ const mapBoxRef = ref(null)
 // ---------- 官方停車點「覆寫層」 ----------
 // 讓車友可以在不變動原始 KML 資料的前提下,對同一官方點提供「覆寫資訊」(如實際費率)。
 // 顯示時若某個官方點存在覆寫,就以覆寫資料為主。
-const { getOverride, getOverrideHistory, upsertOverride, resetOverride } =
+const { overrides, getOverride, getOverrideHistory, upsertOverride, resetOverride } =
   useParkingOverrides()
+
+// 已被車友覆寫的官方點 safeKey 集合,讓地圖能以不同顏色標示
+const overrideKeySet = computed(() => new Set(Object.keys(overrides.value || {})))
 
 // 編輯器狀態
 const editorOpen = ref(false)
@@ -838,6 +841,7 @@ const communityFabItems = computed(() => [
     :priceRangeMin="priceRangeMin"
     :priceRangeMax="priceRangeMax"
     :favorite-ids="favoriteIdSet"
+    :override-keys="overrideKeySet"
     :only-favorites="onlyFavorites"
     :focus-coord="searchFocusCoord"
     :route-profile="routeProfile"
