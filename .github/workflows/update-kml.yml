@@ -1,11 +1,11 @@
 name: Update KML
 
 # 排程 + 手動觸發 + 推送 master 時也跑一次
-# [驗證用] 每週二 台灣時間 15:00 = 每週二 UTC 07:00
+# 每週三 台灣時間 12:00 = 每週三 UTC 04:00
 # 注意:用內建 GITHUB_TOKEN 自動 commit 推回 master 不會再觸發此 workflow,故不會無限迴圈
 on:
   schedule:
-    - cron: '0 8 * * 2'
+    - cron: '0 4 * * 3'
   workflow_dispatch:
   push:
     branches:
