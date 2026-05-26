@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
-    <name>Alan大重停車記事2</name>
-    <description><![CDATA[更新請到<br>https://forms.gle/euRCPCPSmvYLm5Rj8<br>2026/05/03<br>  - 更新台中共用停車格<br>  - 西區 中區 西屯區 南屯區<br>2026/05/01<br>  - 更新新北試辦重機停收費機車格<br>  - 中和、永和、土城、淡水等收費機車格<br>2026/04/07<br>  - 更新台北市試辦停車場<br>2026/03/26<br>  - 合併重機格/機車費率圖層至機車費率圖層<br>  - 新增預計開放圖層(4/6 台北市辦路外停車場)<br>2026/03/06<br>  - 新增重機友善店家圖層<br>2026/03/01<br>  - 新增新北試辦重機停收費機車格<br>  - 新莊、泰山、林口、三重、蘆洲等收費機車格<br>2026/01/23<br>  - 更新台中撤銷禁止陡峭停車場<br>2026/01/01<br>  - 新增春德路停車場<br>2025/11/22<br>  - 新增塔城公園停車場<br>  - 移除阿曼TIT停車場<br>2025/11/05<br>  - 新增科技大樓停車場<br>2025/10/23<br>  - 調整三創停車場費率與類型<br>2025/10/15<br>  - 新增高雄草衙道機車停車場<br>  - 新增台中第二停車場<br>2025/7/14更新<br>  - 新增台北市試辦機車共用車格<br>  - 移除部分停止營業停車場<br>  - 調整部分停車場 icon]]></description>
+    <name>Alan大重停車記事</name>
+    <description><![CDATA[更新請到<br>https://forms.gle/euRCPCPSmvYLm5Rj8<br>2026/05/26<br>  - 更新泰山 中和 收費機車格<br>2026/05/03<br>  - 更新台中共用停車格<br>  - 西區 中區 西屯區 南屯區<br>2026/05/01<br>  - 更新新北試辦重機停收費機車格<br>  - 中和、永和、土城、淡水等收費機車格<br>2026/04/07<br>  - 更新台北市試辦停車場<br>2026/03/26<br>  - 合併重機格/機車費率圖層至機車費率圖層<br>  - 新增預計開放圖層(4/6 台北市辦路外停車場)<br>2026/03/06<br>  - 新增重機友善店家圖層<br>2026/03/01<br>  - 新增新北試辦重機停收費機車格<br>  - 新莊、泰山、林口、三重、蘆洲等收費機車格<br>2026/01/23<br>  - 更新台中撤銷禁止陡峭停車場<br>2026/01/01<br>  - 新增春德路停車場<br>2025/11/22<br>  - 新增塔城公園停車場<br>  - 移除阿曼TIT停車場<br>2025/11/05<br>  - 新增科技大樓停車場<br>2025/10/23<br>  - 調整三創停車場費率與類型<br>2025/10/15<br>  - 新增高雄草衙道機車停車場<br>  - 新增台中第二停車場<br>2025/7/14更新<br>  - 新增台北市試辦機車共用車格<br>  - 移除部分停止營業停車場<br>  - 調整部分停車場 icon]]></description>
     <Style id="icon-1502-7CB342-labelson">
       <IconStyle>
         <scale>1</scale>
@@ -710,6 +710,17 @@
           <href>images/icon-17.png</href>
         </Icon>
       </IconStyle>
+    </Style>
+    <Style id="icon-1644-0288D1-labelson-nodesc">
+      <IconStyle>
+        <scale>1</scale>
+        <Icon>
+          <href>images/icon-17.png</href>
+        </Icon>
+      </IconStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
     </Style>
     <Style id="icon-1644-757575-labelson">
       <IconStyle>
@@ -5325,11 +5336,11 @@
       </Placemark>
       <Placemark>
         <name>(80/h)客限-板橋凱撒大飯店</name>
-        <description><![CDATA[<img src="https://mymaps.usercontent.google.com/hostedimage/m/*/3AE5a_GwPzlw4WgYq30y4GrdfiA19_9rdDTYYkQdSnU30DHtz5IT_zVD6Qo9Rn5HImHLFgjO719DbJlMbkYk8GCxWLM5Mp4quqv_l2esAJ70ePcTbXkX9AGrn8SVr-ymoWFehDDYShebCRVIy2OlkeCRtsqVqgNHZed-LMfIZUlrpUCJgZbS8N7iUtOvv6-HOpWicY-LZQRFsSllIIJGAVezcmnnOgj1-40B66aGoBy9kLHe99JUUXeJyHIwALNo?fife=s16383" height="200" width="auto" /><br><br>感謝hoha5432提供<br>汽車費率 80h 按鈕取票 2 格 或以上 <br>目前對外說不開放臨停，僅供住宿與用餐客人停放。費用沒有公開，根據個人繳費經驗推估約 80h。<br>官網寫說「本飯店提供機車/汽車地下停車場(B2-B5) ，共220個車位。※B2停放機車（可供重型機車停靠，但如需要更大空間可改停靠汽車停車格）」但實際沒有機車格，而是只有大重停車格（為汽車格畫線切出）。  ]]></description>
+        <description><![CDATA[<img src="https://mymaps.usercontent.google.com/hostedimage/m/*/3AE5a_GxtFYQ0o1kVzgUWTir3MMj-fmqmfR9zdNNpuFK1VZlweiXgOHJjOL2g0nMurP3P52gOrv-pLRDbO4VzIkqSFOnqaf52Blu2Co3d_FMhBYG85uz8I3Mpwjo-SNoQbodgCz3VKnfyVzVaEuhLfSdY5AqQ1zYxADAPrOui1mAzFM5f-4yYi_JYpIJRAcddRYQcKHuiuXO6XToAxb-ozt7UJbt3a_Aozxj2JCIutQg9PRYLLaME5sGEPtqtEBM?fife=s16383" height="200" width="auto" /><br><br>感謝hoha5432提供<br>汽車費率 80h 按鈕取票 2 格 或以上 <br>目前對外說不開放臨停，僅供住宿與用餐客人停放。費用沒有公開，根據個人繳費經驗推估約 80h。<br>官網寫說「本飯店提供機車/汽車地下停車場(B2-B5) ，共220個車位。※B2停放機車（可供重型機車停靠，但如需要更大空間可改停靠汽車停車格）」但實際沒有機車格，而是只有大重停車格（為汽車格畫線切出）。  ]]></description>
         <styleUrl>#icon-1633-0288D1</styleUrl>
         <ExtendedData>
           <Data name="gx_media_links">
-            <value>https://mymaps.usercontent.google.com/hostedimage/m/*/3AE5a_GwPzlw4WgYq30y4GrdfiA19_9rdDTYYkQdSnU30DHtz5IT_zVD6Qo9Rn5HImHLFgjO719DbJlMbkYk8GCxWLM5Mp4quqv_l2esAJ70ePcTbXkX9AGrn8SVr-ymoWFehDDYShebCRVIy2OlkeCRtsqVqgNHZed-LMfIZUlrpUCJgZbS8N7iUtOvv6-HOpWicY-LZQRFsSllIIJGAVezcmnnOgj1-40B66aGoBy9kLHe99JUUXeJyHIwALNo?fife=s16383</value>
+            <value>https://mymaps.usercontent.google.com/hostedimage/m/*/3AE5a_GxtFYQ0o1kVzgUWTir3MMj-fmqmfR9zdNNpuFK1VZlweiXgOHJjOL2g0nMurP3P52gOrv-pLRDbO4VzIkqSFOnqaf52Blu2Co3d_FMhBYG85uz8I3Mpwjo-SNoQbodgCz3VKnfyVzVaEuhLfSdY5AqQ1zYxADAPrOui1mAzFM5f-4yYi_JYpIJRAcddRYQcKHuiuXO6XToAxb-ozt7UJbt3a_Aozxj2JCIutQg9PRYLLaME5sGEPtqtEBM?fife=s16383</value>
           </Data>
         </ExtendedData>
         <Point>
@@ -5379,9 +5390,9 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>(50/h)漢神巨蛋購物廣場-汽車</name>
-        <description><![CDATA[地下二樓有收費機車專用格2格、<br>也可以選機車停車場不收費 50h 停汽車格需按鈕聯繫管理員，機車停車場可直接下去<br>專用2 格 或以上 親身經驗 或 車友/朋友/親人經驗 ]]></description>
-        <styleUrl>#icon-1633-E65100</styleUrl>
+        <name>(Free)漢神巨蛋購物廣場-汽車</name>
+        <description><![CDATA[進入收費柵欄前有大格的重機專用格免費<br>但數量不多<br>建議普通尺寸的車友可以直接停機車區<br>https://www.facebook.com/PT.MotoDaily/posts/pfbid0DoJyDhkEM5JzKyqm5xNuLHUzCGqXDiASG9orjQwjbDZHMb31nhc4TX8Gxwq2xLYkl]]></description>
+        <styleUrl>#icon-1633-7CB342</styleUrl>
         <Point>
           <coordinates>
             120.3030345,22.6701499,0
@@ -11258,6 +11269,78 @@
         <Point>
           <coordinates>
             120.6450303,24.1279448,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(30/4h)貴陽街(新北大道6段至明志路3段)</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4210307,25.0335287,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(30/4h)貴陽街(新北大道6段至明志路3段)</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4221653,25.0329989,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(30/4h)明志路三段(明志路3段352巷至432巷)</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4218552,25.0350259,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(30/4h)明志路三段(明志路3段352巷至432巷)</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4209281,25.0331504,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(30/4h)景平路單號側(景安路至景平路241巷)</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.5095274,24.9928194,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(30/4h)景平路單號側(景安路至景平路241巷)</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.5049595,24.9933816,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(30/4h)景安路(景平路至安和路)</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.5050328,24.9937679,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(30/4h)景安路(景平路至安和路)</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.5061539,24.9971907,0
           </coordinates>
         </Point>
       </Placemark>

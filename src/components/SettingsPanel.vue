@@ -5,6 +5,7 @@ import {
   degreeOfFriendlinessList,
   mapStyleList,
 } from '@/constants/parking.js'
+import { MAP_DATA_UPDATED_AT } from '@/constants/dataUpdateDate.js'
 import RangeSlider from './RangeSlider.vue'
 
 const props = defineProps({
@@ -220,7 +221,7 @@ const close = () => emit('update:active', false)
         <label class="form-label">資訊</label>
         <ul class="info-list">
           <li>版本：v2.2.1</li>
-          <li>地圖資料更新：260525</li>
+          <li>地圖資料更新：{{ MAP_DATA_UPDATED_AT }}</li>
           <li>Web 製作：爽爽</li>
           <li>資料參考：Alan大重停車記事 Google My Map</li>
           <li>地圖：Mapbox GL JS API</li>

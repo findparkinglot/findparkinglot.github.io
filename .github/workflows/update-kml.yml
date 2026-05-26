@@ -1,0 +1,45 @@
+name: Update KML
+
+# 排程 + 手動觸發 + 推送 master 時也跑一次
+# 每週一 台灣時間 02:00 = 每週日 UTC 18:00
+# 注意:用內建 GITHUB_TOKEN 自動 commit 推回 master 不會再觸發此 workflow,故不會無限迴圈
+on:
+  schedule:
+    - cron: '0 18 * * 0'
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install adm-zip (no full npm install needed)
+        run: npm install --no-save --no-audit --no-fund adm-zip@^0.5.10
+
+      - name: Run update script
+        run: npm run update:kml
+
+      - name: Commit & push if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "src/assets/MapData/My Maps/PackingMarkerList2" "src/constants/dataUpdateDate.js"
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore(kml): auto-update from Google My Maps ($(date -u +%Y-%m-%d))"
+            git push
+          fi
