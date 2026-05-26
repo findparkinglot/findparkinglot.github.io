@@ -832,7 +832,15 @@ onMounted(() => {
   // 同名同座標的重複點依優先順序保留「較新」那一個;新來源獨有的 icon 則加入並以規範檔名重新對映
   // 與規範重複 (名稱 + 座標相同) 的點會被排除,新點則加入並把 icon 重新對映
   MapDataList.value = mergeKmlSources(loadKmlSources())
-  tryOpenFromUrl()
+  // 透過分享連結進站時,先讓使用者看完歡迎頁,再開啟對應停車點
+  // (若沒帶 ?lng=&lat= 參數則 tryOpenFromUrl 不會做事)
+  // → 啟動時機改由 watch(windowMessageOpen) 觸發
+  if (!windowMessageOpen.value) tryOpenFromUrl()
+})
+
+// 歡迎視窗關閉後再處理分享連結帶入的停車點 (順序:歡迎頁 → 分享定位點 → 教學)
+watch(windowMessageOpen, (v, oldV) => {
+  if (oldV && !v) tryOpenFromUrl()
 })
 
 // ---------- FAB 選單項目 ----------
