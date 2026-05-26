@@ -21,6 +21,15 @@ const emit = defineEmits([
   'editOverride',
   'share',
 ])
+
+// 非「停車格」類型 (友善店家、綠星、紅X) 不顯示收費區塊
+const NON_PRICE_ICONS = new Set([
+  'icon-4.png',   // 重機友善店家
+  'icon-14.png',  // 綠星：路邊友善車格
+  'icon-19.png',  // 紅X：禁停
+])
+const showPrice = (info) =>
+  Boolean(info?.priceInfo) && !NON_PRICE_ICONS.has(info?.parkingIconKey)
 </script>
 
 <template>
@@ -61,6 +70,13 @@ const emit = defineEmits([
     />
 
     <div v-if="info.address" class="info-address">{{ info.address }}</div>
+
+    <div v-if="showPrice(info)" class="info-price">
+      <span class="material-icons-outlined">payments</span>
+      <span class="info-price-label">收費</span>
+      <span class="info-price-value">{{ info.priceInfo }}</span>
+      <span v-if="isOverridden" class="info-price-tag">車友修改</span>
+    </div>
 
     <div v-if="isCommunity" class="community-tag">
       <span class="material-icons-outlined">push_pin</span>
@@ -252,6 +268,41 @@ const emit = defineEmits([
   font-size: 0.78rem;
   color: var(--muted);
   margin: 4px 0;
+}
+.info-price {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 8px 0 4px;
+  padding: 6px 10px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  color: var(--text);
+}
+.info-price .material-icons-outlined {
+  font-size: 16px;
+  color: var(--primary);
+}
+.info-price-label {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+.info-price-value {
+  font-weight: 700;
+  color: var(--primary);
+  word-break: break-all;
+}
+.info-price-tag {
+  margin-left: auto;
+  padding: 2px 8px;
+  background: #5692ff;
+  color: #000;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
 }
 .community-tag {
   display: inline-flex;

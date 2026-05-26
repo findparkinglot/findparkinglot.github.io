@@ -24,6 +24,7 @@ const props = defineProps({
   routeData: Object,
   favoriteIds: { type: Object, default: () => new Set() },
   overrideKeys: { type: Object, default: () => new Set() },
+  overrides: { type: Object, default: () => ({}) },
   onlyFavorites: { type: Boolean, default: false },
   focusCoord: { type: Array, default: null },
   routeProfile: { type: String, default: 'driving' },
@@ -200,6 +201,16 @@ const setMaker = () => {
       const isFav = props.favoriteIds?.has?.(id)
       const ovKey = overrideKey(marker.properties.name, coord)
       const isOverridden = ovKey ? props.overrideKeys?.has?.(ovKey) : false
+      // 若官方點已被車友覆寫且覆寫中包含價格，篩選並顯示都改用覆寫價格
+      const override = isOverridden ? props.overrides?.[ovKey] : null
+      const overridePriceInfo =
+        typeof override?.priceInfo === 'string' && override.priceInfo.trim() !== ''
+          ? override.priceInfo.trim()
+          : ''
+      const effectivePriceInfo = overridePriceInfo || marker.properties.priceInfo
+      const effectivePriceArray = overridePriceInfo
+        ? overridePriceInfo.split('|')
+        : marker.properties.priceArray
       if (
         !isCoordInBounds(bounds, coord) ||
         (props.onlyFavorites && !isFav) ||
@@ -209,8 +220,8 @@ const setMaker = () => {
           props.degreeOfFriendlinessKeyArray
         ) ||
         !shouldShowByPrice(
-          marker.properties.priceInfo,
-          marker.properties.priceArray,
+          effectivePriceInfo,
+          effectivePriceArray,
           props.parkingPriceType,
           props.priceRangeMin,
           props.priceRangeMax

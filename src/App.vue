@@ -913,6 +913,7 @@ const communityFabItems = computed(() => [
     :priceRangeMax="priceRangeMax"
     :favorite-ids="favoriteIdSet"
     :override-keys="overrideKeySet"
+    :overrides="overrides"
     :only-favorites="onlyFavorites"
     :focus-coord="searchFocusCoord"
     :route-profile="routeProfile"
