@@ -144,17 +144,7 @@ const closeMesBox = () => {
   windowMessageOpen.value = false
 }
 
-// 歡迎視窗關閉 (不論是按「開始使用」、X 或點背景) → 若首次造訪則自動啟動導覽
-watch(windowMessageOpen, (v, oldV) => {
-  if (oldV && !v) {
-    try {
-      if (!localStorage.getItem(TOUR_STORAGE_KEY)) {
-        // 等 Modal 收合動畫結束再開,避免遮罩疊在歡迎視窗上
-        setTimeout(startTour, 350)
-      }
-    } catch {/* noop */}
-  }
-})
+// (歡迎視窗關閉後自動啟動新手導覽的邏輯在後面，需等 infoActive / editorOpen 等 ref 都建立之後再宣告)
 
 // ---------- 面板狀態 ----------
 const menuActive = ref(false)
@@ -242,6 +232,40 @@ const editorSubmitting = ref(false)
 const editorDefaultCoord = ref([121.5173399, 25.0475613])
 // override 模式專用:是否已存在覆寫 (決定是否顯示「重設」按鈕)
 const editorHasExistingOverride = ref(false)
+// 「選位置」模式：顯示十字線 + 頂部提示列 (提前宣告供導覽條件使用)
+const addPickMode = ref(false)
+
+// ---------- 新手導覽:延後啟動條件 ----------
+// 從分享連結進站時 ParkingInfoPanel / RouteSteps / 選位置模式 / 編輯器可能正開著,
+// 會把要被高亮的 FAB / 搜尋按鈕隱藏導致跑版;改為等到那些面板都關閉再啟動。
+const pendingTour = ref(false)
+const canShowTour = computed(
+  () => !infoActive.value && !stepsOpen.value && !addPickMode.value && !editorOpen.value
+)
+
+const maybeStartPendingTour = () => {
+  if (!pendingTour.value) return
+  if (!canShowTour.value) return
+  pendingTour.value = false
+  startTour()
+}
+
+// 歡迎視窗關閉 (不論是按「開始使用」、X 或點背景) → 首次造訪則排程啟動導覽
+watch(windowMessageOpen, (v, oldV) => {
+  if (oldV && !v) {
+    try {
+      if (!localStorage.getItem(TOUR_STORAGE_KEY)) {
+        pendingTour.value = true
+        setTimeout(maybeStartPendingTour, 350)
+      }
+    } catch {/* noop */}
+  }
+})
+
+// 當阻擋導覽的面板關閉後重試
+watch(canShowTour, (v) => {
+  if (v) setTimeout(maybeStartPendingTour, 200)
+})
 
 // 編輯器內顯示的「修改紀錄」陣列 — 依目前 mode 自動從對應資料來源取得
 const editorHistory = computed(() => {
@@ -261,8 +285,6 @@ const editorHistory = computed(() => {
   }
   return []
 })
-// 「選位置」模式：顯示十字線 + 頂部提示列
-const addPickMode = ref(false)
 // 目前查看中的社群項目
 const currentCommunity = ref(null)
 
