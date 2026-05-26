@@ -5,6 +5,7 @@ import { resolveIconUrl } from '@/utils/parseKml.js'
 
 const props = defineProps({
   mapDataList: Array,
+  communityParkings: { type: Array, default: () => [] },
 })
 const emit = defineEmits(['select'])
 
@@ -14,7 +15,7 @@ const activeIndex = ref(-1)
 
 const results = computed(() => {
   if (!query.value) return []
-  return searchParkings(props.mapDataList, query.value, 15)
+  return searchParkings(props.mapDataList, query.value, 15, props.communityParkings)
 })
 
 watch(query, () => {

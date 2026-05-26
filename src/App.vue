@@ -602,16 +602,21 @@ const findAddress = (_coord) => {
 
 const onSearchSelect = (item) => {
   // 選中搜尋結果：充填資訊面板 × 讓地圖 flyTo
-  onSetParkingInfo({
-    name: item.groupName,
-    properties: item.properties,
-    geometry: item.geometry,
-    address: findAddress(item.geometry),
-  })
+  if (item.isCommunity && item.community) {
+    onCommunityParkingClick(item.community)
+  } else {
+    onSetParkingInfo({
+      name: item.groupName,
+      properties: item.properties,
+      geometry: item.geometry,
+      address: findAddress(item.geometry),
+    })
+  }
   searchFocusCoord.value = [...item.geometry]
   track('search_select', {
     parking_name: item.properties?.name,
     group: item.groupName,
+    community: Boolean(item.isCommunity),
   })
 }
 
@@ -889,6 +894,7 @@ const communityFabItems = computed(() => [
   <SearchBar
     v-show="!stepsOpen && !infoActive && !addPickMode"
     :map-data-list="MapDataList"
+    :community-parkings="communityParkings"
     @select="onSearchSelect"
   />
 
