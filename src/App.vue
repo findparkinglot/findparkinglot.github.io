@@ -8,6 +8,7 @@ import ParkingInfoPanel from './components/ParkingInfoPanel.vue'
 import RouteSteps from './components/RouteSteps.vue'
 import SearchBar from './components/SearchBar.vue'
 import CommunityParkingEditor from './components/CommunityParkingEditor.vue'
+import OnboardingTour from './components/OnboardingTour.vue'
 
 import { loadKmlSources, mergeKmlSources, resolveIconUrl, getSourceLabel } from '@/utils/parseKml.js'
 import { storage } from '@/utils/storage.js'
@@ -86,15 +87,74 @@ _mqLight?.addEventListener?.('change', () => {
 // ---------- Modal 狀態 ----------
 const windowMessageOpen = ref(true)
 const windowMobileFAQOpen = ref(false)
+// 加入桌面 Modal 目前顯示的系統分頁：'ios' | 'android'
+const mobileFAQTab = ref(isAndroid ? 'android' : 'ios')
 const windowFAQOpen = ref(false)
-const windowHowToUseOpen = ref(false)
 const windowShareOpen = ref(false)
 const windowCommunityHelpOpen = ref(false)
+
+// ---------- 新手導覽 (浮動視窗依序介紹功能) ----------
+const TOUR_STORAGE_KEY = 'onboarding_tour_v1'
+const tourActive = ref(false)
+const tourSteps = [
+  {
+    selector: '.mapboxgl-ctrl-geolocate',
+    icon: 'my_location',
+    title: '定位你的位置',
+    description: '點右上角的定位按鈕,地圖會自動移到你目前位置,並追蹤方向。',
+  },
+  {
+    selector: '.fab-placement-right > .fab-main',
+    icon: 'help_outline',
+    title: '功能與教學',
+    description: '右下角的圓形按鈕展開後,可看到「地圖怎麼看」、「加到手機桌面」、「分享」等功能。',
+  },
+  {
+    selector: '.search-toggle',
+    icon: 'search',
+    title: '搜尋停車點',
+    description: '右下角的搜尋按鈕可依名稱快速找到想去的停車場,點選結果會自動飛到該位置並開啟資訊。',
+  },
+  {
+    selector: '.app-title .title-toggle',
+    icon: 'menu',
+    title: '篩選與我的最愛',
+    description: '左上角選單可以調整停車類型、友善程度、收費範圍,以及只顯示我的最愛、切換主題。',
+  },
+  {
+    selector: '.fab-placement-left > .fab-main',
+    icon: 'add_location_alt',
+    title: '共筆停車點',
+    description: '左下角按鈕可新增/編輯共筆停車點,大家一起分享真實的停車資訊。',
+  },
+]
+const startTour = () => {
+  tourActive.value = true
+  track('onboarding_tour_start')
+}
+const onTourFinish = () => {
+  try {
+    localStorage.setItem(TOUR_STORAGE_KEY, '1')
+  } catch {/* noop */}
+  track('onboarding_tour_finish')
+}
 
 // 每次開啟都顯示歡迎頁面
 const closeMesBox = () => {
   windowMessageOpen.value = false
 }
+
+// 歡迎視窗關閉 (不論是按「開始使用」、X 或點背景) → 若首次造訪則自動啟動導覽
+watch(windowMessageOpen, (v, oldV) => {
+  if (oldV && !v) {
+    try {
+      if (!localStorage.getItem(TOUR_STORAGE_KEY)) {
+        // 等 Modal 收合動畫結束再開,避免遮罩疊在歡迎視窗上
+        setTimeout(startTour, 350)
+      }
+    } catch {/* noop */}
+  }
+})
 
 // ---------- 面板狀態 ----------
 const menuActive = ref(false)
@@ -108,7 +168,6 @@ const openOnly = (key) => {
   if (key !== 'message') windowMessageOpen.value = false
   if (key !== 'mobileFAQ') windowMobileFAQOpen.value = false
   if (key !== 'faq') windowFAQOpen.value = false
-  if (key !== 'howto') windowHowToUseOpen.value = false
   if (key !== 'share') windowShareOpen.value = false
   if (key !== 'communityHelp') windowCommunityHelpOpen.value = false
   // 路線面板（stepsOpen）與路線規劃不互斥，另外處理
@@ -119,8 +178,14 @@ watch(menuActive, (v) => v && openOnly('menu'))
 watch(infoActive, (v) => v && openOnly('info'))
 watch(windowMessageOpen, (v) => v && openOnly('message'))
 watch(windowMobileFAQOpen, (v) => v && openOnly('mobileFAQ'))
+// 每次開啟「加入桌面」Modal 時,依目前裝置自動切到對應系統分頁
+watch(windowMobileFAQOpen, (v) => {
+  if (!v) return
+  if (isAndroid) mobileFAQTab.value = 'android'
+  else if (isApple) mobileFAQTab.value = 'ios'
+  // 桌面瀏覽器維持使用者上次選擇 (預設 iOS)
+})
 watch(windowFAQOpen, (v) => v && openOnly('faq'))
-watch(windowHowToUseOpen, (v) => v && openOnly('howto'))
 watch(windowShareOpen, (v) => v && openOnly('share'))
 watch(windowCommunityHelpOpen, (v) => v && openOnly('communityHelp'))
 
@@ -756,7 +821,7 @@ const fabItems = computed(() => [
     key: 'howto',
     icon: 'help_outline',
     label: '怎麼用',
-    onClick: () => (windowHowToUseOpen.value = true),
+    onClick: startTour,
   },
   {
     key: 'faq',
@@ -1036,27 +1101,60 @@ const communityFabItems = computed(() => [
     </div>
   </BaseModal>
 
-  <!-- 怎麼用 Modal -->
-  <BaseModal v-model="windowHowToUseOpen" title="地圖怎麼用?" close-text="知道了" size="lg">
-    <h4 class="modal-section-title">1. 介面說明</h4>
-    <img class="full-img" src="@/assets/images/FAQ1.jpg" alt="介面說明" />
-    <h4 class="modal-section-title">2. 操作說明</h4>
-    <img class="full-img" src="@/assets/images/FAQ2.jpg" alt="操作說明" />
-    <h4 class="modal-section-title">3. 選單</h4>
-    <img class="full-img" src="@/assets/images/FAQ3.jpg" alt="選單" />
-  </BaseModal>
-
   <!-- 加入桌面 Modal -->
   <BaseModal v-model="windowMobileFAQOpen" title="如何加入手機桌面?" close-text="知道了" size="lg">
-    <p class="modal-hint">以下以 iOS 為範例</p>
-    <h4 class="modal-section-title">1. 使用 Safari 開啟網站並點擊下方分享按鈕</h4>
-    <img class="full-img" src="@/assets/images/ios_01.jpg" alt="" />
-    <h4 class="modal-section-title">2. 加入主畫面</h4>
-    <img class="full-img" src="@/assets/images/ios_02.jpg" alt="" />
-    <h4 class="modal-section-title">3. 儲存</h4>
-    <img class="full-img" src="@/assets/images/ios_03.jpg" alt="" />
-    <h4 class="modal-section-title">4. 即可在桌面開啟並無瀏覽器網址列</h4>
-    <img class="full-img" src="@/assets/images/ios_04.jpg" alt="" />
+    <div class="os-tabs" role="tablist" aria-label="作業系統">
+      <button
+        type="button"
+        role="tab"
+        :aria-selected="mobileFAQTab === 'ios'"
+        class="os-tab"
+        :class="{ 'is-active': mobileFAQTab === 'ios' }"
+        @click="mobileFAQTab = 'ios'"
+      >
+        <span class="material-icons-outlined">phone_iphone</span>
+        iOS
+      </button>
+      <button
+        type="button"
+        role="tab"
+        :aria-selected="mobileFAQTab === 'android'"
+        class="os-tab"
+        :class="{ 'is-active': mobileFAQTab === 'android' }"
+        @click="mobileFAQTab = 'android'"
+      >
+        <span class="material-icons-outlined">android</span>
+        Android
+      </button>
+    </div>
+
+    <!-- iOS 步驟 -->
+    <template v-if="mobileFAQTab === 'ios'">
+      <p class="modal-hint">以下以 iOS Safari 為範例</p>
+      <h4 class="modal-section-title">1. 使用 Safari 開啟網站並點擊下方分享按鈕</h4>
+      <img class="full-img" src="@/assets/images/install/IOS_01.jpg" alt="" />
+      <h4 class="modal-section-title">2. 點選「加入主畫面」</h4>
+      <img class="full-img" src="@/assets/images/install/IOS_02.jpg" alt="" />
+      <h4 class="modal-section-title">3. 確認名稱後按「加入」</h4>
+      <img class="full-img" src="@/assets/images/install/IOS_03.jpg" alt="" />
+      <h4 class="modal-section-title">4. 完成,圖示已加到主畫面</h4>
+      <img class="full-img" src="@/assets/images/install/IOS_04.jpg" alt="" />
+      <h4 class="modal-section-title">5. 點擊即可開啟,享受無瀏覽器網址列的體驗</h4>
+      <img class="full-img" src="@/assets/images/install/IOS_05.jpg" alt="" />
+    </template>
+
+    <!-- Android 步驟 -->
+    <template v-else>
+      <p class="modal-hint">以下以 Android Chrome 為範例</p>
+      <h4 class="modal-section-title">1. 使用 Chrome 開啟網站並點擊右上角選單，點選「加到主畫面」</h4>
+      <img class="full-img" src="@/assets/images/install/Android_01.jpg" alt="" />
+      <h4 class="modal-section-title">2. 點選「安裝」</h4>
+      <img class="full-img" src="@/assets/images/install/Android_02.jpg" alt="" />
+      <h4 class="modal-section-title">3. 完成,圖示已加到主畫面</h4>
+      <img class="full-img" src="@/assets/images/install/Android_03.jpg" alt="" />
+      <h4 class="modal-section-title">4. 點擊即可開啟,享受無瀏覽器網址列的體驗</h4>
+      <img class="full-img" src="@/assets/images/install/Android_04.jpg" alt="" />
+    </template>
   </BaseModal>
 
   <!-- 歡迎訊息 -->
@@ -1198,6 +1296,13 @@ const communityFabItems = computed(() => [
       <li>站方保留必要時清空所有「共筆停車點」資料的權利</li>
     </ul>
   </BaseModal>
+
+  <!-- 新手導覽 (浮動視窗依序介紹功能) -->
+  <OnboardingTour
+    v-model:active="tourActive"
+    :steps="tourSteps"
+    @finish="onTourFinish"
+  />
 </template>
 
 <style scoped>
@@ -1292,6 +1397,44 @@ const communityFabItems = computed(() => [
   width: 100%;
   border-radius: var(--radius-md);
   border: 1px solid var(--border);
+}
+
+/* 加入桌面 Modal：作業系統分頁 */
+.os-tabs {
+  display: flex;
+  gap: 8px;
+  margin: 0 0 14px;
+  padding: 4px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+}
+.os-tab {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background: transparent;
+  border: 0;
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.os-tab:hover {
+  color: var(--text);
+}
+.os-tab.is-active {
+  background: var(--primary);
+  color: var(--primary-contrast);
+  box-shadow: var(--shadow-sm);
+}
+.os-tab .material-icons-outlined {
+  font-size: 18px;
 }
 
 /* 分享 */
