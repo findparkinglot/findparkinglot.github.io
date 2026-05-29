@@ -25,6 +25,7 @@ import {
   parkingTypeList,
   degreeOfFriendlinessList,
   mapStyleList,
+  getIconCategoryName,
 } from '@/constants/parking.js'
 
 // ---------- 裝置 / 環境偵測 ----------
@@ -527,6 +528,7 @@ const ParkingInfo = ref({
   parkingType: '',
   parkingIcon: '',
   parkingIconKey: '',
+  iconCategory: '',
   priceInfo: '',
   geometry: [null, null],
   address: '',
@@ -578,7 +580,11 @@ const onSetParkingInfo = (data) => {
   ParkingInfo.value = {
     parkingName: display.name,
     parkingNameDes: display.description,
+    // parkingType:官方點 = KML Folder name (例如「公有汽車費率(適用停管法)」);共筆點 = '共筆停車點'
     parkingType: original.parkingType,
+    // iconCategory:由 iconKey 反查的分類短名 (例如「汽車 / 重機 / 路邊友善車格」),
+    // 與 parkingType 並列為第二個 badge,讓使用者也能直接看到圖示分類。
+    iconCategory: getIconCategoryName(display.iconKey),
     parkingIcon: resolveIconUrl(display.iconKey),
     parkingIconKey: display.iconKey,
     priceInfo: display.priceInfo || '',

@@ -70,6 +70,17 @@ export const parkingTypeList = [
   },
 ]
 
+// 由 iconKey 反查「分類短名」,用於共筆停車點等沒有 KML 資料夾名稱的點。
+// 取 parkingTypeList 中對應條目 name 的「:」或「:」前半部 (例如 "汽車" / "綠星" / "重機友善店家")。
+export function getIconCategoryName(iconKey) {
+  if (!iconKey) return '未分類'
+  const hit = parkingTypeList.find(
+    (p) => Array.isArray(p.key) && p.key.includes(iconKey)
+  )
+  if (!hit) return '未分類'
+  return hit.name.split(/[：:]/)[0]
+}
+
 export const degreeOfFriendlinessList = [
   {
     name: '全部',

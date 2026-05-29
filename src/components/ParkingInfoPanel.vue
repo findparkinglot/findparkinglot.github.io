@@ -22,14 +22,34 @@ const emit = defineEmits([
   'share',
 ])
 
-// 非「停車格」類型 (友善店家、綠星、紅X) 不顯示收費區塊
+// 非「停車格」類型 (友善店家、綠星、紅X) 通常不顯示收費區塊。
+// 但若為共筆 / 車友修改點且使用者明確填了 priceInfo,仍應顯示。
 const NON_PRICE_ICONS = new Set([
   'icon-4.png',   // 重機友善店家
-  'icon-14.png',  // 綠星：路邊友善車格
-  'icon-19.png',  // 紅X：禁停
+  'icon-14.png',  // 綠星:路邊友善車格
+  'icon-19.png',  // 紅X:禁停
 ])
-const showPrice = (info) =>
-  Boolean(info?.priceInfo) && !NON_PRICE_ICONS.has(info?.parkingIconKey)
+const showPrice = (info) => {
+  if (!info?.priceInfo) return false
+  // 共筆 / 車友修改點:只要有填價就顯示,不受 icon 類型限制
+  if (props.isCommunity || props.isOverridden) return true
+  return !NON_PRICE_ICONS.has(info?.parkingIconKey)
+}
+
+// 將 priceInfo 原始格式 (例如 "100/次" / "30/h" / "50/d" / "Free") 轉為人類友善表示。
+// 其他無法辨識的複雜樣式 (多段、文字描述等) 照原輸出。
+const formatPriceDisplay = (raw) => {
+  if (!raw) return ''
+  if (/^free$/i.test(raw.trim())) return '免費'
+  const m = raw.trim().match(/^(\d+(?:\.\d+)?)\s*\/\s*(h|d|次)$/i)
+  if (!m) return raw
+  const unit = m[2].toLowerCase()
+  const unitLabel =
+    unit === 'h' ? '小時' :
+    unit === 'd' ? '日' :
+    '次 (不限時)'
+  return `${m[1]} 元 / ${unitLabel}`
+}
 </script>
 
 <template>
@@ -74,7 +94,7 @@ const showPrice = (info) =>
     <div v-if="showPrice(info)" class="info-price">
       <span class="material-icons-outlined">payments</span>
       <span class="info-price-label">收費</span>
-      <span class="info-price-value">{{ info.priceInfo }}</span>
+      <span class="info-price-value">{{ formatPriceDisplay(info.priceInfo) }}</span>
       <span v-if="isOverridden" class="info-price-tag">車友修改</span>
     </div>
 
@@ -108,7 +128,16 @@ const showPrice = (info) =>
     </div>
 
     <div class="info-meta">
-      <span class="badge">{{ info.parkingType }}</span>
+      <div class="badge-group">
+        <span class="badge">{{ info.parkingType }}</span>
+        <span
+          v-if="info.iconCategory && info.iconCategory !== info.parkingType"
+          class="badge badge-icon"
+          title="依圖示分類"
+        >
+          {{ info.iconCategory }}
+        </span>
+      </div>
       <span class="coord">
         {{ Number(info.geometry[0]).toFixed(5) }},
         {{ Number(info.geometry[1]).toFixed(5) }}
@@ -365,6 +394,16 @@ const showPrice = (info) =>
   background: var(--surface-2);
   padding: 2px 8px;
   border-radius: var(--radius-sm);
+}
+.badge-group {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  min-width: 0;
+}
+.badge-icon {
+  background: var(--surface-2);
+  color: var(--muted);
 }
 .coord {
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;

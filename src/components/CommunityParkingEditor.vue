@@ -76,8 +76,12 @@ function parsePrice(s) {
   if (!s) return { type: 'free', amount: '', custom: '' }
   const trimmed = s.trim()
   if (/^free$/i.test(trimmed)) return { type: 'free', amount: '', custom: '' }
-  const m = trimmed.match(/^(\d+(?:\.\d+)?)\s*\/\s*([hd])$/i)
-  if (m) return { type: m[2].toLowerCase(), amount: m[1], custom: '' }
+  // 支援 h (計時)、d (計次/日)、次 (計次/不限時)
+  const m = trimmed.match(/^(\d+(?:\.\d+)?)\s*\/\s*([hd次])$/i)
+  if (m) {
+    const unit = m[2].toLowerCase()
+    return { type: unit, amount: m[1], custom: '' }
+  }
   return { type: 'custom', amount: '', custom: trimmed }
 }
 function formatPrice() {
@@ -169,6 +173,7 @@ const PRICE_OPTIONS = [
   { value: 'free', label: '免費' },
   { value: 'h', label: '計時 / 小時' },
   { value: 'd', label: '計次 / 天' },
+  { value: '次', label: '計次 / 不限時' },
   { value: 'custom', label: '其他' },
 ]
 
@@ -366,7 +371,7 @@ function actionSummary(h) {
             {{ o.label }}
           </button>
         </div>
-        <div v-if="priceType === 'h' || priceType === 'd'" class="price-amount">
+        <div v-if="priceType === 'h' || priceType === 'd' || priceType === '次'" class="price-amount">
           <input
             v-model="priceAmount"
             type="number"
@@ -375,7 +380,9 @@ function actionSummary(h) {
             class="form-control compact"
             placeholder="金額"
           />
-          <span class="unit">元 / {{ priceType === 'h' ? '小時' : '次' }}</span>
+          <span class="unit">
+            元 / {{ priceType === 'h' ? '小時' : priceType === 'd' ? '天' : '次 (不限時)' }}
+          </span>
         </div>
         <div v-else-if="priceType === 'custom'" class="price-amount">
           <input

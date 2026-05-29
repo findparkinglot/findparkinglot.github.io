@@ -126,16 +126,22 @@ const close = () => emit('update:active', false)
             :class="{ active: parkingPriceType === 'd' }"
             @click="emit('update:parkingPriceType', 'd')"
           >計次 /日</button>
+          <button
+            type="button"
+            class="chip"
+            :class="{ active: parkingPriceType === 't' }"
+            @click="emit('update:parkingPriceType', 't')"
+          >計次 /不限時</button>
         </div>
         <RangeSlider
-          v-if="/d|h/.test(parkingPriceType)"
+          v-if="/d|h|t/.test(parkingPriceType)"
           class="mt-8"
           :min="0"
           :max="300"
           :step="10"
           :model-min="priceRangeMin"
           :model-max="priceRangeMax"
-          :suffix="parkingPriceType === 'h' ? ' /時' : ' /日'"
+          :suffix="parkingPriceType === 'h' ? ' /時' : parkingPriceType === 'd' ? ' /日' : ' /次'"
           @update:model-min="emit('update:priceRangeMin', $event)"
           @update:model-max="emit('update:priceRangeMax', $event)"
         />

@@ -86,7 +86,8 @@ const isValidCoord = (c) =>
   Number.isFinite(Number(c[1]))
 
 // 建立官方 marker 的 DOM 元素（含 click handler）
-const createOfficialMarkerEl = (MapGroup, marker, isFav, isOverridden) => {
+// effectiveIcon: 若車友覆寫了 iconKey,使用覆寫後的圖示,讓地圖與 InfoPanel 一致
+const createOfficialMarkerEl = (MapGroup, marker, isFav, isOverridden, effectiveIcon) => {
   const el = document.createElement('div')
   el.className = 'marker'
   if (isOverridden) el.classList.add('is-override')
@@ -96,8 +97,9 @@ const createOfficialMarkerEl = (MapGroup, marker, isFav, isOverridden) => {
   tag.className = 'tag'
   const img = document.createElement('div')
   img.className = 'img'
-  if (marker.properties.icon) {
-    img.style.backgroundImage = `url(${resolveIconUrl(marker.properties.icon)})`
+  const iconKey = effectiveIcon || marker.properties.icon
+  if (iconKey) {
+    img.style.backgroundImage = `url(${resolveIconUrl(iconKey)})`
     img.style.backgroundSize = 'cover'
     img.style.backgroundPosition = 'center center'
   }
@@ -211,11 +213,16 @@ const setMaker = () => {
       const effectivePriceArray = overridePriceInfo
         ? overridePriceInfo.split('|')
         : marker.properties.priceArray
+      // 覆寫後的圖示 (若有) —— 同時作為篩選依據與 marker 視覺
+      const effectiveIcon =
+        (typeof override?.iconKey === 'string' && override.iconKey.trim() !== ''
+          ? override.iconKey.trim()
+          : '') || marker.properties.icon
       if (
         !isCoordInBounds(bounds, coord) ||
         (props.onlyFavorites && !isFav) ||
         !shouldShowByIcon(
-          marker.properties.icon,
+          effectiveIcon,
           props.parkingTypeKeyArray,
           props.degreeOfFriendlinessKeyArray
         ) ||
@@ -231,7 +238,7 @@ const setMaker = () => {
       }
       points.push({
         coord: [Number(coord[0]), Number(coord[1])],
-        createEl: () => createOfficialMarkerEl(MapGroup, marker, isFav, isOverridden),
+        createEl: () => createOfficialMarkerEl(MapGroup, marker, isFav, isOverridden, effectiveIcon),
       })
     }
   }

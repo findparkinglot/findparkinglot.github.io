@@ -12,7 +12,12 @@ export function shouldShowByPrice(priceInfo, priceArray, priceType, min, max) {
   if (!priceType) return true
   if (priceType === 'free') return /Free/.test(priceInfo)
 
-  const unitRegex = priceType === 'h' ? /\/h/ : priceType === 'd' ? /\/d/ : null
+  // h: 計時 /h、d: 計次 /日 (/d)、t: 計次 / 不限時 (/次)
+  const unitRegex =
+    priceType === 'h' ? /\/h/ :
+    priceType === 'd' ? /\/d/ :
+    priceType === 't' ? /\/次/ :
+    null
   if (!unitRegex || !unitRegex.test(priceInfo)) return false
 
   for (const item of priceArray) {
