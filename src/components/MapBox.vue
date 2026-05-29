@@ -589,8 +589,10 @@ watch(
     () => props.onlyFavorites,
     () => props.favoriteIds,
     () => props.communityParkings,
+    () => props.overrides,
   ],
-  () => refreshMarkers()
+  () => refreshMarkers(),
+  { deep: true }
 )
 
 watch(
