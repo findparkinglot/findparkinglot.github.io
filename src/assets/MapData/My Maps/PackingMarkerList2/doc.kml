@@ -15,7 +15,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-5.png</href>
+          <href>images/icon-6.png</href>
         </Icon>
       </IconStyle>
     </Style>
@@ -23,7 +23,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-5.png</href>
+          <href>images/icon-6.png</href>
         </Icon>
       </IconStyle>
       <BalloonStyle>
@@ -360,7 +360,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-6.png</href>
+          <href>images/icon-4.png</href>
         </Icon>
       </IconStyle>
       <LabelStyle>
@@ -371,7 +371,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-6.png</href>
+          <href>images/icon-4.png</href>
         </Icon>
       </IconStyle>
       <LabelStyle>
@@ -392,7 +392,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-6.png</href>
+          <href>images/icon-4.png</href>
         </Icon>
       </IconStyle>
     </Style>
@@ -400,7 +400,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-6.png</href>
+          <href>images/icon-4.png</href>
         </Icon>
       </IconStyle>
       <BalloonStyle>
@@ -772,7 +772,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-4.png</href>
+          <href>images/icon-5.png</href>
         </Icon>
       </IconStyle>
     </Style>
@@ -780,7 +780,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-4.png</href>
+          <href>images/icon-5.png</href>
         </Icon>
       </IconStyle>
       <BalloonStyle>
@@ -1055,6 +1055,16 @@
         <Point>
           <coordinates>
             121.324466,23.0191623,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(Free)五華夜市</name>
+        <description><![CDATA[試營運期間去<br>指揮停機車區免費<br>需注意的是非機車格而是停車區<br>所以可能跟一般機車擠在一起]]></description>
+        <styleUrl>#icon-1632-7CB342</styleUrl>
+        <Point>
+          <coordinates>
+            121.4848795,25.0899781,0
           </coordinates>
         </Point>
       </Placemark>
@@ -5336,11 +5346,11 @@
       </Placemark>
       <Placemark>
         <name>(80/h)客限-板橋凱撒大飯店</name>
-        <description><![CDATA[<img src="https://mymaps.usercontent.google.com/hostedimage/m/*/3AE5a_GyceQxtGnxqHMVMldiFPJqywpktiE_7KpJ86HvRIFa9fwU-Ur7OCRa1MlgbnSy47YRQgpjGCOZ-pn6tYpP8k2ck1MjE54ua08RyUEnqLJK6892larDhPGWUmMZg3Hhes4mYj8UjRXtgrqnrez3Gr_1kPAyj2Kh7xeA4VRxpXuXbJngRTaiw0hHQROhVwLK-dNjKAp5yltOki4zUAkgnvwX_qUDRVQH_MtzqEFdhmDU3H7i959tcWDWP4m0?fife=s16383" height="200" width="auto" /><br><br>感謝hoha5432提供<br>汽車費率 80h 按鈕取票 2 格 或以上 <br>目前對外說不開放臨停，僅供住宿與用餐客人停放。費用沒有公開，根據個人繳費經驗推估約 80h。<br>官網寫說「本飯店提供機車/汽車地下停車場(B2-B5) ，共220個車位。※B2停放機車（可供重型機車停靠，但如需要更大空間可改停靠汽車停車格）」但實際沒有機車格，而是只有大重停車格（為汽車格畫線切出）。  ]]></description>
+        <description><![CDATA[<img src="https://mymaps.usercontent.google.com/hostedimage/m/*/3AE5a_GzuHhVO5yz36WSJ_jvEZw95if_7Q3W5qLpcVj4SgZ5wShHpB63zPbSkhNlnMYnYa0zsSlhNdqTWFKccH4UGyS0vZNh4t0-WQvpZCzALf3Ass2L_gKqBZnN56yi8N8iIl5JU-d6D-HnfQDXU-sVPpnDR20tLQ6tRbDtvpCULVXI_KT5tvuGNF0Hw3a83HuCHwuyblIBueRPDhp8lHFqJfjv3CfZAdjue84wS799J61Gdq_JjxUN_NqXcefM?fife=s16383" height="200" width="auto" /><br><br>感謝hoha5432提供<br>汽車費率 80h 按鈕取票 2 格 或以上 <br>目前對外說不開放臨停，僅供住宿與用餐客人停放。費用沒有公開，根據個人繳費經驗推估約 80h。<br>官網寫說「本飯店提供機車/汽車地下停車場(B2-B5) ，共220個車位。※B2停放機車（可供重型機車停靠，但如需要更大空間可改停靠汽車停車格）」但實際沒有機車格，而是只有大重停車格（為汽車格畫線切出）。  ]]></description>
         <styleUrl>#icon-1633-0288D1</styleUrl>
         <ExtendedData>
           <Data name="gx_media_links">
-            <value>https://mymaps.usercontent.google.com/hostedimage/m/*/3AE5a_GyceQxtGnxqHMVMldiFPJqywpktiE_7KpJ86HvRIFa9fwU-Ur7OCRa1MlgbnSy47YRQgpjGCOZ-pn6tYpP8k2ck1MjE54ua08RyUEnqLJK6892larDhPGWUmMZg3Hhes4mYj8UjRXtgrqnrez3Gr_1kPAyj2Kh7xeA4VRxpXuXbJngRTaiw0hHQROhVwLK-dNjKAp5yltOki4zUAkgnvwX_qUDRVQH_MtzqEFdhmDU3H7i959tcWDWP4m0?fife=s16383</value>
+            <value>https://mymaps.usercontent.google.com/hostedimage/m/*/3AE5a_GzuHhVO5yz36WSJ_jvEZw95if_7Q3W5qLpcVj4SgZ5wShHpB63zPbSkhNlnMYnYa0zsSlhNdqTWFKccH4UGyS0vZNh4t0-WQvpZCzALf3Ass2L_gKqBZnN56yi8N8iIl5JU-d6D-HnfQDXU-sVPpnDR20tLQ6tRbDtvpCULVXI_KT5tvuGNF0Hw3a83HuCHwuyblIBueRPDhp8lHFqJfjv3CfZAdjue84wS799J61Gdq_JjxUN_NqXcefM?fife=s16383</value>
           </Data>
         </ExtendedData>
         <Point>
