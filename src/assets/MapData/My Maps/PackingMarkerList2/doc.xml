@@ -787,6 +787,44 @@
         <text><![CDATA[<h3>$[name]</h3>]]></text>
       </BalloonStyle>
     </Style>
+    <Style id="icon-1853-BDBDBD-nodesc-normal">
+      <IconStyle>
+        <scale>1</scale>
+        <Icon>
+          <href>images/icon-21.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1853-BDBDBD-nodesc-highlight">
+      <IconStyle>
+        <scale>1</scale>
+        <Icon>
+          <href>images/icon-21.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1853-BDBDBD-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1853-BDBDBD-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1853-BDBDBD-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
     <Style id="icon-1898-E65100-labelson">
       <IconStyle>
         <scale>1</scale>
@@ -5346,11 +5384,11 @@
       </Placemark>
       <Placemark>
         <name>(80/h)客限-板橋凱撒大飯店</name>
-        <description><![CDATA[<img src="https://mymaps.usercontent.google.com/hostedimage/m/*/3AE5a_GzuHhVO5yz36WSJ_jvEZw95if_7Q3W5qLpcVj4SgZ5wShHpB63zPbSkhNlnMYnYa0zsSlhNdqTWFKccH4UGyS0vZNh4t0-WQvpZCzALf3Ass2L_gKqBZnN56yi8N8iIl5JU-d6D-HnfQDXU-sVPpnDR20tLQ6tRbDtvpCULVXI_KT5tvuGNF0Hw3a83HuCHwuyblIBueRPDhp8lHFqJfjv3CfZAdjue84wS799J61Gdq_JjxUN_NqXcefM?fife=s16383" height="200" width="auto" /><br><br>感謝hoha5432提供<br>汽車費率 80h 按鈕取票 2 格 或以上 <br>目前對外說不開放臨停，僅供住宿與用餐客人停放。費用沒有公開，根據個人繳費經驗推估約 80h。<br>官網寫說「本飯店提供機車/汽車地下停車場(B2-B5) ，共220個車位。※B2停放機車（可供重型機車停靠，但如需要更大空間可改停靠汽車停車格）」但實際沒有機車格，而是只有大重停車格（為汽車格畫線切出）。  ]]></description>
+        <description><![CDATA[<img src="https://mymaps.usercontent.google.com/hostedimage/m/*/3AE5a_GyL4vmZDJj0sywxr8efgwHcOtdTV5EEndTZt21pKZxEhDVLVq-jrhoSbjFFOUvEc-EgMOebCIM97lBqTzc1LMVBG8PduGG5PJLGsHt5M6WzNzrG2HzNJL_7MNM8IYxcobrdWLKng3XpRa4Wn9oxs4UG5kspH-lrg6V4beivCbWl2b_WxJzfWaLsP7aoD-RkQ0cO5fl1IVcJbUb2OmGf8bvmx_PKMXTJPPDeMPjs56ImtqEgMqBNGIYTDAU?fife=s16383" height="200" width="auto" /><br><br>感謝hoha5432提供<br>汽車費率 80h 按鈕取票 2 格 或以上 <br>目前對外說不開放臨停，僅供住宿與用餐客人停放。費用沒有公開，根據個人繳費經驗推估約 80h。<br>官網寫說「本飯店提供機車/汽車地下停車場(B2-B5) ，共220個車位。※B2停放機車（可供重型機車停靠，但如需要更大空間可改停靠汽車停車格）」但實際沒有機車格，而是只有大重停車格（為汽車格畫線切出）。  ]]></description>
         <styleUrl>#icon-1633-0288D1</styleUrl>
         <ExtendedData>
           <Data name="gx_media_links">
-            <value>https://mymaps.usercontent.google.com/hostedimage/m/*/3AE5a_GzuHhVO5yz36WSJ_jvEZw95if_7Q3W5qLpcVj4SgZ5wShHpB63zPbSkhNlnMYnYa0zsSlhNdqTWFKccH4UGyS0vZNh4t0-WQvpZCzALf3Ass2L_gKqBZnN56yi8N8iIl5JU-d6D-HnfQDXU-sVPpnDR20tLQ6tRbDtvpCULVXI_KT5tvuGNF0Hw3a83HuCHwuyblIBueRPDhp8lHFqJfjv3CfZAdjue84wS799J61Gdq_JjxUN_NqXcefM?fife=s16383</value>
+            <value>https://mymaps.usercontent.google.com/hostedimage/m/*/3AE5a_GyL4vmZDJj0sywxr8efgwHcOtdTV5EEndTZt21pKZxEhDVLVq-jrhoSbjFFOUvEc-EgMOebCIM97lBqTzc1LMVBG8PduGG5PJLGsHt5M6WzNzrG2HzNJL_7MNM8IYxcobrdWLKng3XpRa4Wn9oxs4UG5kspH-lrg6V4beivCbWl2b_WxJzfWaLsP7aoD-RkQ0cO5fl1IVcJbUb2OmGf8bvmx_PKMXTJPPDeMPjs56ImtqEgMqBNGIYTDAU?fife=s16383</value>
           </Data>
         </ExtendedData>
         <Point>
@@ -9691,11 +9729,12 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>(30/h)松河街238號 重機專用格</name>
-        <styleUrl>#icon-1644-7CB342-labelson-nodesc</styleUrl>
+        <name>松河街238號 重機專用格</name>
+        <description><![CDATA[這是舊版台北市重機格，費率比照小型車<br>https://maps.app.goo.gl/ewS7RgoJH7BjYW5AA]]></description>
+        <styleUrl>#icon-1644-7CB342-labelson</styleUrl>
         <Point>
           <coordinates>
-            121.5784534,25.0517258,0
+            121.5784735,25.0518461,0
           </coordinates>
         </Point>
       </Placemark>
@@ -9866,7 +9905,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>(30/4h)商港三路</name>
+        <name>(30/4h)商港三路重機專用格</name>
         <description><![CDATA[商港三路上有重機專用停車格<br>未確定精準座標<br>請求支援回報]]></description>
         <styleUrl>#icon-1644-757575-labelson</styleUrl>
         <Point>
@@ -9876,7 +9915,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>(30/4h)芳洲路</name>
+        <name>(30/4h)芳洲路重機專用格</name>
         <description><![CDATA[芳洲路上有重機專用停車格<br>未確定精準座標<br>請求支援回報]]></description>
         <styleUrl>#icon-1644-757575-labelson</styleUrl>
         <Point>
@@ -9886,7 +9925,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>(30/4h)新城一路</name>
+        <name>(30/4h)新城一路重機專用格</name>
         <description><![CDATA[新城一路上有重機專用停車格<br>未確定精準座標<br>請求支援回報]]></description>
         <styleUrl>#icon-1644-757575-labelson</styleUrl>
         <Point>
@@ -9896,7 +9935,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>(30/4h)中山路</name>
+        <name>(30/4h)中山路重機專用格</name>
         <description><![CDATA[中山路上有重機專用停車格<br>未確定精準座標<br>請求支援回報]]></description>
         <styleUrl>#icon-1644-757575-labelson</styleUrl>
         <Point>
@@ -9906,7 +9945,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>(30/4h)中原二街</name>
+        <name>(30/4h)中原二街重機專用格</name>
         <description><![CDATA[中原二街上有重機專用停車格<br>未確定精準座標<br>請求支援回報]]></description>
         <styleUrl>#icon-1644-757575-labelson</styleUrl>
         <Point>
@@ -9916,7 +9955,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>(30/4h)民利街68巷5弄</name>
+        <name>(30/4h)民利街68巷5弄重機專用格</name>
         <description><![CDATA[民利街68巷5弄上有重機專用停車格<br>未確定精準座標<br>請求支援回報]]></description>
         <styleUrl>#icon-1644-757575-labelson</styleUrl>
         <Point>
@@ -9926,12 +9965,11 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>(30/4h)光復路</name>
-        <description><![CDATA[光復路上有重機專用停車格<br>未確定精準座標<br>請求支援回報]]></description>
-        <styleUrl>#icon-1644-757575-labelson</styleUrl>
+        <name>(30/4h)光復路重機專用格</name>
+        <styleUrl>#icon-1644-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
-            121.4720583,25.0493124,0
+            121.4720047,25.0522769,0
           </coordinates>
         </Point>
       </Placemark>
@@ -11354,6 +11392,16 @@
           </coordinates>
         </Point>
       </Placemark>
+      <Placemark>
+        <name>松河街重機專用格</name>
+        <description><![CDATA[這是舊版台北市重機格，費率比照小型車<br>https://maps.app.goo.gl/hj1ahrahpdjm1Pk58]]></description>
+        <styleUrl>#icon-1644-7CB342-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.5748979,25.0510359,0
+          </coordinates>
+        </Point>
+      </Placemark>
     </Folder>
     <Folder>
       <name>禁停重機</name>
@@ -12165,6 +12213,33 @@
     </Folder>
     <Folder>
       <name>預定開放</name>
+      <Placemark>
+        <name>龍七路(鳳一路至鳳三路)</name>
+        <styleUrl>#icon-1853-BDBDBD-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.3360126,24.97276,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>龍七路(鳳一路至鳳三路)</name>
+        <styleUrl>#icon-1853-BDBDBD-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.3348431,24.971836,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>三鶯轉運站北側停車場</name>
+        <styleUrl>#icon-1853-BDBDBD-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.35801,24.9544766,0
+          </coordinates>
+        </Point>
+      </Placemark>
     </Folder>
   </Document>
 </kml>
