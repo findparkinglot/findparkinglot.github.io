@@ -28,6 +28,7 @@ const emit = defineEmits([
   'update:mapStyle',
   'update:active',
   'update:onlyFavorites',
+  'open-support',
 ])
 
 const close = () => emit('update:active', false)
@@ -213,14 +214,13 @@ const close = () => emit('update:active', false)
         >
           重機能停哪? 回報表單
         </a>
-        <a
-          href="https://buymeacoffee.com/jamestim923"
-          target="_blank"
-          rel="noopener"
+        <button
+          type="button"
           class="btn btn-coffee btn-sm mt-8"
+          @click="emit('open-support')"
         >
-          ☕️ 請我喝杯咖啡，讓我有動力繼續更新
-        </a>
+          ❤️ 贊助支持，讓我有動力繼續更新
+        </button>
       </section>
 
       <section class="form-group">

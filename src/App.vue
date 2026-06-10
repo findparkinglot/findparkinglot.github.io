@@ -93,6 +93,7 @@ const mobileFAQTab = ref(isAndroid ? 'android' : 'ios')
 const windowFAQOpen = ref(false)
 const windowShareOpen = ref(false)
 const windowCommunityHelpOpen = ref(false)
+const windowSupportOpen = ref(false)
 
 // ---------- 新手導覽 (浮動視窗依序介紹功能) ----------
 const TOUR_STORAGE_KEY = 'onboarding_tour_v1'
@@ -161,6 +162,7 @@ const openOnly = (key) => {
   if (key !== 'faq') windowFAQOpen.value = false
   if (key !== 'share') windowShareOpen.value = false
   if (key !== 'communityHelp') windowCommunityHelpOpen.value = false
+  if (key !== 'support') windowSupportOpen.value = false
   // 路線面板（stepsOpen）與路線規劃不互斥，另外處理
   track('panel_open', { panel: key })
 }
@@ -179,6 +181,37 @@ watch(windowMobileFAQOpen, (v) => {
 watch(windowFAQOpen, (v) => v && openOnly('faq'))
 watch(windowShareOpen, (v) => v && openOnly('share'))
 watch(windowCommunityHelpOpen, (v) => v && openOnly('communityHelp'))
+watch(windowSupportOpen, (v) => v && openOnly('support'))
+
+// ---------- 贊助連結 ----------
+const SUPPORT_LINKS = [
+  {
+    key: 'portaly',
+    url: 'https://portaly.cc/findparkinglot/support',
+    label: 'Portaly 平台贊助',
+    description: '台幣贊助',
+    icon: 'volunteer_activism',
+    primary: false,
+  },
+  {
+    key: 'buymeacoffee',
+    url: 'https://buymeacoffee.com/jamestim923',
+    label: 'Buy Me a Coffee',
+    description: '請我喝杯咖啡 ☕️ (美金贊助)',
+    icon: 'local_cafe',
+    primary: false,
+  },
+]
+
+const openSupport = () => {
+  windowSupportOpen.value = true
+  track('support_open')
+}
+
+const onSupportClick = (link) => {
+  track('support_click', { provider: link.key })
+  window.open(link.url, '_blank', 'noopener,noreferrer')
+}
 
 // ---------- 篩選器（持久化到 localStorage.filters_v1） ----------
 const FILTERS_STORAGE_KEY = 'filters_v1'
@@ -980,6 +1013,7 @@ const communityFabItems = computed(() => [
     v-model:active="menuActive"
     v-model:onlyFavorites="onlyFavorites"
     :favorites-count="favorites.length"
+    @open-support="openSupport"
   />
 
   <!-- 停車場資訊 -->
@@ -1144,6 +1178,33 @@ const communityFabItems = computed(() => [
     </div>
   </BaseModal>
 
+  <!-- 贊助 Modal -->
+  <BaseModal v-model="windowSupportOpen" title="支持「重機能停哪?」" close-text="關閉" size="sm">
+    <p class="modal-hint">
+      若覺得本站有幫助，歡迎透過以下任一方式贊助，讓我有動力繼續維護更新！
+    </p>
+    <div class="support-list">
+      <button
+        v-for="link in SUPPORT_LINKS"
+        :key="link.key"
+        type="button"
+        class="support-btn"
+        :class="{ 'is-primary': link.primary }"
+        @click="onSupportClick(link)"
+      >
+        <span class="material-icons-outlined support-btn-icon">{{ link.icon }}</span>
+        <span class="support-btn-body">
+          <span class="support-btn-label">
+            {{ link.label }}
+            <span v-if="link.primary" class="support-btn-badge">推薦</span>
+          </span>
+          <span class="support-btn-desc">{{ link.description }}</span>
+        </span>
+        <span class="material-icons-outlined support-btn-arrow">open_in_new</span>
+      </button>
+    </div>
+  </BaseModal>
+
   <!-- 加入桌面 Modal -->
   <BaseModal v-model="windowMobileFAQOpen" title="如何加入手機桌面?" close-text="知道了" size="lg">
     <div class="os-tabs" role="tablist" aria-label="作業系統">
@@ -1262,11 +1323,13 @@ const communityFabItems = computed(() => [
       本站僅提供資料整合服務，地圖免費提供車友使用，資料不定期更新；若發生無法使用情況，請至
       <a href="https://forms.gle/iJCyfqVtpL35WtZM7" target="_blank" rel="noopener" class="link"
         >錯誤資訊回報</a
-      >，也歡迎
-      <a href="https://buymeacoffee.com/jamestim923" target="_blank" rel="noopener" class="link"
-        >請我喝杯咖啡 ☕️</a
-      >讓我有動力繼續更新。
+      >，也歡迎贊助讓我有動力繼續更新。
     </p>
+    <div class="welcome-support-wrap">
+      <button type="button" class="btn btn-coffee btn-sm" @click="openSupport">
+        ❤️ 贊助支持，讓我有動力繼續更新
+      </button>
+    </div>
     <p class="welcome-text right">— by 爽爽</p>
     <template #footer>
       <button class="btn btn-primary" @click="closeMesBox">開始使用</button>
@@ -1599,6 +1662,84 @@ const communityFabItems = computed(() => [
   text-align: right;
   color: var(--muted);
   font-size: 0.85rem;
+}
+.welcome-support-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 4px 0 14px;
+}
+
+/* =================== 贊助 Modal =================== */
+.support-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 4px 0 4px;
+}
+.support-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  text-align: left;
+  padding: 12px 14px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  color: var(--text);
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, transform 0.1s;
+}
+.support-btn:hover {
+  border-color: var(--primary);
+  transform: translateY(-1px);
+}
+.support-btn:active {
+  transform: translateY(0);
+}
+.support-btn.is-primary {
+  background: linear-gradient(135deg, rgba(46, 231, 214, 0.18), rgba(46, 231, 214, 0.05));
+  border-color: var(--primary);
+}
+.support-btn-icon {
+  font-size: 28px;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+.support-btn-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.support-btn-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+.support-btn-badge {
+  display: inline-block;
+  padding: 1px 8px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  background: var(--primary);
+  color: var(--primary-contrast);
+  border-radius: 999px;
+}
+.support-btn-desc {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+.support-btn-arrow {
+  font-size: 18px;
+  color: var(--muted);
+  flex-shrink: 0;
 }
 .link {
   color: var(--primary);
