@@ -185,14 +185,14 @@ watch(windowSupportOpen, (v) => v && openOnly('support'))
 
 // ---------- 贊助連結 ----------
 const SUPPORT_LINKS = [
-  {
-    key: 'portaly',
-    url: 'https://portaly.cc/findparkinglot/support',
-    label: 'Portaly 平台贊助',
-    description: '台幣贊助',
-    icon: 'volunteer_activism',
-    primary: false,
-  },
+  // {
+  //   key: 'portaly',
+  //   url: 'https://portaly.cc/findparkinglot/support',
+  //   label: 'Portaly 平台贊助',
+  //   description: '台幣贊助',
+  //   icon: 'volunteer_activism',
+  //   primary: false,
+  // },
   {
     key: 'buymeacoffee',
     url: 'https://buymeacoffee.com/jamestim923',
@@ -1181,7 +1181,7 @@ const communityFabItems = computed(() => [
   <!-- 贊助 Modal -->
   <BaseModal v-model="windowSupportOpen" title="支持「重機能停哪?」" close-text="關閉" size="sm">
     <p class="modal-hint">
-      若覺得本站有幫助，歡迎透過以下任一方式贊助，讓我有動力繼續維護更新！
+      若覺得本站有幫助，歡迎透過以下連結請我喝一杯咖啡，讓我有動力繼續維護更新！
     </p>
     <div class="support-list">
       <button
