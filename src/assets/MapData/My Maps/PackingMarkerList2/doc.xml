@@ -2,7 +2,7 @@
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
     <name>Alan大重停車記事</name>
-    <description><![CDATA[更新請到<br>https://forms.gle/euRCPCPSmvYLm5Rj8<br>2026/05/26<br>  - 更新泰山 中和 收費機車格<br>2026/05/03<br>  - 更新台中共用停車格<br>  - 西區 中區 西屯區 南屯區<br>2026/05/01<br>  - 更新新北試辦重機停收費機車格<br>  - 中和、永和、土城、淡水等收費機車格<br>2026/04/07<br>  - 更新台北市試辦停車場<br>2026/03/26<br>  - 合併重機格/機車費率圖層至機車費率圖層<br>  - 新增預計開放圖層(4/6 台北市辦路外停車場)<br>2026/03/06<br>  - 新增重機友善店家圖層<br>2026/03/01<br>  - 新增新北試辦重機停收費機車格<br>  - 新莊、泰山、林口、三重、蘆洲等收費機車格<br>2026/01/23<br>  - 更新台中撤銷禁止陡峭停車場<br>2026/01/01<br>  - 新增春德路停車場<br>2025/11/22<br>  - 新增塔城公園停車場<br>  - 移除阿曼TIT停車場<br>2025/11/05<br>  - 新增科技大樓停車場<br>2025/10/23<br>  - 調整三創停車場費率與類型<br>2025/10/15<br>  - 新增高雄草衙道機車停車場<br>  - 新增台中第二停車場<br>2025/7/14更新<br>  - 新增台北市試辦機車共用車格<br>  - 移除部分停止營業停車場<br>  - 調整部分停車場 icon]]></description>
+    <description><![CDATA[更新請到<br>https://forms.gle/euRCPCPSmvYLm5Rj8<br>2026/06/16<br>  - 更新新莊收費機車格<br>  - 更新七月預定開放收費機車格<br>2026/05/26<br>  - 更新泰山 中和 收費機車格<br>2026/05/03<br>  - 更新台中共用停車格<br>  - 西區 中區 西屯區 南屯區<br>2026/05/01<br>  - 更新新北試辦重機停收費機車格<br>  - 中和、永和、土城、淡水等收費機車格<br>2026/04/07<br>  - 更新台北市試辦停車場<br>2026/03/26<br>  - 合併重機格/機車費率圖層至機車費率圖層<br>  - 新增預計開放圖層(4/6 台北市辦路外停車場)<br>2026/03/06<br>  - 新增重機友善店家圖層<br>2026/03/01<br>  - 新增新北試辦重機停收費機車格<br>  - 新莊、泰山、林口、三重、蘆洲等收費機車格<br>2026/01/23<br>  - 更新台中撤銷禁止陡峭停車場<br>2026/01/01<br>  - 新增春德路停車場<br>2025/11/22<br>  - 新增塔城公園停車場<br>  - 移除阿曼TIT停車場<br>2025/11/05<br>  - 新增科技大樓停車場<br>2025/10/23<br>  - 調整三創停車場費率與類型<br>2025/10/15<br>  - 新增高雄草衙道機車停車場<br>  - 新增台中第二停車場<br>2025/7/14更新<br>  - 新增台北市試辦機車共用車格<br>  - 移除部分停止營業停車場<br>  - 調整部分停車場 icon]]></description>
     <Style id="icon-1502-7CB342-labelson">
       <IconStyle>
         <scale>1</scale>
@@ -710,17 +710,6 @@
           <href>images/icon-17.png</href>
         </Icon>
       </IconStyle>
-    </Style>
-    <Style id="icon-1644-0288D1-labelson-nodesc">
-      <IconStyle>
-        <scale>1</scale>
-        <Icon>
-          <href>images/icon-17.png</href>
-        </Icon>
-      </IconStyle>
-      <BalloonStyle>
-        <text><![CDATA[<h3>$[name]</h3>]]></text>
-      </BalloonStyle>
     </Style>
     <Style id="icon-1644-757575-labelson">
       <IconStyle>
@@ -1957,6 +1946,16 @@
         <Point>
           <coordinates>
             120.2261111,23.0080923,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Lin House 餐廳</name>
+        <description><![CDATA[門口兩側都可以停重機<br>https://maps.app.goo.gl/p8pow7BehgKTBNCS6]]></description>
+        <styleUrl>#icon-1684-7CB342-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.704683,24.9353585,0
           </coordinates>
         </Point>
       </Placemark>
@@ -5384,11 +5383,11 @@
       </Placemark>
       <Placemark>
         <name>(80/h)客限-板橋凱撒大飯店</name>
-        <description><![CDATA[<img src="https://mymaps.usercontent.google.com/hostedimage/m/*/3AE5a_GwWBWbAV91KI3DE4UKDBQDI34-scJg0yOIdx_VwfeXBa_Wa820YKvgcUqrqe_oBNe1yPLb5zsquhm-2Y68XljSjirhMzIpJlI455w-tAzPeebX3ERysfMHAuXjTBCaxDBZjxgfkq6fWkI2F3hDn93Ll0sG9Lu3OO2MvZ6PuznJZrJecGVGacpxJtzyEEg1tOn-Tn_AA4uxl2ZWUuYkusFEpamD6bmyMX2JiSZnAAJsxUQ00ifU4VE7F0oI?fife=s16383" height="200" width="auto" /><br><br>感謝hoha5432提供<br>汽車費率 80h 按鈕取票 2 格 或以上 <br>目前對外說不開放臨停，僅供住宿與用餐客人停放。費用沒有公開，根據個人繳費經驗推估約 80h。<br>官網寫說「本飯店提供機車/汽車地下停車場(B2-B5) ，共220個車位。※B2停放機車（可供重型機車停靠，但如需要更大空間可改停靠汽車停車格）」但實際沒有機車格，而是只有大重停車格（為汽車格畫線切出）。  ]]></description>
+        <description><![CDATA[<img src="https://mymaps.usercontent.google.com/hostedimage/m/*/3AE5a_GyE_4420LEmYAUXjqsKpprruTrcmDp_p_X4RdRtUu3VPMjEvvkDvOu9hNJDKOkPy63JQM_WPksZkgKqYSy2mQDN40bHD-RAfpTwnYM1mRHVoAAJyAhIDB2Tg60WBPE54eijdySOZUeEbYU1JBem_IoJGEWwB9VQbCqzaw3O1hr4mWOjZJMAjKFZc_cMYCRNRD3E7vRY_5iJbW2ynM_R0iMgGzIGoRFDoc6dsw5hfNJ9lLgtjQpvQW1xrT8?fife=s16383" height="200" width="auto" /><br><br>感謝hoha5432提供<br>汽車費率 80h 按鈕取票 2 格 或以上 <br>目前對外說不開放臨停，僅供住宿與用餐客人停放。費用沒有公開，根據個人繳費經驗推估約 80h。<br>官網寫說「本飯店提供機車/汽車地下停車場(B2-B5) ，共220個車位。※B2停放機車（可供重型機車停靠，但如需要更大空間可改停靠汽車停車格）」但實際沒有機車格，而是只有大重停車格（為汽車格畫線切出）。  ]]></description>
         <styleUrl>#icon-1633-0288D1</styleUrl>
         <ExtendedData>
           <Data name="gx_media_links">
-            <value>https://mymaps.usercontent.google.com/hostedimage/m/*/3AE5a_GwWBWbAV91KI3DE4UKDBQDI34-scJg0yOIdx_VwfeXBa_Wa820YKvgcUqrqe_oBNe1yPLb5zsquhm-2Y68XljSjirhMzIpJlI455w-tAzPeebX3ERysfMHAuXjTBCaxDBZjxgfkq6fWkI2F3hDn93Ll0sG9Lu3OO2MvZ6PuznJZrJecGVGacpxJtzyEEg1tOn-Tn_AA4uxl2ZWUuYkusFEpamD6bmyMX2JiSZnAAJsxUQ00ifU4VE7F0oI?fife=s16383</value>
+            <value>https://mymaps.usercontent.google.com/hostedimage/m/*/3AE5a_GyE_4420LEmYAUXjqsKpprruTrcmDp_p_X4RdRtUu3VPMjEvvkDvOu9hNJDKOkPy63JQM_WPksZkgKqYSy2mQDN40bHD-RAfpTwnYM1mRHVoAAJyAhIDB2Tg60WBPE54eijdySOZUeEbYU1JBem_IoJGEWwB9VQbCqzaw3O1hr4mWOjZJMAjKFZc_cMYCRNRD3E7vRY_5iJbW2ynM_R0iMgGzIGoRFDoc6dsw5hfNJ9lLgtjQpvQW1xrT8?fife=s16383</value>
           </Data>
         </ExtendedData>
         <Point>
@@ -10302,7 +10301,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)過圳公園</name>
-        <description>2026/03 新北試辦重機停收費機車格</description>
+        <description>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放。</description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10312,7 +10311,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)過圳街7巷</name>
-        <description>2026/03 新北試辦重機停收費機車格</description>
+        <description>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放。</description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10322,7 +10321,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)重新路三段115巷</name>
-        <description><![CDATA[2026/03 新北試辦重機停收費機車格<br>重新路3段115巷(新北大道1段至重新路3段)]]></description>
+        <description><![CDATA[重新路3段115巷(新北大道1段至重新路3段)<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10332,7 +10331,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)新知八路</name>
-        <description>2026/03 新北試辦重機停收費機車格</description>
+        <description>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放。</description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10342,7 +10341,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)新莊路214巷(中正路至景德路)</name>
-        <description><![CDATA[2026/03 新北試辦重機停收費機車格<br>新莊路214巷(中正路至景德路)]]></description>
+        <description><![CDATA[新莊路214巷(中正路至景德路)<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10352,7 +10351,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)中華路一段</name>
-        <description><![CDATA[2026/03 新北試辦重機停收費機車格<br>中華路1段(中正路至中華路1段63巷)]]></description>
+        <description><![CDATA[2026/03 新北試辦重機停收費機車格<br>中華路1段(中正路至中華路1段63巷)<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10362,7 +10361,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)民權路61巷</name>
-        <description>2026/03 新北試辦重機停收費機車格</description>
+        <description><![CDATA[2026/03 新北試辦重機停收費機車格<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10372,7 +10371,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)三民路98巷</name>
-        <description>2026/03 新北試辦重機停收費機車格</description>
+        <description><![CDATA[2026/03 新北試辦重機停收費機車格<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10382,7 +10381,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)長樂路237巷</name>
-        <description><![CDATA[2026/03 新北試辦重機停收費機車格<br>長樂路237巷(長興路至長樂路)]]></description>
+        <description><![CDATA[2026/03 新北試辦重機停收費機車格<br>長樂路237巷(長興路至長樂路)<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10392,7 +10391,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)長樂路</name>
-        <description><![CDATA[2026/03 新北試辦重機停收費機車格<br>長樂路(三民路至長樂路237巷)]]></description>
+        <description><![CDATA[2026/03 新北試辦重機停收費機車格<br>長樂路(三民路至長樂路237巷)<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10402,7 +10401,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)三民路</name>
-        <description><![CDATA[2026/03 新北試辦重機停收費機車格<br>三民路<br>(單號側：民族路548巷至長興路<br>雙號側：三民路300巷至長興路)]]></description>
+        <description><![CDATA[2026/03 新北試辦重機停收費機車格<br>三民路<br>(單號側：民族路548巷至長興路<br>雙號側：三民路300巷至長興路)<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10412,7 +10411,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)中正路</name>
-        <description><![CDATA[2026/03 新北試辦重機停收費機車格<br>中正路<br>(單號側：中正路439號至三民路<br>雙號側：中正路410號至三民路)]]></description>
+        <description><![CDATA[2026/03 新北試辦重機停收費機車格<br>中正路<br>(單號側：中正路439號至三民路<br>雙號側：中正路410號至三民路)<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10422,7 +10421,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)復興路</name>
-        <description>2026/03 新北試辦重機停收費機車格</description>
+        <description><![CDATA[2026/03 新北試辦重機停收費機車格<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10432,7 +10431,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)三泰路(莊泰路至貴子路)</name>
-        <description><![CDATA[2026/03 新北試辦重機停收費機車格<br>三泰路(莊泰路至貴子路)]]></description>
+        <description><![CDATA[2026/03 新北試辦重機停收費機車格<br>三泰路(莊泰路至貴子路)<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10442,7 +10441,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)思源路單號側(中正路至思源路61巷)</name>
-        <description><![CDATA[2026/03 新北試辦重機停收費機車格<br>思源路單號側(中正路至思源路61巷)]]></description>
+        <description><![CDATA[2026/03 新北試辦重機停收費機車格<br>思源路單號側(中正路至思源路61巷)<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10452,7 +10451,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)中正路(化成路至思源路)</name>
-        <description><![CDATA[2026/03 新北試辦重機停收費機車格<br>中正路(化成路至思源路)]]></description>
+        <description><![CDATA[2026/03 新北試辦重機停收費機車格<br>中正路(化成路至思源路)<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放，但仍須停妥於格線內，避免影響其他車輛停放與行車安全。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10462,7 +10461,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)貴子路67巷</name>
-        <description><![CDATA[2026/03 新北試辦重機停收費機車格<br>貴子路67巷<br>貴子路67巷對面新闢道路]]></description>
+        <description><![CDATA[2026/03 新北試辦重機停收費機車格<br>貴子路67巷<br>貴子路67巷對面新闢道路<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放，但仍須停妥於格線內，避免影響其他車輛停放與行車安全。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10472,7 +10471,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)泰林路二段2號</name>
-        <description><![CDATA[2026/03 新北試辦重機停收費機車格<br>泰林路2段2號對面空地]]></description>
+        <description><![CDATA[2026/03 新北試辦重機停收費機車格<br>泰林路2段2號對面空地<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放，但仍須停妥於格線內，避免影響其他車輛停放與行車安全。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10482,7 +10481,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)新北大道四段437號</name>
-        <description><![CDATA[2026/03 新北試辦重機停收費機車格<br>新北大道4段437號旁空地]]></description>
+        <description><![CDATA[2026/03 新北試辦重機停收費機車格<br>新北大道4段437號旁空地<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放，但仍須停妥於格線內，避免影響其他車輛停放與行車安全。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10492,7 +10491,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)八德路</name>
-        <description><![CDATA[2026/03 新北試辦重機停收費機車格<br>八德路(文化三路1段至文化二路1段)]]></description>
+        <description><![CDATA[2026/03 新北試辦重機停收費機車格<br>八德路(文化三路1段至文化二路1段)<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放，但仍須停妥於格線內，避免影響其他車輛停放與行車安全。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10502,7 +10501,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)新北大道一段15巷</name>
-        <description><![CDATA[2026/03 新北試辦重機停收費機車格<br>新北大道1段15巷]]></description>
+        <description><![CDATA[2026/03 新北試辦重機停收費機車格<br>新北大道1段15巷<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放，但仍須停妥於格線內，避免影響其他車輛停放與行車安全。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10512,7 +10511,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)重新路3段115巷1弄</name>
-        <description><![CDATA[2026/03 新北試辦重機停收費機車格<br>重新路3段115巷1弄]]></description>
+        <description><![CDATA[2026/03 新北試辦重機停收費機車格<br>重新路3段115巷1弄<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放，但仍須停妥於格線內，避免影響其他車輛停放與行車安全。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10522,7 +10521,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)重新路3段(中正南、北路口至過圳街、重安街口)</name>
-        <description><![CDATA[2026/03 新北試辦重機停收費機車格<br>重新路3段(中正南、北路口至過圳街、重安街口)]]></description>
+        <description><![CDATA[2026/03 新北試辦重機停收費機車格<br>重新路3段(中正南、北路口至過圳街、重安街口)<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放，但仍須停妥於格線內，避免影響其他車輛停放與行車安全。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10532,7 +10531,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)新北大道1段(單號側：重新路3段至過圳街)</name>
-        <description><![CDATA[2026/03 新北試辦重機停收費機車格<br>新北大道1段(單號側：重新路3段至過圳街)]]></description>
+        <description><![CDATA[2026/03 新北試辦重機停收費機車格<br>新北大道1段(單號側：重新路3段至過圳街)<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放，但仍須停妥於格線內，避免影響其他車輛停放與行車安全。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10542,7 +10541,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)三民路(保和街至得勝街)</name>
-        <description><![CDATA[2026/03 新北試辦重機停收費機車格<br>三民路(保和街至得勝街)]]></description>
+        <description><![CDATA[2026/03 新北試辦重機停收費機車格<br>三民路(保和街至得勝街)<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放，但仍須停妥於格線內，避免影響其他車輛停放與行車安全。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10552,7 +10551,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)忠承路(忠義路至承天路)起</name>
-        <description>2026/05 新北試辦重機停收費機車格</description>
+        <description><![CDATA[2026/05 新北試辦重機停收費機車格<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放，但仍須停妥於格線內，避免影響其他車輛停放與行車安全。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10562,7 +10561,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)忠承路(忠義路至承天路)訖</name>
-        <description>2026/05 新北試辦重機停收費機車格</description>
+        <description><![CDATA[2026/05 新北試辦重機停收費機車格<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放，但仍須停妥於格線內，避免影響其他車輛停放與行車安全。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10572,7 +10571,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)承天路(中央路3段至承天路43巷)起</name>
-        <description>2026/05 新北試辦重機停收費機車格</description>
+        <description><![CDATA[2026/05 新北試辦重機停收費機車格<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放，但仍須停妥於格線內，避免影響其他車輛停放與行車安全。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10582,7 +10581,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)承天路(中央路3段至承天路43巷)訖</name>
-        <description>2026/05 新北試辦重機停收費機車格</description>
+        <description><![CDATA[2026/05 新北試辦重機停收費機車格<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放，但仍須停妥於格線內，避免影響其他車輛停放與行車安全。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10592,7 +10591,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)中央路3段(中華路至大安路)起</name>
-        <description>2026/05 新北試辦重機停收費機車格</description>
+        <description><![CDATA[2026/05 新北試辦重機停收費機車格<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放，但仍須停妥於格線內，避免影響其他車輛停放與行車安全。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10602,7 +10601,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)中央路3段(中華路至大安路)訖</name>
-        <description>2026/05 新北試辦重機停收費機車格</description>
+        <description><![CDATA[2026/05 新北試辦重機停收費機車格<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放，但仍須停妥於格線內，避免影響其他車輛停放與行車安全。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10612,7 +10611,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)海山路</name>
-        <description>2026/05 新北試辦重機停收費機車格</description>
+        <description><![CDATA[2026/05 新北試辦重機停收費機車格<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放，但仍須停妥於格線內，避免影響其他車輛停放與行車安全。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10622,7 +10621,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)頂埔活動中心旁空地</name>
-        <description>2026/05 新北試辦重機停收費機車格</description>
+        <description><![CDATA[2026/05 新北試辦重機停收費機車格<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放，但仍須停妥於格線內，避免影響其他車輛停放與行車安全。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10632,7 +10631,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)中央路4段53號周邊道路</name>
-        <description>2026/05 新北試辦重機停收費機車格</description>
+        <description><![CDATA[2026/05 新北試辦重機停收費機車格<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放，但仍須停妥於格線內，避免影響其他車輛停放與行車安全。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10642,7 +10641,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)中央路4段(大暖路至中央路4段136巷)訖</name>
-        <description>2026/05 新北試辦重機停收費機車格</description>
+        <description><![CDATA[2026/05 新北試辦重機停收費機車格<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放，但仍須停妥於格線內，避免影響其他車輛停放與行車安全。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10652,7 +10651,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)科技路</name>
-        <description>2026/05 新北試辦重機停收費機車格</description>
+        <description><![CDATA[2026/05 新北試辦重機停收費機車格<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放，但仍須停妥於格線內，避免影響其他車輛停放與行車安全。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10662,7 +10661,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)大暖路</name>
-        <description>2026/05 新北試辦重機停收費機車格</description>
+        <description><![CDATA[2026/05 新北試辦重機停收費機車格<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放，但仍須停妥於格線內，避免影響其他車輛停放與行車安全。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10672,7 +10671,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)中和路(雙號側：永貞路至宜安路)起</name>
-        <description>2026/05 新北試辦重機停收費機車格</description>
+        <description><![CDATA[2026/05 新北試辦重機停收費機車格<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放，但仍須停妥於格線內，避免影響其他車輛停放與行車安全。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10682,7 +10681,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)中和路(雙號側：永貞路至宜安路)訖</name>
-        <description>2026/05 新北試辦重機停收費機車格</description>
+        <description>2026/05 新北試辦重機停收費機車格開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放，但仍須停妥於格線內，避免影響其他車輛停放與行車安全。</description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10692,7 +10691,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)四維街</name>
-        <description>2026/05 新北試辦重機停收費機車格</description>
+        <description><![CDATA[2026/05 新北試辦重機停收費機車格<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10702,7 +10701,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)永和路2段(文化路、竹林路口至中山路1段、中正路口)起</name>
-        <description>2026/05 新北試辦重機停收費機車格</description>
+        <description>2026/05 新北試辦重機停收費機車格開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放。</description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10712,7 +10711,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)永和路2段(文化路、竹林路口至中山路1段、中正路口)訖</name>
-        <description>2026/05 新北試辦重機停收費機車格</description>
+        <description><![CDATA[2026/05 新北試辦重機停收費機車格<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10722,7 +10721,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)新市三路一段</name>
-        <description>2026/05 新北試辦重機停收費機車格</description>
+        <description><![CDATA[2026/05 新北試辦重機停收費機車格<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10732,7 +10731,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)崁頂三路</name>
-        <description>2026/05 新北試辦重機停收費機車格</description>
+        <description><![CDATA[2026/05 新北試辦重機停收費機車格<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10742,7 +10741,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)崁頂五路279巷</name>
-        <description>2026/05 新北試辦重機停收費機車格</description>
+        <description><![CDATA[2026/05 新北試辦重機停收費機車格<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10752,7 +10751,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)崁頂五路</name>
-        <description>2026/05 新北試辦重機停收費機車格</description>
+        <description><![CDATA[2026/05 新北試辦重機停收費機車格<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10762,7 +10761,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)濱海路一段</name>
-        <description>2026/05 新北試辦重機停收費機車格</description>
+        <description><![CDATA[2026/05 新北試辦重機停收費機車格<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10772,7 +10771,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)新市一路三段101巷</name>
-        <description>2026/05 新北試辦重機停收費機車格</description>
+        <description><![CDATA[2026/05 新北試辦重機停收費機車格<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10782,7 +10781,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)中山北路二段381巷</name>
-        <description>2026/05 新北試辦重機停收費機車格</description>
+        <description><![CDATA[2026/05 新北試辦重機停收費機車格<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10792,7 +10791,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)中山北路二段</name>
-        <description>2026/05 新北試辦重機停收費機車格</description>
+        <description><![CDATA[2026/05 新北試辦重機停收費機車格<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10802,7 +10801,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)中正東路2段71號旁道路</name>
-        <description>2026/05 新北試辦重機停收費機車格</description>
+        <description><![CDATA[2026/05 新北試辦重機停收費機車格<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10812,7 +10811,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)義山路二段</name>
-        <description>2026/05 新北試辦重機停收費機車格</description>
+        <description><![CDATA[2026/05 新北試辦重機停收費機車格<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10822,7 +10821,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)新市三路二段</name>
-        <description>2026/05 新北試辦重機停收費機車格</description>
+        <description><![CDATA[2026/05 新北試辦重機停收費機車格<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10832,7 +10831,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)油車口公有停車場</name>
-        <description><![CDATA[2026/05 新北試辦重機停收費機車格<br>***非停車場內，是路邊收費停車格***]]></description>
+        <description><![CDATA[2026/05 新北試辦重機停收費機車格<br>***非停車場內，是路邊收費停車格***<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -10842,7 +10841,7 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)中正路</name>
-        <description><![CDATA[2026/05 新北試辦重機停收費機車格<br>中正路(含財政部國稅局淡水稽徵所第二辦公室旁土地及淡水區紅毛城段976地號)]]></description>
+        <description><![CDATA[2026/05 新北試辦重機停收費機車格<br>中正路(含財政部國稅局淡水稽徵所第二辦公室旁土地及淡水區紅毛城段976地號)<br>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放。]]></description>
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -11322,7 +11321,8 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)貴陽街(新北大道6段至明志路3段)</name>
-        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <description>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放。</description>
+        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
             121.4210307,25.0335287,0
@@ -11331,7 +11331,8 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)貴陽街(新北大道6段至明志路3段)</name>
-        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <description>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放。</description>
+        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
             121.4221653,25.0329989,0
@@ -11340,7 +11341,8 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)明志路三段(明志路3段352巷至432巷)</name>
-        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <description>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放。</description>
+        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
             121.4218552,25.0350259,0
@@ -11349,7 +11351,8 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)明志路三段(明志路3段352巷至432巷)</name>
-        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <description>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放。</description>
+        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
             121.4209281,25.0331504,0
@@ -11358,7 +11361,8 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)景平路單號側(景安路至景平路241巷)</name>
-        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <description>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放。</description>
+        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
             121.5095274,24.9928194,0
@@ -11367,7 +11371,8 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)景平路單號側(景安路至景平路241巷)</name>
-        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <description>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放。</description>
+        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
             121.5049595,24.9933816,0
@@ -11376,7 +11381,8 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)景安路(景平路至安和路)</name>
-        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <description>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放。</description>
+        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
             121.5050328,24.9937679,0
@@ -11385,7 +11391,8 @@
       </Placemark>
       <Placemark>
         <name>(30/4h)景安路(景平路至安和路)</name>
-        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <description>開放大型重機停放路邊收費機車格，停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放。</description>
+        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
             121.5061539,24.9971907,0
@@ -11399,6 +11406,46 @@
         <Point>
           <coordinates>
             121.5748979,25.0510359,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>中信街(中央路至新北大道)</name>
+        <description>停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放，但仍須停妥於格線內，避免影響其他車輛停放與行車安全。</description>
+        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.4468706,25.059217,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>中信街(中央路至新北大道)</name>
+        <description>停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放，但仍須停妥於格線內，避免影響其他車輛停放與行車安全。</description>
+        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.4475706,25.0581989,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>中央路</name>
+        <description>停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放，但仍須停妥於格線內，避免影響其他車輛停放與行車安全。</description>
+        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.4449091,25.0564271,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>中央路</name>
+        <description>停放機車格時車身均不得超出格線，若車身太長，可採跨2格停放，但仍須停妥於格線內，避免影響其他車輛停放與行車安全。</description>
+        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.4594895,25.0587718,0
           </coordinates>
         </Point>
       </Placemark>
@@ -12237,6 +12284,186 @@
         <Point>
           <coordinates>
             121.35801,24.9544766,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>龍五路(鳳一路至鳳三路)</name>
+        <styleUrl>#icon-1853-BDBDBD-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.3354252,24.9732765,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>龍五路(鳳一路至鳳三路)</name>
+        <styleUrl>#icon-1853-BDBDBD-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.334245,24.9724207,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>鳳三路(鶯歌路至龍三路)</name>
+        <styleUrl>#icon-1853-BDBDBD-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.3353482,24.9711581,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>鳳三路(鶯歌路至龍三路)</name>
+        <styleUrl>#icon-1853-BDBDBD-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.3328966,24.9737695,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>鳳一路(鶯歌路至龍三路)</name>
+        <styleUrl>#icon-1853-BDBDBD-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.3367573,24.9722298,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>鳳一路(鶯歌路至龍三路)</name>
+        <styleUrl>#icon-1853-BDBDBD-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.3340751,24.9746417,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>鶯歌路(鳳一路至鳳三路)</name>
+        <styleUrl>#icon-1853-BDBDBD-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.3367923,24.9720941,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>鶯歌路(鳳一路至鳳三路)</name>
+        <styleUrl>#icon-1853-BDBDBD-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.3355156,24.9711361,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>文化路229號對面</name>
+        <styleUrl>#icon-1853-BDBDBD-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.3541838,24.9533675,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>建國路(中正一路至建國路85號)</name>
+        <styleUrl>#icon-1853-BDBDBD-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.3408326,24.950662,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>建國路(中正一路至建國路85號)</name>
+        <styleUrl>#icon-1853-BDBDBD-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.3568977,24.9569178,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>行政路</name>
+        <styleUrl>#icon-1853-BDBDBD-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.3550127,24.9564504,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>行政路</name>
+        <styleUrl>#icon-1853-BDBDBD-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.3501874,24.9549354,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>仁愛路(中正一路至建國路)</name>
+        <styleUrl>#icon-1853-BDBDBD-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.353487,24.956819,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>仁愛路(中正一路至建國路)</name>
+        <styleUrl>#icon-1853-BDBDBD-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.3546376,24.9552018,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大學路(三樹路至學府路)</name>
+        <styleUrl>#icon-1853-BDBDBD-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.3716678,24.9475566,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大學路(三樹路至學府路)</name>
+        <styleUrl>#icon-1853-BDBDBD-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.3780192,24.9398714,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大同路2段(大同路1段515巷至大同路2段184巷)</name>
+        <styleUrl>#icon-1853-BDBDBD-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.6455921,25.0623556,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大同路2段(大同路1段515巷至大同路2段184巷)</name>
+        <styleUrl>#icon-1853-BDBDBD-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.6527129,25.0645486,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>福興段194地號臨時路外機車停車場(路外停車場代收)</name>
+        <styleUrl>#icon-1853-BDBDBD-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.6172452,25.0513675,0
           </coordinates>
         </Point>
       </Placemark>
