@@ -1932,6 +1932,26 @@
           </coordinates>
         </Point>
       </Placemark>
+      <Placemark>
+        <name>建益機車行</name>
+        <description>公道價機車救援</description>
+        <styleUrl>#icon-1684-7CB342-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            120.5936427,23.2991881,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>巴拉卡鐵人咖啡</name>
+        <description>停車位充足</description>
+        <styleUrl>#icon-1684-7CB342-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.5020786,25.203689,0
+          </coordinates>
+        </Point>
+      </Placemark>
     </Folder>
     <Folder>
       <name>汽車費率</name>
@@ -5365,11 +5385,11 @@
       </Placemark>
       <Placemark>
         <name>(80/h)客限-板橋凱撒大飯店</name>
-        <description><![CDATA[<img src="https://mymaps.usercontent.google.com/hostedimage/m/*/3AE5a_GzfxqDrXF5dIutQUf3JAHymEU5OK3XXTP9ZzEdhsVJ0XUPatC87lHANTirD8PlvIQdZMYc0DyVDO-g5Cv_nQoxsEqZsVsSXYM3FWDbdg1thMUewx1Gg41vvnKBrN0dCUFUHFVibzX_zZJ49gLJ6W8xsLC74ZHhHXFjhZ54LvwN_kFENo9AcZ4XX78glWBiiFOU7buaATplpaFDMgGpk7pleksIh2_9rTWU2-dkiJe3o61VvIVqRDwpP1EQ?fife=s16383" height="200" width="auto" /><br><br>感謝hoha5432提供<br>汽車費率 80h 按鈕取票 2 格 或以上 <br>目前對外說不開放臨停，僅供住宿與用餐客人停放。費用沒有公開，根據個人繳費經驗推估約 80h。<br>官網寫說「本飯店提供機車/汽車地下停車場(B2-B5) ，共220個車位。※B2停放機車（可供重型機車停靠，但如需要更大空間可改停靠汽車停車格）」但實際沒有機車格，而是只有大重停車格（為汽車格畫線切出）。  ]]></description>
+        <description><![CDATA[<img src="https://mymaps.usercontent.google.com/hostedimage/m/*/3AE5a_Gx_TK9E7dIs_xWOcfJ7Xa4lTmhlZco0R1q-xHS6Vt29Zd6YKOTQgRN_2EMC4TbdOLZfdfL4A0ro_AcUkz5oiJQcDlY09q5fn-VylJoxJDHAfegIcbshzstRdbu8gb2zYi1PWUG5fBTpjNHirxZic2IUm5nL0QatB-KcnvyY9i9NXqsKOlb5YWyPKMyD2eQ2h2Wfo5aK9EVHgy-qmhgSIzOQCUqIy4Ypu3ZkeeNTuqnuKB37I2ylAnR3XOI?fife=s16383" height="200" width="auto" /><br><br>感謝hoha5432提供<br>汽車費率 80h 按鈕取票 2 格 或以上 <br>目前對外說不開放臨停，僅供住宿與用餐客人停放。費用沒有公開，根據個人繳費經驗推估約 80h。<br>官網寫說「本飯店提供機車/汽車地下停車場(B2-B5) ，共220個車位。※B2停放機車（可供重型機車停靠，但如需要更大空間可改停靠汽車停車格）」但實際沒有機車格，而是只有大重停車格（為汽車格畫線切出）。  ]]></description>
         <styleUrl>#icon-1633-0288D1</styleUrl>
         <ExtendedData>
           <Data name="gx_media_links">
-            <value>https://mymaps.usercontent.google.com/hostedimage/m/*/3AE5a_GzfxqDrXF5dIutQUf3JAHymEU5OK3XXTP9ZzEdhsVJ0XUPatC87lHANTirD8PlvIQdZMYc0DyVDO-g5Cv_nQoxsEqZsVsSXYM3FWDbdg1thMUewx1Gg41vvnKBrN0dCUFUHFVibzX_zZJ49gLJ6W8xsLC74ZHhHXFjhZ54LvwN_kFENo9AcZ4XX78glWBiiFOU7buaATplpaFDMgGpk7pleksIh2_9rTWU2-dkiJe3o61VvIVqRDwpP1EQ?fife=s16383</value>
+            <value>https://mymaps.usercontent.google.com/hostedimage/m/*/3AE5a_Gx_TK9E7dIs_xWOcfJ7Xa4lTmhlZco0R1q-xHS6Vt29Zd6YKOTQgRN_2EMC4TbdOLZfdfL4A0ro_AcUkz5oiJQcDlY09q5fn-VylJoxJDHAfegIcbshzstRdbu8gb2zYi1PWUG5fBTpjNHirxZic2IUm5nL0QatB-KcnvyY9i9NXqsKOlb5YWyPKMyD2eQ2h2Wfo5aK9EVHgy-qmhgSIzOQCUqIy4Ypu3ZkeeNTuqnuKB37I2ylAnR3XOI?fife=s16383</value>
           </Data>
         </ExtendedData>
         <Point>
