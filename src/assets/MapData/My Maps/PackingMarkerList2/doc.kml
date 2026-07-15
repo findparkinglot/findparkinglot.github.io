@@ -2,7 +2,7 @@
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
     <name>Alan大重停車記事</name>
-    <description><![CDATA[更新請到<br>https://forms.gle/euRCPCPSmvYLm5Rj8<br>2026/06/16<br>  - 更新新莊收費機車格<br>  - 更新七月預定開放收費機車格<br>2026/05/26<br>  - 更新泰山 中和 收費機車格<br>2026/05/03<br>  - 更新台中共用停車格<br>  - 西區 中區 西屯區 南屯區<br>2026/05/01<br>  - 更新新北試辦重機停收費機車格<br>  - 中和、永和、土城、淡水等收費機車格<br>2026/04/07<br>  - 更新台北市試辦停車場<br>2026/03/26<br>  - 合併重機格/機車費率圖層至機車費率圖層<br>  - 新增預計開放圖層(4/6 台北市辦路外停車場)<br>2026/03/06<br>  - 新增重機友善店家圖層<br>2026/03/01<br>  - 新增新北試辦重機停收費機車格<br>  - 新莊、泰山、林口、三重、蘆洲等收費機車格<br>2026/01/23<br>  - 更新台中撤銷禁止陡峭停車場<br>2026/01/01<br>  - 新增春德路停車場<br>2025/11/22<br>  - 新增塔城公園停車場<br>  - 移除阿曼TIT停車場<br>2025/11/05<br>  - 新增科技大樓停車場<br>2025/10/23<br>  - 調整三創停車場費率與類型<br>2025/10/15<br>  - 新增高雄草衙道機車停車場<br>  - 新增台中第二停車場<br>2025/7/14更新<br>  - 新增台北市試辦機車共用車格<br>  - 移除部分停止營業停車場<br>  - 調整部分停車場 icon]]></description>
+    <description><![CDATA[更新請到<br>https://forms.gle/euRCPCPSmvYLm5Rj8<br>2026/07/15<br>  - 更新台北市路外試辦12處停車場<br>2026/06/16<br>  - 更新新莊收費機車格<br>  - 更新七月預定開放收費機車格<br>2026/05/26<br>  - 更新泰山 中和 收費機車格<br>2026/05/03<br>  - 更新台中共用停車格<br>  - 西區 中區 西屯區 南屯區<br>2026/05/01<br>  - 更新新北試辦重機停收費機車格<br>  - 中和、永和、土城、淡水等收費機車格<br>2026/04/07<br>  - 更新台北市試辦停車場<br>2026/03/26<br>  - 合併重機格/機車費率圖層至機車費率圖層<br>  - 新增預計開放圖層(4/6 台北市辦路外停車場)<br>2026/03/06<br>  - 新增重機友善店家圖層<br>2026/03/01<br>  - 新增新北試辦重機停收費機車格<br>  - 新莊、泰山、林口、三重、蘆洲等收費機車格<br>2026/01/23<br>  - 更新台中撤銷禁止陡峭停車場<br>2026/01/01<br>  - 新增春德路停車場<br>2025/11/22<br>  - 新增塔城公園停車場<br>  - 移除阿曼TIT停車場<br>2025/11/05<br>  - 新增科技大樓停車場<br>2025/10/23<br>  - 調整三創停車場費率與類型<br>2025/10/15<br>  - 新增高雄草衙道機車停車場<br>  - 新增台中第二停車場<br>2025/7/14更新<br>  - 新增台北市試辦機車共用車格<br>  - 移除部分停止營業停車場<br>  - 調整部分停車場 icon]]></description>
     <Style id="icon-1502-7CB342-labelson">
       <IconStyle>
         <scale>1</scale>
@@ -2271,16 +2271,6 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>(30/h)高爾夫球場地下停車場</name>
-        <description>按鈴請人員協助進入</description>
-        <styleUrl>#icon-1538-E65100-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            121.5074862,25.0247141,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
         <name>(平30/h | 假40/h)松山工農地下停車場站</name>
         <styleUrl>#icon-1538-7CB342-labelson-nodesc</styleUrl>
         <Point>
@@ -2597,7 +2587,7 @@
         <styleUrl>#icon-1538-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
-            121.535848,25.033315,0
+            121.5358493,25.0332664,0
           </coordinates>
         </Point>
       </Placemark>
@@ -5222,6 +5212,16 @@
           </coordinates>
         </Point>
       </Placemark>
+      <Placemark>
+        <name>(30/h)高爾夫球場地下停車場</name>
+        <description>汽車道按鈴請人員協助進入</description>
+        <styleUrl>#icon-1538-E65100-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.5074607,25.0247724,0
+          </coordinates>
+        </Point>
+      </Placemark>
     </Folder>
     <Folder>
       <name>重機格/汽車費率</name>
@@ -5385,11 +5385,11 @@
       </Placemark>
       <Placemark>
         <name>(80/h)客限-板橋凱撒大飯店</name>
-        <description><![CDATA[<img src="https://mymaps.usercontent.google.com/hostedimage/m/*/3AE5a_Gx_TK9E7dIs_xWOcfJ7Xa4lTmhlZco0R1q-xHS6Vt29Zd6YKOTQgRN_2EMC4TbdOLZfdfL4A0ro_AcUkz5oiJQcDlY09q5fn-VylJoxJDHAfegIcbshzstRdbu8gb2zYi1PWUG5fBTpjNHirxZic2IUm5nL0QatB-KcnvyY9i9NXqsKOlb5YWyPKMyD2eQ2h2Wfo5aK9EVHgy-qmhgSIzOQCUqIy4Ypu3ZkeeNTuqnuKB37I2ylAnR3XOI?fife=s16383" height="200" width="auto" /><br><br>感謝hoha5432提供<br>汽車費率 80h 按鈕取票 2 格 或以上 <br>目前對外說不開放臨停，僅供住宿與用餐客人停放。費用沒有公開，根據個人繳費經驗推估約 80h。<br>官網寫說「本飯店提供機車/汽車地下停車場(B2-B5) ，共220個車位。※B2停放機車（可供重型機車停靠，但如需要更大空間可改停靠汽車停車格）」但實際沒有機車格，而是只有大重停車格（為汽車格畫線切出）。  ]]></description>
+        <description><![CDATA[<img src="https://mymaps.usercontent.google.com/hostedimage/m/*/3AE5a_Gwhs6lZ2JoLxna3VzARKrim1TnmCiqmUD9FatMJlUzPXmqukteN_rFE2of3KVzk6ZqmM87dSvXHWJL5V8Q-nRA23mHtYabQXvhC9pwH8U7Nk2AG9c25GtRaZn7DP0jJkWlLrfm-uaESVFq07AMUU84ikKF6I_rHlgFA0RnppXKeoIbbOiYt4QdpqSyp0ire37RCM7z81ShfyNY3JbEBNpp4JvsZoKAhLsbNdVmSUUvH2CPV56MTDt4jnF0?fife=s16383" height="200" width="auto" /><br><br>感謝hoha5432提供<br>汽車費率 80h 按鈕取票 2 格 或以上 <br>目前對外說不開放臨停，僅供住宿與用餐客人停放。費用沒有公開，根據個人繳費經驗推估約 80h。<br>官網寫說「本飯店提供機車/汽車地下停車場(B2-B5) ，共220個車位。※B2停放機車（可供重型機車停靠，但如需要更大空間可改停靠汽車停車格）」但實際沒有機車格，而是只有大重停車格（為汽車格畫線切出）。  ]]></description>
         <styleUrl>#icon-1633-0288D1</styleUrl>
         <ExtendedData>
           <Data name="gx_media_links">
-            <value>https://mymaps.usercontent.google.com/hostedimage/m/*/3AE5a_Gx_TK9E7dIs_xWOcfJ7Xa4lTmhlZco0R1q-xHS6Vt29Zd6YKOTQgRN_2EMC4TbdOLZfdfL4A0ro_AcUkz5oiJQcDlY09q5fn-VylJoxJDHAfegIcbshzstRdbu8gb2zYi1PWUG5fBTpjNHirxZic2IUm5nL0QatB-KcnvyY9i9NXqsKOlb5YWyPKMyD2eQ2h2Wfo5aK9EVHgy-qmhgSIzOQCUqIy4Ypu3ZkeeNTuqnuKB37I2ylAnR3XOI?fife=s16383</value>
+            <value>https://mymaps.usercontent.google.com/hostedimage/m/*/3AE5a_Gwhs6lZ2JoLxna3VzARKrim1TnmCiqmUD9FatMJlUzPXmqukteN_rFE2of3KVzk6ZqmM87dSvXHWJL5V8Q-nRA23mHtYabQXvhC9pwH8U7Nk2AG9c25GtRaZn7DP0jJkWlLrfm-uaESVFq07AMUU84ikKF6I_rHlgFA0RnppXKeoIbbOiYt4QdpqSyp0ire37RCM7z81ShfyNY3JbEBNpp4JvsZoKAhLsbNdVmSUUvH2CPV56MTDt4jnF0?fife=s16383</value>
           </Data>
         </ExtendedData>
         <Point>
@@ -5534,16 +5534,6 @@
         <Point>
           <coordinates>
             121.5458942,25.0494003,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>(40/h)忠信廣場地下停車場</name>
-        <description><![CDATA[全日40/h, 2個專用格<br>禁停機車區]]></description>
-        <styleUrl>#icon-1633-757575</styleUrl>
-        <Point>
-          <coordinates>
-            121.5681758,25.0402346,0
           </coordinates>
         </Point>
       </Placemark>
@@ -5695,11 +5685,11 @@
       </Placemark>
       <Placemark>
         <name>(40/h)長安國小地下停車場</name>
-        <description><![CDATA[日間40/h, 晚間30/h, 1個專用格<br>入場辨識 後牌<br>911@m01]]></description>
+        <description><![CDATA[汽車道<br>日間40/h, 晚間30/h, 1個專用格<br>入場辨識 後牌<br>911@m01]]></description>
         <styleUrl>#icon-1633-7CB342</styleUrl>
         <Point>
           <coordinates>
-            121.5313821,25.0503467,0
+            121.5315162,25.0503831,0
           </coordinates>
         </Point>
       </Placemark>
@@ -5744,11 +5734,11 @@
       </Placemark>
       <Placemark>
         <name>(30/h)啟聰學校地下停車場</name>
-        <description>30/H 有專用格</description>
+        <description>汽車道，30/H 有專用格</description>
         <styleUrl>#icon-1633-7CB342</styleUrl>
         <Point>
           <coordinates>
-            121.5117184,25.0743147,0
+            121.5117372,25.0742783,0
           </coordinates>
         </Point>
       </Placemark>
@@ -5794,11 +5784,11 @@
       </Placemark>
       <Placemark>
         <name>(30/h)福林公園地下停車場</name>
-        <description>30/H 室內 管理員, 3個專用格</description>
+        <description>走汽車道的話，30/H 室內 管理員, 3個專用格</description>
         <styleUrl>#icon-1633-7CB342</styleUrl>
         <Point>
           <coordinates>
-            121.5307189,25.095975,0
+            121.5305566,25.0960248,0
           </coordinates>
         </Point>
       </Placemark>
@@ -5868,7 +5858,7 @@
         <styleUrl>#icon-1633-7CB342</styleUrl>
         <Point>
           <coordinates>
-            121.5023769,25.1366855,0
+            121.5023796,25.1366685,0
           </coordinates>
         </Point>
       </Placemark>
@@ -5989,6 +5979,16 @@
         <Point>
           <coordinates>
             121.5155291,25.0554429,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(40/h)忠信廣場地下停車場</name>
+        <description>全日40/h, 2個專用格</description>
+        <styleUrl>#icon-1633-757575</styleUrl>
+        <Point>
+          <coordinates>
+            121.5681758,25.0402346,0
           </coordinates>
         </Point>
       </Placemark>
@@ -7089,6 +7089,126 @@
         <Point>
           <coordinates>
             121.5470878,24.9771695,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(40/d)福林公園地下停車場士林</name>
+        <description><![CDATA[115年7月6日起擴大實施大重機共用格位<br>依現場標誌指示，得斜向停放且以最多2格機車格位為限]]></description>
+        <styleUrl>#icon-1633-7CB342-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.5307618,25.0960479,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(40/d)啟聰學校地下停車場</name>
+        <description><![CDATA[115年7月6日起擴大實施大重機共用格位<br>依現場標誌指示，得斜向停放且以最多2格機車格位為限]]></description>
+        <styleUrl>#icon-1633-7CB342-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.511749,25.0744341,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(20/h|40d)大安森林公園地下停車場 (信義路出入口)</name>
+        <description><![CDATA[115年7月6日起擴大實施大重機共用格位<br>依現場標誌指示，得斜向停放且以最多2格機車格位為限]]></description>
+        <styleUrl>#icon-1633-7CB342-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.537133,25.0320969,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(20/h|40/d)長安國小地下停車場</name>
+        <description><![CDATA[115年7月6日起擴大實施大重機共用格位<br>依現場標誌指示，得斜向停放且以最多2格機車格位為限]]></description>
+        <styleUrl>#icon-1633-7CB342-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.5313687,25.050388,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(40/d)萬興國小地下停車場</name>
+        <description><![CDATA[115年7月6日起擴大實施大重機共用格位<br>依現場標誌指示，得斜向停放且以最多2格機車格位為限]]></description>
+        <styleUrl>#icon-1633-7CB342-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.5767155,24.9894653,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(20/h|40/d)嘟嘟房停車場-七星公園站</name>
+        <description><![CDATA[115年7月6日起擴大實施大重機共用格位<br>依現場標誌指示，得斜向停放且以最多2格機車格位為限]]></description>
+        <styleUrl>#icon-1633-7CB342-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.5021296,25.1365832,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(20/h|40/d)民有市場地下停車場</name>
+        <description><![CDATA[115年7月6日起擴大實施大重機共用格位<br>依現場標誌指示，得斜向停放且以最多2格機車格位為限]]></description>
+        <styleUrl>#icon-1633-7CB342-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.54675,25.0606103,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(20/h|40/d)松山工農地下停車場</name>
+        <description><![CDATA[115年7月6日起擴大實施大重機共用格位<br>依現場標誌指示，得斜向停放且以最多2格機車格位為限]]></description>
+        <styleUrl>#icon-1633-7CB342-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.5724055,25.0390518,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(20/h|40/d)忠信廣場地下停車場</name>
+        <description><![CDATA[115年7月6日起擴大實施大重機共用格位<br>依現場標誌指示，得斜向停放且以最多2格機車格位為限]]></description>
+        <styleUrl>#icon-1633-7CB342-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.5682751,25.0403379,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(40/d)玉成公園地下停車場</name>
+        <description><![CDATA[115年7月6日起擴大實施大重機共用格位<br>依現場標誌指示，得斜向停放且以最多2格機車格位為限]]></description>
+        <styleUrl>#icon-1633-7CB342-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.5871481,25.042201,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(40/d)捷運南港機廠社會住宅停車場</name>
+        <description><![CDATA[115年7月6日起擴大實施大重機共用格位<br>依現場標誌指示，得斜向停放且以最多2格機車格位為限]]></description>
+        <styleUrl>#icon-1633-7CB342-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.5967035,25.0496796,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(40/d)青年公園高爾夫球場地下停車場</name>
+        <description><![CDATA[115年7月6日起擴大實施大重機共用格位<br>依現場標誌指示，得斜向停放且以最多2格機車格位為限]]></description>
+        <styleUrl>#icon-1633-7CB342-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.5075346,25.0243329,0
           </coordinates>
         </Point>
       </Placemark>
