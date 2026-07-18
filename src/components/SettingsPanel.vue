@@ -484,11 +484,11 @@ const close = () => emit('update:active', false)
 }
 .source-chips {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   gap: 6px;
 }
 .source-chip {
-  flex: 1 1 0;
+  flex: 1 1 auto;
   min-width: 0;
   justify-content: center;
   gap: 4px;

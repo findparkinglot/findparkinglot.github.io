@@ -1307,28 +1307,16 @@ const communityFabItems = computed(() => [
       </div>
       <ul class="whatsnew-list">
         <li>
-          <span class="material-icons-outlined">star</span>
-          <span><strong>我的最愛</strong> 
+          <span class="material-icons-outlined">tune</span>
+          <span><strong>顯示分類切換</strong>
             <br>
-            可以將喜歡的停車場加入我的最愛</span>
+            設定頁新增「官方 / 修改 / 共筆」三個開關,可依需求快速隱藏或顯示對應來源的停車點</span>
         </li>
         <li>
-          <span class="material-icons-outlined">search</span>
-          <span><strong>地點搜尋</strong> 
+          <span class="material-icons-outlined">tag</span>
+          <span><strong>各分類即時筆數</strong>
             <br>
-            可以搜尋指定的停車地點</span>
-        </li>
-        <li>
-          <span class="material-icons-outlined">edit_location_alt</span>
-          <span><strong>共筆停車點</strong> 
-            <br>
-            可自由新增、編輯, 大家一起分享停車地點</span>
-        </li>
-        <li>
-          <span class="material-icons-outlined">edit_note</span>
-          <span><strong>官方點異議 / 補充</strong>
-            <br>
-            點開任一官方停車點 → 「異議 / 補充」, 可在不改動原始資料的前提下, 補上實際費率、更正分類或加註說明, 全車友共享</span>
+            每個分類旁會顯示對應停車場資料筆數</span>
         </li>
       </ul>
     </div>
