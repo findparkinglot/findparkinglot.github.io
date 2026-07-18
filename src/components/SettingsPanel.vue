@@ -18,6 +18,12 @@ const props = defineProps({
   active: Boolean,
   onlyFavorites: Boolean,
   favoritesCount: { type: Number, default: 0 },
+  showOfficial: { type: Boolean, default: true },
+  showOverridden: { type: Boolean, default: true },
+  showCommunity: { type: Boolean, default: true },
+  officialCount: { type: Number, default: 0 },
+  overriddenCount: { type: Number, default: 0 },
+  communityCount: { type: Number, default: 0 },
 })
 const emit = defineEmits([
   'update:parkingType',
@@ -28,6 +34,9 @@ const emit = defineEmits([
   'update:mapStyle',
   'update:active',
   'update:onlyFavorites',
+  'update:showOfficial',
+  'update:showOverridden',
+  'update:showCommunity',
   'open-support',
 ])
 
@@ -56,7 +65,7 @@ const close = () => emit('update:active', false)
           <span class="form-toggle-text">
             <span class="material-icons-outlined fav-icon">star</span>
             只看我的最愛
-            <span v-if="favoritesCount" class="fav-count">{{ favoritesCount }}</span>
+            <span class="source-count">({{ favoritesCount }})</span>
           </span>
           <input
             type="checkbox"
@@ -65,6 +74,45 @@ const close = () => emit('update:active', false)
             @change="emit('update:onlyFavorites', $event.target.checked)"
           />
         </label>
+      </section>
+
+      <section class="form-group">
+        <label class="form-label">顯示分類</label>
+        <div class="source-chips">
+          <button
+            type="button"
+            class="chip source-chip source-chip-official"
+            :class="{ active: showOfficial }"
+            @click="emit('update:showOfficial', !showOfficial)"
+            :aria-pressed="showOfficial"
+          >
+            <span class="material-icons-outlined source-icon">place</span>
+            官方
+            <span class="chip-count">{{ officialCount }}</span>
+          </button>
+          <button
+            type="button"
+            class="chip source-chip source-chip-override"
+            :class="{ active: showOverridden }"
+            @click="emit('update:showOverridden', !showOverridden)"
+            :aria-pressed="showOverridden"
+          >
+            <span class="material-icons-outlined source-icon">edit_location_alt</span>
+            修改
+            <span class="chip-count">{{ overriddenCount }}</span>
+          </button>
+          <button
+            type="button"
+            class="chip source-chip source-chip-community"
+            :class="{ active: showCommunity }"
+            @click="emit('update:showCommunity', !showCommunity)"
+            :aria-pressed="showCommunity"
+          >
+            <span class="material-icons-outlined source-icon">add_location_alt</span>
+            共筆
+            <span class="chip-count">{{ communityCount }}</span>
+          </button>
+        </div>
       </section>
 
       <section class="form-group">
@@ -226,8 +274,8 @@ const close = () => emit('update:active', false)
       <section class="form-group">
         <label class="form-label">資訊</label>
         <ul class="info-list">
-          <li>版本：v2.2.1</li>
-          <li>地圖資料更新：{{ MAP_DATA_UPDATED_AT }}</li>
+          <li>版本：v2.3.0</li>
+          <li>地圖資料更新：自動更新於{{ MAP_DATA_UPDATED_AT }}</li>
           <li>Web 製作：爽爽</li>
           <li>資料參考：Alan大重停車記事 Google My Map</li>
           <li>地圖：Mapbox GL JS API</li>
@@ -433,6 +481,74 @@ const close = () => emit('update:active', false)
 .fav-icon {
   color: #ffc107;
   font-size: 18px;
+}
+.source-chips {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 6px;
+}
+.source-chip {
+  flex: 1 1 0;
+  min-width: 0;
+  justify-content: center;
+  gap: 4px;
+  padding: 6px 8px;
+  border-color: var(--c, var(--border));
+  color: var(--c, var(--text));
+}
+.source-chip .source-icon {
+  color: var(--c);
+  font-size: 16px;
+}
+.source-chip:hover {
+  border-color: var(--c);
+  color: var(--c);
+}
+.source-chip.active {
+  background: var(--c);
+  border-color: var(--c);
+  color: #0b1220;
+}
+.source-chip.active .source-icon {
+  color: #0b1220;
+}
+.source-chip[aria-pressed="false"] {
+  opacity: 0.55;
+}
+.source-chip[aria-pressed="false"]:hover {
+  opacity: 0.9;
+}
+.source-chip-official {
+  --c: #2ee7d6;
+}
+.source-chip-override {
+  --c: #5692ff;
+}
+.source-chip-community {
+  --c: #b39ddb;
+}
+.chip-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 16px;
+  padding: 0 5px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.18);
+  color: inherit;
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.source-chip.active .chip-count {
+  background: rgba(0, 0, 0, 0.15);
+}
+.source-count {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 500;
+  margin-left: 2px;
 }
 .fav-count {
   display: inline-flex;

@@ -222,13 +222,18 @@ const parkingPriceType = ref(typeof savedFilters.parkingPriceType === 'string' ?
 const priceRangeMin = ref(typeof savedFilters.priceRangeMin === 'number' ? savedFilters.priceRangeMin : 0)
 const priceRangeMax = ref(typeof savedFilters.priceRangeMax === 'number' ? savedFilters.priceRangeMax : 100)
 
+// 資料來源分類切換 (預設三者皆開啟)
+const showOfficial = ref(savedFilters.showOfficial !== false)
+const showOverridden = ref(savedFilters.showOverridden !== false)
+const showCommunity = ref(savedFilters.showCommunity !== false)
+
 // ---------- 我的最愛 ----------
 const { favorites, favoriteIdSet, isFavorite, toggleFavorite } = useFavorites()
 const onlyFavorites = ref(savedFilters.onlyFavorites === true)
 
 watch(
-  [parkingType, degreeOfFriendliness, parkingPriceType, priceRangeMin, priceRangeMax, onlyFavorites],
-  ([pt, df, ppt, prMin, prMax, fav]) => {
+  [parkingType, degreeOfFriendliness, parkingPriceType, priceRangeMin, priceRangeMax, onlyFavorites, showOfficial, showOverridden, showCommunity],
+  ([pt, df, ppt, prMin, prMax, fav, so, sov, sc]) => {
     storage.setJSON(FILTERS_STORAGE_KEY, {
       parkingType: pt,
       degreeOfFriendliness: df,
@@ -236,6 +241,9 @@ watch(
       priceRangeMin: prMin,
       priceRangeMax: prMax,
       onlyFavorites: fav,
+      showOfficial: so,
+      showOverridden: sov,
+      showCommunity: sc,
     })
   }
 )
@@ -257,6 +265,16 @@ const { overrides, getOverride, getOverrideHistory, upsertOverride, resetOverrid
 
 // 已被車友覆寫的官方點 safeKey 集合,讓地圖能以不同顏色標示
 const overrideKeySet = computed(() => new Set(Object.keys(overrides.value || {})))
+
+// 各資料來源分類的筆數 (顯示於設定面板)
+const officialCount = computed(() =>
+  (MapDataList.value || []).reduce(
+    (sum, g) => sum + (g?.features?.length || 0),
+    0
+  )
+)
+const overriddenCount = computed(() => overrideKeySet.value.size)
+const communityCount = computed(() => (communityParkings.value || []).length)
 
 // 編輯器狀態
 const editorOpen = ref(false)
@@ -984,6 +1002,9 @@ const communityFabItems = computed(() => [
     :override-keys="overrideKeySet"
     :overrides="overrides"
     :only-favorites="onlyFavorites"
+    :show-official="showOfficial"
+    :show-overridden="showOverridden"
+    :show-community="showCommunity"
     :focus-coord="searchFocusCoord"
     :route-profile="routeProfile"
     :community-parkings="communityParkings"
@@ -1012,7 +1033,13 @@ const communityFabItems = computed(() => [
     v-model:mapStyle="themePref"
     v-model:active="menuActive"
     v-model:onlyFavorites="onlyFavorites"
+    v-model:showOfficial="showOfficial"
+    v-model:showOverridden="showOverridden"
+    v-model:showCommunity="showCommunity"
     :favorites-count="favorites.length"
+    :official-count="officialCount"
+    :overridden-count="overriddenCount"
+    :community-count="communityCount"
     @open-support="openSupport"
   />
 

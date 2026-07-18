@@ -26,6 +26,9 @@ const props = defineProps({
   overrideKeys: { type: Object, default: () => new Set() },
   overrides: { type: Object, default: () => ({}) },
   onlyFavorites: { type: Boolean, default: false },
+  showOfficial: { type: Boolean, default: true },
+  showOverridden: { type: Boolean, default: true },
+  showCommunity: { type: Boolean, default: true },
   focusCoord: { type: Array, default: null },
   routeProfile: { type: String, default: 'driving' },
   communityParkings: { type: Array, default: () => [] },
@@ -203,6 +206,14 @@ const setMaker = () => {
       const isFav = props.favoriteIds?.has?.(id)
       const ovKey = overrideKey(marker.properties.name, coord)
       const isOverridden = ovKey ? props.overrideKeys?.has?.(ovKey) : false
+      // 依「顯示分類」設定過濾:
+      //   - 未覆寫官方點:僅依 showOfficial 判斷
+      //   - 已覆寫官方點:本質仍屬官方,只要 showOfficial 或 showOverridden 任一開啟就顯示
+      if (isOverridden) {
+        if (!props.showOfficial && !props.showOverridden) continue
+      } else {
+        if (!props.showOfficial) continue
+      }
       // 若官方點已被車友覆寫且覆寫中包含價格，篩選並顯示都改用覆寫價格
       const override = isOverridden ? props.overrides?.[ovKey] : null
       const overridePriceInfo =
@@ -243,6 +254,7 @@ const setMaker = () => {
     }
   }
   for (const community of props.communityParkings || []) {
+    if (!props.showCommunity) break
     const coord = community.coordinates
     if (!isValidCoord(coord)) continue
     if (!isCoordInBounds(bounds, coord)) continue
@@ -587,6 +599,9 @@ watch(
     () => props.priceRangeMax,
     () => props.parkingPriceType,
     () => props.onlyFavorites,
+    () => props.showOfficial,
+    () => props.showOverridden,
+    () => props.showCommunity,
     () => props.favoriteIds,
     () => props.communityParkings,
     () => props.overrides,
