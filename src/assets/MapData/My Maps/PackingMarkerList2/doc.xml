@@ -2,12 +2,12 @@
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
     <name>Alan大重停車記事</name>
-    <description><![CDATA[更新請到<br>https://forms.gle/euRCPCPSmvYLm5Rj8<br>2026/07/15<br>  - 更新台北市路外試辦12處停車場<br>2026/06/16<br>  - 更新新莊收費機車格<br>  - 更新七月預定開放收費機車格<br>2026/05/26<br>  - 更新泰山 中和 收費機車格<br>2026/05/03<br>  - 更新台中共用停車格<br>  - 西區 中區 西屯區 南屯區<br>2026/05/01<br>  - 更新新北試辦重機停收費機車格<br>  - 中和、永和、土城、淡水等收費機車格<br>2026/04/07<br>  - 更新台北市試辦停車場<br>2026/03/26<br>  - 合併重機格/機車費率圖層至機車費率圖層<br>  - 新增預計開放圖層(4/6 台北市辦路外停車場)<br>2026/03/06<br>  - 新增重機友善店家圖層<br>2026/03/01<br>  - 新增新北試辦重機停收費機車格<br>  - 新莊、泰山、林口、三重、蘆洲等收費機車格<br>2026/01/23<br>  - 更新台中撤銷禁止陡峭停車場<br>2026/01/01<br>  - 新增春德路停車場<br>2025/11/22<br>  - 新增塔城公園停車場<br>  - 移除阿曼TIT停車場<br>2025/11/05<br>  - 新增科技大樓停車場<br>2025/10/23<br>  - 調整三創停車場費率與類型<br>2025/10/15<br>  - 新增高雄草衙道機車停車場<br>  - 新增台中第二停車場<br>2025/7/14更新<br>  - 新增台北市試辦機車共用車格<br>  - 移除部分停止營業停車場<br>  - 調整部分停車場 icon]]></description>
+    <description><![CDATA[更新請到<br>https://forms.gle/euRCPCPSmvYLm5Rj8<br>2026/07/17<br>  - 更新三峽、鶯歌、淡水路邊收費機車格<br>2026/07/15<br>  - 更新台北市路外試辦12處停車場<br>2026/06/16<br>  - 更新新莊收費機車格<br>  - 更新七月預定開放收費機車格<br>2026/05/26<br>  - 更新泰山 中和 收費機車格<br>2026/05/03<br>  - 更新台中共用停車格<br>  - 西區 中區 西屯區 南屯區<br>2026/05/01<br>  - 更新新北試辦重機停收費機車格<br>  - 中和、永和、土城、淡水等收費機車格<br>2026/04/07<br>  - 更新台北市試辦停車場<br>2026/03/26<br>  - 合併重機格/機車費率圖層至機車費率圖層<br>  - 新增預計開放圖層(4/6 台北市辦路外停車場)<br>2026/03/06<br>  - 新增重機友善店家圖層<br>2026/03/01<br>  - 新增新北試辦重機停收費機車格<br>  - 新莊、泰山、林口、三重、蘆洲等收費機車格<br>2026/01/23<br>  - 更新台中撤銷禁止陡峭停車場<br>2026/01/01<br>  - 新增春德路停車場<br>2025/11/22<br>  - 新增塔城公園停車場<br>  - 移除阿曼TIT停車場<br>2025/11/05<br>  - 新增科技大樓停車場<br>2025/10/23<br>  - 調整三創停車場費率與類型<br>2025/10/15<br>  - 新增高雄草衙道機車停車場<br>  - 新增台中第二停車場<br>2025/7/14更新<br>  - 新增台北市試辦機車共用車格<br>  - 移除部分停止營業停車場<br>  - 調整部分停車場 icon]]></description>
     <Style id="icon-1502-7CB342-labelson">
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-14.png</href>
+          <href>images/icon-15.png</href>
         </Icon>
       </IconStyle>
     </Style>
@@ -333,7 +333,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-12.png</href>
+          <href>images/icon-13.png</href>
         </Icon>
       </IconStyle>
     </Style>
@@ -341,7 +341,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-12.png</href>
+          <href>images/icon-13.png</href>
         </Icon>
       </IconStyle>
       <BalloonStyle>
@@ -411,7 +411,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-13.png</href>
+          <href>images/icon-14.png</href>
         </Icon>
       </IconStyle>
     </Style>
@@ -419,7 +419,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-11.png</href>
+          <href>images/icon-12.png</href>
         </Icon>
       </IconStyle>
       <LabelStyle>
@@ -430,7 +430,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-11.png</href>
+          <href>images/icon-12.png</href>
         </Icon>
       </IconStyle>
       <LabelStyle>
@@ -451,7 +451,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-11.png</href>
+          <href>images/icon-12.png</href>
         </Icon>
       </IconStyle>
     </Style>
@@ -459,7 +459,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-11.png</href>
+          <href>images/icon-12.png</href>
         </Icon>
       </IconStyle>
       <BalloonStyle>
@@ -470,7 +470,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-10.png</href>
+          <href>images/icon-11.png</href>
         </Icon>
       </IconStyle>
       <LabelStyle>
@@ -481,7 +481,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-10.png</href>
+          <href>images/icon-11.png</href>
         </Icon>
       </IconStyle>
       <LabelStyle>
@@ -502,7 +502,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-10.png</href>
+          <href>images/icon-11.png</href>
         </Icon>
       </IconStyle>
       <LabelStyle>
@@ -516,7 +516,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-10.png</href>
+          <href>images/icon-11.png</href>
         </Icon>
       </IconStyle>
       <LabelStyle>
@@ -540,7 +540,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-9.png</href>
+          <href>images/icon-10.png</href>
         </Icon>
       </IconStyle>
       <LabelStyle>
@@ -551,7 +551,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-9.png</href>
+          <href>images/icon-10.png</href>
         </Icon>
       </IconStyle>
       <LabelStyle>
@@ -572,7 +572,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-9.png</href>
+          <href>images/icon-10.png</href>
         </Icon>
       </IconStyle>
     </Style>
@@ -580,7 +580,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-9.png</href>
+          <href>images/icon-10.png</href>
         </Icon>
       </IconStyle>
       <BalloonStyle>
@@ -591,7 +591,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-9.png</href>
+          <href>images/icon-10.png</href>
         </Icon>
       </IconStyle>
       <LabelStyle>
@@ -605,7 +605,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-9.png</href>
+          <href>images/icon-10.png</href>
         </Icon>
       </IconStyle>
       <LabelStyle>
@@ -707,7 +707,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-17.png</href>
+          <href>images/icon-9.png</href>
         </Icon>
       </IconStyle>
     </Style>
@@ -715,7 +715,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-17.png</href>
+          <href>images/icon-9.png</href>
         </Icon>
       </IconStyle>
       <BalloonStyle>
@@ -726,7 +726,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-16.png</href>
+          <href>images/icon-17.png</href>
         </Icon>
       </IconStyle>
     </Style>
@@ -734,7 +734,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-15.png</href>
+          <href>images/icon-16.png</href>
         </Icon>
       </IconStyle>
     </Style>
@@ -742,7 +742,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-15.png</href>
+          <href>images/icon-16.png</href>
         </Icon>
       </IconStyle>
       <BalloonStyle>
@@ -5222,6 +5222,26 @@
           </coordinates>
         </Point>
       </Placemark>
+      <Placemark>
+        <name>輕軌紅樹林站橋下</name>
+        <description>輕軌紅樹林站橋下(海天段等6筆地號)機車停車格(路外停車場代收)</description>
+        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.458885,25.156278,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>財政部北區國稅局淡水稽徵所第二辦公室旁土地</name>
+        <description>財政部國稅局淡水稽徵所第二辦公室旁土地及淡水區紅毛城段976地號(路外停車場代收)</description>
+        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.4363908,25.1727571,0
+          </coordinates>
+        </Point>
+      </Placemark>
     </Folder>
     <Folder>
       <name>重機格/汽車費率</name>
@@ -5385,11 +5405,11 @@
       </Placemark>
       <Placemark>
         <name>(80/h)客限-板橋凱撒大飯店</name>
-        <description><![CDATA[<img src="https://mymaps.usercontent.google.com/hostedimage/m/*/3AE5a_Gwhs6lZ2JoLxna3VzARKrim1TnmCiqmUD9FatMJlUzPXmqukteN_rFE2of3KVzk6ZqmM87dSvXHWJL5V8Q-nRA23mHtYabQXvhC9pwH8U7Nk2AG9c25GtRaZn7DP0jJkWlLrfm-uaESVFq07AMUU84ikKF6I_rHlgFA0RnppXKeoIbbOiYt4QdpqSyp0ire37RCM7z81ShfyNY3JbEBNpp4JvsZoKAhLsbNdVmSUUvH2CPV56MTDt4jnF0?fife=s16383" height="200" width="auto" /><br><br>感謝hoha5432提供<br>汽車費率 80h 按鈕取票 2 格 或以上 <br>目前對外說不開放臨停，僅供住宿與用餐客人停放。費用沒有公開，根據個人繳費經驗推估約 80h。<br>官網寫說「本飯店提供機車/汽車地下停車場(B2-B5) ，共220個車位。※B2停放機車（可供重型機車停靠，但如需要更大空間可改停靠汽車停車格）」但實際沒有機車格，而是只有大重停車格（為汽車格畫線切出）。  ]]></description>
+        <description><![CDATA[<img src="https://mymaps.usercontent.google.com/hostedimage/m/*/3AE5a_GxZ-7wcDQoVBKu72P5fkiiNtWwPQ0cQPOlsSTFx4sOvFs1VFVmWDEu6gXuqYyVNonixG9eR5sD_cmaZxwNhnefwS6FVHHG0JEBmbgj19EVLoTuKK8rtI-7PqUwPlecTpvzOCnAF-QcVsu5vdAIHkRymZvyzBXW_fhoq1pEbcnNXtjcsG680KaPgP7EgUxCWF5GG_kDpehx3kVEYObq5rwIwDQs06Xl0yY3zCkk5nzD2CC9YvM0qvDgsPC4?fife=s16383" height="200" width="auto" /><br><br>感謝hoha5432提供<br>汽車費率 80h 按鈕取票 2 格 或以上 <br>目前對外說不開放臨停，僅供住宿與用餐客人停放。費用沒有公開，根據個人繳費經驗推估約 80h。<br>官網寫說「本飯店提供機車/汽車地下停車場(B2-B5) ，共220個車位。※B2停放機車（可供重型機車停靠，但如需要更大空間可改停靠汽車停車格）」但實際沒有機車格，而是只有大重停車格（為汽車格畫線切出）。  ]]></description>
         <styleUrl>#icon-1633-0288D1</styleUrl>
         <ExtendedData>
           <Data name="gx_media_links">
-            <value>https://mymaps.usercontent.google.com/hostedimage/m/*/3AE5a_Gwhs6lZ2JoLxna3VzARKrim1TnmCiqmUD9FatMJlUzPXmqukteN_rFE2of3KVzk6ZqmM87dSvXHWJL5V8Q-nRA23mHtYabQXvhC9pwH8U7Nk2AG9c25GtRaZn7DP0jJkWlLrfm-uaESVFq07AMUU84ikKF6I_rHlgFA0RnppXKeoIbbOiYt4QdpqSyp0ire37RCM7z81ShfyNY3JbEBNpp4JvsZoKAhLsbNdVmSUUvH2CPV56MTDt4jnF0?fife=s16383</value>
+            <value>https://mymaps.usercontent.google.com/hostedimage/m/*/3AE5a_GxZ-7wcDQoVBKu72P5fkiiNtWwPQ0cQPOlsSTFx4sOvFs1VFVmWDEu6gXuqYyVNonixG9eR5sD_cmaZxwNhnefwS6FVHHG0JEBmbgj19EVLoTuKK8rtI-7PqUwPlecTpvzOCnAF-QcVsu5vdAIHkRymZvyzBXW_fhoq1pEbcnNXtjcsG680KaPgP7EgUxCWF5GG_kDpehx3kVEYObq5rwIwDQs06Xl0yY3zCkk5nzD2CC9YvM0qvDgsPC4?fife=s16383</value>
           </Data>
         </ExtendedData>
         <Point>
@@ -10857,7 +10877,7 @@
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
-            121.4275782,25.198105,0
+            121.430597,25.1969777,0
           </coordinates>
         </Point>
       </Placemark>
@@ -10887,7 +10907,7 @@
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
-            121.4237961,25.1968313,0
+            121.4188126,25.1935305,0
           </coordinates>
         </Point>
       </Placemark>
@@ -10897,7 +10917,7 @@
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
-            121.4423887,25.1889901,0
+            121.4381079,25.18966,0
           </coordinates>
         </Point>
       </Placemark>
@@ -10927,7 +10947,7 @@
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
-            121.4442255,25.1853517,0
+            121.4438929,25.1888274,0
           </coordinates>
         </Point>
       </Placemark>
@@ -10947,7 +10967,7 @@
         <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
-            121.439143,25.1977528,0
+            121.4395453,25.200204,0
           </coordinates>
         </Point>
       </Placemark>
@@ -11788,6 +11808,609 @@
           </coordinates>
         </Point>
       </Placemark>
+      <Placemark>
+        <name>國慶路</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.3774911,24.9380024,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>國慶路</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.3739184,24.9408966,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>三樹路(民生街至大學路)</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.3777944,24.938062,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>三樹路(民生街至大學路)</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.378288,24.9396526,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>民生街(三樹路至國光街)</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.3776641,24.9377956,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>民生街(三樹路至國光街)</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.3757598,24.9365358,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>學成路(國慶路至大學路)</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.3738946,24.941256,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>學成路(國慶路至大學路)</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.3753698,24.9426277,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>復興路</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.3682134,24.9388953,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>復興路(學成路至復興路459巷)</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.3621027,24.9385884,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大勇路(復興路至大仁路)</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.3669934,24.9387927,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大勇路(復興路至大仁路)</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.3670792,24.9376496,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>國華路</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.3429321,24.9565781,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>國華路</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.3438602,24.9523127,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>鶯歌路(鶯桃路至鳳七路)</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.3305306,24.9680384,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>鶯歌路(鶯桃路至鳳七路)</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.3318624,24.9689454,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>新市一路一段331巷</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4361728,25.1896298,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>新市一路一段331巷</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4358456,25.1862415,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>新市一路一段281巷</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4347746,25.187903,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>新市一路一段281巷</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4345385,25.1864103,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>新市一路二段</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4443803,25.1829816,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>新市一路二段</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4431411,25.182899,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>新市二路二段</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4267079,25.1957871,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>新市二路二段</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4316647,25.1939523,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>新市二路三段</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4320058,25.1938687,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>新市二路三段</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4383305,25.1931066,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>新市二路三段172巷</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4371569,25.1930749,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>新市二路三段172巷</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4369396,25.1917133,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>崁頂五路</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4257022,25.2009955,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>新市二路四段</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4385529,25.1930334,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>新市二路四段</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.446439,25.1923992,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>新市五路一段</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4218196,25.197897,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>新市五路一段</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4283558,25.200131,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>新市五路三段</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.438988,25.197733,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>新市五路三段</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4337148,25.1983543,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>義山路二段</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4384696,25.193215,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>新市六路一段</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4306244,25.202992,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>新市六路一段</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4345941,25.2014485,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>中山北路3段(濱海路1段至新市二路4段)</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4445665,25.1920735,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>中山北路3段(濱海路1段至新市二路4段)</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4437779,25.1893115,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>中山北路二段</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4444867,25.1831328,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>中山北路三段31巷</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4431855,25.189887,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>濱海路一段111巷</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4392942,25.1877889,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>濱海路一段306巷9弄</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4382228,25.1910355,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>濱海路一段306巷9弄</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4407387,25.1907079,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>濱海路一段306巷60弄</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4410533,25.1916579,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>濱海路一段306巷60弄</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4429871,25.1923035,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>濱海路二段</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4377284,25.1896935,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>濱海路二段</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4310605,25.1905624,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>濱海路一段</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4465422,25.1890485,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>濱海路二段202巷</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4346043,25.1902683,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>濱海路二段202巷</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4351407,25.1932925,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>濱海路二段202巷65弄</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4330679,25.1926502,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>濱海路二段202巷65弄</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4348972,25.1924294,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>義山路一段</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4384155,25.1929018,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>義山路一段</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4374177,25.1860573,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>義山路一段163巷</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.437562,25.1879706,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>義山路一段163巷</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4336996,25.1881842,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>義山路一段401巷</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4380272,25.1910677,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>義山路一段401巷</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4349346,25.1915022,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>崁頂二路</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4363433,25.2008948,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>崁頂二路</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4352275,25.1937206,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>沙崙路二段</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4319356,25.1940487,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>沙崙路二段</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4346821,25.2011209,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>後洲路一段</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4266582,25.1960608,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>新市三路一段</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4249711,25.1991437,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>後洲路一段</name>
+        <styleUrl>#icon-1644-0288D1-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4297534,25.2031086,0
+          </coordinates>
+        </Point>
+      </Placemark>
     </Folder>
     <Folder>
       <name>禁停重機</name>
@@ -12596,9 +13219,6 @@
           </coordinates>
         </Point>
       </Placemark>
-    </Folder>
-    <Folder>
-      <name>預定開放</name>
     </Folder>
   </Document>
 </kml>
