@@ -1,9 +1,13 @@
 // 停車場分類、友善程度、地圖風格常數
 // 原本散在 App.vue 內，抽出來方便維護
 //
-// icon-N.png 的編號來自「canonical KML 來源」的 images/icon-N.png。
-// 目前 canonical = src/assets/MapData/My Maps/PackingMarkerList2。
-// S2 對應關係 (shape-color → 檔名):
+// 以下 key 使用的 "icon-N.png" 是「應用內部的穩定命名」,
+// 對應關係定義在 src/utils/parseKml.js 的 STABLE_ICON_BY_HASH。
+// Google My Maps 每次匯出 KMZ 時 images/icon-N.png 的物理編號會隨當次匯出順序改變,
+// 但 parseKml 會依 styleHash 把 properties.icon remap 成這裡對應的穩定名,
+// 因此排程更新 KML 後這張表不需要跟著改。
+//
+// 穩定編號對應 (styleHash → icon-N.png 詳見 parseKml.js):
 //   汽車 1538: 紅=1 綠=2 灰=3 藍=5      叉 1898: 紅X=19
 //   重機 1632: 綠=6 灰=8 藍=12 紅=13   變體 1684綠=4 / 1502綠=14
 //   機車 1633: 紅=7 綠=9 灰=10 藍=11   ?    1594灰=20

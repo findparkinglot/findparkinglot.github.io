@@ -99,6 +99,63 @@ function extractStyleHash(styleId) {
   return m ? m[1] : ''
 }
 
+// 穩定 styleHash → canonical icon-N.png 對照表
+// ─────────────────────────────────────────────────────────
+// Google My Maps 每次匯出 KMZ 時,images/icon-N.png 的編號會依當次匯出順序
+// 重新編碼 (styleHash 本身穩定,但 IconStyle 的 href 檔名不穩定)。
+// 例如 2026-07 的自動排程更新後,綠重機 (icon-1632-7CB342) 從 icon-6.png
+// 變成 icon-4.png、重機友善店家 (icon-1684-7CB342) 從 icon-4.png 變成 icon-5.png、
+// 藍汽車 (icon-1538-0288D1) 從 icon-5.png 變成 icon-6.png,
+// 導致 constants/parking.js 用檔名分類全都對錯。
+//
+// 這張表把 styleHash 綁定到「應用內部固定的 icon-N.png 命名」,parseKml 產出的
+// properties.icon 一律用這裡的命名,constants/parking.js / Firebase 覆寫資料
+// / 共筆編輯器都不用因 Google 重新排序而修改。
+// 新增 icon 時記得同步登記,否則會落入「未分類」。
+const STABLE_ICON_BY_HASH = {
+  'icon-1538-E65100': 'icon-1.png',  // 汽車 紅
+  'icon-1538-7CB342': 'icon-2.png',  // 汽車 綠
+  'icon-1538-757575': 'icon-3.png',  // 汽車 灰
+  'icon-1684-7CB342': 'icon-4.png',  // 重機友善店家
+  'icon-1538-0288D1': 'icon-5.png',  // 汽車 藍
+  'icon-1632-7CB342': 'icon-6.png',  // 重機 綠
+  'icon-1633-E65100': 'icon-7.png',  // 機車 紅
+  'icon-1632-757575': 'icon-8.png',  // 重機 灰
+  'icon-1633-7CB342': 'icon-9.png',  // 機車 綠
+  'icon-1633-757575': 'icon-10.png', // 機車 灰
+  'icon-1633-0288D1': 'icon-11.png', // 機車 藍
+  'icon-1632-0288D1': 'icon-12.png', // 重機 藍
+  'icon-1632-E65100': 'icon-13.png', // 重機 紅
+  'icon-1502-7CB342': 'icon-14.png', // 綠星 (路邊友善車格)
+  'icon-1644-7CB342': 'icon-15.png', // 綠P
+  'icon-1644-757575': 'icon-16.png', // 灰P
+  'icon-1644-0288D1': 'icon-17.png', // 藍P
+  'icon-1644-9C27B0': 'icon-18.png', // 紫P
+  'icon-1898-E65100': 'icon-19.png', // 紅X
+  'icon-1594-757575': 'icon-20.png', // ? 類型未確認
+}
+
+// styleHash 對應的穩定 icon 檔名; 若尚未登記則沿用原檔名 (會落入「全部」filter)
+function stableIconFor(styleHash, physicalIconFile) {
+  return (styleHash && STABLE_ICON_BY_HASH[styleHash]) || physicalIconFile
+}
+
+// canonical 來源: 穩定 icon-N.png → 實體檔案名 icon-M.png 的翻譯表
+// 例如 2026-07 匯出後 "icon-6.png" (穩定,綠重機) → "icon-4.png" (實體檔案)
+// 由 resolveIconUrl 使用,把 constants / UI 內寫死的穩定名對到實體資產。
+const STABLE_TO_PHYSICAL = {}
+if (XML_SOURCES[0]?.xml) {
+  const styles = XML_SOURCES[0].xml.kml?.Document?.[0]?.Style || []
+  for (const s of styles) {
+    const styleHash = extractStyleHash(s.$?.id || '')
+    const stable = STABLE_ICON_BY_HASH[styleHash]
+    if (!stable) continue
+    const href = s.IconStyle?.[0]?.Icon?.[0]?.href?.[0] || ''
+    const physical = href.replace('images/', '')
+    if (physical) STABLE_TO_PHYSICAL[stable] = physical
+  }
+}
+
 // 把 iconMapId (可能指向 StyleMap) 解析成真正的 Style id
 function resolveStyleId(xml, iconMapId) {
   const id = (iconMapId || '').replace(/^#/, '')
@@ -155,8 +212,11 @@ export function parseKmlWithMeta(xml) {
         const priceInfo = getPriceAndType(place.name[0])
         const iconMapId = place.styleUrl?.[0] || ''
         const resolvedStyleId = resolveStyleId(xml, iconMapId)
-        const iconFile = findIconFile(xml, resolvedStyleId)
+        const iconFilePhysical = findIconFile(xml, resolvedStyleId)
         const styleHash = extractStyleHash(resolvedStyleId)
+        // 將 icon 對外檔名固定為穩定命名 (與 constants/parking.js 對應),
+        // 避免 Google My Maps 每次匯出重編 icon-N.png 順序時分類跑掉。
+        const iconFile = stableIconFor(styleHash, iconFilePhysical)
 
         if (styleHash && iconFile) iconMap[styleHash] = iconFile
 
@@ -284,13 +344,72 @@ export function mergeKmlSources(sources) {
 }
 
 export function resolveIconUrl(url) {
-  if (!url) return ''
+  if (!url) return makeFallbackIconUrl('')
   if (url.match('http')) return url
   // url 可能是 "icon-5.png"、"s2:icon-5.png" 或含路徑。
   // 只在「沒有來源 tag 前綴」時才取檔名部分,以保留 "s2:" 這種 prefix。
   let key = url
+  let stableName = ''
   if (!/^[a-z0-9]+:/i.test(key)) {
     key = key.split('/').pop()
+    // 保留翻譯前的穩定名 (e.g. "icon-20.png"),萬一實體檔缺席時能用它推回類別/顏色。
+    stableName = key
+    // canonical 來源的 properties.icon 是「穩定命名」(見 STABLE_ICON_BY_HASH),
+    // 需要翻譯回實際 KMZ 匯出時的檔名才能對到 ICON_URL_MAP。
+    if (STABLE_TO_PHYSICAL[key]) key = STABLE_TO_PHYSICAL[key]
   }
-  return ICON_URL_MAP[key] || ''
+  // 官方資料若移除了某個 icon (例如 2026-07 移除了 icon-1594-757575),
+  // 這裡會查不到 URL。改回傳一張自動生成的 SVG 佔位圖 (顏色與圖示比照 Google
+  // My Maps 風格),避免 <img> 顯示破圖,也讓地圖 marker 用 background-image
+  // 時不會出現空白框。
+  return ICON_URL_MAP[key] || makeFallbackIconUrl(stableName)
+}
+
+// ─────────────────────────────────────────────────────────
+// SVG 佔位圖 (fallback icon)
+// ─────────────────────────────────────────────────────────
+// 只要 KMZ 中找不到對應的實體 PNG,就用這裡生成的 SVG 代替。
+// 樣式比照 Google My Maps: 圓形填色底 + 白色外框 + 白色符號,
+// 底色依 styleHash 的顏色碼,符號依 shape 碼決定 (汽/重/機/P/X/★ ...)。
+// 這樣即使 Alan 未來再把某個 icon 從 My Map 移除,UI 仍能保持一致風格,
+// 使用者也能從符號 + 顏色一眼判斷這是哪類停車格。
+
+// stableIcon (icon-N.png) → styleHash 反查表
+const HASH_BY_STABLE_ICON = Object.fromEntries(
+  Object.entries(STABLE_ICON_BY_HASH).map(([hash, stable]) => [stable, hash])
+)
+
+// shape 碼 (styleHash 中間 4 位) → 白色符號文字
+// 用中文單字 / 符號取代對應向量 icon,無需外部字體。
+const SHAPE_LABEL = {
+  1538: '汽',  // 汽車
+  1632: '重',  // 重機
+  1633: '機',  // 機車
+  1644: 'P',   // 各色 P 標
+  1898: '✕',  // 停都不給停
+  1502: '★',  // 綠星:路邊友善車格
+  1684: '☕', // 重機友善店家
+  1594: '?',   // 類型未確認
+}
+
+function makeFallbackIconUrl(stableIcon) {
+  const hash = HASH_BY_STABLE_ICON[stableIcon] || ''
+  // hash 形如 "icon-1538-7CB342"; 拆不出來就退回中性灰底 + "?"
+  const m = /^icon-(\d{3,4})-([A-Fa-f0-9]{6})$/.exec(hash)
+  const shape = m ? m[1] : ''
+  const colorHex = m ? m[2] : '9E9E9E'
+  const label = SHAPE_LABEL[shape] || '?'
+  // 若標籤是中文/表情符號 (字寬較寬) 需縮小字級,避免超出圓形。
+  const isWide = /[\u4e00-\u9fff\u2600-\u27bf]/.test(label)
+  const fontSize = isWide ? 14 : 18
+  // 中文字視覺下沉點需要往上一點 (baseline)
+  const yOffset = isWide ? 21 : 22
+  const svg =
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">' +
+      `<circle cx="16" cy="16" r="14" fill="#${colorHex}" stroke="#FFFFFF" stroke-width="2"/>` +
+      `<text x="16" y="${yOffset}" text-anchor="middle" ` +
+      `font-family="system-ui, -apple-system, &quot;Microsoft JhengHei&quot;, sans-serif" ` +
+      `font-size="${fontSize}" font-weight="700" fill="#FFFFFF">${label}</text>` +
+      '</svg>'
+  return 'data:image/svg+xml;utf8,' + encodeURIComponent(svg)
 }
