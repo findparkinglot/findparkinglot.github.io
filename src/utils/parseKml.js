@@ -118,14 +118,17 @@ const STABLE_ICON_BY_HASH = {
   'icon-1538-757575': 'icon-3.png',  // 汽車 灰
   'icon-1684-7CB342': 'icon-4.png',  // 重機友善店家
   'icon-1538-0288D1': 'icon-5.png',  // 汽車 藍
-  'icon-1632-7CB342': 'icon-6.png',  // 重機 綠
-  'icon-1633-E65100': 'icon-7.png',  // 機車 紅
-  'icon-1632-757575': 'icon-8.png',  // 重機 灰
-  'icon-1633-7CB342': 'icon-9.png',  // 機車 綠
-  'icon-1633-757575': 'icon-10.png', // 機車 灰
-  'icon-1633-0288D1': 'icon-11.png', // 機車 藍
-  'icon-1632-0288D1': 'icon-12.png', // 重機 藍
-  'icon-1632-E65100': 'icon-13.png', // 重機 紅
+  // shape 1633 = 重機 (有騎士圖案);shape 1632 = 機車 (純速克達)。
+  // 依 Alan 的 PackingMarkerList2 「重機格/汽車費率」「重機格/個別費率」等 folder
+  // 幾乎全數使用 icon-1633-* 為準,勿再與 1632 互調。
+  'icon-1633-7CB342': 'icon-6.png',  // 重機 綠
+  'icon-1632-E65100': 'icon-7.png',  // 機車 紅
+  'icon-1633-757575': 'icon-8.png',  // 重機 灰
+  'icon-1632-7CB342': 'icon-9.png',  // 機車 綠
+  'icon-1632-757575': 'icon-10.png', // 機車 灰
+  'icon-1632-0288D1': 'icon-11.png', // 機車 藍
+  'icon-1633-0288D1': 'icon-12.png', // 重機 藍
+  'icon-1633-E65100': 'icon-13.png', // 重機 紅
   'icon-1502-7CB342': 'icon-14.png', // 綠星 (路邊友善車格)
   'icon-1644-7CB342': 'icon-15.png', // 綠P
   'icon-1644-757575': 'icon-16.png', // 灰P
