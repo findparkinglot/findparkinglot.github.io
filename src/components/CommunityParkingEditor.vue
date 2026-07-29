@@ -72,6 +72,17 @@ const computedIcon = computed(() => {
 
 const friendlinessLocked = computed(() => Boolean(SPECIAL_ICON[category.value]))
 
+// 說明欄位在資料層以 <br> 保存換行 (因顯示端使用 v-html)
+// 進入編輯 textarea 前把 <br> 轉為真正的換行,送出時再轉回 <br>
+function brToNewline(s) {
+  if (!s) return ''
+  return String(s).replace(/<br\s*\/?>/gi, '\n')
+}
+function newlineToBr(s) {
+  if (!s) return ''
+  return String(s).replace(/\r\n|\r|\n/g, '<br>')
+}
+
 function parsePrice(s) {
   if (!s) return { type: 'free', amount: '', custom: '' }
   const trimmed = s.trim()
@@ -94,7 +105,7 @@ function formatPrice() {
 const reset = () => {
   if ((props.mode === 'edit' || props.mode === 'override') && props.initial) {
     name.value = props.initial.name || ''
-    description.value = props.initial.description || ''
+    description.value = brToNewline(props.initial.description || '')
     category.value = props.initial.category || 'motorcycle'
     friendliness.value = props.initial.friendliness || 'friendly'
     const p = parsePrice(props.initial.priceInfo || '')
@@ -142,7 +153,7 @@ const onSubmit = () => {
   }
   emit('submit', {
     name: name.value,
-    description: description.value,
+    description: newlineToBr(description.value),
     iconKey: computedIcon.value,
     category: category.value,
     friendliness: friendlinessLocked.value ? '' : friendliness.value,
@@ -216,8 +227,9 @@ const HIST_FIELD_LABEL = {
 function displayValue(v) {
   if (v === undefined || v === null || v === '') return '(空)'
   if (typeof v === 'number') return String(v)
-  const s = String(v)
-  return s.length > 40 ? s.slice(0, 40) + '…' : s
+  // 資料層以 <br> 存換行,顯示時轉回真正換行 (搭配 CSS white-space: pre-wrap)
+  const s = String(v).replace(/<br\s*\/?>/gi, '\n')
+  return s.length > 80 ? s.slice(0, 80) + '…' : s
 }
 /** 規範化值以判定「空 / 兩值相同」:字串會 trim,空白字串視為空 */
 function normVal(v) {
@@ -725,6 +737,7 @@ textarea.form-control {
   text-decoration: line-through;
   text-decoration-color: rgba(177, 74, 74, 0.55);
   word-break: break-all;
+  white-space: pre-wrap;
 }
 .h-diff-arrow {
   color: var(--muted);
@@ -733,6 +746,7 @@ textarea.form-control {
   color: var(--text);
   font-weight: 500;
   word-break: break-all;
+  white-space: pre-wrap;
 }
 .history-toggle {
   margin-top: 6px;
