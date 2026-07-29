@@ -4765,8 +4765,9 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>(30/h | 150/d - 後牌)力揚文二立體停車場</name>
-        <styleUrl>#icon-1538-7CB342-labelson-nodesc</styleUrl>
+        <name>(30/h | 150/d)力揚文二立體停車場</name>
+        <description>重機後牌辨識似乎沒啟用，通常要管理員才能進</description>
+        <styleUrl>#icon-1538-E65100-labelson</styleUrl>
         <Point>
           <coordinates>
             121.3637684,25.0610162,0
@@ -5319,16 +5320,6 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>(平30/h|假40/h)新莊幸福立體停車場</name>
-        <description>2026/05/20 網友寫信詢問</description>
-        <styleUrl>#icon-1538-757575-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            121.4604394,25.0501087,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
         <name>(平20/h|假30/h)歐特儀林口轉運站平面停車場(機車)(汽車)</name>
         <description>前30分鐘免費</description>
         <styleUrl>#icon-1538-757575-labelson</styleUrl>
@@ -5373,6 +5364,16 @@
         <Point>
           <coordinates>
             121.2689047,24.9770888,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(30/H)林口新創園 B區停車場</name>
+        <description>走汽車道，後牌辨識，B1有重機停車格</description>
+        <styleUrl>#icon-1538-7CB342-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.3779522,25.0759245,0
           </coordinates>
         </Point>
       </Placemark>
@@ -5539,11 +5540,11 @@
       </Placemark>
       <Placemark>
         <name>(80/h)客限-板橋凱撒大飯店</name>
-        <description><![CDATA[<img src="https://mymaps.usercontent.google.com/hostedimage/m/*/3AAjQbR62p_o6c0lBC2aM8yflwg0xf91wEQTCfdYFrRew6Xy9k7oqveSutHvYacS7X34gmcx4p-C85HUwyOcMdLjuFA5J-7Hpnlnb0mAZ_74JlQp7kpWzbFS77TYZCjrhVGfsF26jpMHz5xhgH5UbZNcUWAV3ydnW25oSrgSjpD2lI762sr39lFNCahaR_dtXdz923J7t5hSCuEkAh6cvoX6VVpVX6r_4cF0B-yq1e4bln65g186u3KZ0QFaJ1Nc?fife=s16383" height="200" width="auto" /><br><br>感謝hoha5432提供<br>汽車費率 80h 按鈕取票 2 格 或以上 <br>目前對外說不開放臨停，僅供住宿與用餐客人停放。費用沒有公開，根據個人繳費經驗推估約 80h。<br>官網寫說「本飯店提供機車/汽車地下停車場(B2-B5) ，共220個車位。※B2停放機車（可供重型機車停靠，但如需要更大空間可改停靠汽車停車格）」但實際沒有機車格，而是只有大重停車格（為汽車格畫線切出）。  ]]></description>
+        <description><![CDATA[<img src="https://mymaps.usercontent.google.com/hostedimage/m/*/3AAjQbR7LUME5sNBKddUYJzdJZcOXtAG4PL8Xn15oTxj7ZQ32YSqS95daMNWycrnvIfLbm9p5jY_aYzmNV9Zy8lHuvrQJOy6d_Gn8QmNkI9jTLHHLTHz60IPNtOCbz9Sw7Si-MO0UPHOq_OhMc90lLb-zJoNz0b-UaZNx2TlOOixaKKSSQQD4fi_weINYlrbVpowVmOrlwBYDQ1zvK4JRBRWu_wozLQ6qot65JGswnfD6XQ7jE8NS8978E6U_R0M?fife=s16383" height="200" width="auto" /><br><br>感謝hoha5432提供<br>汽車費率 80h 按鈕取票 2 格 或以上 <br>目前對外說不開放臨停，僅供住宿與用餐客人停放。費用沒有公開，根據個人繳費經驗推估約 80h。<br>官網寫說「本飯店提供機車/汽車地下停車場(B2-B5) ，共220個車位。※B2停放機車（可供重型機車停靠，但如需要更大空間可改停靠汽車停車格）」但實際沒有機車格，而是只有大重停車格（為汽車格畫線切出）。  ]]></description>
         <styleUrl>#icon-1633-0288D1</styleUrl>
         <ExtendedData>
           <Data name="gx_media_links">
-            <value>https://mymaps.usercontent.google.com/hostedimage/m/*/3AAjQbR62p_o6c0lBC2aM8yflwg0xf91wEQTCfdYFrRew6Xy9k7oqveSutHvYacS7X34gmcx4p-C85HUwyOcMdLjuFA5J-7Hpnlnb0mAZ_74JlQp7kpWzbFS77TYZCjrhVGfsF26jpMHz5xhgH5UbZNcUWAV3ydnW25oSrgSjpD2lI762sr39lFNCahaR_dtXdz923J7t5hSCuEkAh6cvoX6VVpVX6r_4cF0B-yq1e4bln65g186u3KZ0QFaJ1Nc?fife=s16383</value>
+            <value>https://mymaps.usercontent.google.com/hostedimage/m/*/3AAjQbR7LUME5sNBKddUYJzdJZcOXtAG4PL8Xn15oTxj7ZQ32YSqS95daMNWycrnvIfLbm9p5jY_aYzmNV9Zy8lHuvrQJOy6d_Gn8QmNkI9jTLHHLTHz60IPNtOCbz9Sw7Si-MO0UPHOq_OhMc90lLb-zJoNz0b-UaZNx2TlOOixaKKSSQQD4fi_weINYlrbVpowVmOrlwBYDQ1zvK4JRBRWu_wozLQ6qot65JGswnfD6XQ7jE8NS8978E6U_R0M?fife=s16383</value>
           </Data>
         </ExtendedData>
         <Point>
@@ -6267,9 +6268,9 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>(平20/h | 假30/h)金山立體停車場</name>
-        <description><![CDATA[大型重型機車需由人員協助由汽車車道進場，依汽車臨停收費，建議停放於R樓平日20h、最高上限50元；假日30h、最高上限100元 <br>由汽車道進入；若遇汽車排隊車潮，可選擇另一方式，由人員引導至機車區的大型車格停放（實際停放大小為3格機車格大小，場內另有畫製）<br>感謝kevinbig3  ]]></description>
-        <styleUrl>#icon-1633-E65100</styleUrl>
+        <name>(10/h|100/d)金山立體停車場</name>
+        <description>2026/07/29 試辦停機車格，大車可考慮照舊走汽車道</description>
+        <styleUrl>#icon-1633-7CB342</styleUrl>
         <Point>
           <coordinates>
             121.6416937,25.220059,0
@@ -7356,9 +7357,29 @@
           </coordinates>
         </Point>
       </Placemark>
+      <Placemark>
+        <name>(10/h|200/d)新莊幸福立體停車場</name>
+        <description><![CDATA[2026/05/20 網友寫信詢問走汽車道<br>2026/07/29 試辦走機車道 10/h <br>每日收費上限汽車收費上限]]></description>
+        <styleUrl>#icon-1633-7CB342-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.4604394,25.0501087,0
+          </coordinates>
+        </Point>
+      </Placemark>
     </Folder>
     <Folder>
       <name>機車費率</name>
+      <Placemark>
+        <name>(Free)林口三井OUTLET二館停車場 文化二路一段</name>
+        <description>下去有一個U形迴轉，迴轉半徑較大的建議改停一館</description>
+        <styleUrl>#icon-1632-7CB342-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.3647688,25.0677138,0
+          </coordinates>
+        </Point>
+      </Placemark>
       <Placemark>
         <name>(20/d)168parking(明倫社宅室內停車場)</name>
         <description><![CDATA[2026/03/30<br>機車費率20元/次<br>機車出入口與汽車共用一車道 小心駕駛<br>感謝網友 liyco.kennie.9999 熱心回報]]></description>
