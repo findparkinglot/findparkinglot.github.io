@@ -85,6 +85,51 @@ body.modal-open {
   overflow: hidden;
 }
 
+/* =================== 自訂捲軸樣式 =================== */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--surface-3) transparent;
+}
+
+/* WebKit / Chromium / Edge / Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: var(--surface-3);
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  transition: background-color 0.2s ease;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background-color: var(--primary);
+  background-clip: padding-box;
+}
+*::-webkit-scrollbar-thumb:active {
+  background-color: var(--primary-hover);
+  background-clip: padding-box;
+}
+*::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* 觸控裝置隱藏捲軸 (但仍可捲動) */
+@media (hover: none) and (pointer: coarse) {
+  *::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  * {
+    scrollbar-width: none;
+  }
+}
+
 /* =================== 防止 iOS Safari 聚焦表單時自動放大 =================== */
 /* 觸控裝置上,任何 input/textarea/select 的字體必須 >= 16px,否則 iOS Safari 會自動 zoom-in。
    桌面版維持原樣式,因此只在 hover 不可用(touch only)的裝置套用。 */
