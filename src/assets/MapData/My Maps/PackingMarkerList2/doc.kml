@@ -2911,16 +2911,6 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>(20/h)新北市三重國民運動中心</name>
-        <description>汽車費率	20/h	按鈕取票 感謝Jason0408@ptt</description>
-        <styleUrl>#icon-1538-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            121.4878983,25.0546254,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
         <name>(30/h | 200/d)江翠國小地下停車場</name>
         <description><![CDATA[2023/12/24到訪-文強停車代理後增加後牌辨識<br>-------------------------------------------------------<br>評論有說可以+打電話詢問<br>感謝yaoyuchien @ptt]]></description>
         <styleUrl>#icon-1538-7CB342-labelson</styleUrl>
@@ -5540,11 +5530,11 @@
       </Placemark>
       <Placemark>
         <name>(80/h)客限-板橋凱撒大飯店</name>
-        <description><![CDATA[<img src="https://mymaps.usercontent.google.com/hostedimage/m/*/3AAjQbR6ltR-BnGnKIz3XDJJpiRuZPf7MJypKZC9ju8TjUzHhlTZPUP29goCAaXROfA8UwjHDVjP_U-eeEe3orrM98fQejjieHQ03t-O7xMuphbLPvEC6i-WGXSr9qqSeKoN8rwiiladrUkvD35Zx9gag--1vSkMItJvcsZ3rYWKp17fZWstXYpZ78Ln9gV6TW5a_y4tyhMTE8L800is8FSIzWPlMCiLpjArsh-GntesCVEHj1rF4Th0fDVLohLM?fife=s16383" height="200" width="auto" /><br><br>感謝hoha5432提供<br>汽車費率 80h 按鈕取票 2 格 或以上 <br>目前對外說不開放臨停，僅供住宿與用餐客人停放。費用沒有公開，根據個人繳費經驗推估約 80h。<br>官網寫說「本飯店提供機車/汽車地下停車場(B2-B5) ，共220個車位。※B2停放機車（可供重型機車停靠，但如需要更大空間可改停靠汽車停車格）」但實際沒有機車格，而是只有大重停車格（為汽車格畫線切出）。  ]]></description>
+        <description><![CDATA[<img src="https://mymaps.usercontent.google.com/hostedimage/m/*/3AAjQbR7dMT9k4UazJrC-rIlpLfMZPsOvjGJpNcCidKqxzAogE-_IFFreJp97DqzgsQXx_yNpv13CmXTiMfhjeDedRIr7v82XWaGmsBNe9FgLkIUwo2V-dsMjDmzuNRhyoo51H_awSuUMx-fb-BubI4MWadRhWA-X1ERa895MyFmedGNyBM7thK6P9NLd9lHtwzYmZNSGMGZ7RXj_h4I0XuUbRduHDDRoNbdbmkPL_yhmMeLqvsohggpFyPZP6zA?fife=s16383" height="200" width="auto" /><br><br>感謝hoha5432提供<br>汽車費率 80h 按鈕取票 2 格 或以上 <br>目前對外說不開放臨停，僅供住宿與用餐客人停放。費用沒有公開，根據個人繳費經驗推估約 80h。<br>官網寫說「本飯店提供機車/汽車地下停車場(B2-B5) ，共220個車位。※B2停放機車（可供重型機車停靠，但如需要更大空間可改停靠汽車停車格）」但實際沒有機車格，而是只有大重停車格（為汽車格畫線切出）。  ]]></description>
         <styleUrl>#icon-1633-0288D1</styleUrl>
         <ExtendedData>
           <Data name="gx_media_links">
-            <value>https://mymaps.usercontent.google.com/hostedimage/m/*/3AAjQbR6ltR-BnGnKIz3XDJJpiRuZPf7MJypKZC9ju8TjUzHhlTZPUP29goCAaXROfA8UwjHDVjP_U-eeEe3orrM98fQejjieHQ03t-O7xMuphbLPvEC6i-WGXSr9qqSeKoN8rwiiladrUkvD35Zx9gag--1vSkMItJvcsZ3rYWKp17fZWstXYpZ78Ln9gV6TW5a_y4tyhMTE8L800is8FSIzWPlMCiLpjArsh-GntesCVEHj1rF4Th0fDVLohLM?fife=s16383</value>
+            <value>https://mymaps.usercontent.google.com/hostedimage/m/*/3AAjQbR7dMT9k4UazJrC-rIlpLfMZPsOvjGJpNcCidKqxzAogE-_IFFreJp97DqzgsQXx_yNpv13CmXTiMfhjeDedRIr7v82XWaGmsBNe9FgLkIUwo2V-dsMjDmzuNRhyoo51H_awSuUMx-fb-BubI4MWadRhWA-X1ERa895MyFmedGNyBM7thK6P9NLd9lHtwzYmZNSGMGZ7RXj_h4I0XuUbRduHDDRoNbdbmkPL_yhmMeLqvsohggpFyPZP6zA?fife=s16383</value>
           </Data>
         </ExtendedData>
         <Point>
@@ -9900,6 +9890,16 @@
         <Point>
           <coordinates>
             120.3215491,22.5877452,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(20/d)新北市三重國民運動中心</name>
+        <description><![CDATA[2026/8/1<br>可機車道進入，機車費率]]></description>
+        <styleUrl>#icon-1632-7CB342-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.4878983,25.0546254,0
           </coordinates>
         </Point>
       </Placemark>
