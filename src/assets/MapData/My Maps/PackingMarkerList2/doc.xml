@@ -2125,6 +2125,15 @@
           </coordinates>
         </Point>
       </Placemark>
+      <Placemark>
+        <name>龍帥咖啡園藝農場</name>
+        <styleUrl>#icon-1684-7CB342-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4026372,25.1326668,0
+          </coordinates>
+        </Point>
+      </Placemark>
     </Folder>
     <Folder>
       <name>汽車費率</name>
@@ -5405,6 +5414,16 @@
           </coordinates>
         </Point>
       </Placemark>
+      <Placemark>
+        <name>(30/h)永福國小地下停車場</name>
+        <description><![CDATA[2026/08/29 感謝網友 Ming 分享<br>汽車格, 警衛室前方空地也可以停，之前是警衛把三角錐拿走讓我停<br>因為沒有車牌辨識，是手動登記，所以要自己記錄幾點進去幾點出去]]></description>
+        <styleUrl>#icon-1538-E65100-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.4798061,25.0775352,0
+          </coordinates>
+        </Point>
+      </Placemark>
     </Folder>
     <Folder>
       <name>重機格/汽車費率</name>
@@ -5568,11 +5587,11 @@
       </Placemark>
       <Placemark>
         <name>(80/h)客限-板橋凱撒大飯店</name>
-        <description><![CDATA[<img src="https://mymaps.usercontent.google.com/hostedimage/m/*/3AAjQbR4mNEa_kwLfH63dzoMUhXhpxAHEN87G2TbezGzCwOwU-zEUzhB8Q9pJrLpLlgWA_jf0_SxLUS5NTSJqp5Qs6skV052evYbcpzda5KchmjsEy18FfT01aKs6SABm1YQfV9BLJUUp4wmF6Vll8k-dOOpiLVqoVZh26GKwvQGcxa21D6IuLUfCEFHc_WaOV0yczCoPnyBpYAScU7L1I9ARms_Qt99DIW4Vv9rS0mYpdRdHRsesNut6m1BDGyk?fife=s16383" height="200" width="auto" /><br><br>感謝hoha5432提供<br>汽車費率 80h 按鈕取票 2 格 或以上 <br>目前對外說不開放臨停，僅供住宿與用餐客人停放。費用沒有公開，根據個人繳費經驗推估約 80h。<br>官網寫說「本飯店提供機車/汽車地下停車場(B2-B5) ，共220個車位。※B2停放機車（可供重型機車停靠，但如需要更大空間可改停靠汽車停車格）」但實際沒有機車格，而是只有大重停車格（為汽車格畫線切出）。  ]]></description>
+        <description><![CDATA[<img src="https://mymaps.usercontent.google.com/hostedimage/m/*/3AAjQbR4Bu4gjvbod-870MOeVBz7geURBPL-Res780jv3mG5lMkqDIfrsKX_sqGuCIRLEKMNFbKzvyZ0kQsaI5kpAJEB9qcJTSTIKqzs0AC9jQrZmruQNLAq-PLfZ6OW8AFy1h1fk_ViEiaf5RfHOdHeYxMBrw9GYh92--GoR9U6AUGxzOC7-XydlvfGI0XZTLO6ijanjzB1xotQYem58JXn4pCbJlWKjswNVxDwGwbXQ7U7c_Oxt4uP98DNqq7A?fife=s16383" height="200" width="auto" /><br><br>感謝hoha5432提供<br>汽車費率 80h 按鈕取票 2 格 或以上 <br>目前對外說不開放臨停，僅供住宿與用餐客人停放。費用沒有公開，根據個人繳費經驗推估約 80h。<br>官網寫說「本飯店提供機車/汽車地下停車場(B2-B5) ，共220個車位。※B2停放機車（可供重型機車停靠，但如需要更大空間可改停靠汽車停車格）」但實際沒有機車格，而是只有大重停車格（為汽車格畫線切出）。  ]]></description>
         <styleUrl>#icon-1633-0288D1</styleUrl>
         <ExtendedData>
           <Data name="gx_media_links">
-            <value>https://mymaps.usercontent.google.com/hostedimage/m/*/3AAjQbR4mNEa_kwLfH63dzoMUhXhpxAHEN87G2TbezGzCwOwU-zEUzhB8Q9pJrLpLlgWA_jf0_SxLUS5NTSJqp5Qs6skV052evYbcpzda5KchmjsEy18FfT01aKs6SABm1YQfV9BLJUUp4wmF6Vll8k-dOOpiLVqoVZh26GKwvQGcxa21D6IuLUfCEFHc_WaOV0yczCoPnyBpYAScU7L1I9ARms_Qt99DIW4Vv9rS0mYpdRdHRsesNut6m1BDGyk?fife=s16383</value>
+            <value>https://mymaps.usercontent.google.com/hostedimage/m/*/3AAjQbR4Bu4gjvbod-870MOeVBz7geURBPL-Res780jv3mG5lMkqDIfrsKX_sqGuCIRLEKMNFbKzvyZ0kQsaI5kpAJEB9qcJTSTIKqzs0AC9jQrZmruQNLAq-PLfZ6OW8AFy1h1fk_ViEiaf5RfHOdHeYxMBrw9GYh92--GoR9U6AUGxzOC7-XydlvfGI0XZTLO6ijanjzB1xotQYem58JXn4pCbJlWKjswNVxDwGwbXQ7U7c_Oxt4uP98DNqq7A?fife=s16383</value>
           </Data>
         </ExtendedData>
         <Point>
