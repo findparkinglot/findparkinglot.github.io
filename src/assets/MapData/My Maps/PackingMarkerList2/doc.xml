@@ -2134,6 +2134,75 @@
           </coordinates>
         </Point>
       </Placemark>
+      <Placemark>
+        <name>TAICHI 立昇台北</name>
+        <description><![CDATA[🛵顧客重機免費停門口 <br>凡來店消費之大型重機，可免費停放本店門口指定區域，請依現場標線與指示停放，並留意行人與車輛通行安全。]]></description>
+        <styleUrl>#icon-1684-7CB342-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.5804129,25.0513744,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>66驛站美式餐廳（19:00最後供餐）</name>
+        <description><![CDATA[一樓外面可停重機<br>內部有很多哈雷]]></description>
+        <styleUrl>#icon-1684-7CB342-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.056263,25.031581,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[水漾石門景觀餐廳&咖啡廳]]></name>
+        <description><![CDATA[可以停在庭院<br>https://maps.app.goo.gl/Moz8M1J2RZ2u6xXF9]]></description>
+        <styleUrl>#icon-1684-7CB342-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.290804,24.817863,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>嚴咖啡 a yen cafe</name>
+        <description>店前都是白線好停車</description>
+        <styleUrl>#icon-1684-7CB342-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.3436995,24.8230662,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>丸山咖啡</name>
+        <styleUrl>#icon-1684-7CB342-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.3440793,24.8255253,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>七號公路咖啡館</name>
+        <description>外面有十幾格自己的機車車位</description>
+        <styleUrl>#icon-1684-7CB342-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.3559612,24.8254622,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>巴尚咖啡（ 窯烤披薩 麵包 窯烤餐 下午茶）</name>
+        <description>有六七格位置加白線可以停</description>
+        <styleUrl>#icon-1684-7CB342-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.2757874,24.7839219,0
+          </coordinates>
+        </Point>
+      </Placemark>
     </Folder>
     <Folder>
       <name>汽車費率</name>
@@ -5587,11 +5656,11 @@
       </Placemark>
       <Placemark>
         <name>(80/h)客限-板橋凱撒大飯店</name>
-        <description><![CDATA[<img src="https://mymaps.usercontent.google.com/hostedimage/m/*/3AAjQbR4Bu4gjvbod-870MOeVBz7geURBPL-Res780jv3mG5lMkqDIfrsKX_sqGuCIRLEKMNFbKzvyZ0kQsaI5kpAJEB9qcJTSTIKqzs0AC9jQrZmruQNLAq-PLfZ6OW8AFy1h1fk_ViEiaf5RfHOdHeYxMBrw9GYh92--GoR9U6AUGxzOC7-XydlvfGI0XZTLO6ijanjzB1xotQYem58JXn4pCbJlWKjswNVxDwGwbXQ7U7c_Oxt4uP98DNqq7A?fife=s16383" height="200" width="auto" /><br><br>感謝hoha5432提供<br>汽車費率 80h 按鈕取票 2 格 或以上 <br>目前對外說不開放臨停，僅供住宿與用餐客人停放。費用沒有公開，根據個人繳費經驗推估約 80h。<br>官網寫說「本飯店提供機車/汽車地下停車場(B2-B5) ，共220個車位。※B2停放機車（可供重型機車停靠，但如需要更大空間可改停靠汽車停車格）」但實際沒有機車格，而是只有大重停車格（為汽車格畫線切出）。  ]]></description>
+        <description><![CDATA[<img src="https://mymaps.usercontent.google.com/hostedimage/m/*/3AAjQbR7AEug-mMtDQPUyX3YDsk068NoOsewqp0AowLLfuQyy4KZuy2T6cggoGPyPOUMCOYT40IwZjYKPm9GveyLujHCeUYDc9lBxC6mVLO0Zi9d6sMldBaPu6pCIbdd2IKGv9j32BQaGYfKV2UZYyJhpIFiK4iWirQqFo9Rc7nqIkKIhThP8HH-3gD8ucesLD4nAC6vZvj2IMstoy0Sv8EmdMdZNi2apbD7Dfiw19M5R_w0k9cKs87L4xt4xpbw?fife=s16383" height="200" width="auto" /><br><br>感謝hoha5432提供<br>汽車費率 80h 按鈕取票 2 格 或以上 <br>目前對外說不開放臨停，僅供住宿與用餐客人停放。費用沒有公開，根據個人繳費經驗推估約 80h。<br>官網寫說「本飯店提供機車/汽車地下停車場(B2-B5) ，共220個車位。※B2停放機車（可供重型機車停靠，但如需要更大空間可改停靠汽車停車格）」但實際沒有機車格，而是只有大重停車格（為汽車格畫線切出）。  ]]></description>
         <styleUrl>#icon-1633-0288D1</styleUrl>
         <ExtendedData>
           <Data name="gx_media_links">
-            <value>https://mymaps.usercontent.google.com/hostedimage/m/*/3AAjQbR4Bu4gjvbod-870MOeVBz7geURBPL-Res780jv3mG5lMkqDIfrsKX_sqGuCIRLEKMNFbKzvyZ0kQsaI5kpAJEB9qcJTSTIKqzs0AC9jQrZmruQNLAq-PLfZ6OW8AFy1h1fk_ViEiaf5RfHOdHeYxMBrw9GYh92--GoR9U6AUGxzOC7-XydlvfGI0XZTLO6ijanjzB1xotQYem58JXn4pCbJlWKjswNVxDwGwbXQ7U7c_Oxt4uP98DNqq7A?fife=s16383</value>
+            <value>https://mymaps.usercontent.google.com/hostedimage/m/*/3AAjQbR7AEug-mMtDQPUyX3YDsk068NoOsewqp0AowLLfuQyy4KZuy2T6cggoGPyPOUMCOYT40IwZjYKPm9GveyLujHCeUYDc9lBxC6mVLO0Zi9d6sMldBaPu6pCIbdd2IKGv9j32BQaGYfKV2UZYyJhpIFiK4iWirQqFo9Rc7nqIkKIhThP8HH-3gD8ucesLD4nAC6vZvj2IMstoy0Sv8EmdMdZNi2apbD7Dfiw19M5R_w0k9cKs87L4xt4xpbw?fife=s16383</value>
           </Data>
         </ExtendedData>
         <Point>
@@ -7346,7 +7415,7 @@
       </Placemark>
       <Placemark>
         <name>(20/h|40/d)民有市場地下停車場</name>
-        <description><![CDATA[115年7月6日起擴大實施大重機共用格位<br>依現場標誌指示，得斜向停放且以最多2格機車格位為限]]></description>
+        <description><![CDATA[入口有直角轉彎，大車要斟酌<br>https://www.facebook.com/photo/?fbid=28317051417889957&set=a.457950930893380<br>機車道，得斜向停放且以最多2格機車格位為限]]></description>
         <styleUrl>#icon-1633-7CB342-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -9951,9 +10020,9 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>(20/d)新北市三重國民運動中心</name>
-        <description><![CDATA[2026/8/1<br>可機車道進入，機車費率]]></description>
-        <styleUrl>#icon-1632-7CB342-labelson</styleUrl>
+        <name>(30/h)新北市三重國民運動中心</name>
+        <description>2026/9/1 貼請走汽車道</description>
+        <styleUrl>#icon-1538-7CB342-labelson</styleUrl>
         <Point>
           <coordinates>
             121.4878983,25.0546254,0
@@ -9967,6 +10036,33 @@
         <Point>
           <coordinates>
             121.5132295,25.1192983,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(Free)好市多 北投店</name>
+        <styleUrl>#icon-1632-7CB342-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.4700057,25.1277518,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(Free)好市多汐止店</name>
+        <styleUrl>#icon-1632-7CB342-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.633169,25.056257,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(Free)好市多 台北內湖店</name>
+        <styleUrl>#icon-1632-7CB342-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            121.576143,25.063963,0
           </coordinates>
         </Point>
       </Placemark>
