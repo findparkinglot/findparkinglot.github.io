@@ -2,7 +2,7 @@
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
     <name>Alan大重停車記事</name>
-    <description><![CDATA[更新請到<br>https://forms.gle/euRCPCPSmvYLm5Rj8<br>2026/07/17<br>  - 更新三峽、鶯歌、淡水路邊收費機車格<br>2026/07/15<br>  - 更新台北市路外試辦12處停車場<br>2026/06/16<br>  - 更新新莊收費機車格<br>  - 更新七月預定開放收費機車格<br>2026/05/26<br>  - 更新泰山 中和 收費機車格<br>2026/05/03<br>  - 更新台中共用停車格<br>  - 西區 中區 西屯區 南屯區<br>2026/05/01<br>  - 更新新北試辦重機停收費機車格<br>  - 中和、永和、土城、淡水等收費機車格<br>2026/04/07<br>  - 更新台北市試辦停車場<br>2026/03/26<br>  - 合併重機格/機車費率圖層至機車費率圖層<br>  - 新增預計開放圖層(4/6 台北市辦路外停車場)<br>2026/03/06<br>  - 新增重機友善店家圖層<br>2026/03/01<br>  - 新增新北試辦重機停收費機車格<br>  - 新莊、泰山、林口、三重、蘆洲等收費機車格<br>2026/01/23<br>  - 更新台中撤銷禁止陡峭停車場<br>2026/01/01<br>  - 新增春德路停車場<br>2025/11/22<br>  - 新增塔城公園停車場<br>  - 移除阿曼TIT停車場<br>2025/11/05<br>  - 新增科技大樓停車場<br>2025/10/23<br>  - 調整三創停車場費率與類型<br>2025/10/15<br>  - 新增高雄草衙道機車停車場<br>  - 新增台中第二停車場<br>2025/7/14更新<br>  - 新增台北市試辦機車共用車格<br>  - 移除部分停止營業停車場<br>  - 調整部分停車場 icon]]></description>
+    <description><![CDATA[更新請到<br>https://forms.gle/euRCPCPSmvYLm5Rj8<br>2026/09/14<br>  - 新增中壢國小、中山停車場<br>2026/09/12<br>  - 辛亥路一段100號機車停車場改為禁停<br>2026/07/17<br>  - 更新三峽、鶯歌、淡水路邊收費機車格<br>2026/07/15<br>  - 更新台北市路外試辦12處停車場<br>2026/06/16<br>  - 更新新莊收費機車格<br>  - 更新七月預定開放收費機車格<br>2026/05/26<br>  - 更新泰山 中和 收費機車格<br>2026/05/03<br>  - 更新台中共用停車格<br>  - 西區 中區 西屯區 南屯區<br>2026/05/01<br>  - 更新新北試辦重機停收費機車格<br>  - 中和、永和、土城、淡水等收費機車格<br>2026/04/07<br>  - 更新台北市試辦停車場<br>2026/03/26<br>  - 合併重機格/機車費率圖層至機車費率圖層<br>  - 新增預計開放圖層(4/6 台北市辦路外停車場)<br>2026/03/06<br>  - 新增重機友善店家圖層<br>2026/03/01<br>  - 新增新北試辦重機停收費機車格<br>  - 新莊、泰山、林口、三重、蘆洲等收費機車格<br>2026/01/23<br>  - 更新台中撤銷禁止陡峭停車場<br>2026/01/01<br>  - 新增春德路停車場<br>2025/11/22<br>  - 新增塔城公園停車場<br>  - 移除阿曼TIT停車場<br>2025/11/05<br>  - 新增科技大樓停車場<br>2025/10/23<br>  - 調整三創停車場費率與類型<br>2025/10/15<br>  - 新增高雄草衙道機車停車場<br>  - 新增台中第二停車場<br>2025/7/14更新<br>  - 新增台北市試辦機車共用車格<br>  - 移除部分停止營業停車場<br>  - 調整部分停車場 icon]]></description>
     <Style id="icon-1502-7CB342-labelson">
       <IconStyle>
         <scale>1</scale>
@@ -5493,6 +5493,26 @@
           </coordinates>
         </Point>
       </Placemark>
+      <Placemark>
+        <name>(30/h)新北市三重國民運動中心</name>
+        <description>2026/9/1 貼請走汽車道</description>
+        <styleUrl>#icon-1538-7CB342-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.4878983,25.0546254,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(40/h)中壢國小地下停車場</name>
+        <description><![CDATA[2026/09/14 感謝網友 Jun 分享<br>也可停機車格]]></description>
+        <styleUrl>#icon-1538-7CB342-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.2219516,24.9541738,0
+          </coordinates>
+        </Point>
+      </Placemark>
     </Folder>
     <Folder>
       <name>重機格/汽車費率</name>
@@ -5656,11 +5676,11 @@
       </Placemark>
       <Placemark>
         <name>(80/h)客限-板橋凱撒大飯店</name>
-        <description><![CDATA[<img src="https://mymaps.usercontent.google.com/hostedimage/m/*/3AAjQbR7AEug-mMtDQPUyX3YDsk068NoOsewqp0AowLLfuQyy4KZuy2T6cggoGPyPOUMCOYT40IwZjYKPm9GveyLujHCeUYDc9lBxC6mVLO0Zi9d6sMldBaPu6pCIbdd2IKGv9j32BQaGYfKV2UZYyJhpIFiK4iWirQqFo9Rc7nqIkKIhThP8HH-3gD8ucesLD4nAC6vZvj2IMstoy0Sv8EmdMdZNi2apbD7Dfiw19M5R_w0k9cKs87L4xt4xpbw?fife=s16383" height="200" width="auto" /><br><br>感謝hoha5432提供<br>汽車費率 80h 按鈕取票 2 格 或以上 <br>目前對外說不開放臨停，僅供住宿與用餐客人停放。費用沒有公開，根據個人繳費經驗推估約 80h。<br>官網寫說「本飯店提供機車/汽車地下停車場(B2-B5) ，共220個車位。※B2停放機車（可供重型機車停靠，但如需要更大空間可改停靠汽車停車格）」但實際沒有機車格，而是只有大重停車格（為汽車格畫線切出）。  ]]></description>
+        <description><![CDATA[<img src="https://mymaps.usercontent.google.com/hostedimage/m/*/3AAjQbR4s86QrWxJ23cNHJUgURs85se3b76aFHsHdsdSvnHpGqt2uNR_IZ3ghHDG6tZG21uO0Y93N5lOY92F_IiQlsWjzxoitHmJeGksELSScKvnLsyUSLmVN2oplYNRSkjXt9Y2B18ZiYhddLYv1uzMJp8XWnRr8iuZZanlpg4xFL8TWfA-9nYZGBmaeIE038Jj4UyTPdzwrKU4RmG7Rw_kxB0pdvuuBEKwe0L_Mr2pitmCbdhIvK-woXIbGnIM?fife=s16383" height="200" width="auto" /><br><br>感謝hoha5432提供<br>汽車費率 80h 按鈕取票 2 格 或以上 <br>目前對外說不開放臨停，僅供住宿與用餐客人停放。費用沒有公開，根據個人繳費經驗推估約 80h。<br>官網寫說「本飯店提供機車/汽車地下停車場(B2-B5) ，共220個車位。※B2停放機車（可供重型機車停靠，但如需要更大空間可改停靠汽車停車格）」但實際沒有機車格，而是只有大重停車格（為汽車格畫線切出）。  ]]></description>
         <styleUrl>#icon-1633-0288D1</styleUrl>
         <ExtendedData>
           <Data name="gx_media_links">
-            <value>https://mymaps.usercontent.google.com/hostedimage/m/*/3AAjQbR7AEug-mMtDQPUyX3YDsk068NoOsewqp0AowLLfuQyy4KZuy2T6cggoGPyPOUMCOYT40IwZjYKPm9GveyLujHCeUYDc9lBxC6mVLO0Zi9d6sMldBaPu6pCIbdd2IKGv9j32BQaGYfKV2UZYyJhpIFiK4iWirQqFo9Rc7nqIkKIhThP8HH-3gD8ucesLD4nAC6vZvj2IMstoy0Sv8EmdMdZNi2apbD7Dfiw19M5R_w0k9cKs87L4xt4xpbw?fife=s16383</value>
+            <value>https://mymaps.usercontent.google.com/hostedimage/m/*/3AAjQbR4s86QrWxJ23cNHJUgURs85se3b76aFHsHdsdSvnHpGqt2uNR_IZ3ghHDG6tZG21uO0Y93N5lOY92F_IiQlsWjzxoitHmJeGksELSScKvnLsyUSLmVN2oplYNRSkjXt9Y2B18ZiYhddLYv1uzMJp8XWnRr8iuZZanlpg4xFL8TWfA-9nYZGBmaeIE038Jj4UyTPdzwrKU4RmG7Rw_kxB0pdvuuBEKwe0L_Mr2pitmCbdhIvK-woXIbGnIM?fife=s16383</value>
           </Data>
         </ExtendedData>
         <Point>
@@ -9714,15 +9734,6 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>(20/d)辛亥路一段100號機車停車場</name>
-        <styleUrl>#icon-1632-7CB342-labelson-nodesc</styleUrl>
-        <Point>
-          <coordinates>
-            121.5317156,25.02157,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
         <name>(30/d | 600/月)嘟嘟房停車場紀念牆</name>
         <description><![CDATA[感謝Kyontw@ptt<br>24年3月修正月費為900<br>24年7月修正月費為300<br>24年8月修正月費為600<br>https://maps.app.goo.gl/SmM12rb7Ahkci6uz7]]></description>
         <styleUrl>#icon-1632-7CB342-labelson</styleUrl>
@@ -10020,16 +10031,6 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>(30/h)新北市三重國民運動中心</name>
-        <description>2026/9/1 貼請走汽車道</description>
-        <styleUrl>#icon-1538-7CB342-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            121.4878983,25.0546254,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
         <name>(30/d)國立陽明交通大學陽明校區入口收費亭</name>
         <description>https://www.facebook.com/share/p/1BqKYAJsnu/</description>
         <styleUrl>#icon-1632-7CB342-labelson</styleUrl>
@@ -10063,6 +10064,26 @@
         <Point>
           <coordinates>
             121.576143,25.063963,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(30/d)中壢國小地下停車場</name>
+        <description><![CDATA[2026/09/14 感謝網友 Jun 分享<br>也可停汽車格]]></description>
+        <styleUrl>#icon-1632-7CB342-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.2218872,24.9540133,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(平:30/d|假:40/d)中山停車場</name>
+        <description><![CDATA[2026/09/14 感謝網友 Jun 分享<br>比照機車費率平日30/日 假日40/日]]></description>
+        <styleUrl>#icon-1632-0288D1-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.2274501,24.9552535,0
           </coordinates>
         </Point>
       </Placemark>
@@ -13326,6 +13347,16 @@
         <Point>
           <coordinates>
             121.563022,25.1677761,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>辛亥路一段100號機車停車場</name>
+        <description>紅牌原本停放於此停車場，已於115/8/22被開違規停車單</description>
+        <styleUrl>#icon-1898-E65100-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.5317156,25.02157,0
           </coordinates>
         </Point>
       </Placemark>
