@@ -3,7 +3,9 @@ name: Update KML
 # 排程 + 手動觸發 + 推送 master 時也跑一次
 # 每週三 台灣時間 11:50 = 每週三 UTC 03:50
 # (刻意避開整點,降低 GitHub Actions schedule 在熱門時段被延遲的機率)
-# 注意:用內建 GITHUB_TOKEN 自動 commit 推回 master 不會再觸發此 workflow,故不會無限迴圈
+# 注意:用內建 GITHUB_TOKEN 自動 commit 推回 master 不會再觸發 deploy.yml 的 push 事件
+# (GitHub 迴圈防護機制,workflow_dispatch/repository_dispatch 除外),
+# 所以下方會在 commit 後主動用 gh CLI 觸發 deploy.yml,確保資料更新後網站也會重新部署。
 on:
   schedule:
     - cron: '50 3 * * 3'
@@ -14,6 +16,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 jobs:
   update:
@@ -34,13 +37,24 @@ jobs:
         run: npm run update:kml
 
       - name: Commit & push if changed
+        id: commit
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add "src/assets/MapData/My Maps/PackingMarkerList2" "src/constants/dataUpdateDate.js"
           if git diff --cached --quiet; then
             echo "No changes to commit."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             git commit -m "chore(kml): auto-update from Google My Maps ($(date -u +%Y-%m-%d))"
             git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
+
+      - name: Trigger deploy workflow
+        # 用 GITHUB_TOKEN 自動 push 不會觸發 deploy.yml 的 push 事件,
+        # 因此改用 workflow_dispatch 主動觸發部署 (此事件不受迴圈防護限制)。
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy.yml --ref master
