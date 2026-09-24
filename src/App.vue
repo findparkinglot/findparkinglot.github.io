@@ -94,6 +94,7 @@ const windowFAQOpen = ref(false)
 const windowShareOpen = ref(false)
 const windowCommunityHelpOpen = ref(false)
 const windowSupportOpen = ref(false)
+const windowLeaderboardOpen = ref(false)
 
 // ---------- 新手導覽 (浮動視窗依序介紹功能) ----------
 const TOUR_STORAGE_KEY = 'onboarding_tour_v1'
@@ -163,6 +164,7 @@ const openOnly = (key) => {
   if (key !== 'share') windowShareOpen.value = false
   if (key !== 'communityHelp') windowCommunityHelpOpen.value = false
   if (key !== 'support') windowSupportOpen.value = false
+  if (key !== 'leaderboard') windowLeaderboardOpen.value = false
   // 路線面板（stepsOpen）與路線規劃不互斥，另外處理
   track('panel_open', { panel: key })
 }
@@ -182,6 +184,7 @@ watch(windowFAQOpen, (v) => v && openOnly('faq'))
 watch(windowShareOpen, (v) => v && openOnly('share'))
 watch(windowCommunityHelpOpen, (v) => v && openOnly('communityHelp'))
 watch(windowSupportOpen, (v) => v && openOnly('support'))
+watch(windowLeaderboardOpen, (v) => v && openOnly('leaderboard'))
 
 // ---------- 贊助連結 ----------
 const SUPPORT_LINKS = [
@@ -275,6 +278,64 @@ const officialCount = computed(() =>
 )
 const overriddenCount = computed(() => overrideKeySet.value.size)
 const communityCount = computed(() => (communityParkings.value || []).length)
+
+// ---------- 貢獻排行榜 ----------
+// 統計每位車友「共筆停車點新增/編輯」與「官方點資訊修改」的次數,取前五名
+const contributionRanking = computed(() => {
+  const stats = new Map() // id -> { id, nickname, community, override, lastAt }
+  const bump = (by, kind, at = 0) => {
+    if (!by?.id) return
+    let s = stats.get(by.id)
+    if (!s) {
+      s = { id: by.id, nickname: '', community: 0, override: 0, lastAt: 0 }
+      stats.set(by.id, s)
+    }
+    s[kind] += 1
+    // 以最近一次行為的暱稱作為顯示名稱
+    if (by.nickname && at >= s.lastAt) s.nickname = by.nickname
+    if (at > s.lastAt) s.lastAt = at
+  }
+  for (const item of communityParkings.value || []) {
+    const hist = item.history || []
+    if (hist.length) {
+      for (const h of hist) {
+        if (h?.action === 'create' || h?.action === 'update')
+          bump(h.by, 'community', h.at || 0)
+      }
+    } else {
+      // 舊資料沒有 history 時退回 createdBy / updatedBy
+      bump(item.createdBy, 'community', item.createdAt || 0)
+      if (item.updatedBy?.id && item.updatedBy.id !== item.createdBy?.id)
+        bump(item.updatedBy, 'community', item.updatedAt || 0)
+    }
+  }
+  for (const ov of Object.values(overrides.value || {})) {
+    const hist =
+      ov?.history && typeof ov.history === 'object'
+        ? Object.values(ov.history)
+        : []
+    if (hist.length) {
+      for (const h of hist) {
+        if (h?.action === 'override') bump(h.by, 'override', h.at || 0)
+      }
+    } else {
+      bump(ov?.updatedBy, 'override', ov?.updatedAt || 0)
+    }
+  }
+  return [...stats.values()]
+    .map((s) => ({ ...s, total: s.community + s.override }))
+    .sort((a, b) => b.total - a.total || b.lastAt - a.lastAt)
+})
+
+const leaderboardTop = computed(() => contributionRanking.value.slice(0, 5))
+
+const contributorName = (s) =>
+  s.nickname || (s.id ? `匿名#${s.id}` : '匿名')
+
+const openLeaderboard = () => {
+  windowLeaderboardOpen.value = true
+  track('leaderboard_open')
+}
 
 // 編輯器狀態
 const editorOpen = ref(false)
@@ -977,6 +1038,17 @@ const communityFabItems = computed(() => [
     main-label="共筆停車點"
   />
 
+  <!-- 貢獻排行榜（左下獨立按鈕，涵蓋共筆與官方點修改） -->
+  <button
+    v-show="!stepsOpen && !infoActive && !addPickMode"
+    class="leaderboard-fab"
+    @click="openLeaderboard"
+    aria-label="貢獻排行榜"
+    title="貢獻排行榜"
+  >
+    <span class="material-icons-outlined">emoji_events</span>
+  </button>
+
   <!-- 搜尋列 -->
   <SearchBar
     v-show="!stepsOpen && !infoActive && !addPickMode"
@@ -1307,16 +1379,11 @@ const communityFabItems = computed(() => [
       </div>
       <ul class="whatsnew-list">
         <li>
-          <span class="material-icons-outlined">tune</span>
-          <span><strong>顯示分類切換</strong>
+          <span class="material-icons-outlined">emoji_events</span>
+          <span><strong>貢獻排行榜</strong>
             <br>
-            設定頁新增「官方 / 修改 / 共筆」三個開關,可依需求快速隱藏或顯示對應來源的停車點</span>
-        </li>
-        <li>
-          <span class="material-icons-outlined">tag</span>
-          <span><strong>各分類即時筆數</strong>
-            <br>
-            每個分類旁會顯示對應停車場資料筆數</span>
+            看看哪些車友貢獻最多停車資訊!點左下角的 🏆 按鈕,或
+            <a href="#" class="link" @click.prevent="openLeaderboard">點此立即查看</a></span>
         </li>
       </ul>
     </div>
@@ -1329,13 +1396,10 @@ const communityFabItems = computed(() => [
       2.  -->
       <a href="https://www.google.com/maps/d/viewer?mid=1ORD5DnL6yqrCrtQJYB9TeTgOOlvo-Yc&g_ep=CAESBjI2LjguNRgAIN1iKpUBLDk0MjY3NzI3LDk0MjkyMTk1LDk0Mjk5NTMyLDEwMDc5NjQ5OCwxMDA3OTc3NTcsMTAwNzk2NTMxLDk0MjgwNTc2LDk0MjA3Mzk0LDk0MjA3NTA2LDk0MjA4NTA2LDk0MjE4NjUzLDk0MjI5ODM5LDk0Mjc1MTY4LDk0Mjc5NjE5LDEwMDc5MjU3MiwxMDA3OTE0ODNCAlRX&skid=9984dc32-0eac-4e02-b7a8-241e8910f915&shorturl=1&ll=25.078951126084913%2C121.45397636318671&z=11"
         target="_blank" rel="noopener" class="link"
-        >Alan大重停車記事</a>，如有停車場相關問題請至該頁面填寫回報表單。
+        >Alan大重停車記事</a>，感謝Alan的辛苦整理與分享！如有停車場相關問題請至該頁面填寫回報表單。
     </p>
     <p class="welcome-text">
-      公告: 原始資料"大重停車記事已無更新" 已改由 Alan大重停車記事 提供，感謝Alan的辛苦整理與分享！
-    </p>
-    <p class="welcome-text">
-      本站僅提供資料整合服務，地圖免費提供車友使用，資料不定期更新；若發生無法使用情況，請至
+      本站僅提供資料整合服務，地圖免費提供車友使用，資料每週三自動同步更新；若發生無法使用情況，請至
       <a href="https://forms.gle/iJCyfqVtpL35WtZM7" target="_blank" rel="noopener" class="link"
         >錯誤資訊回報</a
       >，也歡迎贊助讓我有動力繼續更新。
@@ -1416,6 +1480,33 @@ const communityFabItems = computed(() => [
       <li>暱稱可選填,留空將顯示為「匿名#xxx-xxx」</li>
       <li>站方保留必要時清空所有「共筆停車點」資料的權利</li>
     </ul>
+  </BaseModal>
+
+  <!-- 貢獻排行榜 Modal -->
+  <BaseModal v-model="windowLeaderboardOpen" title="貢獻排行榜" close-text="關閉">
+    <p class="welcome-text">
+      感謝每一位車友的共筆與修改!
+    </p>
+    <div v-if="leaderboardTop.length" class="leaderboard-list">
+      <div
+        v-for="(s, idx) in leaderboardTop"
+        :key="s.id"
+        class="leaderboard-item"
+        :class="`rank-${idx + 1}`"
+      >
+        <span class="leaderboard-medal">{{ ['🥇', '🥈', '🥉'][idx] || `#${idx + 1}` }}</span>
+        <div class="leaderboard-body">
+          <span class="leaderboard-name">{{ contributorName(s) }}</span>
+          <span class="leaderboard-detail">
+            共筆 {{ s.community }} 次 · 修改官方點 {{ s.override }} 次
+          </span>
+        </div>
+        <span class="leaderboard-total">{{ s.total }}<small>次</small></span>
+      </div>
+    </div>
+    <p v-else class="leaderboard-empty">
+      目前還沒有任何貢獻紀錄,快來成為第一位上榜的車友吧!
+    </p>
   </BaseModal>
 
   <!-- 新手導覽 (浮動視窗依序介紹功能) -->
@@ -1682,6 +1773,108 @@ const communityFabItems = computed(() => [
   display: flex;
   justify-content: center;
   margin: 4px 0 14px;
+}
+
+/* =================== 貢獻排行榜 =================== */
+/* 左下獨立浮動按鈕:位於共筆 FAB 右側,避開其往上展開的選單項 */
+.leaderboard-fab {
+  position: fixed;
+  left: 72px;
+  bottom: 30px;
+  z-index: 999;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 0;
+  background: var(--surface);
+  color: #ffc83c;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.leaderboard-fab:hover {
+  transform: translateY(-1px);
+  border-color: #ffc83c;
+}
+.leaderboard-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 6px 0 10px;
+}
+.leaderboard-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+.leaderboard-item.rank-1 {
+  background: linear-gradient(135deg, rgba(255, 200, 60, 0.18), rgba(255, 200, 60, 0.04));
+  border-color: rgba(255, 200, 60, 0.55);
+}
+.leaderboard-item.rank-2 {
+  background: linear-gradient(135deg, rgba(190, 200, 215, 0.18), rgba(190, 200, 215, 0.04));
+  border-color: rgba(190, 200, 215, 0.55);
+}
+.leaderboard-item.rank-3 {
+  background: linear-gradient(135deg, rgba(205, 130, 70, 0.18), rgba(205, 130, 70, 0.04));
+  border-color: rgba(205, 130, 70, 0.55);
+}
+.leaderboard-medal {
+  font-size: 26px;
+  flex-shrink: 0;
+  width: 30px;
+  text-align: center;
+}
+/* 第 4、5 名以數字名次顯示 */
+.leaderboard-item:nth-child(n + 4) .leaderboard-medal {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--muted);
+}
+.leaderboard-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.leaderboard-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.leaderboard-detail {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+.leaderboard-total {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+.leaderboard-total small {
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: var(--muted);
+  margin-left: 2px;
+}
+.leaderboard-empty {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+  padding: 10px 0 14px;
 }
 
 /* =================== 贊助 Modal =================== */
