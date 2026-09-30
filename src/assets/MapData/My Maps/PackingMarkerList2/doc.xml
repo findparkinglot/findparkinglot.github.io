@@ -2213,6 +2213,16 @@
           </coordinates>
         </Point>
       </Placemark>
+      <Placemark>
+        <name>台北漢來大飯店</name>
+        <description><![CDATA[可停地下室，但教育訓練不足，警衛有可能會攔<br>用餐可折抵]]></description>
+        <styleUrl>#icon-1684-7CB342-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.6198161,25.057952,0
+          </coordinates>
+        </Point>
+      </Placemark>
     </Folder>
     <Folder>
       <name>汽車費率</name>
@@ -5686,11 +5696,11 @@
       </Placemark>
       <Placemark>
         <name>(80/h)客限-板橋凱撒大飯店</name>
-        <description><![CDATA[<img src="https://mymaps.usercontent.google.com/hostedimage/m/*/3AAjQbR5J52Lport77vCo4NQnhwwNl8reyQ9C6UFVKeHWcS_eePsc8HgHwV1JDRezRDAn13zo1CZyQ9Bb9ZzEFGAg3Vmfm8XwCYrt2Y86TOQwfcF6CQEFLxLz7eBKzBPyKOa_9WeX0sBuWZd7ufgGwxEKg09kZsZqbbdIJD2g1oUJDFqSi7SKwWME2E8gdnG2xklnMN_2EfzK5fY6yxVVvlkPdqPFC0Em3Gv9de8vMTx9fuFkPUak5SRFXijz-FM?fife=s16383" height="200" width="auto" /><br><br>感謝hoha5432提供<br>汽車費率 80h 按鈕取票 2 格 或以上 <br>目前對外說不開放臨停，僅供住宿與用餐客人停放。費用沒有公開，根據個人繳費經驗推估約 80h。<br>官網寫說「本飯店提供機車/汽車地下停車場(B2-B5) ，共220個車位。※B2停放機車（可供重型機車停靠，但如需要更大空間可改停靠汽車停車格）」但實際沒有機車格，而是只有大重停車格（為汽車格畫線切出）。  ]]></description>
+        <description><![CDATA[<img src="https://mymaps.usercontent.google.com/hostedimage/m/*/3AAjQbR7zgqcD-Ito-YltUKOKJKgvaKAEdxXLAZZwDHG0ihMwF8KAv3YG_rKAS7PqM06yf4NN7GzhKPaaJEKADJOol7ZwYB0LeVxTnC00XEIZ8-YUab9uRzpUaerwB4HfmxBVj2Ka_KeOz705SBnnLp1FA1gd9S7mXY6cqkhDK5bl3R9RFHAaB4yDjOkVl3UfiD2ewjukmKzixdmAc_-AO6wAgHu7z0NWKZ47VMUJUyoHEMvw8R7TnvwAUU7hMfs?fife=s16383" height="200" width="auto" /><br><br>感謝hoha5432提供<br>汽車費率 80h 按鈕取票 2 格 或以上 <br>目前對外說不開放臨停，僅供住宿與用餐客人停放。費用沒有公開，根據個人繳費經驗推估約 80h。<br>官網寫說「本飯店提供機車/汽車地下停車場(B2-B5) ，共220個車位。※B2停放機車（可供重型機車停靠，但如需要更大空間可改停靠汽車停車格）」但實際沒有機車格，而是只有大重停車格（為汽車格畫線切出）。  ]]></description>
         <styleUrl>#icon-1633-0288D1</styleUrl>
         <ExtendedData>
           <Data name="gx_media_links">
-            <value>https://mymaps.usercontent.google.com/hostedimage/m/*/3AAjQbR5J52Lport77vCo4NQnhwwNl8reyQ9C6UFVKeHWcS_eePsc8HgHwV1JDRezRDAn13zo1CZyQ9Bb9ZzEFGAg3Vmfm8XwCYrt2Y86TOQwfcF6CQEFLxLz7eBKzBPyKOa_9WeX0sBuWZd7ufgGwxEKg09kZsZqbbdIJD2g1oUJDFqSi7SKwWME2E8gdnG2xklnMN_2EfzK5fY6yxVVvlkPdqPFC0Em3Gv9de8vMTx9fuFkPUak5SRFXijz-FM?fife=s16383</value>
+            <value>https://mymaps.usercontent.google.com/hostedimage/m/*/3AAjQbR7zgqcD-Ito-YltUKOKJKgvaKAEdxXLAZZwDHG0ihMwF8KAv3YG_rKAS7PqM06yf4NN7GzhKPaaJEKADJOol7ZwYB0LeVxTnC00XEIZ8-YUab9uRzpUaerwB4HfmxBVj2Ka_KeOz705SBnnLp1FA1gd9S7mXY6cqkhDK5bl3R9RFHAaB4yDjOkVl3UfiD2ewjukmKzixdmAc_-AO6wAgHu7z0NWKZ47VMUJUyoHEMvw8R7TnvwAUU7hMfs?fife=s16383</value>
           </Data>
         </ExtendedData>
         <Point>
@@ -6763,18 +6773,28 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>(Free)24.9879090, 121.5665702</name>
-        <description><![CDATA[機車平面停車場附設重機專用格<br>感謝網友於 2026/06/21 回報]]></description>
+        <name>(平:30/h|假:60/h)台北流行音樂中心 機車停車場</name>
+        <description><![CDATA[2026/9/25 感謝網友 Shoz 分享<br>停放機車停車場，被收汽車費率$60/h<br>建議直接停旁邊汽車停車場]]></description>
         <styleUrl>#icon-1633-7CB342</styleUrl>
         <Point>
           <coordinates>
-            121.5665702,24.987909,0
+            121.5979262,25.0537268,0
           </coordinates>
         </Point>
       </Placemark>
     </Folder>
     <Folder>
       <name>重機格/個別費率</name>
+      <Placemark>
+        <name>(Free)24.9879090, 121.5665702</name>
+        <description><![CDATA[機車平面停車場附設重機專用格<br>感謝網友於 2026/06/21 回報]]></description>
+        <styleUrl>#icon-1633-7CB342-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.5665702,24.987909,0
+          </coordinates>
+        </Point>
+      </Placemark>
       <Placemark>
         <name>(20/h|60/d)捷運士林站橋下空間機車停車場</name>
         <description><![CDATA[為優化公有路外停車場空間管理並滿足各式新興載具停車需求，臺北市停車管理工程處（以下簡稱停管處）宣布延續本市路邊「機車與大型重型機車共用機車格位」2.0計畫，將自115年4月6日（星期一）起於全市24處公有路外停車場試辦大型重型機車停放機車格計畫，試辦期程預計為6個月。<br><br> 停放於汽車區：依各場小型車費率計收。<br> 停放於機車區：依現場標誌指示，得斜向停放且以最多2格機車格位為限，比照各場機車費率之2倍計收，現場將設置之專屬停車須知牌面，引導車主遵循斜停規範並消弭民眾誤解。]]></description>
