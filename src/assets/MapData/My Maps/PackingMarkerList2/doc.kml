@@ -2,7 +2,15 @@
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
     <name>Alan大重停車記事</name>
-    <description><![CDATA[更新請到<br>https://forms.gle/euRCPCPSmvYLm5Rj8<br>2026/09/14<br>  - 新增中壢國小、中山停車場<br>2026/09/12<br>  - 辛亥路一段100號機車停車場改為禁停<br>2026/07/17<br>  - 更新三峽、鶯歌、淡水路邊收費機車格<br>2026/07/15<br>  - 更新台北市路外試辦12處停車場<br>2026/06/16<br>  - 更新新莊收費機車格<br>  - 更新七月預定開放收費機車格<br>2026/05/26<br>  - 更新泰山 中和 收費機車格<br>2026/05/03<br>  - 更新台中共用停車格<br>  - 西區 中區 西屯區 南屯區<br>2026/05/01<br>  - 更新新北試辦重機停收費機車格<br>  - 中和、永和、土城、淡水等收費機車格<br>2026/04/07<br>  - 更新台北市試辦停車場<br>2026/03/26<br>  - 合併重機格/機車費率圖層至機車費率圖層<br>  - 新增預計開放圖層(4/6 台北市辦路外停車場)<br>2026/03/06<br>  - 新增重機友善店家圖層<br>2026/03/01<br>  - 新增新北試辦重機停收費機車格<br>  - 新莊、泰山、林口、三重、蘆洲等收費機車格<br>2026/01/23<br>  - 更新台中撤銷禁止陡峭停車場<br>2026/01/01<br>  - 新增春德路停車場<br>2025/11/22<br>  - 新增塔城公園停車場<br>  - 移除阿曼TIT停車場<br>2025/11/05<br>  - 新增科技大樓停車場<br>2025/10/23<br>  - 調整三創停車場費率與類型<br>2025/10/15<br>  - 新增高雄草衙道機車停車場<br>  - 新增台中第二停車場<br>2025/7/14更新<br>  - 新增台北市試辦機車共用車格<br>  - 移除部分停止營業停車場<br>  - 調整部分停車場 icon]]></description>
+    <description><![CDATA[更新請到<br>https://forms.gle/euRCPCPSmvYLm5Rj8<br>2026/10/06<br> - 更新台北市可停收費機車格資訊<br>2026/09/14<br>  - 新增中壢國小、中山停車場<br>2026/09/12<br>  - 辛亥路一段100號機車停車場改為禁停<br>2026/07/17<br>  - 更新三峽、鶯歌、淡水路邊收費機車格<br>2026/07/15<br>  - 更新台北市路外試辦12處停車場<br>2026/06/16<br>  - 更新新莊收費機車格<br>  - 更新七月預定開放收費機車格<br>2026/05/26<br>  - 更新泰山 中和 收費機車格<br>2026/05/03<br>  - 更新台中共用停車格<br>  - 西區 中區 西屯區 南屯區<br>2026/05/01<br>  - 更新新北試辦重機停收費機車格<br>  - 中和、永和、土城、淡水等收費機車格<br>2026/04/07<br>  - 更新台北市試辦停車場<br>2026/03/26<br>  - 合併重機格/機車費率圖層至機車費率圖層<br>  - 新增預計開放圖層(4/6 台北市辦路外停車場)<br>2026/03/06<br>  - 新增重機友善店家圖層<br>2026/03/01<br>  - 新增新北試辦重機停收費機車格<br>  - 新莊、泰山、林口、三重、蘆洲等收費機車格<br>2026/01/23<br>  - 更新台中撤銷禁止陡峭停車場<br>2026/01/01<br>  - 新增春德路停車場<br>2025/11/22<br>  - 新增塔城公園停車場<br>  - 移除阿曼TIT停車場<br>2025/11/05<br>  - 新增科技大樓停車場<br>2025/10/23<br>  - 調整三創停車場費率與類型<br>2025/10/15<br>  - 新增高雄草衙道機車停車場<br>  - 新增台中第二停車場<br>2025/7/14更新<br>  - 新增台北市試辦機車共用車格<br>  - 移除部分停止營業停車場<br>  - 調整部分停車場 icon]]></description>
+    <Style id="icon-1502-0288D1-labelson">
+      <IconStyle>
+        <scale>1</scale>
+        <Icon>
+          <href>images/icon-19.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
     <Style id="icon-1502-7CB342-labelson">
       <IconStyle>
         <scale>1</scale>
@@ -721,7 +729,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-19.png</href>
+          <href>images/icon-20.png</href>
         </Icon>
       </IconStyle>
     </Style>
@@ -729,207 +737,151 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>images/icon-19.png</href>
+          <href>images/icon-20.png</href>
         </Icon>
       </IconStyle>
       <BalloonStyle>
         <text><![CDATA[<h3>$[name]</h3>]]></text>
       </BalloonStyle>
     </Style>
-    <Style id="line-01579B-15144-nodesc-normal">
+    <Style id="line-01579B-8363-nodesc-normal">
       <LineStyle>
         <color>ff9b5701</color>
-        <width>15.144</width>
+        <width>8.363</width>
       </LineStyle>
       <BalloonStyle>
         <text><![CDATA[<h3>$[name]</h3>]]></text>
       </BalloonStyle>
     </Style>
-    <Style id="line-01579B-15144-nodesc-highlight">
+    <Style id="line-01579B-8363-nodesc-highlight">
       <LineStyle>
         <color>ff9b5701</color>
-        <width>22.716</width>
+        <width>12.5445</width>
       </LineStyle>
       <BalloonStyle>
         <text><![CDATA[<h3>$[name]</h3>]]></text>
       </BalloonStyle>
     </Style>
-    <StyleMap id="line-01579B-15144-nodesc">
+    <StyleMap id="line-01579B-8363-nodesc">
       <Pair>
         <key>normal</key>
-        <styleUrl>#line-01579B-15144-nodesc-normal</styleUrl>
+        <styleUrl>#line-01579B-8363-nodesc-normal</styleUrl>
       </Pair>
       <Pair>
         <key>highlight</key>
-        <styleUrl>#line-01579B-15144-nodesc-highlight</styleUrl>
+        <styleUrl>#line-01579B-8363-nodesc-highlight</styleUrl>
       </Pair>
     </StyleMap>
-    <Style id="line-01579B-15531-nodesc-normal">
+    <Style id="line-01579B-8556-nodesc-normal">
       <LineStyle>
         <color>ff9b5701</color>
-        <width>15.531</width>
+        <width>8.556</width>
       </LineStyle>
       <BalloonStyle>
         <text><![CDATA[<h3>$[name]</h3>]]></text>
       </BalloonStyle>
     </Style>
-    <Style id="line-01579B-15531-nodesc-highlight">
+    <Style id="line-01579B-8556-nodesc-highlight">
       <LineStyle>
         <color>ff9b5701</color>
-        <width>23.2965</width>
+        <width>12.834</width>
       </LineStyle>
       <BalloonStyle>
         <text><![CDATA[<h3>$[name]</h3>]]></text>
       </BalloonStyle>
     </Style>
-    <StyleMap id="line-01579B-15531-nodesc">
+    <StyleMap id="line-01579B-8556-nodesc">
       <Pair>
         <key>normal</key>
-        <styleUrl>#line-01579B-15531-nodesc-normal</styleUrl>
+        <styleUrl>#line-01579B-8556-nodesc-normal</styleUrl>
       </Pair>
       <Pair>
         <key>highlight</key>
-        <styleUrl>#line-01579B-15531-nodesc-highlight</styleUrl>
+        <styleUrl>#line-01579B-8556-nodesc-highlight</styleUrl>
       </Pair>
     </StyleMap>
-    <Style id="line-01579B-15725-nodesc-normal">
+    <Style id="line-01579B-8750-nodesc-normal">
       <LineStyle>
         <color>ff9b5701</color>
-        <width>15.725</width>
+        <width>8.75</width>
       </LineStyle>
       <BalloonStyle>
         <text><![CDATA[<h3>$[name]</h3>]]></text>
       </BalloonStyle>
     </Style>
-    <Style id="line-01579B-15725-nodesc-highlight">
+    <Style id="line-01579B-8750-nodesc-highlight">
       <LineStyle>
         <color>ff9b5701</color>
-        <width>23.5875</width>
+        <width>13.125</width>
       </LineStyle>
       <BalloonStyle>
         <text><![CDATA[<h3>$[name]</h3>]]></text>
       </BalloonStyle>
     </Style>
-    <StyleMap id="line-01579B-15725-nodesc">
+    <StyleMap id="line-01579B-8750-nodesc">
       <Pair>
         <key>normal</key>
-        <styleUrl>#line-01579B-15725-nodesc-normal</styleUrl>
+        <styleUrl>#line-01579B-8750-nodesc-normal</styleUrl>
       </Pair>
       <Pair>
         <key>highlight</key>
-        <styleUrl>#line-01579B-15725-nodesc-highlight</styleUrl>
+        <styleUrl>#line-01579B-8750-nodesc-highlight</styleUrl>
       </Pair>
     </StyleMap>
-    <Style id="line-01579B-15919-nodesc-normal">
+    <Style id="line-01579B-8944-nodesc-normal">
       <LineStyle>
         <color>ff9b5701</color>
-        <width>15.919</width>
+        <width>8.944</width>
       </LineStyle>
       <BalloonStyle>
         <text><![CDATA[<h3>$[name]</h3>]]></text>
       </BalloonStyle>
     </Style>
-    <Style id="line-01579B-15919-nodesc-highlight">
+    <Style id="line-01579B-8944-nodesc-highlight">
       <LineStyle>
         <color>ff9b5701</color>
-        <width>23.8785</width>
+        <width>13.416</width>
       </LineStyle>
       <BalloonStyle>
         <text><![CDATA[<h3>$[name]</h3>]]></text>
       </BalloonStyle>
     </Style>
-    <StyleMap id="line-01579B-15919-nodesc">
+    <StyleMap id="line-01579B-8944-nodesc">
       <Pair>
         <key>normal</key>
-        <styleUrl>#line-01579B-15919-nodesc-normal</styleUrl>
+        <styleUrl>#line-01579B-8944-nodesc-normal</styleUrl>
       </Pair>
       <Pair>
         <key>highlight</key>
-        <styleUrl>#line-01579B-15919-nodesc-highlight</styleUrl>
+        <styleUrl>#line-01579B-8944-nodesc-highlight</styleUrl>
       </Pair>
     </StyleMap>
-    <Style id="line-01579B-16113-nodesc-normal">
+    <Style id="line-01579B-9138-nodesc-normal">
       <LineStyle>
         <color>ff9b5701</color>
-        <width>16.113</width>
+        <width>9.138</width>
       </LineStyle>
       <BalloonStyle>
         <text><![CDATA[<h3>$[name]</h3>]]></text>
       </BalloonStyle>
     </Style>
-    <Style id="line-01579B-16113-nodesc-highlight">
+    <Style id="line-01579B-9138-nodesc-highlight">
       <LineStyle>
         <color>ff9b5701</color>
-        <width>24.1695</width>
+        <width>13.707</width>
       </LineStyle>
       <BalloonStyle>
         <text><![CDATA[<h3>$[name]</h3>]]></text>
       </BalloonStyle>
     </Style>
-    <StyleMap id="line-01579B-16113-nodesc">
+    <StyleMap id="line-01579B-9138-nodesc">
       <Pair>
         <key>normal</key>
-        <styleUrl>#line-01579B-16113-nodesc-normal</styleUrl>
+        <styleUrl>#line-01579B-9138-nodesc-normal</styleUrl>
       </Pair>
       <Pair>
         <key>highlight</key>
-        <styleUrl>#line-01579B-16113-nodesc-highlight</styleUrl>
-      </Pair>
-    </StyleMap>
-    <Style id="line-01579B-17275-nodesc-normal">
-      <LineStyle>
-        <color>ff9b5701</color>
-        <width>17.275</width>
-      </LineStyle>
-      <BalloonStyle>
-        <text><![CDATA[<h3>$[name]</h3>]]></text>
-      </BalloonStyle>
-    </Style>
-    <Style id="line-01579B-17275-nodesc-highlight">
-      <LineStyle>
-        <color>ff9b5701</color>
-        <width>25.9125</width>
-      </LineStyle>
-      <BalloonStyle>
-        <text><![CDATA[<h3>$[name]</h3>]]></text>
-      </BalloonStyle>
-    </Style>
-    <StyleMap id="line-01579B-17275-nodesc">
-      <Pair>
-        <key>normal</key>
-        <styleUrl>#line-01579B-17275-nodesc-normal</styleUrl>
-      </Pair>
-      <Pair>
-        <key>highlight</key>
-        <styleUrl>#line-01579B-17275-nodesc-highlight</styleUrl>
-      </Pair>
-    </StyleMap>
-    <Style id="line-01579B-17469-nodesc-normal">
-      <LineStyle>
-        <color>ff9b5701</color>
-        <width>17.469</width>
-      </LineStyle>
-      <BalloonStyle>
-        <text><![CDATA[<h3>$[name]</h3>]]></text>
-      </BalloonStyle>
-    </Style>
-    <Style id="line-01579B-17469-nodesc-highlight">
-      <LineStyle>
-        <color>ff9b5701</color>
-        <width>26.2035</width>
-      </LineStyle>
-      <BalloonStyle>
-        <text><![CDATA[<h3>$[name]</h3>]]></text>
-      </BalloonStyle>
-    </Style>
-    <StyleMap id="line-01579B-17469-nodesc">
-      <Pair>
-        <key>normal</key>
-        <styleUrl>#line-01579B-17469-nodesc-normal</styleUrl>
-      </Pair>
-      <Pair>
-        <key>highlight</key>
-        <styleUrl>#line-01579B-17469-nodesc-highlight</styleUrl>
+        <styleUrl>#line-01579B-9138-nodesc-highlight</styleUrl>
       </Pair>
     </StyleMap>
     <Folder>
@@ -5696,11 +5648,11 @@
       </Placemark>
       <Placemark>
         <name>(80/h)客限-板橋凱撒大飯店</name>
-        <description><![CDATA[<img src="https://mymaps.usercontent.google.com/hostedimage/m/*/3AAjQbR7zgqcD-Ito-YltUKOKJKgvaKAEdxXLAZZwDHG0ihMwF8KAv3YG_rKAS7PqM06yf4NN7GzhKPaaJEKADJOol7ZwYB0LeVxTnC00XEIZ8-YUab9uRzpUaerwB4HfmxBVj2Ka_KeOz705SBnnLp1FA1gd9S7mXY6cqkhDK5bl3R9RFHAaB4yDjOkVl3UfiD2ewjukmKzixdmAc_-AO6wAgHu7z0NWKZ47VMUJUyoHEMvw8R7TnvwAUU7hMfs?fife=s16383" height="200" width="auto" /><br><br>感謝hoha5432提供<br>汽車費率 80h 按鈕取票 2 格 或以上 <br>目前對外說不開放臨停，僅供住宿與用餐客人停放。費用沒有公開，根據個人繳費經驗推估約 80h。<br>官網寫說「本飯店提供機車/汽車地下停車場(B2-B5) ，共220個車位。※B2停放機車（可供重型機車停靠，但如需要更大空間可改停靠汽車停車格）」但實際沒有機車格，而是只有大重停車格（為汽車格畫線切出）。  ]]></description>
+        <description><![CDATA[<img src="https://mymaps.usercontent.google.com/hostedimage/m/*/3AAjQbR6NmtCWdP_wfd8nV6VY8WrQ7jW_cH569lsO_qKI1SUgudjNeOf6FRChg7sGxi2NIgfQj0NRZ5AebpagejNmwyh8TgIwKd2Fx9pRzIrq9DdIx1x4vQfnz9HPO-4NAsHBhlw_5Uk48l5YErtu5BsygJHwq0wwrkqmQOdkoDq-rm-hthD0NjhFrWtI2BI3YJ8jkIskQ945i3YBqJ26LBLa3xUw4KFBryq0rnl2O_AJai7LR-lXjfUJJSpi4YQ?fife=s16383" height="200" width="auto" /><br><br>感謝hoha5432提供<br>汽車費率 80h 按鈕取票 2 格 或以上 <br>目前對外說不開放臨停，僅供住宿與用餐客人停放。費用沒有公開，根據個人繳費經驗推估約 80h。<br>官網寫說「本飯店提供機車/汽車地下停車場(B2-B5) ，共220個車位。※B2停放機車（可供重型機車停靠，但如需要更大空間可改停靠汽車停車格）」但實際沒有機車格，而是只有大重停車格（為汽車格畫線切出）。  ]]></description>
         <styleUrl>#icon-1633-0288D1</styleUrl>
         <ExtendedData>
           <Data name="gx_media_links">
-            <value>https://mymaps.usercontent.google.com/hostedimage/m/*/3AAjQbR7zgqcD-Ito-YltUKOKJKgvaKAEdxXLAZZwDHG0ihMwF8KAv3YG_rKAS7PqM06yf4NN7GzhKPaaJEKADJOol7ZwYB0LeVxTnC00XEIZ8-YUab9uRzpUaerwB4HfmxBVj2Ka_KeOz705SBnnLp1FA1gd9S7mXY6cqkhDK5bl3R9RFHAaB4yDjOkVl3UfiD2ewjukmKzixdmAc_-AO6wAgHu7z0NWKZ47VMUJUyoHEMvw8R7TnvwAUU7hMfs?fife=s16383</value>
+            <value>https://mymaps.usercontent.google.com/hostedimage/m/*/3AAjQbR6NmtCWdP_wfd8nV6VY8WrQ7jW_cH569lsO_qKI1SUgudjNeOf6FRChg7sGxi2NIgfQj0NRZ5AebpagejNmwyh8TgIwKd2Fx9pRzIrq9DdIx1x4vQfnz9HPO-4NAsHBhlw_5Uk48l5YErtu5BsygJHwq0wwrkqmQOdkoDq-rm-hthD0NjhFrWtI2BI3YJ8jkIskQ945i3YBqJ26LBLa3xUw4KFBryq0rnl2O_AJai7LR-lXjfUJJSpi4YQ?fife=s16383</value>
           </Data>
         </ExtendedData>
         <Point>
@@ -12773,7 +12725,7 @@
       </Placemark>
       <Placemark>
         <name>新北大道1段5巷2弄</name>
-        <styleUrl>#line-01579B-17275-nodesc</styleUrl>
+        <styleUrl>#line-01579B-8750-nodesc</styleUrl>
         <LineString>
           <tessellate>1</tessellate>
           <coordinates>
@@ -12785,7 +12737,7 @@
       </Placemark>
       <Placemark>
         <name>過圳街31巷</name>
-        <styleUrl>#line-01579B-17469-nodesc</styleUrl>
+        <styleUrl>#line-01579B-8363-nodesc</styleUrl>
         <LineString>
           <tessellate>1</tessellate>
           <coordinates>
@@ -12798,7 +12750,7 @@
       </Placemark>
       <Placemark>
         <name>重新路3段115巷(新北大道1段至重新路3段)</name>
-        <styleUrl>#line-01579B-15144-nodesc</styleUrl>
+        <styleUrl>#line-01579B-8556-nodesc</styleUrl>
         <LineString>
           <tessellate>1</tessellate>
           <coordinates>
@@ -12812,7 +12764,7 @@
       </Placemark>
       <Placemark>
         <name>過圳街7巷(重新路3段115巷至過圳街7巷16號)</name>
-        <styleUrl>#line-01579B-15725-nodesc</styleUrl>
+        <styleUrl>#line-01579B-9138-nodesc</styleUrl>
         <LineString>
           <tessellate>1</tessellate>
           <coordinates>
@@ -12823,7 +12775,7 @@
       </Placemark>
       <Placemark>
         <name>新北大道1段15巷</name>
-        <styleUrl>#line-01579B-15919-nodesc</styleUrl>
+        <styleUrl>#line-01579B-8750-nodesc</styleUrl>
         <LineString>
           <tessellate>1</tessellate>
           <coordinates>
@@ -12835,7 +12787,7 @@
       </Placemark>
       <Placemark>
         <name>重新路3段115巷1弄</name>
-        <styleUrl>#line-01579B-15531-nodesc</styleUrl>
+        <styleUrl>#line-01579B-8750-nodesc</styleUrl>
         <LineString>
           <tessellate>1</tessellate>
           <coordinates>
@@ -12848,7 +12800,7 @@
       </Placemark>
       <Placemark>
         <name>重新路3段(中正南、北路口至過圳街、重安街口)</name>
-        <styleUrl>#line-01579B-16113-nodesc</styleUrl>
+        <styleUrl>#line-01579B-8944-nodesc</styleUrl>
         <LineString>
           <tessellate>1</tessellate>
           <coordinates>
@@ -12860,7 +12812,7 @@
       </Placemark>
       <Placemark>
         <name>新北大道1段(單號側：重新路3段至過圳街)</name>
-        <styleUrl>#line-01579B-17275-nodesc</styleUrl>
+        <styleUrl>#line-01579B-8556-nodesc</styleUrl>
         <LineString>
           <tessellate>1</tessellate>
           <coordinates>
@@ -12869,6 +12821,126 @@
             121.4924173,25.0612836,0
           </coordinates>
         </LineString>
+      </Placemark>
+      <Placemark>
+        <name>北投區</name>
+        <description>臺北市6.3萬席路邊收費機車格全面試辦開放大重機停放，可採斜向停放2個機車格位方式，以兼顧車身尺寸及其他機車停放空間</description>
+        <styleUrl>#icon-1502-0288D1-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.515018,25.1151759,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>士林區</name>
+        <description>臺北市6.3萬席路邊收費機車格全面試辦開放大重機停放，可採斜向停放2個機車格位方式，以兼顧車身尺寸及其他機車停放空間</description>
+        <styleUrl>#icon-1502-0288D1-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.5246077,25.0950492,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>內湖區</name>
+        <description>臺北市6.3萬席路邊收費機車格全面試辦開放大重機停放，可採斜向停放2個機車格位方式，以兼顧車身尺寸及其他機車停放空間</description>
+        <styleUrl>#icon-1502-0288D1-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.5909027,25.0689422,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>中山區</name>
+        <description>臺北市6.3萬席路邊收費機車格全面試辦開放大重機停放，可採斜向停放2個機車格位方式，以兼顧車身尺寸及其他機車停放空間</description>
+        <styleUrl>#icon-1502-0288D1-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.5427093,25.0792018,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大同區</name>
+        <description>臺北市6.3萬席路邊收費機車格全面試辦開放大重機停放，可採斜向停放2個機車格位方式，以兼顧車身尺寸及其他機車停放空間</description>
+        <styleUrl>#icon-1502-0288D1-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.5113064,25.0627243,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>萬華區</name>
+        <description>臺北市6.3萬席路邊收費機車格全面試辦開放大重機停放，可採斜向停放2個機車格位方式，以兼顧車身尺寸及其他機車停放空間</description>
+        <styleUrl>#icon-1502-0288D1-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.4970294,25.0262857,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>松山區</name>
+        <description>臺北市6.3萬席路邊收費機車格全面試辦開放大重機停放，可採斜向停放2個機車格位方式，以兼顧車身尺寸及其他機車停放空間</description>
+        <styleUrl>#icon-1502-0288D1-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.5638621,25.0541591,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>大安區</name>
+        <description>臺北市6.3萬席路邊收費機車格全面試辦開放大重機停放，可採斜向停放2個機車格位方式，以兼顧車身尺寸及其他機車停放空間</description>
+        <styleUrl>#icon-1502-0288D1-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.5433783,25.0249441,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>中正區</name>
+        <description>臺北市6.3萬席路邊收費機車格全面試辦開放大重機停放，可採斜向停放2個機車格位方式，以兼顧車身尺寸及其他機車停放空間</description>
+        <styleUrl>#icon-1502-0288D1-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.5198716,25.0421407,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>信義區</name>
+        <description>臺北市6.3萬席路邊收費機車格全面試辦開放大重機停放，可採斜向停放2個機車格位方式，以兼顧車身尺寸及其他機車停放空間</description>
+        <styleUrl>#icon-1502-0288D1-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.5720055,25.0409201,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>南港區</name>
+        <description>臺北市6.3萬席路邊收費機車格全面試辦開放大重機停放，可採斜向停放2個機車格位方式，以兼顧車身尺寸及其他機車停放空間</description>
+        <styleUrl>#icon-1502-0288D1-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.6111949,25.0312347,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>文山區</name>
+        <description>臺北市6.3萬席路邊收費機車格全面試辦開放大重機停放，可採斜向停放2個機車格位方式，以兼顧車身尺寸及其他機車停放空間</description>
+        <styleUrl>#icon-1502-0288D1-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.5601762,24.9887396,0
+          </coordinates>
+        </Point>
       </Placemark>
     </Folder>
     <Folder>
