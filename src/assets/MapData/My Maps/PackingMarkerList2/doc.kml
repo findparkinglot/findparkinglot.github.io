@@ -2179,6 +2179,16 @@
     <Folder>
       <name>汽車費率</name>
       <Placemark>
+        <name>(日20/h|夜40/h)停車場-永權立人停車場</name>
+        <description><![CDATA[2026/10/18 感謝網友 Philip 分享<br>僅限悠遊卡<br>路過看到的，理論上應該是可以停]]></description>
+        <styleUrl>#icon-1538-0288D1-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.5178255,24.9939911,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
         <name>(30/h)福林公園地下停車場</name>
         <description>走汽車道的話，30/H 室內 管理員, 3個專用格</description>
         <styleUrl>#icon-1538-7CB342-labelson</styleUrl>
@@ -5648,11 +5658,11 @@
       </Placemark>
       <Placemark>
         <name>(80/h)客限-板橋凱撒大飯店</name>
-        <description><![CDATA[<img src="https://mymaps.usercontent.google.com/hostedimage/m/*/3AAjQbR4mfh0P1ZQ_-2k3htN4JNX6OmASJ15oEsHU1baKU78d3tznFglCZ4zwwVktlKarhIVO6M-AB0xWbZqpI7B0xARkYUpY6A-gZytyjVh7hy7XR7JLrfogyGZOmzmRdzdJFYM30TL_ZYSZTiNiQp9yF3UO9RqtLQH4bN_bAYaRyL4xkFeELtuGbhckdP9xAI6NpmcNtMxjsb6h-p1vUT8J2LCnXThxAyAtkp9y7Bt1U7A5sRToR_MsoEbvv30?fife=s16383" height="200" width="auto" /><br><br>感謝hoha5432提供<br>汽車費率 80h 按鈕取票 2 格 或以上 <br>目前對外說不開放臨停，僅供住宿與用餐客人停放。費用沒有公開，根據個人繳費經驗推估約 80h。<br>官網寫說「本飯店提供機車/汽車地下停車場(B2-B5) ，共220個車位。※B2停放機車（可供重型機車停靠，但如需要更大空間可改停靠汽車停車格）」但實際沒有機車格，而是只有大重停車格（為汽車格畫線切出）。  ]]></description>
+        <description><![CDATA[<img src="https://mymaps.usercontent.google.com/hostedimage/m/*/3ABkJAZjXwowCuyKTShkxM3Bi6L7V0qVjKEp-Co41s5jB5Pr0kJsIsAVCXQsuLJl7DtNHmSoEyF4gCsh7aRNzJhxT7m7Zm7AG3A_Kosbvt4_1Jg0hJ6f3noqoUsUmWl-mJN3kDDv0Sf3m7__rZ02UXYYvZm39OZI3zWNcmuEHeSyTo1MV98K0No1izFgRKLlvPBnW-UvwLr-McHa1SjxoMLoPEi5cAg4eYzUzFUa81WMMz8XBzIzZuAIPo4H1zww?fife=s16383" height="200" width="auto" /><br><br>感謝hoha5432提供<br>汽車費率 80h 按鈕取票 2 格 或以上 <br>目前對外說不開放臨停，僅供住宿與用餐客人停放。費用沒有公開，根據個人繳費經驗推估約 80h。<br>官網寫說「本飯店提供機車/汽車地下停車場(B2-B5) ，共220個車位。※B2停放機車（可供重型機車停靠，但如需要更大空間可改停靠汽車停車格）」但實際沒有機車格，而是只有大重停車格（為汽車格畫線切出）。  ]]></description>
         <styleUrl>#icon-1633-0288D1</styleUrl>
         <ExtendedData>
           <Data name="gx_media_links">
-            <value>https://mymaps.usercontent.google.com/hostedimage/m/*/3AAjQbR4mfh0P1ZQ_-2k3htN4JNX6OmASJ15oEsHU1baKU78d3tznFglCZ4zwwVktlKarhIVO6M-AB0xWbZqpI7B0xARkYUpY6A-gZytyjVh7hy7XR7JLrfogyGZOmzmRdzdJFYM30TL_ZYSZTiNiQp9yF3UO9RqtLQH4bN_bAYaRyL4xkFeELtuGbhckdP9xAI6NpmcNtMxjsb6h-p1vUT8J2LCnXThxAyAtkp9y7Bt1U7A5sRToR_MsoEbvv30?fife=s16383</value>
+            <value>https://mymaps.usercontent.google.com/hostedimage/m/*/3ABkJAZjXwowCuyKTShkxM3Bi6L7V0qVjKEp-Co41s5jB5Pr0kJsIsAVCXQsuLJl7DtNHmSoEyF4gCsh7aRNzJhxT7m7Zm7AG3A_Kosbvt4_1Jg0hJ6f3noqoUsUmWl-mJN3kDDv0Sf3m7__rZ02UXYYvZm39OZI3zWNcmuEHeSyTo1MV98K0No1izFgRKLlvPBnW-UvwLr-McHa1SjxoMLoPEi5cAg4eYzUzFUa81WMMz8XBzIzZuAIPo4H1zww?fife=s16383</value>
           </Data>
         </ExtendedData>
         <Point>
@@ -10067,6 +10077,16 @@
         <Point>
           <coordinates>
             121.2274501,24.9552535,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>(Free)復育公園停車場</name>
+        <description><![CDATA[2026//10/15 感謝熱心網友分享<br>機車格, 鑽縫進場跟白牌一樣路邊就能停車<br>此資訊來自現場潛店教練（也是大重車友）]]></description>
+        <styleUrl>#icon-1632-7CB342-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.8048651,25.1458919,0
           </coordinates>
         </Point>
       </Placemark>
