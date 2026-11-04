@@ -2,7 +2,7 @@
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
     <name>Alan大重停車記事</name>
-    <description><![CDATA[更新請到<br>https://forms.gle/euRCPCPSmvYLm5Rj8<br>2026/10/06<br> - 更新台北市可停收費機車格資訊<br>2026/09/14<br>  - 新增中壢國小、中山停車場<br>2026/09/12<br>  - 辛亥路一段100號機車停車場改為禁停<br>2026/07/17<br>  - 更新三峽、鶯歌、淡水路邊收費機車格<br>2026/07/15<br>  - 更新台北市路外試辦12處停車場<br>2026/06/16<br>  - 更新新莊收費機車格<br>  - 更新七月預定開放收費機車格<br>2026/05/26<br>  - 更新泰山 中和 收費機車格<br>2026/05/03<br>  - 更新台中共用停車格<br>  - 西區 中區 西屯區 南屯區<br>2026/05/01<br>  - 更新新北試辦重機停收費機車格<br>  - 中和、永和、土城、淡水等收費機車格<br>2026/04/07<br>  - 更新台北市試辦停車場<br>2026/03/26<br>  - 合併重機格/機車費率圖層至機車費率圖層<br>  - 新增預計開放圖層(4/6 台北市辦路外停車場)<br>2026/03/06<br>  - 新增重機友善店家圖層<br>2026/03/01<br>  - 新增新北試辦重機停收費機車格<br>  - 新莊、泰山、林口、三重、蘆洲等收費機車格<br>2026/01/23<br>  - 更新台中撤銷禁止陡峭停車場<br>2026/01/01<br>  - 新增春德路停車場<br>2025/11/22<br>  - 新增塔城公園停車場<br>  - 移除阿曼TIT停車場<br>2025/11/05<br>  - 新增科技大樓停車場<br>2025/10/23<br>  - 調整三創停車場費率與類型<br>2025/10/15<br>  - 新增高雄草衙道機車停車場<br>  - 新增台中第二停車場<br>2025/7/14更新<br>  - 新增台北市試辦機車共用車格<br>  - 移除部分停止營業停車場<br>  - 調整部分停車場 icon]]></description>
+    <description><![CDATA[更新請到<br>https://forms.gle/euRCPCPSmvYLm5Rj8<br>2026/11/01<br>  - 更新台中開放路邊停車資訊<br>2026/10/06<br> - 更新台北市可停收費機車格資訊<br>2026/09/14<br>  - 新增中壢國小、中山停車場<br>2026/09/12<br>  - 辛亥路一段100號機車停車場改為禁停<br>2026/07/17<br>  - 更新三峽、鶯歌、淡水路邊收費機車格<br>2026/07/15<br>  - 更新台北市路外試辦12處停車場<br>2026/06/16<br>  - 更新新莊收費機車格<br>  - 更新七月預定開放收費機車格<br>2026/05/26<br>  - 更新泰山 中和 收費機車格<br>2026/05/03<br>  - 更新台中共用停車格<br>  - 西區 中區 西屯區 南屯區<br>2026/05/01<br>  - 更新新北試辦重機停收費機車格<br>  - 中和、永和、土城、淡水等收費機車格<br>2026/04/07<br>  - 更新台北市試辦停車場<br>2026/03/26<br>  - 合併重機格/機車費率圖層至機車費率圖層<br>  - 新增預計開放圖層(4/6 台北市辦路外停車場)<br>2026/03/06<br>  - 新增重機友善店家圖層<br>2026/03/01<br>  - 新增新北試辦重機停收費機車格<br>  - 新莊、泰山、林口、三重、蘆洲等收費機車格<br>2026/01/23<br>  - 更新台中撤銷禁止陡峭停車場<br>2026/01/01<br>  - 新增春德路停車場<br>2025/11/22<br>  - 新增塔城公園停車場<br>  - 移除阿曼TIT停車場<br>2025/11/05<br>  - 新增科技大樓停車場<br>2025/10/23<br>  - 調整三創停車場費率與類型<br>2025/10/15<br>  - 新增高雄草衙道機車停車場<br>  - 新增台中第二停車場<br>2025/7/14更新<br>  - 新增台北市試辦機車共用車格<br>  - 移除部分停止營業停車場<br>  - 調整部分停車場 icon]]></description>
     <Style id="icon-1502-0288D1-labelson">
       <IconStyle>
         <scale>1</scale>
@@ -1192,15 +1192,6 @@
         <Point>
           <coordinates>
             121.4824891,25.0325151,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>No:8車庫咖啡</name>
-        <styleUrl>#icon-1684-7CB342-labelson-nodesc</styleUrl>
-        <Point>
-          <coordinates>
-            121.4737727,25.0367645,0
           </coordinates>
         </Point>
       </Placemark>
@@ -4471,11 +4462,11 @@
       </Placemark>
       <Placemark>
         <name>(平30/h | 假40/h)168parking(明倫社宅室內停車場)</name>
-        <description><![CDATA[感謝kevinbig3<br>汽車費率 平日30h（上限140元）;假日40h（無上限）]]></description>
+        <description><![CDATA[2026/11/01 更新<br>警衛說無法停機車區<br>感謝 Philip 網友回報<br>汽車費率 平日30h（上限140元）;假日40h（無上限）]]></description>
         <styleUrl>#icon-1538-757575-labelson</styleUrl>
         <Point>
           <coordinates>
-            121.519944,25.0729329,0
+            121.5199319,25.0727896,0
           </coordinates>
         </Point>
       </Placemark>
@@ -5486,6 +5477,16 @@
           </coordinates>
         </Point>
       </Placemark>
+      <Placemark>
+        <name>(平:40/h|假:60/h)168Parking (徐匯室內停車場)</name>
+        <description><![CDATA[2026/11/01 感謝網友 mango大鳥 分享<br>無後牌辨識。且出口為上坡前牌辨識，若無法掏出第二備用車牌誘騙辨識鏡頭，可先從柵欄旁縫隙離場後，打給客服手動清除後台資訊(記得先繳費)<br>附近機車格很多，若非前往雀客旅館住宿建議停外面就好]]></description>
+        <styleUrl>#icon-1538-E65100-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.4800978,25.0811486,0
+          </coordinates>
+        </Point>
+      </Placemark>
     </Folder>
     <Folder>
       <name>重機格/汽車費率</name>
@@ -5649,11 +5650,11 @@
       </Placemark>
       <Placemark>
         <name>(80/h)客限-板橋凱撒大飯店</name>
-        <description><![CDATA[<img src="https://mymaps.usercontent.google.com/hostedimage/m/*/3ABkJAZhtTmy74aeanW9AwgflJP8jKxETUIostGRPX07TkklYV_orE1DMD9CJt0fT4Kl5LnFxA6DYBmz8N7Ob0rq6DMs33RBeU4hPMTWXJ9rICJJAlNX7cpcXhMo2bCSIp3z0dFWx-vUEW13mB4QZrwMqKR-0kg-M2S2muhG4syyzWktD-q1fs_xeUs55U9f4ESv0ZS8q2iFXDbcdBjg2KaRvX9-8Z5Tp1wV2COgMFrTZUgcIhP2Y_W8RXgekww0?fife=s16383" height="200" width="auto" /><br><br>感謝hoha5432提供<br>汽車費率 80h 按鈕取票 2 格 或以上 <br>目前對外說不開放臨停，僅供住宿與用餐客人停放。費用沒有公開，根據個人繳費經驗推估約 80h。<br>官網寫說「本飯店提供機車/汽車地下停車場(B2-B5) ，共220個車位。※B2停放機車（可供重型機車停靠，但如需要更大空間可改停靠汽車停車格）」但實際沒有機車格，而是只有大重停車格（為汽車格畫線切出）。  ]]></description>
+        <description><![CDATA[<img src="https://mymaps.usercontent.google.com/hostedimage/m/*/3ABkJAZjiqI8EgJHIB2AfXhdPGoBlqlnFG51EiMVTgHOCafOuCLJQjDWcfsSKzeWihuBvvFL5B4IVhdV_qpvbQTSMVlLp8gwgxKAF9PRjPz11tUx5EPRoupZmXb5acQh-ADpUqOtyp4WFyKG1MskENG2VwY8a5JZF6V_vjfrPFzdm7ryFiGZTmvvovydp3GMi6o3IjNmJ2fPqh0kFJPAtdjQKAiMS-8vRyItSShfMr2fj_q5gc_bqqJ0__fb4SZ0?fife=s16383" height="200" width="auto" /><br><br>感謝hoha5432提供<br>汽車費率 80h 按鈕取票 2 格 或以上 <br>目前對外說不開放臨停，僅供住宿與用餐客人停放。費用沒有公開，根據個人繳費經驗推估約 80h。<br>官網寫說「本飯店提供機車/汽車地下停車場(B2-B5) ，共220個車位。※B2停放機車（可供重型機車停靠，但如需要更大空間可改停靠汽車停車格）」但實際沒有機車格，而是只有大重停車格（為汽車格畫線切出）。  ]]></description>
         <styleUrl>#icon-1633-0288D1</styleUrl>
         <ExtendedData>
           <Data name="gx_media_links">
-            <value>https://mymaps.usercontent.google.com/hostedimage/m/*/3ABkJAZhtTmy74aeanW9AwgflJP8jKxETUIostGRPX07TkklYV_orE1DMD9CJt0fT4Kl5LnFxA6DYBmz8N7Ob0rq6DMs33RBeU4hPMTWXJ9rICJJAlNX7cpcXhMo2bCSIp3z0dFWx-vUEW13mB4QZrwMqKR-0kg-M2S2muhG4syyzWktD-q1fs_xeUs55U9f4ESv0ZS8q2iFXDbcdBjg2KaRvX9-8Z5Tp1wV2COgMFrTZUgcIhP2Y_W8RXgekww0?fife=s16383</value>
+            <value>https://mymaps.usercontent.google.com/hostedimage/m/*/3ABkJAZjiqI8EgJHIB2AfXhdPGoBlqlnFG51EiMVTgHOCafOuCLJQjDWcfsSKzeWihuBvvFL5B4IVhdV_qpvbQTSMVlLp8gwgxKAF9PRjPz11tUx5EPRoupZmXb5acQh-ADpUqOtyp4WFyKG1MskENG2VwY8a5JZF6V_vjfrPFzdm7ryFiGZTmvvovydp3GMi6o3IjNmJ2fPqh0kFJPAtdjQKAiMS-8vRyItSShfMr2fj_q5gc_bqqJ0__fb4SZ0?fife=s16383</value>
           </Data>
         </ExtendedData>
         <Point>
@@ -7496,16 +7497,6 @@
         <Point>
           <coordinates>
             121.3647688,25.0677138,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>(20/d)168parking(明倫社宅室內停車場)</name>
-        <description><![CDATA[2026/03/30<br>機車費率20元/次<br>機車出入口與汽車共用一車道 小心駕駛<br>感謝網友 liyco.kennie.9999 熱心回報]]></description>
-        <styleUrl>#icon-1632-7CB342-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            121.5199158,25.0728151,0
           </coordinates>
         </Point>
       </Placemark>
@@ -10085,6 +10076,16 @@
     <Folder>
       <name>路邊友善車格</name>
       <Placemark>
+        <name>臺中</name>
+        <description><![CDATA[自115年11月1日起，全面開放大型重型機車停放路邊機車停車格及機慢車停放區，收費原則按照各路段現行機車收費費率及收費時段辦理<br>此次開放範圍以路邊劃設的機車停車格及機慢車停放區為限，不包含人行道及騎樓<br>以1格停放1輛為原則，依該路段標示的停放方向停放，車身不得逾越停車格標線範圍；如因車體較大，無法完整停放於單一機車格內，應停放於機慢車停放區，並依現場空間採直向或斜向停放，以最小傾斜角度為原則，且不得逾越停放區標線範圍]]></description>
+        <styleUrl>#icon-1502-7CB342-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            120.6746104,24.1629765,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
         <name>新店區</name>
         <description>【新北市訊】為提升大型重機停車可及性，新北市交通局今(114)年8月1日起，試辦開放大型重機停放板橋區及新店區的路邊機車格，若停在收費機車格，比照大型重機專用格費率，採計次收費，每4小時30元。</description>
         <styleUrl>#icon-1502-7CB342-labelson</styleUrl>
@@ -11301,476 +11302,6 @@
         <Point>
           <coordinates>
             121.4381038,25.1716184,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>中興街(公益路-公正路)</name>
-        <description><![CDATA[為提升路邊停車空間使用效率，台中市政府自115年5月1日起，於逢甲、勤美、文心秀泰商圈、台中火車站等熱門區域，試辦「大型重型機車共用路邊機車格位計畫」。<br><br>地面繪設「大重機共用」標誌，比照一般機車費率計收。]]></description>
-        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            120.6629285,24.1507139,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>中興街(公益路-公正路)</name>
-        <description><![CDATA[為提升路邊停車空間使用效率，台中市政府自115年5月1日起，於逢甲、勤美、文心秀泰商圈、台中火車站等熱門區域，試辦「大型重型機車共用路邊機車格位計畫」。<br><br>地面繪設「大重機共用」標誌，比照一般機車費率計收。]]></description>
-        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            120.6629499,24.1490408,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>館前路(英才路470巷-公益路)</name>
-        <description><![CDATA[為提升路邊停車空間使用效率，台中市政府自115年5月1日起，於逢甲、勤美、文心秀泰商圈、台中火車站等熱門區域，試辦「大型重型機車共用路邊機車格位計畫」。<br><br>地面繪設「大重機共用」標誌，比照一般機車費率計收。]]></description>
-        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            120.6634827,24.1533253,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>館前路(英才路470巷-公益路)</name>
-        <description><![CDATA[為提升路邊停車空間使用效率，台中市政府自115年5月1日起，於逢甲、勤美、文心秀泰商圈、台中火車站等熱門區域，試辦「大型重型機車共用路邊機車格位計畫」。<br><br>地面繪設「大重機共用」標誌，比照一般機車費率計收。]]></description>
-        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            120.6634237,24.1509358,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>臺灣大道二段311巷(臺灣大道-公益路)</name>
-        <description><![CDATA[為提升路邊停車空間使用效率，台中市政府自115年5月1日起，於逢甲、勤美、文心秀泰商圈、台中火車站等熱門區域，試辦「大型重型機車共用路邊機車格位計畫」。<br><br>地面繪設「大重機共用」標誌，比照一般機車費率計收。]]></description>
-        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            120.6654081,24.1536718,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>臺灣大道二段311巷</name>
-        <description><![CDATA[為提升路邊停車空間使用效率，台中市政府自115年5月1日起，於逢甲、勤美、文心秀泰商圈、台中火車站等熱門區域，試辦「大型重型機車共用路邊機車格位計畫」。<br><br>地面繪設「大重機共用」標誌，比照一般機車費率計收。]]></description>
-        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            120.664252,24.150921,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>臺灣大道二段311巷1弄(英才路-臺灣大道2段311巷)</name>
-        <description><![CDATA[為提升路邊停車空間使用效率，台中市政府自115年5月1日起，於逢甲、勤美、文心秀泰商圈、台中火車站等熱門區域，試辦「大型重型機車共用路邊機車格位計畫」。<br><br>地面繪設「大重機共用」標誌，比照一般機車費率計收。]]></description>
-        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            120.665146,24.1533017,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>臺灣大道二段311巷1弄(英才路-臺灣大道2段311巷)</name>
-        <description><![CDATA[為提升路邊停車空間使用效率，台中市政府自115年5月1日起，於逢甲、勤美、文心秀泰商圈、台中火車站等熱門區域，試辦「大型重型機車共用路邊機車格位計畫」。<br><br>地面繪設「大重機共用」標誌，比照一般機車費率計收。]]></description>
-        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            120.6662591,24.1526581,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>公益路155巷(公益路-公正路)</name>
-        <description><![CDATA[為提升路邊停車空間使用效率，台中市政府自115年5月1日起，於逢甲、勤美、文心秀泰商圈、台中火車站等熱門區域，試辦「大型重型機車共用路邊機車格位計畫」。<br><br>地面繪設「大重機共用」標誌，比照一般機車費率計收。]]></description>
-        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            120.6642435,24.150734,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>公益路155巷(公益路-公正路)</name>
-        <description><![CDATA[為提升路邊停車空間使用效率，台中市政府自115年5月1日起，於逢甲、勤美、文心秀泰商圈、台中火車站等熱門區域，試辦「大型重型機車共用路邊機車格位計畫」。<br><br>地面繪設「大重機共用」標誌，比照一般機車費率計收。]]></description>
-        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            120.6642381,24.1490256,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>公益路(英才路-美村路)</name>
-        <description><![CDATA[為提升路邊停車空間使用效率，台中市政府自115年5月1日起，於逢甲、勤美、文心秀泰商圈、台中火車站等熱門區域，試辦「大型重型機車共用路邊機車格位計畫」。<br><br>地面繪設「大重機共用」標誌，比照一般機車費率計收。]]></description>
-        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            120.6651021,24.1507961,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>公益路(英才路-美村路)</name>
-        <description><![CDATA[為提升路邊停車空間使用效率，台中市政府自115年5月1日起，於逢甲、勤美、文心秀泰商圈、台中火車站等熱門區域，試辦「大型重型機車共用路邊機車格位計畫」。<br><br>地面繪設「大重機共用」標誌，比照一般機車費率計收。]]></description>
-        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            120.661744,24.1507913,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>英才路(臺灣大道-公益路)</name>
-        <description><![CDATA[為提升路邊停車空間使用效率，台中市政府自115年5月1日起，於逢甲、勤美、文心秀泰商圈、台中火車站等熱門區域，試辦「大型重型機車共用路邊機車格位計畫」。<br><br>地面繪設「大重機共用」標誌，比照一般機車費率計收。]]></description>
-        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            120.6652468,24.1509705,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>英才路(臺灣大道-公益路)</name>
-        <description><![CDATA[為提升路邊停車空間使用效率，台中市政府自115年5月1日起，於逢甲、勤美、文心秀泰商圈、台中火車站等熱門區域，試辦「大型重型機車共用路邊機車格位計畫」。<br><br>地面繪設「大重機共用」標誌，比照一般機車費率計收。]]></description>
-        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            120.6666684,24.1529774,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>英才路470巷(英才路-館前路)</name>
-        <description><![CDATA[為提升路邊停車空間使用效率，台中市政府自115年5月1日起，於逢甲、勤美、文心秀泰商圈、台中火車站等熱門區域，試辦「大型重型機車共用路邊機車格位計畫」。<br><br>地面繪設「大重機共用」標誌，比照一般機車費率計收。]]></description>
-        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            120.6656584,24.1521962,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>英才路470巷</name>
-        <description><![CDATA[為提升路邊停車空間使用效率，台中市政府自115年5月1日起，於逢甲、勤美、文心秀泰商圈、台中火車站等熱門區域，試辦「大型重型機車共用路邊機車格位計畫」。<br><br>地面繪設「大重機共用」標誌，比照一般機車費率計收。]]></description>
-        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            120.6636281,24.1533905,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>綠川西街(光復路-民權路)</name>
-        <description><![CDATA[為提升路邊停車空間使用效率，台中市政府自115年5月1日起，於逢甲、勤美、文心秀泰商圈、台中火車站等熱門區域，試辦「大型重型機車共用路邊機車格位計畫」。<br><br>地面繪設「大重機共用」標誌，比照一般機車費率計收。]]></description>
-        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            120.6851824,24.1400429,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>綠川西街(光復路-民權路)</name>
-        <description><![CDATA[為提升路邊停車空間使用效率，台中市政府自115年5月1日起，於逢甲、勤美、文心秀泰商圈、台中火車站等熱門區域，試辦「大型重型機車共用路邊機車格位計畫」。<br><br>地面繪設「大重機共用」標誌，比照一般機車費率計收。]]></description>
-        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            120.6815829,24.136621,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>綠川東街(建國路-民權路）</name>
-        <description><![CDATA[為提升路邊停車空間使用效率，台中市政府自115年5月1日起，於逢甲、勤美、文心秀泰商圈、台中火車站等熱門區域，試辦「大型重型機車共用路邊機車格位計畫」。<br><br>地面繪設「大重機共用」標誌，比照一般機車費率計收。]]></description>
-        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            120.6817788,24.1364041,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>綠川東街(建國路-民權路）</name>
-        <description><![CDATA[為提升路邊停車空間使用效率，台中市政府自115年5月1日起，於逢甲、勤美、文心秀泰商圈、台中火車站等熱門區域，試辦「大型重型機車共用路邊機車格位計畫」。<br><br>地面繪設「大重機共用」標誌，比照一般機車費率計收。]]></description>
-        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            120.6857324,24.1396974,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>民族路(建國路-綠川西街)</name>
-        <description><![CDATA[為提升路邊停車空間使用效率，台中市政府自115年5月1日起，於逢甲、勤美、文心秀泰商圈、台中火車站等熱門區域，試辦「大型重型機車共用路邊機車格位計畫」。<br><br>地面繪設「大重機共用」標誌，比照一般機車費率計收。]]></description>
-        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            120.6823098,24.1372155,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>民族路(建國路-綠川西街)</name>
-        <description><![CDATA[為提升路邊停車空間使用效率，台中市政府自115年5月1日起，於逢甲、勤美、文心秀泰商圈、台中火車站等熱門區域，試辦「大型重型機車共用路邊機車格位計畫」。<br><br>地面繪設「大重機共用」標誌，比照一般機車費率計收。]]></description>
-        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            120.683144,24.136464,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>中山路(建國路-綠川西街)</name>
-        <description><![CDATA[為提升路邊停車空間使用效率，台中市政府自115年5月1日起，於逢甲、勤美、文心秀泰商圈、台中火車站等熱門區域，試辦「大型重型機車共用路邊機車格位計畫」。<br><br>地面繪設「大重機共用」標誌，比照一般機車費率計收。]]></description>
-        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            120.6830361,24.1378999,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>中山路(建國路-綠川西街)</name>
-        <description><![CDATA[為提升路邊停車空間使用效率，台中市政府自115年5月1日起，於逢甲、勤美、文心秀泰商圈、台中火車站等熱門區域，試辦「大型重型機車共用路邊機車格位計畫」。<br><br>地面繪設「大重機共用」標誌，比照一般機車費率計收。]]></description>
-        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            120.6841975,24.1372806,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>成功路(建國路-綠川西街)</name>
-        <description><![CDATA[為提升路邊停車空間使用效率，台中市政府自115年5月1日起，於逢甲、勤美、文心秀泰商圈、台中火車站等熱門區域，試辦「大型重型機車共用路邊機車格位計畫」。<br><br>地面繪設「大重機共用」標誌，比照一般機車費率計收。]]></description>
-        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            120.6845103,24.1393347,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>成功路(建國路-綠川西街)</name>
-        <description><![CDATA[為提升路邊停車空間使用效率，台中市政府自115年5月1日起，於逢甲、勤美、文心秀泰商圈、台中火車站等熱門區域，試辦「大型重型機車共用路邊機車格位計畫」。<br><br>地面繪設「大重機共用」標誌，比照一般機車費率計收。]]></description>
-        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            120.685492,24.1385367,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>逢甲路(文華路-西屯路)</name>
-        <description><![CDATA[為提升路邊停車空間使用效率，台中市政府自115年5月1日起，於逢甲、勤美、文心秀泰商圈、台中火車站等熱門區域，試辦「大型重型機車共用路邊機車格位計畫」。<br><br>地面繪設「大重機共用」標誌，比照一般機車費率計收。]]></description>
-        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            120.6463855,24.1788154,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>逢甲路(文華路-西屯路)</name>
-        <description><![CDATA[為提升路邊停車空間使用效率，台中市政府自115年5月1日起，於逢甲、勤美、文心秀泰商圈、台中火車站等熱門區域，試辦「大型重型機車共用路邊機車格位計畫」。<br><br>地面繪設「大重機共用」標誌，比照一般機車費率計收。]]></description>
-        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            120.6423837,24.1778122,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>福星路(河南路-福星北路)</name>
-        <description><![CDATA[為提升路邊停車空間使用效率，台中市政府自115年5月1日起，於逢甲、勤美、文心秀泰商圈、台中火車站等熱門區域，試辦「大型重型機車共用路邊機車格位計畫」。<br><br>地面繪設「大重機共用」標誌，比照一般機車費率計收。]]></description>
-        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            120.6477556,24.1742573,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>福星路(河南路-福星北路)</name>
-        <description><![CDATA[為提升路邊停車空間使用效率，台中市政府自115年5月1日起，於逢甲、勤美、文心秀泰商圈、台中火車站等熱門區域，試辦「大型重型機車共用路邊機車格位計畫」。<br><br>地面繪設「大重機共用」標誌，比照一般機車費率計收。]]></description>
-        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            120.6449527,24.1821364,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>至善路(逢甲路-西屯路)</name>
-        <description><![CDATA[為提升路邊停車空間使用效率，台中市政府自115年5月1日起，於逢甲、勤美、文心秀泰商圈、台中火車站等熱門區域，試辦「大型重型機車共用路邊機車格位計畫」。<br><br>地面繪設「大重機共用」標誌，比照一般機車費率計收。]]></description>
-        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            120.6434051,24.1782694,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>至善路(逢甲路-西屯路)</name>
-        <description><![CDATA[為提升路邊停車空間使用效率，台中市政府自115年5月1日起，於逢甲、勤美、文心秀泰商圈、台中火車站等熱門區域，試辦「大型重型機車共用路邊機車格位計畫」。<br><br>地面繪設「大重機共用」標誌，比照一般機車費率計收。]]></description>
-        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            120.6432442,24.1768587,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>逢大路(大鵬路~河南路)</name>
-        <description><![CDATA[為提升路邊停車空間使用效率，台中市政府自115年5月1日起，於逢甲、勤美、文心秀泰商圈、台中火車站等熱門區域，試辦「大型重型機車共用路邊機車格位計畫」。<br><br>地面繪設「大重機共用」標誌，比照一般機車費率計收。]]></description>
-        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            120.6503032,24.1780207,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>逢大路(大鵬路~河南路)</name>
-        <description><![CDATA[為提升路邊停車空間使用效率，台中市政府自115年5月1日起，於逢甲、勤美、文心秀泰商圈、台中火車站等熱門區域，試辦「大型重型機車共用路邊機車格位計畫」。<br><br>地面繪設「大重機共用」標誌，比照一般機車費率計收。]]></description>
-        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            120.6506385,24.1759311,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>文華路86巷(全路段)</name>
-        <description><![CDATA[為提升路邊停車空間使用效率，台中市政府自115年5月1日起，於逢甲、勤美、文心秀泰商圈、台中火車站等熱門區域，試辦「大型重型機車共用路邊機車格位計畫」。<br><br>地面繪設「大重機共用」標誌，比照一般機車費率計收。]]></description>
-        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            120.650273,24.1765734,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>文華路86巷(全路段)</name>
-        <description><![CDATA[為提升路邊停車空間使用效率，台中市政府自115年5月1日起，於逢甲、勤美、文心秀泰商圈、台中火車站等熱門區域，試辦「大型重型機車共用路邊機車格位計畫」。<br><br>地面繪設「大重機共用」標誌，比照一般機車費率計收。]]></description>
-        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            120.6466252,24.1765416,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>逢大路19巷(全路段)</name>
-        <description><![CDATA[為提升路邊停車空間使用效率，台中市政府自115年5月1日起，於逢甲、勤美、文心秀泰商圈、台中火車站等熱門區域，試辦「大型重型機車共用路邊機車格位計畫」。<br><br>地面繪設「大重機共用」標誌，比照一般機車費率計收。]]></description>
-        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            120.6503591,24.17652,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>文心南路(文心南五路-文心南九路)</name>
-        <description><![CDATA[為提升路邊停車空間使用效率，台中市政府自115年5月1日起，於逢甲、勤美、文心秀泰商圈、台中火車站等熱門區域，試辦「大型重型機車共用路邊機車格位計畫」。<br><br>地面繪設「大重機共用」標誌，比照一般機車費率計收。]]></description>
-        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            120.6464487,24.1318749,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>文心南路(文心南五路-文心南九路)</name>
-        <description><![CDATA[為提升路邊停車空間使用效率，台中市政府自115年5月1日起，於逢甲、勤美、文心秀泰商圈、台中火車站等熱門區域，試辦「大型重型機車共用路邊機車格位計畫」。<br><br>地面繪設「大重機共用」標誌，比照一般機車費率計收。]]></description>
-        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            120.6463441,24.1279437,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>文心南五路(永春東一路-文心南路)</name>
-        <description><![CDATA[為提升路邊停車空間使用效率，台中市政府自115年5月1日起，於逢甲、勤美、文心秀泰商圈、台中火車站等熱門區域，試辦「大型重型機車共用路邊機車格位計畫」。<br><br>地面繪設「大重機共用」標誌，比照一般機車費率計收。]]></description>
-        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            120.6414495,24.1320264,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>文心南五路(永春東一路-文心南路)</name>
-        <description><![CDATA[為提升路邊停車空間使用效率，台中市政府自115年5月1日起，於逢甲、勤美、文心秀泰商圈、台中火車站等熱門區域，試辦「大型重型機車共用路邊機車格位計畫」。<br><br>地面繪設「大重機共用」標誌，比照一般機車費率計收。]]></description>
-        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            120.6462158,24.1320313,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>永春東一路(文心南五路-文心南七路)</name>
-        <description><![CDATA[為提升路邊停車空間使用效率，台中市政府自115年5月1日起，於逢甲、勤美、文心秀泰商圈、台中火車站等熱門區域，試辦「大型重型機車共用路邊機車格位計畫」。<br><br>地面繪設「大重機共用」標誌，比照一般機車費率計收。]]></description>
-        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            120.6413053,24.13189,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>永春東一路(文心南五路-文心南七路)</name>
-        <description><![CDATA[為提升路邊停車空間使用效率，台中市政府自115年5月1日起，於逢甲、勤美、文心秀泰商圈、台中火車站等熱門區域，試辦「大型重型機車共用路邊機車格位計畫」。<br><br>地面繪設「大重機共用」標誌，比照一般機車費率計收。]]></description>
-        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            120.6412999,24.1296233,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>向心南路(文心南五路-文心南七路)</name>
-        <description><![CDATA[為提升路邊停車空間使用效率，台中市政府自115年5月1日起，於逢甲、勤美、文心秀泰商圈、台中火車站等熱門區域，試辦「大型重型機車共用路邊機車格位計畫」。<br><br>地面繪設「大重機共用」標誌，比照一般機車費率計收。]]></description>
-        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            120.6439081,24.1318051,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>向心南路(文心南五路-文心南七路)</name>
-        <description><![CDATA[為提升路邊停車空間使用效率，台中市政府自115年5月1日起，於逢甲、勤美、文心秀泰商圈、台中火車站等熱門區域，試辦「大型重型機車共用路邊機車格位計畫」。<br><br>地面繪設「大重機共用」標誌，比照一般機車費率計收。]]></description>
-        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            120.6439081,24.1296021,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>豐偉路(文心南五路-文心南九路)</name>
-        <description><![CDATA[為提升路邊停車空間使用效率，台中市政府自115年5月1日起，於逢甲、勤美、文心秀泰商圈、台中火車站等熱門區域，試辦「大型重型機車共用路邊機車格位計畫」。<br><br>地面繪設「大重機共用」標誌，比照一般機車費率計收。]]></description>
-        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            120.6450572,24.1317977,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>豐偉路(文心南五路-文心南九路)</name>
-        <description><![CDATA[為提升路邊停車空間使用效率，台中市政府自115年5月1日起，於逢甲、勤美、文心秀泰商圈、台中火車站等熱門區域，試辦「大型重型機車共用路邊機車格位計畫」。<br><br>地面繪設「大重機共用」標誌，比照一般機車費率計收。]]></description>
-        <styleUrl>#icon-1644-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            120.6450303,24.1279448,0
           </coordinates>
         </Point>
       </Placemark>
