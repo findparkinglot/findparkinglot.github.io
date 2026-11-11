@@ -2161,6 +2161,16 @@
     <Folder>
       <name>汽車費率</name>
       <Placemark>
+        <name>(20/h)歐特儀捷運木柵站轉乘停車場</name>
+        <description><![CDATA[2026/11/06 感謝熱心網友分享<br>台北捷運轉乘停車場有規範250cc以上大型重機可停，比照汽車費率。今天去實測木柵的可以唷，後牌辨識進場、繳費都很順利。]]></description>
+        <styleUrl>#icon-1538-7CB342-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            121.5727537,24.9982935,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
         <name>(日20/h|夜40/h)停車場-永權立人停車場</name>
         <description><![CDATA[2026/10/18 感謝網友 Philip 分享<br>僅限悠遊卡<br>路過看到的，理論上應該是可以停]]></description>
         <styleUrl>#icon-1538-0288D1-labelson</styleUrl>
@@ -5650,11 +5660,11 @@
       </Placemark>
       <Placemark>
         <name>(80/h)客限-板橋凱撒大飯店</name>
-        <description><![CDATA[<img src="https://mymaps.usercontent.google.com/hostedimage/m/*/3ABkJAZjiqI8EgJHIB2AfXhdPGoBlqlnFG51EiMVTgHOCafOuCLJQjDWcfsSKzeWihuBvvFL5B4IVhdV_qpvbQTSMVlLp8gwgxKAF9PRjPz11tUx5EPRoupZmXb5acQh-ADpUqOtyp4WFyKG1MskENG2VwY8a5JZF6V_vjfrPFzdm7ryFiGZTmvvovydp3GMi6o3IjNmJ2fPqh0kFJPAtdjQKAiMS-8vRyItSShfMr2fj_q5gc_bqqJ0__fb4SZ0?fife=s16383" height="200" width="auto" /><br><br>感謝hoha5432提供<br>汽車費率 80h 按鈕取票 2 格 或以上 <br>目前對外說不開放臨停，僅供住宿與用餐客人停放。費用沒有公開，根據個人繳費經驗推估約 80h。<br>官網寫說「本飯店提供機車/汽車地下停車場(B2-B5) ，共220個車位。※B2停放機車（可供重型機車停靠，但如需要更大空間可改停靠汽車停車格）」但實際沒有機車格，而是只有大重停車格（為汽車格畫線切出）。  ]]></description>
+        <description><![CDATA[<img src="https://mymaps.usercontent.google.com/hostedimage/m/*/3ABkJAZjafnGo8JyrPnDxjeEoPXgdxC4soOIl6I25529E26P_WRAus-ArVg_iFudClzLvJqwGjLD9AVCYPMcO7K7wotrOJtxle1WUEWdtWL0AmKVWMh34KWtyBz3Y_9a1hM1uJ44W6c9Tn8-lEtxtpBD3-5sQTJWcAPO70iDwUDABjIZyenSzxTYD78FdtyorUo84qORpjcGviFDz5caTRtMRXsu0nMpT55uq-Q0dHt0W6mC29NGKRQsLzprgD7k?fife=s16383" height="200" width="auto" /><br><br>感謝hoha5432提供<br>汽車費率 80h 按鈕取票 2 格 或以上 <br>目前對外說不開放臨停，僅供住宿與用餐客人停放。費用沒有公開，根據個人繳費經驗推估約 80h。<br>官網寫說「本飯店提供機車/汽車地下停車場(B2-B5) ，共220個車位。※B2停放機車（可供重型機車停靠，但如需要更大空間可改停靠汽車停車格）」但實際沒有機車格，而是只有大重停車格（為汽車格畫線切出）。  ]]></description>
         <styleUrl>#icon-1633-0288D1</styleUrl>
         <ExtendedData>
           <Data name="gx_media_links">
-            <value>https://mymaps.usercontent.google.com/hostedimage/m/*/3ABkJAZjiqI8EgJHIB2AfXhdPGoBlqlnFG51EiMVTgHOCafOuCLJQjDWcfsSKzeWihuBvvFL5B4IVhdV_qpvbQTSMVlLp8gwgxKAF9PRjPz11tUx5EPRoupZmXb5acQh-ADpUqOtyp4WFyKG1MskENG2VwY8a5JZF6V_vjfrPFzdm7ryFiGZTmvvovydp3GMi6o3IjNmJ2fPqh0kFJPAtdjQKAiMS-8vRyItSShfMr2fj_q5gc_bqqJ0__fb4SZ0?fife=s16383</value>
+            <value>https://mymaps.usercontent.google.com/hostedimage/m/*/3ABkJAZjafnGo8JyrPnDxjeEoPXgdxC4soOIl6I25529E26P_WRAus-ArVg_iFudClzLvJqwGjLD9AVCYPMcO7K7wotrOJtxle1WUEWdtWL0AmKVWMh34KWtyBz3Y_9a1hM1uJ44W6c9Tn8-lEtxtpBD3-5sQTJWcAPO70iDwUDABjIZyenSzxTYD78FdtyorUo84qORpjcGviFDz5caTRtMRXsu0nMpT55uq-Q0dHt0W6mC29NGKRQsLzprgD7k?fife=s16383</value>
           </Data>
         </ExtendedData>
         <Point>
